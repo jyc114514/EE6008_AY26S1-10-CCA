@@ -10,12 +10,12 @@
 
 项目拟研究 joint-embedding video representation 在 humanoid everyday action understanding 与 action anticipation 中的作用。当前暂定流程如下：
 
-V-JEPA / V-JEPA 2 baseline  
-→ 选择并审核公开数据的 metadata 与小规模数据子集  
-→ feature extraction 或 frozen representation  
-→ current-action recognition baseline  
-→ action anticipation / 其他下游任务  
-→ 轻量模型或训练策略修改  
+V-JEPA / V-JEPA 2 baseline<br>
+→ 选择并审核公开数据的 metadata 与小规模数据子集<br>
+→ feature extraction 或 frozen representation<br>
+→ current-action recognition baseline<br>
+→ action anticipation / 其他下游任务<br>
+→ 轻量模型或训练策略修改<br>
 → ablation 与失败案例分析
 
 首次初始化不代表已经完成 baseline，也不代表已经取得任何实验指标。
