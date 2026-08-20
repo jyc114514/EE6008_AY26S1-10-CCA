@@ -1,5 +1,7 @@
 # EE6008 AY26S1-10-CCA
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 **Joint-Embedding Predictive Modelling for Humanoid Everyday Action Anticipation**
 
 This is the public research repository for the NTU EE6008 AY26S1-10-CCA five-student course project. It is currently an initial, reproducible project scaffold: V-JEPA/V-JEPA 2 adaptation, the exact downstream task, and the first dataset split remain subject to team and supervisor confirmation.
