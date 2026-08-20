@@ -1,0 +1,7 @@
+dataset_config: configs/dataset_g1.yaml
+feature_source: ${EE6008_FEATURE_ROOT}
+task: current_action_recognition
+head: TODO_select_after_baseline
+seed: 0
+output_root: ${EE6008_OUTPUT_ROOT}
+notes: Task, labels, split, and metric must be confirmed before training.

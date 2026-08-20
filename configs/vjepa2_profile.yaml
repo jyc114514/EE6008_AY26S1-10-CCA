@@ -1,0 +1,10 @@
+# Profiling skeleton. The checkpoint remains on the GPU Server.
+model_family: vjepa2
+model_variant: TODO_select_after_profile
+checkpoint_path: ${EE6008_CHECKPOINT_ROOT}/vjepa2/TODO_checkpoint
+input_frames: TODO_verify_from_official_config
+fps: TODO_verify_from_official_config
+resolution: TODO_verify_from_official_config
+batch_size: 1
+device: cuda
+output_root: ${EE6008_OUTPUT_ROOT}

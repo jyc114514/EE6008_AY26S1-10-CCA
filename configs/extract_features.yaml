@@ -1,0 +1,6 @@
+dataset_config: configs/dataset_g1.yaml
+model_config: configs/vjepa2_profile.yaml
+output_root: ${EE6008_FEATURE_ROOT}
+feature_format: TODO_choose_and_document
+overwrite: false
+notes: Feature tensors are server-only artifacts; save only small summaries to results/.

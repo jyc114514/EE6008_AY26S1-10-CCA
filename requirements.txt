@@ -1,0 +1,3 @@
+# Intentionally minimal at repository initialization.
+# Add a dependency only after it is required by a verified project command,
+# and record the tested Python/CUDA/PyTorch combination in docs/.

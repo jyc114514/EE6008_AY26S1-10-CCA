@@ -1,0 +1,8 @@
+# Tentative H1 dataset configuration. This is not a confirmed split.
+dataset_name: humanoid-everyday
+robot: H1
+dataset_root: ${EE6008_DATA_ROOT}
+metadata_root: ${EE6008_METADATA_ROOT}
+split: TODO_confirm_episode_level_split
+frame_rate: TODO_verify
+notes: Verify task completeness, action dimensions, licensing, and split policy before use.

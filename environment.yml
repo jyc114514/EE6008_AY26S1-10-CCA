@@ -1,0 +1,11 @@
+name: ee6008-cca
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.11,<3.13
+  - pip
+  - pip:
+      - -r requirements.txt
+
+# Project dependencies and CUDA/PyTorch versions will be finalized only after
+# the verified V-JEPA baseline environment is reproduced on the assigned server.

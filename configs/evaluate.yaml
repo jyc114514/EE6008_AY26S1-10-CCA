@@ -1,0 +1,6 @@
+dataset_config: configs/dataset_g1.yaml
+checkpoint_path: ${EE6008_OUTPUT_ROOT}/TODO_run/checkpoint
+task: TODO_confirm
+metrics: []
+output_root: ${EE6008_OUTPUT_ROOT}
+notes: Do not report metrics until the run is recorded in experiments/runs.csv.

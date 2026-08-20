@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments and secrets
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ML checkpoints and large artifacts
+*.pth
+*.pt
+*.ckpt
+*.bin
+*.safetensors
+features/
+checkpoints/
+outputs/
+logs/
+wandb/
+tensorboard/
+runs/
+
+# Raw data and archives
+data_raw/
+datasets/
+raw_data/
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.zip
+*.7z
+*.tar
+*.tar.gz
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Local source workspaces; curated copies live under docs/.
+AY26S1-10-CCA_项目启动_20260811/
+JEPA自学_20260812/
+论文精读_01-03/
+项目下一步计划_20260813/
