@@ -10,7 +10,6 @@ from pathlib import Path
 
 from PIL import Image
 
-
 REPO_ROOT = Path(__file__).resolve().parents[2]
 OUT = REPO_ROOT / "results/core_a"
 MANIFEST_JSON = OUT / "figure_manifest.json"

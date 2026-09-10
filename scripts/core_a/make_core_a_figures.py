@@ -11,7 +11,6 @@ from __future__ import annotations
 
 import csv
 import json
-import math
 from pathlib import Path
 from typing import Any
 
@@ -20,7 +19,6 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
-
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 OUT = REPO_ROOT / "results/core_a"
@@ -57,7 +55,7 @@ def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
         writer.writerows(rows)
 
 
-def f(value: str | float | int) -> float:
+def f(value: str | float) -> float:
     try:
         return float(value)
     except (TypeError, ValueError):
@@ -184,7 +182,6 @@ def fig03() -> tuple[dict[str, str], str, str, str]:
     write_csv(FIGURE_DATA / "fig03_full120_lora_factorial.csv", rows)
     labels = [r["cell"] for r in rows]
     x = np.arange(len(rows))
-    width = 0.37
     fig, axes = plt.subplots(1, 2, figsize=(12, 5.6), layout="constrained")
     for ax, metric, title in zip(axes, ("top1", "macro_f1"), ("Top-1 accuracy", "Macro-F1")):
         values = np.array([f(r[metric]) * 100 for r in rows])
@@ -321,7 +318,7 @@ def main() -> int:
     ]
     manifest = []
     for figure_id, builder in specs:
-        outputs, caption, alt_text, data_file = builder()
+        _outputs, caption, alt_text, data_file = builder()
         manifest.append({
             "figure_id": figure_id,
             "file_stem": figure_id,

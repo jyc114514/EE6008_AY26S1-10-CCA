@@ -25,6 +25,9 @@ import numpy as np
 import pandas as pd
 import torch
 import yaml
+from torch import Tensor, nn
+from torch.utils.data import DataLoader, Dataset
+
 from ee6008.config import CoreAConfig, expand_path, load_config
 from ee6008.full_attentive import (
     EarlyStoppingState,
@@ -39,8 +42,6 @@ from ee6008.full_attentive_data import (
     load_v3_population,
     sha256_file,
 )
-from torch import Tensor, nn
-from torch.utils.data import DataLoader, Dataset
 
 DEFAULT_SEEDS = (20260825, 20260826, 20260827)
 EXPECTED_MAX_EPOCHS = 20

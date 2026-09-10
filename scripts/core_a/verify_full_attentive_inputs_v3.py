@@ -10,6 +10,7 @@ from typing import Any
 
 import numpy as np
 import pandas as pd
+
 from ee6008.config import load_config
 from ee6008.data.clips import decode_prefix, preprocess_vjepa
 from ee6008.full_attentive import repeat_first_frame

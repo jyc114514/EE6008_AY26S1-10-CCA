@@ -29,13 +29,6 @@ import numpy as np
 import pandas as pd
 import torch
 import yaml
-from ee6008.config import CoreAConfig, expand_path, load_config
-from ee6008.full_attentive import EarlyStoppingState, extended_classification_metrics
-from ee6008.full_attentive_data import (
-    EXPECTED_CLASS_COUNT,
-    EXPECTED_TOKEN_SHAPE,
-    load_v3_population,
-)
 from run_full_attentive_probe_v3 import (
     autocast_context,
     build_head,
@@ -44,6 +37,14 @@ from run_full_attentive_probe_v3 import (
 )
 from torch import Tensor, nn
 from torch.utils.data import DataLoader
+
+from ee6008.config import CoreAConfig, expand_path, load_config
+from ee6008.full_attentive import EarlyStoppingState, extended_classification_metrics
+from ee6008.full_attentive_data import (
+    EXPECTED_CLASS_COUNT,
+    EXPECTED_TOKEN_SHAPE,
+    load_v3_population,
+)
 
 EXPECTED_BATCH_SIZE = 32
 EXPECTED_MAX_EPOCHS = 20

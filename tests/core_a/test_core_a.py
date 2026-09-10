@@ -6,6 +6,7 @@ import numpy as np
 import pandas as pd
 import pytest
 import torch
+
 from ee6008.cache import CacheConfigMismatch, FeatureCache
 from ee6008.config import load_config
 from ee6008.data.clips import (
@@ -16,7 +17,6 @@ from ee6008.data.clips import (
 from ee6008.data.splits import build_splits
 from ee6008.metrics import classification_metrics, require_label_safe_split
 from ee6008.probe import train_linear_probe
-
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 

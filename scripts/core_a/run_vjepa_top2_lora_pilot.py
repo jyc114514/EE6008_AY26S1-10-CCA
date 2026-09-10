@@ -23,6 +23,10 @@ from typing import Any
 import numpy as np
 import pandas as pd
 import torch
+from torch import Tensor, nn
+from torch.nn import functional as F
+from torch.utils.data import DataLoader, Dataset
+
 from ee6008.config import CoreAConfig, load_config
 from ee6008.data.clips import decode_prefix, preprocess_vjepa
 from ee6008.data.selection import benchmark_primary_mask
@@ -39,9 +43,6 @@ from ee6008.lora import (
 from ee6008.metrics import classification_metrics
 from ee6008.models import load_vjepa2_1_base
 from ee6008.top_block_finetune import describe_encoder, forward_top_two_lora
-from torch import Tensor, nn
-from torch.nn import functional as F
-from torch.utils.data import DataLoader, Dataset
 
 DEFAULT_SEEDS = (20260825, 20260826, 20260827)
 EXPECTED_PILOT_TASKS = 12

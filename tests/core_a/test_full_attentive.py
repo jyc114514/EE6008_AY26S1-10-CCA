@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import pytest
 import torch
+
 from ee6008.full_attentive import (
     EarlyStoppingState,
     extended_classification_metrics,

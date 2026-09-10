@@ -15,6 +15,7 @@ from typing import Any
 
 import numpy as np
 import torch
+
 from ee6008.config import load_config
 from ee6008.full_attentive_data import load_v3_population
 

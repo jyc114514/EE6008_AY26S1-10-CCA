@@ -3,9 +3,10 @@ from __future__ import annotations
 import copy
 
 import torch
+from torch import Tensor, nn
+
 from ee6008.lora import LoRAConfig, inject_top_block_lora
 from ee6008.top_block_finetune import describe_encoder, forward_top_two_lora
-from torch import Tensor, nn
 
 
 class TinyAttention(nn.Module):

@@ -3,6 +3,8 @@ from __future__ import annotations
 import copy
 
 import torch
+from torch import Tensor, nn
+
 from ee6008.lora import (
     LoRAConfig,
     LoRALinear,
@@ -11,7 +13,6 @@ from ee6008.lora import (
     inject_top_block_lora,
     lora_named_parameters,
 )
-from torch import Tensor, nn
 
 
 class TinyAttention(nn.Module):
