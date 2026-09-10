@@ -1702,7 +1702,7 @@
   {
     "public_destination": "results/core_a/figure_manifest.csv",
     "size_bytes": 4186,
-    "sha256": "8a3e4f45f78afc4e87a231b9706a2af4f724deca5b0749beed09d39efd458b0b",
+    "sha256": "a26965afea1bd9014a2897b4ba574f589d31e3a866158fbccee5b699614123bb",
     "file_type": "csv",
     "source_id": "research_archive/.../core_a/analysis/.../figure_manifest.csv",
     "source_sha256": "",
@@ -1719,7 +1719,7 @@
   {
     "public_destination": "results/core_a/figure_manifest.json",
     "size_bytes": 5563,
-    "sha256": "bc48662886e723b1c26b55684c187f8bf6108f8ec751b7c3faa4f0981e1315ce",
+    "sha256": "0895c9d0fbb694b8084f076c5ed85401009eccec79b44ef9f222f14f3a6b8d4d",
     "file_type": "json",
     "source_id": "research_archive/.../core_a/analysis/.../figure_manifest.json",
     "source_sha256": "",
@@ -1736,7 +1736,7 @@
   {
     "public_destination": "results/core_a/figure_visual_qa.json",
     "size_bytes": 2140,
-    "sha256": "7cfa609eb989f4560fc3efef5e3bc3a88b48d96f2dfff6b76d1cb46bdbac1c90",
+    "sha256": "b5b69c60172b59aa4841f81ab022023a0727fee4e73a3a58550f7617027bdda6",
     "file_type": "json",
     "source_id": "research_archive/.../core_a/analysis/.../figure_visual_qa.json",
     "source_sha256": "",
@@ -1753,7 +1753,7 @@
   {
     "public_destination": "results/core_a/figure_visual_qa.md",
     "size_bytes": 329,
-    "sha256": "d7ac3f6848c0c30aee373e50816108485d19cfa1def3a0372a052a69d10f345a",
+    "sha256": "880a19db591d0efcd2944acfd61c5d63a59e21a6f275ab0b5a50660f27738878",
     "file_type": "md",
     "source_id": "research_archive/.../core_a/analysis/.../figure_visual_qa.md",
     "source_sha256": "",
@@ -1787,7 +1787,7 @@
   {
     "public_destination": "results/core_a/figures/fig01_baseline_panorama.pdf",
     "size_bytes": 30309,
-    "sha256": "9001157f454addeaff5febca1689abf87f8ff76e786d259950b8d85bf5e886f7",
+    "sha256": "da6ba3b3c2c0d57fcc8575377ead051be34ccd50c72be2d9b6aebc2ecc68086a",
     "file_type": "pdf",
     "source_id": "research_archive/.../core_a/analysis/.../figures/fig01_baseline_panorama.pdf",
     "source_sha256": "",
@@ -1820,8 +1820,8 @@
   },
   {
     "public_destination": "results/core_a/figures/fig01_baseline_panorama.svg",
-    "size_bytes": 105607,
-    "sha256": "ba212b06e631e1a4f1583627c09c09be862a0425202c1b92784bac63d76b71d6",
+    "size_bytes": 107196,
+    "sha256": "72015e66ab8366300b77185720fe454760a19d8c08028323f52ce54ef071437f",
     "file_type": "svg",
     "source_id": "research_archive/.../core_a/analysis/.../figures/fig01_baseline_panorama.svg",
     "source_sha256": "",
@@ -1855,7 +1855,7 @@
   {
     "public_destination": "results/core_a/figures/fig02_batch4_32_48_dynamic_static.pdf",
     "size_bytes": 23367,
-    "sha256": "04b70cd177b63727535c7e6bf3e0e0eeee1a5d946dbdc25eb7fdf6d8bd13d125",
+    "sha256": "84bc005027a099f7d408ed189b16666ed365b80885d6612de87309465aecc4e2",
     "file_type": "pdf",
     "source_id": "research_archive/.../core_a/analysis/.../figures/fig02_batch4_32_48_dynamic_static.pdf",
     "source_sha256": "",
@@ -1888,8 +1888,8 @@
   },
   {
     "public_destination": "results/core_a/figures/fig02_batch4_32_48_dynamic_static.svg",
-    "size_bytes": 55671,
-    "sha256": "f2f8c27a924d5129a63ec7abe287674fa0ae142f413c328b56dda13f0d1a74ea",
+    "size_bytes": 56740,
+    "sha256": "21437d123361c1d0ff3e41b7584014b507b369d53b47b4f5235b077d3b4dfee5",
     "file_type": "svg",
     "source_id": "research_archive/.../core_a/analysis/.../figures/fig02_batch4_32_48_dynamic_static.svg",
     "source_sha256": "",
@@ -1923,7 +1923,7 @@
   {
     "public_destination": "results/core_a/figures/fig03_full120_lora_factorial.pdf",
     "size_bytes": 25770,
-    "sha256": "de92d27248733fcf171b00b749ded1a27b0c6c4e2e8455a8fbd4d6c3299fb97a",
+    "sha256": "0e7646ee7ab75a742698d194eaa877fca5a798e88a836b835c6bd57ef5ca90fc",
     "file_type": "pdf",
     "source_id": "research_archive/.../core_a/analysis/.../figures/fig03_full120_lora_factorial.pdf",
     "source_sha256": "",
@@ -1956,8 +1956,8 @@
   },
   {
     "public_destination": "results/core_a/figures/fig03_full120_lora_factorial.svg",
-    "size_bytes": 65370,
-    "sha256": "834a61ac742ee1100e24b64f484c269043557ab328328d693541b757bf6120c5",
+    "size_bytes": 66622,
+    "sha256": "b1d1340fb6b930c3f9ef9adefbf9557552b13d924494dbe593c18a2d886b6a9c",
     "file_type": "svg",
     "source_id": "research_archive/.../core_a/analysis/.../figures/fig03_full120_lora_factorial.svg",
     "source_sha256": "",
@@ -1991,7 +1991,7 @@
   {
     "public_destination": "results/core_a/figures/fig04_lora_gain_interaction.pdf",
     "size_bytes": 26564,
-    "sha256": "e2ac06d8ddba3adb09d1ae504ed383991898bb101adf9cb8fd89c02f9ec8f9e5",
+    "sha256": "08f5ad32b6cb121273dd868df0ee92e00fcde8ebe9a6d87c62731d2d84a2b067",
     "file_type": "pdf",
     "source_id": "research_archive/.../core_a/analysis/.../figures/fig04_lora_gain_interaction.pdf",
     "source_sha256": "",
@@ -2024,8 +2024,8 @@
   },
   {
     "public_destination": "results/core_a/figures/fig04_lora_gain_interaction.svg",
-    "size_bytes": 68117,
-    "sha256": "101495466f271a19bc58f949e36149bcfa0262b340d4bc1b9dba283530302bf1",
+    "size_bytes": 69312,
+    "sha256": "23936aba8cf1448be8c4d571bf60059480b135dd8e206725b32550436d082b9d",
     "file_type": "svg",
     "source_id": "research_archive/.../core_a/analysis/.../figures/fig04_lora_gain_interaction.svg",
     "source_sha256": "",
@@ -2059,7 +2059,7 @@
   {
     "public_destination": "results/core_a/figures/fig05_rare_shortcut.pdf",
     "size_bytes": 27301,
-    "sha256": "5a1d4150b07ae32a8a95c35b8f4e90dd7e96a053d169ca9a9bb508d530af6df0",
+    "sha256": "3deeefb0af19cc95c8b71938db04932b958e46fb566891185c8e64b7406f9be0",
     "file_type": "pdf",
     "source_id": "research_archive/.../core_a/analysis/.../figures/fig05_rare_shortcut.pdf",
     "source_sha256": "",
@@ -2092,8 +2092,8 @@
   },
   {
     "public_destination": "results/core_a/figures/fig05_rare_shortcut.svg",
-    "size_bytes": 143394,
-    "sha256": "b65614599be5738060daa1c7f78cce1bb80f337111c4c67940b886e0863047d5",
+    "size_bytes": 144596,
+    "sha256": "aa461e30fc7bbaefe0ca454da0deacace56647baa1deb5c76b826642d9829eef",
     "file_type": "svg",
     "source_id": "research_archive/.../core_a/analysis/.../figures/fig05_rare_shortcut.svg",
     "source_sha256": "",
@@ -2127,7 +2127,7 @@
   {
     "public_destination": "results/core_a/figures/fig06_calibration.pdf",
     "size_bytes": 31361,
-    "sha256": "04bd737c578b3d706abbbaf95c4b305d143781ef52f8e1074e6a6302137b33b9",
+    "sha256": "83e466751f536c699caf89df44cc156a6605e35cc8b5dd11869de54b119281ee",
     "file_type": "pdf",
     "source_id": "research_archive/.../core_a/analysis/.../figures/fig06_calibration.pdf",
     "source_sha256": "",
@@ -2160,8 +2160,8 @@
   },
   {
     "public_destination": "results/core_a/figures/fig06_calibration.svg",
-    "size_bytes": 146801,
-    "sha256": "e53951b3ab6c3e31fd483e95dff82e3592953acdc5c2ce42893b830a15a20451",
+    "size_bytes": 148161,
+    "sha256": "368cd3869d2064a962ab16a6de1ed93e7cd38ae8e3bb1e459cccc51411311728",
     "file_type": "svg",
     "source_id": "research_archive/.../core_a/analysis/.../figures/fig06_calibration.svg",
     "source_sha256": "",
@@ -2483,8 +2483,8 @@
   },
   {
     "public_destination": "scripts/core_a/make_core_a_figures.py",
-    "size_bytes": 18844,
-    "sha256": "a80c0a9f525c16ae3080b927b42d7a411c72b6201aa08440c76133b331b0cd77",
+    "size_bytes": 18865,
+    "sha256": "00b07b7ee8b13904e13412b2450380fc107cd710470fb2ff7a6c6dfc5e633260",
     "file_type": "py",
     "source_id": "research_archive/.../core_a/analysis/.../code/make_core_a_figures.py",
     "source_sha256": "",
