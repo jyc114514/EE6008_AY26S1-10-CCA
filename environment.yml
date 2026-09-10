@@ -4,8 +4,16 @@ channels:
 dependencies:
   - python>=3.11,<3.13
   - pip
+  - numpy>=2.0
+  - pandas>=2.0
+  - pyyaml>=6.0
+  - pytest>=8.0
+  - pillow>=10.0
+  - matplotlib>=3.7
+  - pyarrow>=12.0
   - pip:
       - -r requirements.txt
 
-# Project dependencies and CUDA/PyTorch versions will be finalized only after
-# the verified V-JEPA baseline environment is reproduced on the assigned server.
+# PyTorch, torchvision, OpenCV, and decord must match the authorized runtime
+# and are listed in requirements.txt for reference. The public clone does not
+# contain V-JEPA weights or raw data.

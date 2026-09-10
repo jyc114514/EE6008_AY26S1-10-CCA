@@ -4,7 +4,7 @@
 
 **面向 Humanoid Everyday Action Anticipation 的联合嵌入预测建模**
 
-这是 NTU EE6008 AY26S1-10-CCA 五人课程项目的公开研究仓库。当前版本是一个可复现的项目骨架；V-JEPA/V-JEPA 2 的具体适配方式、下游任务和第一版数据划分仍需团队与导师确认。
+这是 NTU EE6008 AY26S1-10-CCA 五人课程项目的公开研究仓库。本分支在保留原有仓库结构的基础上，加入了路径脱敏后的 Core A 证据发布包。
 
 ## 项目目标
 
@@ -18,14 +18,15 @@ V-JEPA / V-JEPA 2 baseline<br>
 → 轻量模型或训练策略修改<br>
 → ablation 与失败案例分析
 
-首次初始化不代表已经完成 baseline，也不代表已经取得任何实验指标。
+Core A 是 [docs/core_a/](docs/core_a/) 中记录的 development/validation task-recognition 线路，不是 action-anticipation 结果，也不包含 final-test 指标。
 
 ## 当前状态
 
-- 项目仓库骨架：已初始化。
-- 数据集、robot 子集和最终任务：暂定，等待团队确认。
-- baseline 实现：尚未声称完成。
-- 实验结果：当前没有已记录的结果。
+- 项目仓库骨架：已初始化；本分支加入 Core A 证据发布包。
+- Core A 数据/任务协议：G1 duplicate-safe v3、120 个 primary classes，仅 development/validation。
+- Full-120 Stage1：源证据中 9/9 通过验收；D-P-L 使用 unmerged derived inference。
+- final-test access：0；Stage2 未启动。
+- 许可：本证据导出不新增许可证声明；第三方源码、数据和模型许可仍需分别核对。
 
 ## GitHub 与 GPU Server 的分工
 
@@ -52,11 +53,11 @@ GPU Server 中保存：
 | `configs/` | 可移植的实验配置骨架，使用环境变量表示机器路径。 |
 | `docs/` | 项目范围、协作规范、服务器布局、会议/周报模板和整理后的公开材料。 |
 | `data_metadata/` | 小型 manifest、label map 和 split 定义。 |
-| `src/` | 后续加入 dataset、model、feature、training、evaluation 和 utility 代码。 |
-| `scripts/` | 在服务器环境和官方命令确认前，先记录 pipeline 说明。 |
-| `experiments/` | 实验命名规则和版本控制的实验记录表。 |
-| `results/` | 小型最终汇总结果与图片，不存放原始训练输出。 |
-| `tests/` | 后续加入单元测试和 smoke tests。 |
+| `src/` | project-authored Core A package 与原有骨架模块。 |
+| `scripts/` | 可移植 Core A runner、审计和图表 QA 入口。 |
+| `experiments/` | Core A catalog、run-level aggregate、effects 和 acceptance summary。 |
+| `results/` | 小型 Core A 汇总、plot data 和图，不存放原始训练输出。 |
+| `tests/` | Core A 单元和 contract tests。 |
 
 ## 协作流程
 
@@ -91,7 +92,7 @@ git push -u origin feature/<short-description>
 - owner、日期、status；
 - primary metric、secondary metric 和备注。
 
-记录位置为 `experiments/runs.csv`。初始化仓库不填入虚构实验。
+记录位置为 `experiments/runs.csv`。当前分支只记录经过脱敏的 development/validation 证据。
 
 ## 项目材料与版权边界
 

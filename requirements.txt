@@ -1,3 +1,16 @@
-# Intentionally minimal at repository initialization.
-# Add a dependency only after it is required by a verified project command,
-# and record the tested Python/CUDA/PyTorch combination in docs/.
+# Core A CPU tests and figure regeneration.
+numpy>=2.0
+pandas>=2.0
+PyYAML>=6.0
+pytest>=8.0
+Pillow>=10.0
+matplotlib>=3.7
+
+# Core A data/runtime modules. Install a platform-appropriate PyTorch build
+# separately when replaying external experiments; no weights are downloaded by
+# this repository.
+torch>=2.0
+torchvision>=0.15
+opencv-python>=4.8
+decord>=0.6
+pyarrow>=12.0

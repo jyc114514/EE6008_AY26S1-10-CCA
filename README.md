@@ -4,7 +4,7 @@
 
 **Joint-Embedding Predictive Modelling for Humanoid Everyday Action Anticipation**
 
-This is the public research repository for the NTU EE6008 AY26S1-10-CCA five-student course project. It is currently an initial, reproducible project scaffold: V-JEPA/V-JEPA 2 adaptation, the exact downstream task, and the first dataset split remain subject to team and supervisor confirmation.
+This is the public research repository for the NTU EE6008 AY26S1-10-CCA five-student course project. This branch adds a curated, path-redacted Core A evidence release while retaining the original repository layout.
 
 ## Objective
 
@@ -12,7 +12,7 @@ The working direction is to evaluate joint-embedding video representations for h
 
 V-JEPA / V-JEPA 2 baseline -> selected public metadata and a verified dataset subset -> feature extraction or frozen representation -> current-action recognition baseline -> action anticipation / additional task -> small modification -> ablation and failure analysis.
 
-No baseline result, dataset split, or performance number is claimed by this initial commit.
+Core A is the verified development/validation task-recognition line documented in [docs/core_a/](docs/core_a/). It is not an action-anticipation result, and it reports no final-test metrics.
 
 ## Repository versus GPU Server
 
@@ -25,11 +25,11 @@ GitHub contains source code, configs, metadata, notes, small final summaries, an
 | configs/ | Portable experiment configuration skeletons; paths use environment variables. |
 | docs/ | Scope, collaboration rules, server layout, templates, and sanitized project materials. |
 | data_metadata/ | Small manifests, label maps, and split definitions only. |
-| src/ | Future dataset, model, feature, training, evaluation, and utility code. |
-| scripts/ | Pipeline notes until commands are verified on the assigned server. |
-| experiments/ | Run naming rules and the version-controlled experiment ledger. |
-| results/ | Small, curated final summaries and figures; not raw training output. |
-| tests/ | Future unit and smoke tests. |
+| src/ | Project-authored Core A package and existing scaffold modules. |
+| scripts/ | Portable Core A runners, audits, and figure QA entrypoints. |
+| experiments/ | Core A catalog, run-level aggregates, effects, and acceptance summaries. |
+| results/ | Small, curated Core A summaries, plot data, and figures; not raw training output. |
+| tests/ | Focused Core A unit and contract tests. |
 
 ## Collaboration workflow
 
@@ -45,7 +45,7 @@ Open a pull request when the change is ready. Small documentation fixes may be m
 
 ## Reproducibility
 
-Each real run should record the dataset revision, split, config path, Git commit, run ID, random seed, model/checkpoint identifier, server, output path, metrics, owner, date, and status in experiments/runs.csv. The ledger starts empty by design.
+Each real run should record the dataset revision, split, Git commit, run ID, random seed, model/checkpoint identifier, restricted artifact ID, metrics, owner, date, and status in experiments/runs.csv. The current branch records only sanitized development/validation evidence.
 
 ## Contributors
 
@@ -57,7 +57,8 @@ The original local folders remain outside this public repository. Public copies 
 
 ## Status
 
-- Repository scaffold: initialized.
-- Public-data and task choice: tentative / pending team confirmation.
-- Baseline implementation: not yet claimed.
-- Experiments and metrics: none recorded yet.
+- Repository scaffold: initialized; Core A evidence release added on this branch.
+- Core A task/data contract: G1 duplicate-safe v3, 120 primary classes, development/validation only.
+- Full-120 Stage1: 9/9 acceptance in the source evidence package; D-P-L uses unmerged derived inference.
+- Final-test access: 0; Stage2 was not launched.
+- License: no new license is asserted by this evidence export; third-party/data licenses remain separately governed.

@@ -1,0 +1,16 @@
+{
+  "protocol_id": "core_a_full120_lora_factorial_v1_20260902",
+  "scope": "G1 duplicate-safe v3 train/dev only, 120 classes",
+  "population": {"train": 2757, "development_validation": 617, "final_test_accessed": 0},
+  "video_factors": {"input": ["dynamic", "static_repeated_first_frame"], "head": ["pooled", "attentive_depth4_heads16"], "adaptation": ["frozen", "lora_top_blocks"]},
+  "stage0": {"video_cells": 8, "steps_per_cell": 4, "state_only_smoke": true},
+  "stage1": {"seed": 20260825, "identity": "single_seed_exploratory_factorial_screen"},
+  "stage2": {"seeds": [20260826, 20260827, 20260828], "max_video_runs": 12, "discovery_seed_excluded_from_confirmatory_p": true},
+  "model": {"source_commit": "204698b45b3712590f06245fbfba32d3be539812", "checkpoint_key": "ema_encoder", "lora_blocks": [10, 11], "target_modules": ["qkv", "proj"], "rank": 8, "alpha": 16.0, "dropout": 0.05, "scaling": 2.0},
+  "optimization": {"precision": "bf16", "physical_micro_batch": 48, "gradient_accumulation": 1, "effective_batch": 48, "optimizer": "AdamW", "head_learning_rate": 0.001, "lora_learning_rate": 0.0001, "weight_decay": 0.0001, "max_grad_norm": 1.0, "max_epochs": 20, "min_epochs": 5, "patience": 5, "min_delta": 0.001, "selection": ["development_macro_f1", "lower_nll", "earlier_epoch"], "scheduler": "CosineAnnealingLR"},
+  "allowed_gpus": [2, 3],
+  "final_test_accessed": 0,
+  "core_b_jobs_interfered": false,
+  "gpu0_or_gpu1_used": false,
+  "old_artifacts_modified": false
+}

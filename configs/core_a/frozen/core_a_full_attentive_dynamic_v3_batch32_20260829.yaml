@@ -1,0 +1,47 @@
+project_root: '${EE6008_PROJECT_ROOT}'
+g1_root: '${EE6008_PROJECT_ROOT}/data_raw/HumanoidEveryday/G1/USC-PSI-Lab-Humanoid-Everyday-G1__6b6b599d'
+manifest_dir: '${EE6008_PROJECT_ROOT}/repo/ee6008-humanoid-vjepa/manifests/g1_6b6b599def75e3558b2736062e79bdbeec6cd224/splits/core_a_protocol_v3_duplicate_safe'
+checkpoint: '${EE6008_PROJECT_ROOT}/checkpoints/vjepa2/vjepa2_1_vitb_dist_vitG_384.pt'
+vjepa_source_root: '${EE6008_PROJECT_ROOT}/repo/third_party/vjepa2'
+feature_root: '${EE6008_PROJECT_ROOT}/features/g1/vjepa2'
+source_commit: '204698b45b3712590f06245fbfba32d3be539812'
+dataset_revision: '6b6b599def75e3558b2736062e79bdbeec6cd224'
+observation_seconds: 4.0
+sample_fps: 8
+source_fps: 30.0
+input_resolution: 384
+tubelet_size: 2
+model_name: 'vjepa2_1_vit_base_384'
+checkpoint_key: 'ema_encoder'
+pooled_dtype: 'float32'
+token_dtype: 'float16'
+allow_final_test_label_metrics: false
+
+experiment_status: 'preregistered_batch32_rescue'
+single_changed_variable: 'physical_batch_size'
+parent_batch4_config_sha256: '177627f523cd44630aa05681c7654e45e8076416b5b3758752276161d8789592'
+v3_split_sha256: '2883debbbe542bd4df0478ec7e896ed1468e647f93cb609041dd6411e7856997'
+label_map_sha256: '057a66c50e4fd85198e4a59359e4fc31c79565f0a379f0be368a389bb4811c22'
+feature_manifest_sha256: '59d54576a19b45edbc7627c181005d1c797cca07d0460e24c2a7abad5020d785'
+final_test_allowed: false
+
+variant: 'dynamic'
+feature_run: '${EE6008_PROJECT_ROOT}/features/g1/vjepa2/full-vjepa-b-opencv-20260826'
+output_root: '${EE6008_PROJECT_ROOT}/repo/ee6008-humanoid-vjepa/reports/benchmarks/CORE_A_BATCH32_RESCUE_V3_20260829/batch32_dynamic'
+physical_gpu: 2
+max_epochs: 20
+min_epochs: 5
+patience: 5
+min_delta: 0.001
+batch_size: 32
+gradient_accumulation_steps: 1
+learning_rate: 0.001
+weight_decay: 0.0001
+num_heads: 16
+probe_depth: 4
+calibration_bins: 15
+num_workers: 0
+preload_tokens: true
+use_bfloat16: true
+seeds: [20260825, 20260826, 20260827]
+creation_utc: '2026-08-29T05:59:20Z'
