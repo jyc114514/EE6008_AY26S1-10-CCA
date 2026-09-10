@@ -1,0 +1,76 @@
+schema_version: 1
+protocol_id: core_a_top2_lora_exploratory_v1_20260827
+status: frozen_after_preflight_memory_overfit_gates
+exploratory_only: true
+
+gate_evidence:
+  frozen_at_utc: 2026-08-27T05:38:31Z
+  run_root: reports/benchmarks/CORE_A_BENCHMARK_MATRIX_20260826_V3/top2_lora_v3_exploratory_20260827T051910Z
+  preflight_report: reports/benchmarks/CORE_A_BENCHMARK_MATRIX_20260826_V3/top2_lora_v3_exploratory_20260827T051910Z/preflight/PREFLIGHT_REPORT.json
+  memory_smoke_report: reports/benchmarks/CORE_A_BENCHMARK_MATRIX_20260826_V3/top2_lora_v3_exploratory_20260827T051910Z/memory_smoke/MEMORY_SMOKE.json
+  overfit_report: reports/benchmarks/CORE_A_BENCHMARK_MATRIX_20260826_V3/top2_lora_v3_exploratory_20260827T051910Z/overfit/OVERFIT_SMOKE.json
+  preflight_official_vs_split_max_abs: 0.0
+  preflight_zero_init_B: true
+  selected_micro_batch: 4
+  selected_gradient_accumulation: 1
+  overfit_optimizer_steps: 200
+  overfit_train_top1: 1.0
+  overfit_train_loss: 0.0
+
+scope:
+  task_count: 12
+  task_ids: [30, 94, 119, 143, 193, 225, 231, 90, 76, 20, 40, 5]
+  train_split: train
+  validation_split: validation
+  final_test_access: none
+  max_scope: 12_task_pilot
+  backbone_fine_tuning: false
+
+data:
+  core_a_config: configs/core_a/core_a_benchmark_v3.yaml
+  task_selection: data_metadata/core_a/task_selection_v3.json
+  feature_run_for_preflight_only: ${EE6008_PROJECT_ROOT}/features/g1/vjepa2/full-vjepa-b-opencv-20260826
+  training_input: raw_rgb_video_4_second_prefix
+  preprocessing: src/ee6008/data/clips.py
+  source_episode_split: v3_duplicate_safe_primary
+
+model:
+  source_root: third_party/vjepa2
+  source_commit: 204698b45b3712590f06245fbfba32d3be539812
+  checkpoint: checkpoints/vjepa2/vjepa2_1_vitb_dist_vitG_384.pt
+  checkpoint_sha256: 848a77c33cc9e6649ed2119c9bea1e2c569bcdab9539ff3e7c02ccc2959ddf4d
+  loading_key: ema_encoder
+  target_block_indices: [10, 11]
+  target_modules: [qkv, proj]
+  attentive_head_depth: 4
+  attentive_head_num_heads: 16
+  lower_blocks_frozen: true
+  lora_base_parameters_frozen: true
+
+lora:
+  rank: 8
+  alpha: 16
+  dropout: 0.05
+  scaling: 2.0
+  initialization: lora_B_zero
+
+optimization:
+  optimizer: AdamW
+  head_learning_rate: 0.001
+  lora_learning_rate: 0.0001
+  weight_decay: 0.0001
+  max_grad_norm: 1.0
+  effective_batch_size: 4
+  epochs: 20
+  seeds: [20260825, 20260826, 20260827]
+  periodic_checkpoint_epochs: [5, 10, 15, 20]
+
+runtime:
+  physical_gpu_index: 3
+  cuda_visible_devices: "3"
+  precision: bf16
+  micro_batch: 4
+  gradient_accumulation: 1
+  num_workers: 2
+  persistent_tmux_required: true
+  artificial_memory_filler: false

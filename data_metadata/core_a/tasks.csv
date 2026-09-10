@@ -1,0 +1,248 @@
+original_task_index,task_name_raw,task_name_normalized,category_raw,category_normalized,task_name_suffix_class,episode_count_metadata,parquet_row_task_count,valid_4s_episode_count
+0,Articulated/adjust_the_angle_of_a_phone_stand,articulated/adjust the angle of a phone stand,Articulated,articulated,none,39,14711,39
+1,Articulated/adjust_the_tilt_angle_of_a_monitor_on_the_desk,articulated/adjust the tilt angle of a monitor on the desk,Articulated,articulated,none,0,0,0
+2,Articulated/center_the_angle_of_a_monitor_on_the_desk,articulated/center the angle of a monitor on the desk,Articulated,articulated,none,0,0,0
+3,Articulated/click_a_button_on_the_mouse,articulated/click a button on the mouse,Articulated,articulated,none,0,0,0
+4,Articulated/click_a_mechanical_keyboard_space_key,articulated/click a mechanical keyboard space key,Articulated,articulated,none,0,0,0
+5,Articulated/close_a_kettle_lid_g1,articulated/close a kettle lid g1,Articulated,articulated,_g1,40,10098,40
+6,Articulated/close_a_kettle_lid_h1,articulated/close a kettle lid h1,Articulated,articulated,_h1,0,0,0
+7,Articulated/close_a_laptop_g1,articulated/close a laptop g1,Articulated,articulated,_g1,40,8639,40
+8,Articulated/close_a_laptop_lid_h1,articulated/close a laptop lid h1,Articulated,articulated,_h1,0,0,0
+9,Articulated/close_a_microwave_door,articulated/close a microwave door,Articulated,articulated,none,0,0,0
+10,Articulated/close_a_small_storage_box_lid,articulated/close a small storage box lid,Articulated,articulated,none,0,0,0
+11,Articulated/close_refrigerator_door,articulated/close refrigerator door,Articulated,articulated,none,40,7301,40
+12,Articulated/close_the_cabinet_door,articulated/close the cabinet door,Articulated,articulated,none,40,5878,36
+13,Articulated/close_the_zipper_of_a_bag,articulated/close the zipper of a bag,Articulated,articulated,none,40,20781,40
+14,Articulated/collapse_a_extended_duster,articulated/collapse a extended duster,Articulated,articulated,none,0,0,0
+15,Articulated/compress_a_liquid_hand_soap_into_a_cup_h1,articulated/compress a liquid hand soap into a cup h1,Articulated,articulated,_h1,0,0,0
+16,Articulated/compress_a_small_air_pump_g1,articulated/compress a small air pump g1,Articulated,articulated,_g1,39,12261,39
+17,Articulated/compress_air_pumper_h1,articulated/compress air pumper h1,Articulated,articulated,_h1,0,0,0
+18,Articulated/compress_an_air_pump_g1,articulated/compress an air pump g1,Articulated,articulated,_g1,40,22502,40
+19,Articulated/de-compress_a_small_air_pump_g1,articulated/de compress a small air pump g1,Articulated,articulated,_g1,40,22455,40
+20,Articulated/extend_a_phone_stand,articulated/extend a phone stand,Articulated,articulated,none,40,18634,40
+21,Articulated/flip_close_a_diary_g1,articulated/flip close a diary g1,Articulated,articulated,_g1,40,10206,40
+22,Articulated/flip_close_a_diary_h1,articulated/flip close a diary h1,Articulated,articulated,_h1,0,0,0
+23,Articulated/flip_open_a_diary_g1,articulated/flip open a diary g1,Articulated,articulated,_g1,40,12987,40
+24,Articulated/flip_open_a_diary_h1,articulated/flip open a diary h1,Articulated,articulated,_h1,0,0,0
+25,Articulated/open_a_book,articulated/open a book,Articulated,articulated,none,0,0,0
+26,Articulated/open_a_drawer_g1,articulated/open a drawer g1,Articulated,articulated,_g1,40,15728,40
+27,Articulated/open_a_microwave_door,articulated/open a microwave door,Articulated,articulated,none,0,0,0
+28,Articulated/open_a_small_storage_box_lid,articulated/open a small storage box lid,Articulated,articulated,none,0,0,0
+29,Articulated/open_a_stapler,articulated/open a stapler,Articulated,articulated,none,0,0,0
+30,Articulated/open_the_zipper_of_a_bag,articulated/open the zipper of a bag,Articulated,articulated,none,40,16225,40
+31,Articulated/press_a_big_button_h1,articulated/press a big button h1,Articulated,articulated,_h1,0,0,0
+32,Articulated/press_a_paper_pin_puncher,articulated/press a paper pin puncher,Articulated,articulated,none,0,0,0
+33,Articulated/press_the_stapler_g1,articulated/press the stapler g1,Articulated,articulated,_g1,40,14206,40
+34,Articulated/pressing_on_a_light_switch,articulated/pressing on a light switch,Articulated,articulated,none,0,0,0
+35,Articulated/pull_out_chips_tray_g1,articulated/pull out chips tray g1,Articulated,articulated,_g1,40,12976,40
+36,Articulated/pull_out_chips_tray_h1,articulated/pull out chips tray h1,Articulated,articulated,_h1,0,0,0
+37,Articulated/push_a_button_g1,articulated/push a button g1,Articulated,articulated,_g1,40,9711,40
+38,Articulated/push_back_chips_tray_g1,articulated/push back chips tray g1,Articulated,articulated,_g1,40,15086,40
+39,Articulated/push_button_on_controller,articulated/push button on controller,Articulated,articulated,none,0,0,0
+40,Articulated/push_the_drawer_back,articulated/push the drawer back,Articulated,articulated,none,40,12325,40
+41,Articulated/rotate_a_phone_stand,articulated/rotate a phone stand,Articulated,articulated,none,40,18946,40
+42,Articulated/rotate_chair,articulated/rotate chair,Articulated,articulated,none,40,9034,40
+43,Articulated/rotate_sofa_g1,articulated/rotate sofa g1,Articulated,articulated,_g1,40,13818,40
+44,Articulated/turn_off_the_faucet_handle,articulated/turn off the faucet handle,Articulated,articulated,none,0,0,0
+45,Articulated/turn_on_the_faucet_handle,articulated/turn on the faucet handle,Articulated,articulated,none,0,0,0
+46,Articulated/unfold_stand_on_multimeter,articulated/unfold stand on multimeter,Articulated,articulated,none,0,0,0
+47,Articulated/use_joystick_on_controller,articulated/use joystick on controller,Articulated,articulated,none,0,0,0
+48,Basic/drag_a_white_board,basic/drag a white board,Basic,basic,none,40,13877,40
+49,Basic/lift_a_kettle_from_base,basic/lift a kettle from base,Basic,basic,none,0,0,0
+50,Basic/move_dinasour_to_the_left,basic/move dinasour to the left,Basic,basic,none,0,0,0
+51,Basic/pick_a_3d_printing_filament_and_put_it_inside_the_container,basic/pick a 3d printing filament and put it inside the container,Basic,basic,none,0,0,0
+52,Basic/pick_a_bag_of_fork_and_place_it_in_a_container,basic/pick a bag of fork and place it in a container,Basic,basic,none,0,0,0
+53,Basic/pick_a_calculator_from_a_container_and_put_it_on_the_desk,basic/pick a calculator from a container and put it on the desk,Basic,basic,none,0,0,0
+54,Basic/pick_a_chess_piece_and_place_it_in_a_container,basic/pick a chess piece and place it in a container,Basic,basic,none,0,0,0
+55,Basic/pick_a_electric_screwdriver_and_place_it_in_a_container,basic/pick a electric screwdriver and place it in a container,Basic,basic,none,0,0,0
+56,Basic/pick_a_hammer_and_place_on_table,basic/pick a hammer and place on table,Basic,basic,none,0,0,0
+57,Basic/pick_a_multi_meter_and_place_it_in_a_container,basic/pick a multi meter and place it in a container,Basic,basic,none,0,0,0
+58,Basic/pick_a_oven_glove_on_top_of_the_container_and_put_it_into_a_rectangular_container,basic/pick a oven glove on top of the container and put it into a rectangular container,Basic,basic,none,0,0,0
+59,Basic/pick_a_plastic_water_bottle_and_place_it_in_a_container,basic/pick a plastic water bottle and place it in a container,Basic,basic,none,0,0,0
+60,Basic/pick_a_plate_and_put_it_on_the_tray,basic/pick a plate and put it on the tray,Basic,basic,none,0,0,0
+61,Basic/pick_a_power_strip_and_put_it_inside_a_container,basic/pick a power strip and put it inside a container,Basic,basic,none,0,0,0
+62,Basic/pick_a_shampoo_and_place_it_in_a_container,basic/pick a shampoo and place it in a container,Basic,basic,none,0,0,0
+63,Basic/pick_a_smaller_container_and_put_it_inside_a_bigger_container,basic/pick a smaller container and put it inside a bigger container,Basic,basic,none,0,0,0
+64,Basic/pick_a_t-shirt_and_place_it_in_a_container,basic/pick a t shirt and place it in a container,Basic,basic,none,0,0,0
+65,Basic/pick_a_tennis_ball_and_place_it_in_a_container,basic/pick a tennis ball and place it in a container,Basic,basic,none,0,0,0
+66,Basic/pick_a_umbrella_and_place_it_in_a_container,basic/pick a umbrella and place it in a container,Basic,basic,none,0,0,0
+67,Basic/pick_a_web_cam_and_place_it_in_a_container,basic/pick a web cam and place it in a container,Basic,basic,none,0,0,0
+68,Basic/pick_an_air_purify_spray_and_put_it_inside_a_container,basic/pick an air purify spray and put it inside a container,Basic,basic,none,0,0,0
+69,Basic/pick_the_tape_and_place_in_a_container,basic/pick the tape and place in a container,Basic,basic,none,0,0,0
+70,Basic/pick_up_a_football_and_put_in_a_container,basic/pick up a football and put in a container,Basic,basic,none,40,8661,40
+71,Basic/pick_up_a_pillow,basic/pick up a pillow,Basic,basic,none,0,0,0
+72,Basic/pick_up_a_plier,basic/pick up a plier,Basic,basic,none,0,0,0
+73,Basic/pick_up_a_tripod_and_stand_it_on_the_desk,basic/pick up a tripod and stand it on the desk,Basic,basic,none,40,24528,40
+74,Basic/place_a_bag_of_coffee_beans_in_a_plastic_bag_and_lift_it,basic/place a bag of coffee beans in a plastic bag and lift it,Basic,basic,none,0,0,0
+75,Basic/place_a_bottle_of_protein_shake_in_the_plastic_bag,basic/place a bottle of protein shake in the plastic bag,Basic,basic,none,0,0,0
+76,Basic/place_a_cube_in_a_bag,basic/place a cube in a bag,Basic,basic,none,40,15537,40
+77,Basic/place_a_rubix_cube_in_a_plastic_bag_and_lift_it,basic/place a rubix cube in a plastic bag and lift it,Basic,basic,none,0,0,0
+78,Basic/place_a_small_rectangular_container_in_a_plastic_bag_and_lift_it,basic/place a small rectangular container in a plastic bag and lift it,Basic,basic,none,0,0,0
+79,Basic/place_a_stack_of_plates_in_a_bag,basic/place a stack of plates in a bag,Basic,basic,none,0,0,0
+80,Basic/place_a_stapler_in_a_plastic_bag_and_lift_it,basic/place a stapler in a plastic bag and lift it,Basic,basic,none,0,0,0
+81,Basic/place_the_pencil_case_inside_a_container,basic/place the pencil case inside a container,Basic,basic,none,0,0,0
+82,Basic/pour_out_some_sunflower_seeds,basic/pour out some sunflower seeds,Basic,basic,none,0,0,0
+83,Basic/pour_sunflower_seeds_on_plate_g1,basic/pour sunflower seeds on plate g1,Basic,basic,_g1,40,20742,40
+84,Basic/pour_water_from_a_kettle_into_a_cup,basic/pour water from a kettle into a cup,Basic,basic,none,40,20565,40
+85,Basic/pour_water_from_a_kettle_into_a_cup_g1,basic/pour water from a kettle into a cup g1,Basic,basic,_g1,40,20565,40
+86,Basic/pour_water_into_a_cup,basic/pour water into a cup,Basic,basic,none,0,0,0
+87,Basic/pull_a_chair_away_from_table_g1,basic/pull a chair away from table g1,Basic,basic,_g1,40,17771,40
+88,Basic/push_2_dumplings_together,basic/push 2 dumplings together,Basic,basic,none,0,0,0
+89,Basic/push_a_box_of_screws_from_the_left_side_of_the_desk_to_the_right_next_to_the_tape,basic/push a box of screws from the left side of the desk to the right next to the tape,Basic,basic,none,0,0,0
+90,Basic/push_duck_g1,basic/push duck g1,Basic,basic,_g1,68,20258,68
+91,Basic/push_the_pencil_case_next_to_the_container,basic/push the pencil case next to the container,Basic,basic,none,0,0,0
+92,Basic/push_the_tape_towards_the_notebook,basic/push the tape towards the notebook,Basic,basic,none,0,0,0
+93,Basic/put_bag_of_coffee_bean_into_container,basic/put bag of coffee bean into container,Basic,basic,none,0,0,0
+94,Basic/put_dumpling_into_plate_g1,basic/put dumpling into plate g1,Basic,basic,_g1,80,28079,80
+95,Basic/put_lunchbag_into_container,basic/put lunchbag into container,Basic,basic,none,0,0,0
+96,Basic/put_notebook_into_container,basic/put notebook into container,Basic,basic,none,0,0,0
+97,Basic/put_powercord_into_container,basic/put powercord into container,Basic,basic,none,0,0,0
+98,Basic/put_small_tripod_upright,basic/put small tripod upright,Basic,basic,none,0,0,0
+99,Basic/put_the_duck_toy_into_container,basic/put the duck toy into container,Basic,basic,none,0,0,0
+100,Basic/put_the_lunch_bag_next_to_the_notebook,basic/put the lunch bag next to the notebook,Basic,basic,none,0,0,0
+101,Basic/put_tripod_into_container_h1,basic/put tripod into container h1,Basic,basic,_h1,0,0,0
+102,Basic/remove_container_from_whiteboard_g1,basic/remove container from whiteboard g1,Basic,basic,_g1,40,22532,40
+103,Basic/remove_lid_of_spray_bottle,basic/remove lid of spray bottle,Basic,basic,none,0,0,0
+104,Basic/stack_book_from_bookholder,basic/stack book from bookholder,Basic,basic,none,0,0,0
+105,Basic/stack_notebook_into_shelf,basic/stack notebook into shelf,Basic,basic,none,0,0,0
+106,Basic/stack_two_boxes,basic/stack two boxes,Basic,basic,none,40,16800,40
+107,Basic/stack_two_cubes_g1,basic/stack two cubes g1,Basic,basic,_g1,40,16969,40
+108,Basic/stack_two_cubes_h1,basic/stack two cubes h1,Basic,basic,_h1,0,0,0
+109,Basic/stack_two_storage_boxes,basic/stack two storage boxes,Basic,basic,none,0,0,0
+110,Basic/take_out_the_lid_of_the_spray_bottle,basic/take out the lid of the spray bottle,Basic,basic,none,40,11610,40
+111,Basic/unstack_two_cubes_g1,basic/unstack two cubes g1,Basic,basic,_g1,40,12991,40
+112,deformable/adjust_the_opening_of_a_loosely_closed_bag,deformable/adjust the opening of a loosely closed bag,deformable,deformable,none,0,0,0
+113,deformable/compress_a_plastic_bag,deformable/compress a plastic bag,deformable,deformable,none,40,11420,40
+114,deformable/flip_a_pillow_g1,deformable/flip a pillow g1,deformable,deformable,_g1,40,11370,40
+115,deformable/flip_a_soft_plate,deformable/flip a soft plate,deformable,deformable,none,40,21744,40
+116,deformable/fold_a_jacket_on_the_desk,deformable/fold a jacket on the desk,deformable,deformable,none,0,0,0
+117,deformable/fold_a_toolkit_g1,deformable/fold a toolkit g1,deformable,deformable,_g1,40,10152,40
+118,deformable/fold_a_toolkit_h1,deformable/fold a toolkit h1,deformable,deformable,_h1,0,0,0
+119,deformable/fold_towel,deformable/fold towel,deformable,deformable,none,80,29187,80
+120,deformable/open_a_lunchbag,deformable/open a lunchbag,deformable,deformable,none,40,16054,40
+121,deformable/pick_up_a_plastic_bag,deformable/pick up a plastic bag,deformable,deformable,none,40,19945,40
+122,deformable/press_a_soft_travel_bag_to_reduce_its_size,deformable/press a soft travel bag to reduce its size,deformable,deformable,none,0,0,0
+123,deformable/pull_out_tissue_from_tissue_box_g1,deformable/pull out tissue from tissue box g1,deformable,deformable,_g1,40,14416,40
+124,deformable/smooth_a_stack_of_napkins,deformable/smooth a stack of napkins,deformable,deformable,none,0,0,0
+125,deformable/squeeze_a_ball,deformable/squeeze a ball,deformable,deformable,none,0,0,0
+126,deformable/squeeze_a_toy,deformable/squeeze a toy,deformable,deformable,none,0,0,0
+127,deformable/unfold_a_stack_of_microfiber_clothes,deformable/unfold a stack of microfiber clothes,deformable,deformable,none,0,0,0
+128,deformable/unfold_a_tablet_cover_g1,deformable/unfold a tablet cover g1,deformable,deformable,_g1,40,9906,40
+129,deformable/unfold_a_tablet_cover_h1,deformable/unfold a tablet cover h1,deformable,deformable,_h1,0,0,0
+130,deformable/unfold_a_toolkit_g1,deformable/unfold a toolkit g1,deformable,deformable,_g1,40,11757,40
+131,HRI/fold_and_pass_coat,hri/fold and pass coat,HRI,hri,none,40,19839,40
+132,HRI/h1-grab_a_book_from_a_magazine_stand_and_hand_it_to_a_person,hri/h1 grab a book from a magazine stand and hand it to a person,HRI,hri,none,0,0,0
+133,HRI/h1-grab_a_stack_of_plates_from_the_desk_and_hand_it_to_a_person,hri/h1 grab a stack of plates from the desk and hand it to a person,HRI,hri,none,0,0,0
+134,HRI/h1-take_a_notebook_from_a_person_and_put_it_in_a_magazine_stand,hri/h1 take a notebook from a person and put it in a magazine stand,HRI,hri,none,0,0,0
+135,HRI/h1-take_a_notebook_from_a_person_and_put_it_in_the_file_tray,hri/h1 take a notebook from a person and put it in the file tray,HRI,hri,none,0,0,0
+136,HRI/h1-take_a_stack_of_plates_from_a_person_and_put_it_on_the_desk,hri/h1 take a stack of plates from a person and put it on the desk,HRI,hri,none,0,0,0
+137,HRI/hand_over_flower,hri/hand over flower,HRI,hri,none,40,18576,40
+138,HRI/handover_dumpling_g1,hri/handover dumpling g1,HRI,hri,_g1,40,17422,40
+139,HRI/help_wear_a_coat,hri/help wear a coat,HRI,hri,none,40,22680,40
+140,HRI/hold_a_emotional_support_dumpling_and_hand_it_back_to_human,hri/hold a emotional support dumpling and hand it back to human,HRI,hri,none,40,18367,40
+141,HRI/hold_a_lunch_bag_and_hand_it_back_to_human,hri/hold a lunch bag and hand it back to human,HRI,hri,none,40,16511,40
+142,HRI/hold_a_plastic_bag_and_hand_it_back_to_human,hri/hold a plastic bag and hand it back to human,HRI,hri,none,40,19132,40
+143,HRI/hold_a_roll_of_toilet_paper_and_hand_it_back_to_human,hri/hold a roll of toilet paper and hand it back to human,HRI,hri,none,40,15480,40
+144,HRI/hold_a_tripod_and_hand_it_back_to_human,hri/hold a tripod and hand it back to human,HRI,hri,none,40,12493,40
+145,HRI/pass_plates,hri/pass plates,HRI,hri,none,40,15002,40
+146,HRI/pick_up_a_bottle_and_hand_it,hri/pick up a bottle and hand it,HRI,hri,none,40,13774,40
+147,HRI/pick_up_a_bottle_from_the_desk_and_hand_it_to_a_person,hri/pick up a bottle from the desk and hand it to a person,HRI,hri,none,0,0,0
+148,HRI/pick_up_a_cube_and_hand_it,hri/pick up a cube and hand it,HRI,hri,none,40,15480,40
+149,HRI/pick_up_a_duster_from_the_table_and_hand_it_to_a_person,hri/pick up a duster from the table and hand it to a person,HRI,hri,none,0,0,0
+150,HRI/pick_up_a_emotional_support_dumplings_and_hand_it_to_a_person,hri/pick up a emotional support dumplings and hand it to a person,HRI,hri,none,0,0,0
+151,HRI/pick_up_a_football_and_hand_it,hri/pick up a football and hand it,HRI,hri,none,40,19541,40
+152,HRI/pick_up_a_grey_duster_from_the_table_and_hand_it_to_a_person,hri/pick up a grey duster from the table and hand it to a person,HRI,hri,none,0,0,0
+153,HRI/pick_up_a_rubiks_cube_from_the_table_and_hand_it_to_a_person,hri/pick up a rubiks cube from the table and hand it to a person,HRI,hri,none,0,0,0
+154,HRI/pick_up_a_spray_on_the_desk_and_hand_it_to_a_person,hri/pick up a spray on the desk and hand it to a person,HRI,hri,none,0,0,0
+155,HRI/pick_up_a_stapler_from_the_desk_and_hand_it_to_a_person,hri/pick up a stapler from the desk and hand it to a person,HRI,hri,none,0,0,0
+156,HRI/pick_up_a_toilet_paper_and_hand_it_to_a_person,hri/pick up a toilet paper and hand it to a person,HRI,hri,none,0,0,0
+157,HRI/pick_up_a_tripod_from_the_desk_and_hand_it_to_a_person,hri/pick up a tripod from the desk and hand it to a person,HRI,hri,none,0,0,0
+158,HRI/pick_up_basketball_from_a_person_and_drop_on_chair,hri/pick up basketball from a person and drop on chair,HRI,hri,none,0,0,0
+159,HRI/shake_a_bottle_of_protein_powder,hri/shake a bottle of protein powder,HRI,hri,none,40,16259,40
+160,HRI/shake_hand_with_a_person,hri/shake hand with a person,HRI,hri,none,0,0,0
+161,HRI/shake_hands,hri/shake hands,HRI,hri,none,40,12594,40
+162,HRI/take_a_duster_from_a_person_and_put_it_on_the_desk,hri/take a duster from a person and put it on the desk,HRI,hri,none,0,0,0
+163,HRI/take_a_emotional_support_dumplings_from_a_person_and_place_it_on_the_desk,hri/take a emotional support dumplings from a person and place it on the desk,HRI,hri,none,0,0,0
+164,HRI/take_a_grey_duster_from_a_person_and_put_it_on_the_desk,hri/take a grey duster from a person and put it on the desk,HRI,hri,none,0,0,0
+165,HRI/take_a_rubiks_cube_from_a_person_and_put_it_on_the_desk,hri/take a rubiks cube from a person and put it on the desk,HRI,hri,none,0,0,0
+166,HRI/take_a_spray_from_a_person_and_put_it_on_the_desk,hri/take a spray from a person and put it on the desk,HRI,hri,none,0,0,0
+167,HRI/take_a_stapler_from_a_person_and_put_it_on_the_desk,hri/take a stapler from a person and put it on the desk,HRI,hri,none,0,0,0
+168,HRI/take_a_t_shirt_from_a_person,hri/take a t shirt from a person,HRI,hri,none,0,0,0
+169,HRI/take_a_toilet_paper_from_a_person_and_place_it_on_the_desk,hri/take a toilet paper from a person and place it on the desk,HRI,hri,none,0,0,0
+170,HRI/take_a_tripod_from_a_person_and_put_it_on_the_desk,hri/take a tripod from a person and put it on the desk,HRI,hri,none,0,0,0
+171,HRI/tear_toilet_paper_and_hand_it,hri/tear toilet paper and hand it,HRI,hri,none,40,21349,40
+172,Locomanip/clean_the_plate,locomanip/clean the plate,Locomanip,locomanip,none,3,2936,3
+173,Locomanip/hold_a_whiteboard_and_walk_with_it,locomanip/hold a whiteboard and walk with it,Locomanip,locomanip,none,3,1524,3
+174,Locomanip/organize_chess_pieces,locomanip/organize chess pieces,Locomanip,locomanip,none,3,4766,3
+175,Locomanip/pack_a_lunch_box,locomanip/pack a lunch box,Locomanip,locomanip,none,3,6316,3
+176,Locomanip/pick_up_a_caution_sign_stand_and_walk_to_put_it_agaist_wall,locomanip/pick up a caution sign stand and walk to put it agaist wall,Locomanip,locomanip,none,3,2769,3
+177,Locomanip/pick_up_a_dumpling_toy_turn_around_walk_towards_another_desk_and_place_it,locomanip/pick up a dumpling toy turn around walk towards another desk and place it,Locomanip,locomanip,none,3,2171,3
+178,Locomanip/pick_up_a_duster_turn_around_walk_towards_another_desk_place_it_in_a_container,locomanip/pick up a duster turn around walk towards another desk place it in a container,Locomanip,locomanip,none,3,2653,3
+179,Locomanip/pick_up_a_kettle_place_it_on_base_and_turn_on,locomanip/pick up a kettle place it on base and turn on,Locomanip,locomanip,none,3,5785,3
+180,Locomanip/pick_up_a_magnetic_container_turn_around_walk_towards_whiteboard_stick_it_onto_the_board,locomanip/pick up a magnetic container turn around walk towards whiteboard stick it onto the board,Locomanip,locomanip,none,2,1943,2
+181,Locomanip/pick_up_a_plate_and_put_it_into_the_sink,locomanip/pick up a plate and put it into the sink,Locomanip,locomanip,none,3,2100,3
+182,Locomanip/pick_up_football_and_walk_towards_another_desk,locomanip/pick up football and walk towards another desk,Locomanip,locomanip,none,3,2380,3
+183,Locomanip/place_kettle_near_coffee_maker,locomanip/place kettle near coffee maker,Locomanip,locomanip,none,3,3048,3
+184,Locomanip/throw_away_a_piece_of_paper_to_trashcan,locomanip/throw away a piece of paper to trashcan,Locomanip,locomanip,none,3,2469,3
+185,Locomanip/walk_to_grab_the_door_handle,locomanip/walk to grab the door handle,Locomanip,locomanip,none,40,26809,40
+186,Locomanip/walk_towards_a_desk_and_drag_the_file_tray_out,locomanip/walk towards a desk and drag the file tray out,Locomanip,locomanip,none,40,24585,40
+187,Locomanip/walk_towards_a_desk_and_pick_up_a_bottle_and_put_it_in_a_container,locomanip/walk towards a desk and pick up a bottle and put it in a container,Locomanip,locomanip,none,40,19335,40
+188,Locomanip/walk_towards_a_desk_and_pick_up_a_dumpling,locomanip/walk towards a desk and pick up a dumpling,Locomanip,locomanip,none,40,22617,40
+189,Locomanip/walk_towards_a_desk_and_pick_up_a_pencil_case_and_put_it_in_a_container,locomanip/walk towards a desk and pick up a pencil case and put it in a container,Locomanip,locomanip,none,40,23652,40
+190,Locomanip/walk_towards_a_desk_and_pick_up_a_shampoo,locomanip/walk towards a desk and pick up a shampoo,Locomanip,locomanip,none,40,21718,40
+191,Locomanip/walk_towards_a_desk_and_pick_up_a_tennis_ball_and_put_it_in_a_container,locomanip/walk towards a desk and pick up a tennis ball and put it in a container,Locomanip,locomanip,none,40,21846,40
+192,Locomanip/walk_towards_a_desk_and_pick_up_the_boiling_pot_from_its_base,locomanip/walk towards a desk and pick up the boiling pot from its base,Locomanip,locomanip,none,40,23146,40
+193,Locomanip/walk_towards_a_desk_and_place_a_bottle,locomanip/walk towards a desk and place a bottle,Locomanip,locomanip,none,40,17332,40
+194,Locomanip/walk_towards_a_desk_and_place_a_cube_on_a_tray,locomanip/walk towards a desk and place a cube on a tray,Locomanip,locomanip,none,40,22048,40
+195,Locomanip/walk_towards_a_desk_and_place_a_stapler_on_a_tray,locomanip/walk towards a desk and place a stapler on a tray,Locomanip,locomanip,none,40,24875,40
+196,Locomanip/walk_towards_a_desk_and_place_a_toilet_paper_roll_on_a_tray,locomanip/walk towards a desk and place a toilet paper roll on a tray,Locomanip,locomanip,none,40,26961,40
+197,Locomanip/walk_towards_a_desk_and_pour_water_from_the_pot_to_a_cup,locomanip/walk towards a desk and pour water from the pot to a cup,Locomanip,locomanip,none,40,33446,40
+198,Locomanip/walk_towards_a_desk_and_push_the_file_tray_in,locomanip/walk towards a desk and push the file tray in,Locomanip,locomanip,none,40,20668,40
+199,Locomanip/walk_towards_a_desk_and_put_the_eraser_into_a_container,locomanip/walk towards a desk and put the eraser into a container,Locomanip,locomanip,none,40,24844,40
+200,Locomanip/walk_towards_a_desk_and_put_the_shovel_into_a_container,locomanip/walk towards a desk and put the shovel into a container,Locomanip,locomanip,none,40,29798,40
+201,Locomanip/walk_towards_a_desk_and_turn_on_the_boiling_pot,locomanip/walk towards a desk and turn on the boiling pot,Locomanip,locomanip,none,40,20706,40
+202,Locomanip/walk_towards_a_desk_and_turn_on_the_light_switch,locomanip/walk towards a desk and turn on the light switch,Locomanip,locomanip,none,40,20417,40
+203,Locomanip/walk_towards_a_duster_on_desk_and_clean_the_desk,locomanip/walk towards a duster on desk and clean the desk,Locomanip,locomanip,none,3,2176,3
+204,Locomanip/walk_towards_a_open_gate_button_and_open_gate,locomanip/walk towards a open gate button and open gate,Locomanip,locomanip,none,3,1368,3
+205,Locomanip/walk_towards_a_stanchion_and_retract_the_strap,locomanip/walk towards a stanchion and retract the strap,Locomanip,locomanip,none,3,1648,3
+206,Locomanip/walk_towards_chair_and_pull_it_out,locomanip/walk towards chair and pull it out,Locomanip,locomanip,none,3,1615,3
+207,Locomanip/walk_towards_chair_and_push_it_in,locomanip/walk towards chair and push it in,Locomanip,locomanip,none,3,1601,3
+208,Locomanip/walk_towards_chair_and_rotate_the_chair,locomanip/walk towards chair and rotate the chair,Locomanip,locomanip,none,3,1871,3
+209,Locomanip/walk_towards_coffee_maker_and_close_lid,locomanip/walk towards coffee maker and close lid,Locomanip,locomanip,none,3,1602,3
+210,Locomanip/walk_towards_elevator_and_push_button,locomanip/walk towards elevator and push button,Locomanip,locomanip,none,3,2292,3
+211,Locomanip/walk_towards_fire_extinguisher_and_close_door,locomanip/walk towards fire extinguisher and close door,Locomanip,locomanip,none,3,1541,3
+212,Locomanip/walk_towards_fire_extinguisher_and_open_door,locomanip/walk towards fire extinguisher and open door,Locomanip,locomanip,none,3,1586,3
+213,Locomanip/walk_towards_outside_chair_and_pull_it_out,locomanip/walk towards outside chair and pull it out,Locomanip,locomanip,none,3,1378,3
+214,Locomanip/walk_towards_table_organize_table_top,locomanip/walk towards table organize table top,Locomanip,locomanip,none,3,2434,3
+215,Locomanip/walk_towards_the_cabinet_and_close_the_cabinet_door,locomanip/walk towards the cabinet and close the cabinet door,Locomanip,locomanip,none,40,14212,40
+216,Locomanip/walk_towards_the_desk_and_use_an_air_pump_on_the_desk,locomanip/walk towards the desk and use an air pump on the desk,Locomanip,locomanip,none,40,31372,40
+217,Locomanip/walk_towards_trashbin_and_throw_trash_inside,locomanip/walk towards trashbin and throw trash inside,Locomanip,locomanip,none,2,1225,2
+218,Precision/align_a_stack_of_books,precision/align a stack of books,Precision,precision,none,0,0,0
+219,Precision/insert_flower_into_vase,precision/insert flower into vase,Precision,precision,none,40,23662,40
+220,Precision/open_a_bottle_g1,precision/open a bottle g1,Precision,precision,_g1,40,30903,40
+221,Precision/place_a_soldering_gun_into_its_base_h1,precision/place a soldering gun into its base h1,Precision,precision,_h1,0,0,0
+222,Precision/place_the_kettle_on_its_base,precision/place the kettle on its base,Precision,precision,none,0,0,0
+223,Precision/press_start_boiling_button,precision/press start boiling button,Precision,precision,none,0,0,0
+224,Precision/stack_a_rolls_of_paper_towel_on_top_of_the_other,precision/stack a rolls of paper towel on top of the other,Precision,precision,none,0,0,0
+225,Precision/unplug_a_charger,precision/unplug a charger,Precision,precision,none,40,15867,40
+226,Tool_use/clean_a_table_with_duster,tool use/clean a table with duster,Tool_use,tool use,none,40,17206,40
+227,Tool_use/clean_a_table_with_eraser,tool use/clean a table with eraser,Tool_use,tool use,none,40,13628,40
+228,Tool_use/clean_the_window,tool use/clean the window,Tool_use,tool use,none,3,3769,3
+229,Tool_use/click_a_keyboard_key,tool use/click a keyboard key,Tool_use,tool use,none,40,13008,40
+230,Tool_use/click_a_mouse,tool use/click a mouse,Tool_use,tool use,none,40,12542,40
+231,Tool_use/erase_a_table_g1,tool use/erase a table g1,Tool_use,tool use,_g1,40,15308,40
+232,Tool_use/pick_the_hammer_and_hit_desk,tool use/pick the hammer and hit desk,Tool_use,tool use,none,0,0,0
+233,Tool_use/put_tripod_into_container_h1,tool use/put tripod into container h1,Tool_use,tool use,_h1,0,0,0
+234,Tool_use/remove_a_soldering_gun_from_its_base_g1,tool use/remove a soldering gun from its base g1,Tool_use,tool use,_g1,40,12782,40
+235,Tool_use/remove_a_soldering_gun_from_its_base_h1,tool use/remove a soldering gun from its base h1,Tool_use,tool use,_h1,0,0,0
+236,Tool_use/remove_soil_from_box,tool use/remove soil from box,Tool_use,tool use,none,0,0,0
+237,Tool_use/use_a_duster_to_dust_the_desk,tool use/use a duster to dust the desk,Tool_use,tool use,none,0,0,0
+238,Tool_use/use_a_garden_tool,tool use/use a garden tool,Tool_use,tool use,none,39,18717,39
+239,Tool_use/use_a_soft_sponge_to_wipe_off_a_dry_surface,tool use/use a soft sponge to wipe off a dry surface,Tool_use,tool use,none,0,0,0
+240,Tool_use/use_a_whiteboard_eraser_to_erase_the_mark_on_the_desk,tool use/use a whiteboard eraser to erase the mark on the desk,Tool_use,tool use,none,0,0,0
+241,Tool_use/use_eraser_to_wipe_desk_g1,tool use/use eraser to wipe desk g1,Tool_use,tool use,_g1,40,15229,40
+242,Tool_use/use_liquid_hand_soap,tool use/use liquid hand soap,Tool_use,tool use,none,40,12975,40
+243,Tool_use/use_the_hammer,tool use/use the hammer,Tool_use,tool use,none,40,22448,40
+244,Tool_use/use_the_hole_punch,tool use/use the hole punch,Tool_use,tool use,none,40,11216,40
+245,Tool_use/wipe_a_monitor_with_a_cloth,tool use/wipe a monitor with a cloth,Tool_use,tool use,none,0,0,0
+246,Tool_use/wipe_a_table_with_an_eraser,tool use/wipe a table with an eraser,Tool_use,tool use,none,0,0,0

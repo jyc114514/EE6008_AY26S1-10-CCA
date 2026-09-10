@@ -1,0 +1,32 @@
+{
+  "task_set": "12_task_pilot",
+  "task_count": 12,
+  "task_ids": [
+    30,
+    94,
+    119,
+    143,
+    193,
+    225,
+    231,
+    90,
+    76,
+    20,
+    40,
+    5
+  ],
+  "train_count": 412,
+  "frozen_validation_count": 88,
+  "lora_validation_count": null,
+  "frozen_metrics": {
+    "macro_f1": 1.0,
+    "mean_class_recall_at_1": 1.0,
+    "mean_class_recall_at_5": 1.0,
+    "top1": 1.0,
+    "top5": 1.0
+  },
+  "lora_seed_summaries": [],
+  "final_test_access": 0,
+  "exploratory_only": true,
+  "note": "The 12-task pilot is not Full-120 evidence; prediction arrays and checkpoints are not distributed."
+}

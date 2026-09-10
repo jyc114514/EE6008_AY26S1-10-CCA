@@ -1,0 +1,15 @@
+{
+  "dataset_revision": null,
+  "eligible_episode_count": null,
+  "exact_duplicate_group_count": null,
+  "conflicting_duplicate_excluded_episode_count": null,
+  "old_split_status": null,
+  "primary_population": {
+    "train": 2757,
+    "development_validation": 617,
+    "classes": 120
+  },
+  "final_test_metrics_computed": false,
+  "final_test_accessed": 0,
+  "note": "Only split metadata and task labels are distributed; final-test IDs, labels, predictions and metrics are not distributed."
+}

@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "files_checked": 196,
+  "python_files_parsed": 48,
+  "json_files_parsed": 19,
+  "yaml_files_parsed": 21,
+  "csv_files_checked": 25,
+  "figures_checked": 6,
+  "final_test_access": 0,
+  "new_training_started": false,
+  "failures": [],
+  "warnings": [
+    "End-to-end model replay is not part of this QA; external inputs remain excluded."
+  ]
+}

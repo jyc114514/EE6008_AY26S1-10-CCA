@@ -1,0 +1,55 @@
+cell,metric,independent_value,recorded_run_metrics_value,independent_minus_recorded,recorded_metrics_path,status,note
+D-P-F,top1,0.9481361426256077,0.9481361508369446,-8.211336832708582e-09,server-only://core-a/D-P-F/run_metrics,match_within_1e-6,
+D-P-F,top5,0.9967585089141004,0.9967585206031799,-1.1689079482124498e-08,server-only://core-a/D-P-F/run_metrics,match_within_1e-6,
+D-P-F,macro_f1,0.902113580863581,0.9021135808635808,1.1102230246251565e-16,server-only://core-a/D-P-F/run_metrics,match_within_1e-6,
+D-P-F,nll,0.331486102563503,0.3314861059188843,-3.355381250624845e-09,server-only://core-a/D-P-F/run_metrics,match_within_1e-6,
+D-P-F,ece,0.13836722727839312,0.1383671760559082,5.1222484920288025e-08,server-only://core-a/D-P-F/run_metrics,match_within_1e-6,
+D-P-F,brier,0.12768104052283866,0.12768104672431946,-6.2014808011046085e-09,server-only://core-a/D-P-F/run_metrics,match_within_1e-6,
+D-P-L,top1,0.9611021069692058,,,server-only://core-a/D-P-L/run_metrics,recorded_metric_missing,D-A-F top5 differs by one tied boundary episode under the source topk tie policy; D-P-L has no source RUN_METRICS.json and is independent-only.
+D-P-L,top5,0.9967585089141004,,,server-only://core-a/D-P-L/run_metrics,recorded_metric_missing,D-A-F top5 differs by one tied boundary episode under the source topk tie policy; D-P-L has no source RUN_METRICS.json and is independent-only.
+D-P-L,macro_f1,0.9219984644984645,,,server-only://core-a/D-P-L/run_metrics,recorded_metric_missing,D-A-F top5 differs by one tied boundary episode under the source topk tie policy; D-P-L has no source RUN_METRICS.json and is independent-only.
+D-P-L,nll,0.14505097554477162,,,server-only://core-a/D-P-L/run_metrics,recorded_metric_missing,D-A-F top5 differs by one tied boundary episode under the source topk tie policy; D-P-L has no source RUN_METRICS.json and is independent-only.
+D-P-L,ece,0.024525120519200097,,,server-only://core-a/D-P-L/run_metrics,recorded_metric_missing,D-A-F top5 differs by one tied boundary episode under the source topk tie policy; D-P-L has no source RUN_METRICS.json and is independent-only.
+D-P-L,brier,0.06018689813401854,,,server-only://core-a/D-P-L/run_metrics,recorded_metric_missing,D-A-F top5 differs by one tied boundary episode under the source topk tie policy; D-P-L has no source RUN_METRICS.json and is independent-only.
+D-A-F,top1,0.9351701782820098,0.9351701736450195,4.636990236228655e-09,server-only://core-a/D-A-F/run_metrics,match_within_1e-6,D-A-F top5 differs by one tied boundary episode under the source topk tie policy; D-P-L has no source RUN_METRICS.json and is independent-only.
+D-A-F,top5,0.9821717990275527,0.9821717739105225,2.5117030233445803e-08,server-only://core-a/D-A-F/run_metrics,match_within_1e-6,D-A-F top5 differs by one tied boundary episode under the source topk tie policy; D-P-L has no source RUN_METRICS.json and is independent-only.
+D-A-F,macro_f1,0.8347468125556361,0.8347468125556361,0.0,server-only://core-a/D-A-F/run_metrics,match_within_1e-6,D-A-F top5 differs by one tied boundary episode under the source topk tie policy; D-P-L has no source RUN_METRICS.json and is independent-only.
+D-A-F,nll,0.39771200551400343,0.39771199226379395,1.3250209485171638e-08,server-only://core-a/D-A-F/run_metrics,match_within_1e-6,D-A-F top5 differs by one tied boundary episode under the source topk tie policy; D-P-L has no source RUN_METRICS.json and is independent-only.
+D-A-F,ece,0.04297838403922585,0.04297842085361481,-3.681438895397626e-08,server-only://core-a/D-A-F/run_metrics,match_within_1e-6,D-A-F top5 differs by one tied boundary episode under the source topk tie policy; D-P-L has no source RUN_METRICS.json and is independent-only.
+D-A-F,brier,0.11046883166822907,0.11046881973743439,1.193079468553293e-08,server-only://core-a/D-A-F/run_metrics,match_within_1e-6,D-A-F top5 differs by one tied boundary episode under the source topk tie policy; D-P-L has no source RUN_METRICS.json and is independent-only.
+D-A-L,top1,0.9384116693679092,0.9384116530418396,1.632606960733085e-08,server-only://core-a/D-A-L/run_metrics,match_within_1e-6,
+D-A-L,top5,0.9854132901134521,0.9854133129119873,-2.2798535170842626e-08,server-only://core-a/D-A-L/run_metrics,match_within_1e-6,
+D-A-L,macro_f1,0.8212797339113128,0.8212797339113128,0.0,server-only://core-a/D-A-L/run_metrics,match_within_1e-6,
+D-A-L,nll,0.3450383752482089,0.34503835439682007,2.0851388837783702e-08,server-only://core-a/D-A-L/run_metrics,match_within_1e-6,
+D-A-L,ece,0.03817123270849171,0.038171280175447464,-4.746695575486015e-08,server-only://core-a/D-A-L/run_metrics,match_within_1e-6,
+D-A-L,brier,0.1012450625821809,0.10124506056308746,2.0190934341135502e-09,server-only://core-a/D-A-L/run_metrics,match_within_1e-6,
+S-P-F,top1,0.9497568881685575,0.9497568607330322,2.743552529604898e-08,server-only://core-a/S-P-F/run_metrics,match_within_1e-6,
+S-P-F,top5,0.9967585089141004,0.9967585206031799,-1.1689079482124498e-08,server-only://core-a/S-P-F/run_metrics,match_within_1e-6,
+S-P-F,macro_f1,0.910348309098309,0.9103483090983091,-1.1102230246251565e-16,server-only://core-a/S-P-F/run_metrics,match_within_1e-6,
+S-P-F,nll,0.35003774995175485,0.3500377833843231,-3.3432568269375906e-08,server-only://core-a/S-P-F/run_metrics,match_within_1e-6,
+S-P-F,ece,0.14549046257445145,0.14549051225185394,-4.967740249717245e-08,server-only://core-a/S-P-F/run_metrics,match_within_1e-6,
+S-P-F,brier,0.13747097181274656,0.13747097551822662,-3.7054800616775907e-09,server-only://core-a/S-P-F/run_metrics,match_within_1e-6,
+S-P-L,top1,0.9708265802269044,0.9708265662193298,1.4007574544727674e-08,server-only://core-a/S-P-L/run_metrics,match_within_1e-6,
+S-P-L,top5,0.9967585089141004,0.9967585206031799,-1.1689079482124498e-08,server-only://core-a/S-P-L/run_metrics,match_within_1e-6,
+S-P-L,macro_f1,0.9299209124209126,0.9299209124209125,1.1102230246251565e-16,server-only://core-a/S-P-L/run_metrics,match_within_1e-6,
+S-P-L,nll,0.12408468683995723,0.12408465892076492,2.791919230527018e-08,server-only://core-a/S-P-L/run_metrics,match_within_1e-6,
+S-P-L,ece,0.022126268037667932,0.02212623506784439,3.2969823541423304e-08,server-only://core-a/S-P-L/run_metrics,match_within_1e-6,
+S-P-L,brier,0.05369481455920807,0.05369481444358826,1.1561981233532137e-10,server-only://core-a/S-P-L/run_metrics,match_within_1e-6,
+S-A-F,top1,0.9238249594813615,0.9238249659538269,-6.472465452489473e-09,server-only://core-a/S-A-F/run_metrics,match_within_1e-6,
+S-A-F,top5,0.9854132901134521,0.9854133129119873,-2.2798535170842626e-08,server-only://core-a/S-A-F/run_metrics,match_within_1e-6,
+S-A-F,macro_f1,0.8291514917830707,0.8291514917830707,0.0,server-only://core-a/S-A-F/run_metrics,match_within_1e-6,
+S-A-F,nll,0.3836280506442767,0.3836280405521393,1.0092137403550083e-08,server-only://core-a/S-A-F/run_metrics,match_within_1e-6,
+S-A-F,ece,0.05001878417281658,0.0500187948346138,-1.0661797222866198e-08,server-only://core-a/S-A-F/run_metrics,match_within_1e-6,
+S-A-F,brier,0.12655936653349087,0.12655936181545258,4.718038293383131e-09,server-only://core-a/S-A-F/run_metrics,match_within_1e-6,
+S-A-L,top1,0.9497568881685575,0.9497568607330322,2.743552529604898e-08,server-only://core-a/S-A-L/run_metrics,match_within_1e-6,
+S-A-L,top5,0.9902755267423015,0.990275502204895,2.4537406440039433e-08,server-only://core-a/S-A-L/run_metrics,match_within_1e-6,
+S-A-L,macro_f1,0.8865461893179284,0.8865461893179284,0.0,server-only://core-a/S-A-L/run_metrics,match_within_1e-6,
+S-A-L,nll,0.2715978656801595,0.27159780263900757,6.304115190980397e-08,server-only://core-a/S-A-L/run_metrics,match_within_1e-6,
+S-A-L,ece,0.035337816691355176,0.03533783555030823,-1.8858953051981153e-08,server-only://core-a/S-A-L/run_metrics,match_within_1e-6,
+S-A-L,brier,0.08484566812876312,0.08484566956758499,-1.4388218672056752e-09,server-only://core-a/S-A-L/run_metrics,match_within_1e-6,
+STATE-CTRL,top1,0.6337115072933549,0.6337115168571472,-9.563792313649344e-09,server-only://core-a/STATE-CTRL/run_metrics,match_within_1e-6,
+STATE-CTRL,top5,0.8703403565640194,0.8703403472900391,9.273980361435008e-09,server-only://core-a/STATE-CTRL/run_metrics,match_within_1e-6,
+STATE-CTRL,macro_f1,0.49080161407307993,0.4908016140730799,5.551115123125783e-17,server-only://core-a/STATE-CTRL/run_metrics,match_within_1e-6,
+STATE-CTRL,nll,1.9804915483751622,1.9804917573928833,-2.0901772113113282e-07,server-only://core-a/STATE-CTRL/run_metrics,match_within_1e-6,
+STATE-CTRL,ece,0.3565930980431363,0.3565930426120758,5.5431060519417485e-08,server-only://core-a/STATE-CTRL/run_metrics,match_within_1e-6,
+STATE-CTRL,brier,0.67677034770973,0.6767703294754028,1.8234327159305508e-08,server-only://core-a/STATE-CTRL/run_metrics,match_within_1e-6,

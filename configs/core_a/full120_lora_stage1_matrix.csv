@@ -1,0 +1,10 @@
+cell,input,head,adaptation,seed,physical_gpu,run_order,stage,status
+D-P-F,dynamic,pooled,frozen,20260825,2,1,stage1,registered
+D-P-L,dynamic,pooled,lora,20260825,2,2,stage1,registered
+S-A-F,static_repeated_first_frame,attentive,frozen,20260825,2,3,stage1,registered
+S-A-L,static_repeated_first_frame,attentive,lora,20260825,2,4,stage1,registered
+D-A-F,dynamic,attentive,frozen,20260825,3,1,stage1,registered
+D-A-L,dynamic,attentive,lora,20260825,3,2,stage1,registered
+S-P-F,static_repeated_first_frame,pooled,frozen,20260825,3,3,stage1,registered
+S-P-L,static_repeated_first_frame,pooled,lora,20260825,3,4,stage1,registered
+STATE-CTRL,state-only,not_applicable,not_applicable,20260825,,external,stage1,existing_accepted_control

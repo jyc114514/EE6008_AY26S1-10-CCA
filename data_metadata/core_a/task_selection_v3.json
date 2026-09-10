@@ -1,0 +1,143 @@
+{
+  "pilot": [
+    {
+      "category_normalized": "articulated",
+      "category_raw": "Articulated",
+      "original_task_index": 30,
+      "task_name_normalized": "articulated/open the zipper of a bag",
+      "task_name_raw": "Articulated/open_the_zipper_of_a_bag",
+      "valid_4s_episode_count": 40
+    },
+    {
+      "category_normalized": "basic",
+      "category_raw": "Basic",
+      "original_task_index": 94,
+      "task_name_normalized": "basic/put dumpling into plate g1",
+      "task_name_raw": "Basic/put_dumpling_into_plate_g1",
+      "valid_4s_episode_count": 80
+    },
+    {
+      "category_normalized": "deformable",
+      "category_raw": "deformable",
+      "original_task_index": 119,
+      "task_name_normalized": "deformable/fold towel",
+      "task_name_raw": "deformable/fold_towel",
+      "valid_4s_episode_count": 80
+    },
+    {
+      "category_normalized": "hri",
+      "category_raw": "HRI",
+      "original_task_index": 143,
+      "task_name_normalized": "hri/hold a roll of toilet paper and hand it back to human",
+      "task_name_raw": "HRI/hold_a_roll_of_toilet_paper_and_hand_it_back_to_human",
+      "valid_4s_episode_count": 40
+    },
+    {
+      "category_normalized": "locomanip",
+      "category_raw": "Locomanip",
+      "original_task_index": 193,
+      "task_name_normalized": "locomanip/walk towards a desk and place a bottle",
+      "task_name_raw": "Locomanip/walk_towards_a_desk_and_place_a_bottle",
+      "valid_4s_episode_count": 40
+    },
+    {
+      "category_normalized": "precision",
+      "category_raw": "Precision",
+      "original_task_index": 225,
+      "task_name_normalized": "precision/unplug a charger",
+      "task_name_raw": "Precision/unplug_a_charger",
+      "valid_4s_episode_count": 40
+    },
+    {
+      "category_normalized": "tool use",
+      "category_raw": "Tool_use",
+      "original_task_index": 231,
+      "task_name_normalized": "tool use/erase a table g1",
+      "task_name_raw": "Tool_use/erase_a_table_g1",
+      "valid_4s_episode_count": 40
+    },
+    {
+      "category_normalized": "basic",
+      "category_raw": "Basic",
+      "original_task_index": 90,
+      "task_name_normalized": "basic/push duck g1",
+      "task_name_raw": "Basic/push_duck_g1",
+      "valid_4s_episode_count": 68
+    },
+    {
+      "category_normalized": "basic",
+      "category_raw": "Basic",
+      "original_task_index": 76,
+      "task_name_normalized": "basic/place a cube in a bag",
+      "task_name_raw": "Basic/place_a_cube_in_a_bag",
+      "valid_4s_episode_count": 40
+    },
+    {
+      "category_normalized": "articulated",
+      "category_raw": "Articulated",
+      "original_task_index": 20,
+      "task_name_normalized": "articulated/extend a phone stand",
+      "task_name_raw": "Articulated/extend_a_phone_stand",
+      "valid_4s_episode_count": 40
+    },
+    {
+      "category_normalized": "articulated",
+      "category_raw": "Articulated",
+      "original_task_index": 40,
+      "task_name_normalized": "articulated/push the drawer back",
+      "task_name_raw": "Articulated/push_the_drawer_back",
+      "valid_4s_episode_count": 40
+    },
+    {
+      "category_normalized": "articulated",
+      "category_raw": "Articulated",
+      "original_task_index": 5,
+      "task_name_normalized": "articulated/close a kettle lid g1",
+      "task_name_raw": "Articulated/close_a_kettle_lid_g1",
+      "valid_4s_episode_count": 40
+    }
+  ],
+  "pilot_tasks": [
+    30,
+    94,
+    119,
+    143,
+    193,
+    225,
+    231,
+    90,
+    76,
+    20,
+    40,
+    5
+  ],
+  "selection_rule": {
+    "ordering": "category_normalized, descending valid 4s episode count, SHA-256(seed:task_index)",
+    "pilot": "top-count task from every available broad category, then highest-count tasks until 12; hash tie-break",
+    "seed": 20260825,
+    "smoke": "top-count task in the first two lexicographic broad categories; no model results used"
+  },
+  "selection_sha256": "f9ed70cb40372c937febe792634ee6784bdd2ea77b29c1c947cab80cfffcfd0a",
+  "smoke": [
+    {
+      "category_normalized": "articulated",
+      "category_raw": "Articulated",
+      "original_task_index": 30,
+      "task_name_normalized": "articulated/open the zipper of a bag",
+      "task_name_raw": "Articulated/open_the_zipper_of_a_bag",
+      "valid_4s_episode_count": 40
+    },
+    {
+      "category_normalized": "basic",
+      "category_raw": "Basic",
+      "original_task_index": 94,
+      "task_name_normalized": "basic/put dumpling into plate g1",
+      "task_name_raw": "Basic/put_dumpling_into_plate_g1",
+      "valid_4s_episode_count": 80
+    }
+  ],
+  "smoke_tasks": [
+    30,
+    94
+  ]
+}

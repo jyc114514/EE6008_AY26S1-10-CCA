@@ -1,0 +1,2225 @@
+{
+  "0": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 0,
+    "task_name_normalized": "articulated/adjust the angle of a phone stand",
+    "task_name_raw": "Articulated/adjust_the_angle_of_a_phone_stand",
+    "valid_4s_episode_count": 39
+  },
+  "1": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "articulated/adjust the tilt angle of a monitor on the desk",
+    "task_name_raw": "Articulated/adjust_the_tilt_angle_of_a_monitor_on_the_desk",
+    "valid_4s_episode_count": 0
+  },
+  "10": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "articulated/close a small storage box lid",
+    "task_name_raw": "Articulated/close_a_small_storage_box_lid",
+    "valid_4s_episode_count": 0
+  },
+  "100": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/put the lunch bag next to the notebook",
+    "task_name_raw": "Basic/put_the_lunch_bag_next_to_the_notebook",
+    "valid_4s_episode_count": 0
+  },
+  "101": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/put tripod into container h1",
+    "task_name_raw": "Basic/put_tripod_into_container_h1",
+    "valid_4s_episode_count": 0
+  },
+  "102": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 32,
+    "task_name_normalized": "basic/remove container from whiteboard g1",
+    "task_name_raw": "Basic/remove_container_from_whiteboard_g1",
+    "valid_4s_episode_count": 40
+  },
+  "103": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/remove lid of spray bottle",
+    "task_name_raw": "Basic/remove_lid_of_spray_bottle",
+    "valid_4s_episode_count": 0
+  },
+  "104": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/stack book from bookholder",
+    "task_name_raw": "Basic/stack_book_from_bookholder",
+    "valid_4s_episode_count": 0
+  },
+  "105": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/stack notebook into shelf",
+    "task_name_raw": "Basic/stack_notebook_into_shelf",
+    "valid_4s_episode_count": 0
+  },
+  "106": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 33,
+    "task_name_normalized": "basic/stack two boxes",
+    "task_name_raw": "Basic/stack_two_boxes",
+    "valid_4s_episode_count": 40
+  },
+  "107": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 34,
+    "task_name_normalized": "basic/stack two cubes g1",
+    "task_name_raw": "Basic/stack_two_cubes_g1",
+    "valid_4s_episode_count": 40
+  },
+  "108": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/stack two cubes h1",
+    "task_name_raw": "Basic/stack_two_cubes_h1",
+    "valid_4s_episode_count": 0
+  },
+  "109": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/stack two storage boxes",
+    "task_name_raw": "Basic/stack_two_storage_boxes",
+    "valid_4s_episode_count": 0
+  },
+  "11": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 3,
+    "task_name_normalized": "articulated/close refrigerator door",
+    "task_name_raw": "Articulated/close_refrigerator_door",
+    "valid_4s_episode_count": 40
+  },
+  "110": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 35,
+    "task_name_normalized": "basic/take out the lid of the spray bottle",
+    "task_name_raw": "Basic/take_out_the_lid_of_the_spray_bottle",
+    "valid_4s_episode_count": 40
+  },
+  "111": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 36,
+    "task_name_normalized": "basic/unstack two cubes g1",
+    "task_name_raw": "Basic/unstack_two_cubes_g1",
+    "valid_4s_episode_count": 40
+  },
+  "112": {
+    "category_normalized": "deformable",
+    "category_raw": "deformable",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "deformable/adjust the opening of a loosely closed bag",
+    "task_name_raw": "deformable/adjust_the_opening_of_a_loosely_closed_bag",
+    "valid_4s_episode_count": 0
+  },
+  "113": {
+    "category_normalized": "deformable",
+    "category_raw": "deformable",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 37,
+    "task_name_normalized": "deformable/compress a plastic bag",
+    "task_name_raw": "deformable/compress_a_plastic_bag",
+    "valid_4s_episode_count": 40
+  },
+  "114": {
+    "category_normalized": "deformable",
+    "category_raw": "deformable",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 38,
+    "task_name_normalized": "deformable/flip a pillow g1",
+    "task_name_raw": "deformable/flip_a_pillow_g1",
+    "valid_4s_episode_count": 40
+  },
+  "115": {
+    "category_normalized": "deformable",
+    "category_raw": "deformable",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 39,
+    "task_name_normalized": "deformable/flip a soft plate",
+    "task_name_raw": "deformable/flip_a_soft_plate",
+    "valid_4s_episode_count": 40
+  },
+  "116": {
+    "category_normalized": "deformable",
+    "category_raw": "deformable",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "deformable/fold a jacket on the desk",
+    "task_name_raw": "deformable/fold_a_jacket_on_the_desk",
+    "valid_4s_episode_count": 0
+  },
+  "117": {
+    "category_normalized": "deformable",
+    "category_raw": "deformable",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 40,
+    "task_name_normalized": "deformable/fold a toolkit g1",
+    "task_name_raw": "deformable/fold_a_toolkit_g1",
+    "valid_4s_episode_count": 40
+  },
+  "118": {
+    "category_normalized": "deformable",
+    "category_raw": "deformable",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "deformable/fold a toolkit h1",
+    "task_name_raw": "deformable/fold_a_toolkit_h1",
+    "valid_4s_episode_count": 0
+  },
+  "119": {
+    "category_normalized": "deformable",
+    "category_raw": "deformable",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 41,
+    "task_name_normalized": "deformable/fold towel",
+    "task_name_raw": "deformable/fold_towel",
+    "valid_4s_episode_count": 80
+  },
+  "12": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 4,
+    "task_name_normalized": "articulated/close the cabinet door",
+    "task_name_raw": "Articulated/close_the_cabinet_door",
+    "valid_4s_episode_count": 36
+  },
+  "120": {
+    "category_normalized": "deformable",
+    "category_raw": "deformable",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 42,
+    "task_name_normalized": "deformable/open a lunchbag",
+    "task_name_raw": "deformable/open_a_lunchbag",
+    "valid_4s_episode_count": 40
+  },
+  "121": {
+    "category_normalized": "deformable",
+    "category_raw": "deformable",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 43,
+    "task_name_normalized": "deformable/pick up a plastic bag",
+    "task_name_raw": "deformable/pick_up_a_plastic_bag",
+    "valid_4s_episode_count": 40
+  },
+  "122": {
+    "category_normalized": "deformable",
+    "category_raw": "deformable",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "deformable/press a soft travel bag to reduce its size",
+    "task_name_raw": "deformable/press_a_soft_travel_bag_to_reduce_its_size",
+    "valid_4s_episode_count": 0
+  },
+  "123": {
+    "category_normalized": "deformable",
+    "category_raw": "deformable",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 44,
+    "task_name_normalized": "deformable/pull out tissue from tissue box g1",
+    "task_name_raw": "deformable/pull_out_tissue_from_tissue_box_g1",
+    "valid_4s_episode_count": 40
+  },
+  "124": {
+    "category_normalized": "deformable",
+    "category_raw": "deformable",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "deformable/smooth a stack of napkins",
+    "task_name_raw": "deformable/smooth_a_stack_of_napkins",
+    "valid_4s_episode_count": 0
+  },
+  "125": {
+    "category_normalized": "deformable",
+    "category_raw": "deformable",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "deformable/squeeze a ball",
+    "task_name_raw": "deformable/squeeze_a_ball",
+    "valid_4s_episode_count": 0
+  },
+  "126": {
+    "category_normalized": "deformable",
+    "category_raw": "deformable",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "deformable/squeeze a toy",
+    "task_name_raw": "deformable/squeeze_a_toy",
+    "valid_4s_episode_count": 0
+  },
+  "127": {
+    "category_normalized": "deformable",
+    "category_raw": "deformable",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "deformable/unfold a stack of microfiber clothes",
+    "task_name_raw": "deformable/unfold_a_stack_of_microfiber_clothes",
+    "valid_4s_episode_count": 0
+  },
+  "128": {
+    "category_normalized": "deformable",
+    "category_raw": "deformable",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 45,
+    "task_name_normalized": "deformable/unfold a tablet cover g1",
+    "task_name_raw": "deformable/unfold_a_tablet_cover_g1",
+    "valid_4s_episode_count": 40
+  },
+  "129": {
+    "category_normalized": "deformable",
+    "category_raw": "deformable",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "deformable/unfold a tablet cover h1",
+    "task_name_raw": "deformable/unfold_a_tablet_cover_h1",
+    "valid_4s_episode_count": 0
+  },
+  "13": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 5,
+    "task_name_normalized": "articulated/close the zipper of a bag",
+    "task_name_raw": "Articulated/close_the_zipper_of_a_bag",
+    "valid_4s_episode_count": 40
+  },
+  "130": {
+    "category_normalized": "deformable",
+    "category_raw": "deformable",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 46,
+    "task_name_normalized": "deformable/unfold a toolkit g1",
+    "task_name_raw": "deformable/unfold_a_toolkit_g1",
+    "valid_4s_episode_count": 40
+  },
+  "131": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 47,
+    "task_name_normalized": "hri/fold and pass coat",
+    "task_name_raw": "HRI/fold_and_pass_coat",
+    "valid_4s_episode_count": 40
+  },
+  "132": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "hri/h1 grab a book from a magazine stand and hand it to a person",
+    "task_name_raw": "HRI/h1-grab_a_book_from_a_magazine_stand_and_hand_it_to_a_person",
+    "valid_4s_episode_count": 0
+  },
+  "133": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "hri/h1 grab a stack of plates from the desk and hand it to a person",
+    "task_name_raw": "HRI/h1-grab_a_stack_of_plates_from_the_desk_and_hand_it_to_a_person",
+    "valid_4s_episode_count": 0
+  },
+  "134": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "hri/h1 take a notebook from a person and put it in a magazine stand",
+    "task_name_raw": "HRI/h1-take_a_notebook_from_a_person_and_put_it_in_a_magazine_stand",
+    "valid_4s_episode_count": 0
+  },
+  "135": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "hri/h1 take a notebook from a person and put it in the file tray",
+    "task_name_raw": "HRI/h1-take_a_notebook_from_a_person_and_put_it_in_the_file_tray",
+    "valid_4s_episode_count": 0
+  },
+  "136": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "hri/h1 take a stack of plates from a person and put it on the desk",
+    "task_name_raw": "HRI/h1-take_a_stack_of_plates_from_a_person_and_put_it_on_the_desk",
+    "valid_4s_episode_count": 0
+  },
+  "137": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 48,
+    "task_name_normalized": "hri/hand over flower",
+    "task_name_raw": "HRI/hand_over_flower",
+    "valid_4s_episode_count": 40
+  },
+  "138": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 49,
+    "task_name_normalized": "hri/handover dumpling g1",
+    "task_name_raw": "HRI/handover_dumpling_g1",
+    "valid_4s_episode_count": 40
+  },
+  "139": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 50,
+    "task_name_normalized": "hri/help wear a coat",
+    "task_name_raw": "HRI/help_wear_a_coat",
+    "valid_4s_episode_count": 40
+  },
+  "14": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "articulated/collapse a extended duster",
+    "task_name_raw": "Articulated/collapse_a_extended_duster",
+    "valid_4s_episode_count": 0
+  },
+  "140": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 51,
+    "task_name_normalized": "hri/hold a emotional support dumpling and hand it back to human",
+    "task_name_raw": "HRI/hold_a_emotional_support_dumpling_and_hand_it_back_to_human",
+    "valid_4s_episode_count": 40
+  },
+  "141": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 52,
+    "task_name_normalized": "hri/hold a lunch bag and hand it back to human",
+    "task_name_raw": "HRI/hold_a_lunch_bag_and_hand_it_back_to_human",
+    "valid_4s_episode_count": 40
+  },
+  "142": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 53,
+    "task_name_normalized": "hri/hold a plastic bag and hand it back to human",
+    "task_name_raw": "HRI/hold_a_plastic_bag_and_hand_it_back_to_human",
+    "valid_4s_episode_count": 40
+  },
+  "143": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 54,
+    "task_name_normalized": "hri/hold a roll of toilet paper and hand it back to human",
+    "task_name_raw": "HRI/hold_a_roll_of_toilet_paper_and_hand_it_back_to_human",
+    "valid_4s_episode_count": 40
+  },
+  "144": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 55,
+    "task_name_normalized": "hri/hold a tripod and hand it back to human",
+    "task_name_raw": "HRI/hold_a_tripod_and_hand_it_back_to_human",
+    "valid_4s_episode_count": 40
+  },
+  "145": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 56,
+    "task_name_normalized": "hri/pass plates",
+    "task_name_raw": "HRI/pass_plates",
+    "valid_4s_episode_count": 40
+  },
+  "146": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 57,
+    "task_name_normalized": "hri/pick up a bottle and hand it",
+    "task_name_raw": "HRI/pick_up_a_bottle_and_hand_it",
+    "valid_4s_episode_count": 40
+  },
+  "147": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "hri/pick up a bottle from the desk and hand it to a person",
+    "task_name_raw": "HRI/pick_up_a_bottle_from_the_desk_and_hand_it_to_a_person",
+    "valid_4s_episode_count": 0
+  },
+  "148": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 58,
+    "task_name_normalized": "hri/pick up a cube and hand it",
+    "task_name_raw": "HRI/pick_up_a_cube_and_hand_it",
+    "valid_4s_episode_count": 40
+  },
+  "149": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "hri/pick up a duster from the table and hand it to a person",
+    "task_name_raw": "HRI/pick_up_a_duster_from_the_table_and_hand_it_to_a_person",
+    "valid_4s_episode_count": 0
+  },
+  "15": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "articulated/compress a liquid hand soap into a cup h1",
+    "task_name_raw": "Articulated/compress_a_liquid_hand_soap_into_a_cup_h1",
+    "valid_4s_episode_count": 0
+  },
+  "150": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "hri/pick up a emotional support dumplings and hand it to a person",
+    "task_name_raw": "HRI/pick_up_a_emotional_support_dumplings_and_hand_it_to_a_person",
+    "valid_4s_episode_count": 0
+  },
+  "151": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 59,
+    "task_name_normalized": "hri/pick up a football and hand it",
+    "task_name_raw": "HRI/pick_up_a_football_and_hand_it",
+    "valid_4s_episode_count": 40
+  },
+  "152": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "hri/pick up a grey duster from the table and hand it to a person",
+    "task_name_raw": "HRI/pick_up_a_grey_duster_from_the_table_and_hand_it_to_a_person",
+    "valid_4s_episode_count": 0
+  },
+  "153": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "hri/pick up a rubiks cube from the table and hand it to a person",
+    "task_name_raw": "HRI/pick_up_a_rubiks_cube_from_the_table_and_hand_it_to_a_person",
+    "valid_4s_episode_count": 0
+  },
+  "154": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "hri/pick up a spray on the desk and hand it to a person",
+    "task_name_raw": "HRI/pick_up_a_spray_on_the_desk_and_hand_it_to_a_person",
+    "valid_4s_episode_count": 0
+  },
+  "155": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "hri/pick up a stapler from the desk and hand it to a person",
+    "task_name_raw": "HRI/pick_up_a_stapler_from_the_desk_and_hand_it_to_a_person",
+    "valid_4s_episode_count": 0
+  },
+  "156": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "hri/pick up a toilet paper and hand it to a person",
+    "task_name_raw": "HRI/pick_up_a_toilet_paper_and_hand_it_to_a_person",
+    "valid_4s_episode_count": 0
+  },
+  "157": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "hri/pick up a tripod from the desk and hand it to a person",
+    "task_name_raw": "HRI/pick_up_a_tripod_from_the_desk_and_hand_it_to_a_person",
+    "valid_4s_episode_count": 0
+  },
+  "158": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "hri/pick up basketball from a person and drop on chair",
+    "task_name_raw": "HRI/pick_up_basketball_from_a_person_and_drop_on_chair",
+    "valid_4s_episode_count": 0
+  },
+  "159": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 60,
+    "task_name_normalized": "hri/shake a bottle of protein powder",
+    "task_name_raw": "HRI/shake_a_bottle_of_protein_powder",
+    "valid_4s_episode_count": 40
+  },
+  "16": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 6,
+    "task_name_normalized": "articulated/compress a small air pump g1",
+    "task_name_raw": "Articulated/compress_a_small_air_pump_g1",
+    "valid_4s_episode_count": 39
+  },
+  "160": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "hri/shake hand with a person",
+    "task_name_raw": "HRI/shake_hand_with_a_person",
+    "valid_4s_episode_count": 0
+  },
+  "161": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 61,
+    "task_name_normalized": "hri/shake hands",
+    "task_name_raw": "HRI/shake_hands",
+    "valid_4s_episode_count": 40
+  },
+  "162": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "hri/take a duster from a person and put it on the desk",
+    "task_name_raw": "HRI/take_a_duster_from_a_person_and_put_it_on_the_desk",
+    "valid_4s_episode_count": 0
+  },
+  "163": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "hri/take a emotional support dumplings from a person and place it on the desk",
+    "task_name_raw": "HRI/take_a_emotional_support_dumplings_from_a_person_and_place_it_on_the_desk",
+    "valid_4s_episode_count": 0
+  },
+  "164": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "hri/take a grey duster from a person and put it on the desk",
+    "task_name_raw": "HRI/take_a_grey_duster_from_a_person_and_put_it_on_the_desk",
+    "valid_4s_episode_count": 0
+  },
+  "165": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "hri/take a rubiks cube from a person and put it on the desk",
+    "task_name_raw": "HRI/take_a_rubiks_cube_from_a_person_and_put_it_on_the_desk",
+    "valid_4s_episode_count": 0
+  },
+  "166": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "hri/take a spray from a person and put it on the desk",
+    "task_name_raw": "HRI/take_a_spray_from_a_person_and_put_it_on_the_desk",
+    "valid_4s_episode_count": 0
+  },
+  "167": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "hri/take a stapler from a person and put it on the desk",
+    "task_name_raw": "HRI/take_a_stapler_from_a_person_and_put_it_on_the_desk",
+    "valid_4s_episode_count": 0
+  },
+  "168": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "hri/take a t shirt from a person",
+    "task_name_raw": "HRI/take_a_t_shirt_from_a_person",
+    "valid_4s_episode_count": 0
+  },
+  "169": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "hri/take a toilet paper from a person and place it on the desk",
+    "task_name_raw": "HRI/take_a_toilet_paper_from_a_person_and_place_it_on_the_desk",
+    "valid_4s_episode_count": 0
+  },
+  "17": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "articulated/compress air pumper h1",
+    "task_name_raw": "Articulated/compress_air_pumper_h1",
+    "valid_4s_episode_count": 0
+  },
+  "170": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "hri/take a tripod from a person and put it on the desk",
+    "task_name_raw": "HRI/take_a_tripod_from_a_person_and_put_it_on_the_desk",
+    "valid_4s_episode_count": 0
+  },
+  "171": {
+    "category_normalized": "hri",
+    "category_raw": "HRI",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 62,
+    "task_name_normalized": "hri/tear toilet paper and hand it",
+    "task_name_raw": "HRI/tear_toilet_paper_and_hand_it",
+    "valid_4s_episode_count": 40
+  },
+  "172": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 63,
+    "task_name_normalized": "locomanip/clean the plate",
+    "task_name_raw": "Locomanip/clean_the_plate",
+    "valid_4s_episode_count": 3
+  },
+  "173": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 64,
+    "task_name_normalized": "locomanip/hold a whiteboard and walk with it",
+    "task_name_raw": "Locomanip/hold_a_whiteboard_and_walk_with_it",
+    "valid_4s_episode_count": 3
+  },
+  "174": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 65,
+    "task_name_normalized": "locomanip/organize chess pieces",
+    "task_name_raw": "Locomanip/organize_chess_pieces",
+    "valid_4s_episode_count": 3
+  },
+  "175": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 66,
+    "task_name_normalized": "locomanip/pack a lunch box",
+    "task_name_raw": "Locomanip/pack_a_lunch_box",
+    "valid_4s_episode_count": 3
+  },
+  "176": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 67,
+    "task_name_normalized": "locomanip/pick up a caution sign stand and walk to put it agaist wall",
+    "task_name_raw": "Locomanip/pick_up_a_caution_sign_stand_and_walk_to_put_it_agaist_wall",
+    "valid_4s_episode_count": 3
+  },
+  "177": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 68,
+    "task_name_normalized": "locomanip/pick up a dumpling toy turn around walk towards another desk and place it",
+    "task_name_raw": "Locomanip/pick_up_a_dumpling_toy_turn_around_walk_towards_another_desk_and_place_it",
+    "valid_4s_episode_count": 3
+  },
+  "178": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 69,
+    "task_name_normalized": "locomanip/pick up a duster turn around walk towards another desk place it in a container",
+    "task_name_raw": "Locomanip/pick_up_a_duster_turn_around_walk_towards_another_desk_place_it_in_a_container",
+    "valid_4s_episode_count": 3
+  },
+  "179": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 70,
+    "task_name_normalized": "locomanip/pick up a kettle place it on base and turn on",
+    "task_name_raw": "Locomanip/pick_up_a_kettle_place_it_on_base_and_turn_on",
+    "valid_4s_episode_count": 3
+  },
+  "18": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 7,
+    "task_name_normalized": "articulated/compress an air pump g1",
+    "task_name_raw": "Articulated/compress_an_air_pump_g1",
+    "valid_4s_episode_count": 40
+  },
+  "180": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "locomanip/pick up a magnetic container turn around walk towards whiteboard stick it onto the board",
+    "task_name_raw": "Locomanip/pick_up_a_magnetic_container_turn_around_walk_towards_whiteboard_stick_it_onto_the_board",
+    "valid_4s_episode_count": 2
+  },
+  "181": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 71,
+    "task_name_normalized": "locomanip/pick up a plate and put it into the sink",
+    "task_name_raw": "Locomanip/pick_up_a_plate_and_put_it_into_the_sink",
+    "valid_4s_episode_count": 3
+  },
+  "182": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 72,
+    "task_name_normalized": "locomanip/pick up football and walk towards another desk",
+    "task_name_raw": "Locomanip/pick_up_football_and_walk_towards_another_desk",
+    "valid_4s_episode_count": 3
+  },
+  "183": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 73,
+    "task_name_normalized": "locomanip/place kettle near coffee maker",
+    "task_name_raw": "Locomanip/place_kettle_near_coffee_maker",
+    "valid_4s_episode_count": 3
+  },
+  "184": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 74,
+    "task_name_normalized": "locomanip/throw away a piece of paper to trashcan",
+    "task_name_raw": "Locomanip/throw_away_a_piece_of_paper_to_trashcan",
+    "valid_4s_episode_count": 3
+  },
+  "185": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 75,
+    "task_name_normalized": "locomanip/walk to grab the door handle",
+    "task_name_raw": "Locomanip/walk_to_grab_the_door_handle",
+    "valid_4s_episode_count": 40
+  },
+  "186": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 76,
+    "task_name_normalized": "locomanip/walk towards a desk and drag the file tray out",
+    "task_name_raw": "Locomanip/walk_towards_a_desk_and_drag_the_file_tray_out",
+    "valid_4s_episode_count": 40
+  },
+  "187": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 77,
+    "task_name_normalized": "locomanip/walk towards a desk and pick up a bottle and put it in a container",
+    "task_name_raw": "Locomanip/walk_towards_a_desk_and_pick_up_a_bottle_and_put_it_in_a_container",
+    "valid_4s_episode_count": 40
+  },
+  "188": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 78,
+    "task_name_normalized": "locomanip/walk towards a desk and pick up a dumpling",
+    "task_name_raw": "Locomanip/walk_towards_a_desk_and_pick_up_a_dumpling",
+    "valid_4s_episode_count": 40
+  },
+  "189": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 79,
+    "task_name_normalized": "locomanip/walk towards a desk and pick up a pencil case and put it in a container",
+    "task_name_raw": "Locomanip/walk_towards_a_desk_and_pick_up_a_pencil_case_and_put_it_in_a_container",
+    "valid_4s_episode_count": 40
+  },
+  "19": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 8,
+    "task_name_normalized": "articulated/de compress a small air pump g1",
+    "task_name_raw": "Articulated/de-compress_a_small_air_pump_g1",
+    "valid_4s_episode_count": 40
+  },
+  "190": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 80,
+    "task_name_normalized": "locomanip/walk towards a desk and pick up a shampoo",
+    "task_name_raw": "Locomanip/walk_towards_a_desk_and_pick_up_a_shampoo",
+    "valid_4s_episode_count": 40
+  },
+  "191": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 81,
+    "task_name_normalized": "locomanip/walk towards a desk and pick up a tennis ball and put it in a container",
+    "task_name_raw": "Locomanip/walk_towards_a_desk_and_pick_up_a_tennis_ball_and_put_it_in_a_container",
+    "valid_4s_episode_count": 40
+  },
+  "192": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 82,
+    "task_name_normalized": "locomanip/walk towards a desk and pick up the boiling pot from its base",
+    "task_name_raw": "Locomanip/walk_towards_a_desk_and_pick_up_the_boiling_pot_from_its_base",
+    "valid_4s_episode_count": 40
+  },
+  "193": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 83,
+    "task_name_normalized": "locomanip/walk towards a desk and place a bottle",
+    "task_name_raw": "Locomanip/walk_towards_a_desk_and_place_a_bottle",
+    "valid_4s_episode_count": 40
+  },
+  "194": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 84,
+    "task_name_normalized": "locomanip/walk towards a desk and place a cube on a tray",
+    "task_name_raw": "Locomanip/walk_towards_a_desk_and_place_a_cube_on_a_tray",
+    "valid_4s_episode_count": 40
+  },
+  "195": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 85,
+    "task_name_normalized": "locomanip/walk towards a desk and place a stapler on a tray",
+    "task_name_raw": "Locomanip/walk_towards_a_desk_and_place_a_stapler_on_a_tray",
+    "valid_4s_episode_count": 40
+  },
+  "196": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 86,
+    "task_name_normalized": "locomanip/walk towards a desk and place a toilet paper roll on a tray",
+    "task_name_raw": "Locomanip/walk_towards_a_desk_and_place_a_toilet_paper_roll_on_a_tray",
+    "valid_4s_episode_count": 40
+  },
+  "197": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 87,
+    "task_name_normalized": "locomanip/walk towards a desk and pour water from the pot to a cup",
+    "task_name_raw": "Locomanip/walk_towards_a_desk_and_pour_water_from_the_pot_to_a_cup",
+    "valid_4s_episode_count": 40
+  },
+  "198": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 88,
+    "task_name_normalized": "locomanip/walk towards a desk and push the file tray in",
+    "task_name_raw": "Locomanip/walk_towards_a_desk_and_push_the_file_tray_in",
+    "valid_4s_episode_count": 40
+  },
+  "199": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 89,
+    "task_name_normalized": "locomanip/walk towards a desk and put the eraser into a container",
+    "task_name_raw": "Locomanip/walk_towards_a_desk_and_put_the_eraser_into_a_container",
+    "valid_4s_episode_count": 40
+  },
+  "2": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "articulated/center the angle of a monitor on the desk",
+    "task_name_raw": "Articulated/center_the_angle_of_a_monitor_on_the_desk",
+    "valid_4s_episode_count": 0
+  },
+  "20": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 9,
+    "task_name_normalized": "articulated/extend a phone stand",
+    "task_name_raw": "Articulated/extend_a_phone_stand",
+    "valid_4s_episode_count": 40
+  },
+  "200": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 90,
+    "task_name_normalized": "locomanip/walk towards a desk and put the shovel into a container",
+    "task_name_raw": "Locomanip/walk_towards_a_desk_and_put_the_shovel_into_a_container",
+    "valid_4s_episode_count": 40
+  },
+  "201": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 91,
+    "task_name_normalized": "locomanip/walk towards a desk and turn on the boiling pot",
+    "task_name_raw": "Locomanip/walk_towards_a_desk_and_turn_on_the_boiling_pot",
+    "valid_4s_episode_count": 40
+  },
+  "202": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 92,
+    "task_name_normalized": "locomanip/walk towards a desk and turn on the light switch",
+    "task_name_raw": "Locomanip/walk_towards_a_desk_and_turn_on_the_light_switch",
+    "valid_4s_episode_count": 40
+  },
+  "203": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 93,
+    "task_name_normalized": "locomanip/walk towards a duster on desk and clean the desk",
+    "task_name_raw": "Locomanip/walk_towards_a_duster_on_desk_and_clean_the_desk",
+    "valid_4s_episode_count": 3
+  },
+  "204": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 94,
+    "task_name_normalized": "locomanip/walk towards a open gate button and open gate",
+    "task_name_raw": "Locomanip/walk_towards_a_open_gate_button_and_open_gate",
+    "valid_4s_episode_count": 3
+  },
+  "205": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 95,
+    "task_name_normalized": "locomanip/walk towards a stanchion and retract the strap",
+    "task_name_raw": "Locomanip/walk_towards_a_stanchion_and_retract_the_strap",
+    "valid_4s_episode_count": 3
+  },
+  "206": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 96,
+    "task_name_normalized": "locomanip/walk towards chair and pull it out",
+    "task_name_raw": "Locomanip/walk_towards_chair_and_pull_it_out",
+    "valid_4s_episode_count": 3
+  },
+  "207": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 97,
+    "task_name_normalized": "locomanip/walk towards chair and push it in",
+    "task_name_raw": "Locomanip/walk_towards_chair_and_push_it_in",
+    "valid_4s_episode_count": 3
+  },
+  "208": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 98,
+    "task_name_normalized": "locomanip/walk towards chair and rotate the chair",
+    "task_name_raw": "Locomanip/walk_towards_chair_and_rotate_the_chair",
+    "valid_4s_episode_count": 3
+  },
+  "209": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 99,
+    "task_name_normalized": "locomanip/walk towards coffee maker and close lid",
+    "task_name_raw": "Locomanip/walk_towards_coffee_maker_and_close_lid",
+    "valid_4s_episode_count": 3
+  },
+  "21": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 10,
+    "task_name_normalized": "articulated/flip close a diary g1",
+    "task_name_raw": "Articulated/flip_close_a_diary_g1",
+    "valid_4s_episode_count": 40
+  },
+  "210": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 100,
+    "task_name_normalized": "locomanip/walk towards elevator and push button",
+    "task_name_raw": "Locomanip/walk_towards_elevator_and_push_button",
+    "valid_4s_episode_count": 3
+  },
+  "211": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 101,
+    "task_name_normalized": "locomanip/walk towards fire extinguisher and close door",
+    "task_name_raw": "Locomanip/walk_towards_fire_extinguisher_and_close_door",
+    "valid_4s_episode_count": 3
+  },
+  "212": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 102,
+    "task_name_normalized": "locomanip/walk towards fire extinguisher and open door",
+    "task_name_raw": "Locomanip/walk_towards_fire_extinguisher_and_open_door",
+    "valid_4s_episode_count": 3
+  },
+  "213": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 103,
+    "task_name_normalized": "locomanip/walk towards outside chair and pull it out",
+    "task_name_raw": "Locomanip/walk_towards_outside_chair_and_pull_it_out",
+    "valid_4s_episode_count": 3
+  },
+  "214": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 104,
+    "task_name_normalized": "locomanip/walk towards table organize table top",
+    "task_name_raw": "Locomanip/walk_towards_table_organize_table_top",
+    "valid_4s_episode_count": 3
+  },
+  "215": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 105,
+    "task_name_normalized": "locomanip/walk towards the cabinet and close the cabinet door",
+    "task_name_raw": "Locomanip/walk_towards_the_cabinet_and_close_the_cabinet_door",
+    "valid_4s_episode_count": 40
+  },
+  "216": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 106,
+    "task_name_normalized": "locomanip/walk towards the desk and use an air pump on the desk",
+    "task_name_raw": "Locomanip/walk_towards_the_desk_and_use_an_air_pump_on_the_desk",
+    "valid_4s_episode_count": 40
+  },
+  "217": {
+    "category_normalized": "locomanip",
+    "category_raw": "Locomanip",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "locomanip/walk towards trashbin and throw trash inside",
+    "task_name_raw": "Locomanip/walk_towards_trashbin_and_throw_trash_inside",
+    "valid_4s_episode_count": 2
+  },
+  "218": {
+    "category_normalized": "precision",
+    "category_raw": "Precision",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "precision/align a stack of books",
+    "task_name_raw": "Precision/align_a_stack_of_books",
+    "valid_4s_episode_count": 0
+  },
+  "219": {
+    "category_normalized": "precision",
+    "category_raw": "Precision",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 107,
+    "task_name_normalized": "precision/insert flower into vase",
+    "task_name_raw": "Precision/insert_flower_into_vase",
+    "valid_4s_episode_count": 40
+  },
+  "22": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "articulated/flip close a diary h1",
+    "task_name_raw": "Articulated/flip_close_a_diary_h1",
+    "valid_4s_episode_count": 0
+  },
+  "220": {
+    "category_normalized": "precision",
+    "category_raw": "Precision",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 108,
+    "task_name_normalized": "precision/open a bottle g1",
+    "task_name_raw": "Precision/open_a_bottle_g1",
+    "valid_4s_episode_count": 40
+  },
+  "221": {
+    "category_normalized": "precision",
+    "category_raw": "Precision",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "precision/place a soldering gun into its base h1",
+    "task_name_raw": "Precision/place_a_soldering_gun_into_its_base_h1",
+    "valid_4s_episode_count": 0
+  },
+  "222": {
+    "category_normalized": "precision",
+    "category_raw": "Precision",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "precision/place the kettle on its base",
+    "task_name_raw": "Precision/place_the_kettle_on_its_base",
+    "valid_4s_episode_count": 0
+  },
+  "223": {
+    "category_normalized": "precision",
+    "category_raw": "Precision",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "precision/press start boiling button",
+    "task_name_raw": "Precision/press_start_boiling_button",
+    "valid_4s_episode_count": 0
+  },
+  "224": {
+    "category_normalized": "precision",
+    "category_raw": "Precision",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "precision/stack a rolls of paper towel on top of the other",
+    "task_name_raw": "Precision/stack_a_rolls_of_paper_towel_on_top_of_the_other",
+    "valid_4s_episode_count": 0
+  },
+  "225": {
+    "category_normalized": "precision",
+    "category_raw": "Precision",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 109,
+    "task_name_normalized": "precision/unplug a charger",
+    "task_name_raw": "Precision/unplug_a_charger",
+    "valid_4s_episode_count": 40
+  },
+  "226": {
+    "category_normalized": "tool use",
+    "category_raw": "Tool_use",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 110,
+    "task_name_normalized": "tool use/clean a table with duster",
+    "task_name_raw": "Tool_use/clean_a_table_with_duster",
+    "valid_4s_episode_count": 40
+  },
+  "227": {
+    "category_normalized": "tool use",
+    "category_raw": "Tool_use",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 111,
+    "task_name_normalized": "tool use/clean a table with eraser",
+    "task_name_raw": "Tool_use/clean_a_table_with_eraser",
+    "valid_4s_episode_count": 40
+  },
+  "228": {
+    "category_normalized": "tool use",
+    "category_raw": "Tool_use",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 112,
+    "task_name_normalized": "tool use/clean the window",
+    "task_name_raw": "Tool_use/clean_the_window",
+    "valid_4s_episode_count": 3
+  },
+  "229": {
+    "category_normalized": "tool use",
+    "category_raw": "Tool_use",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 113,
+    "task_name_normalized": "tool use/click a keyboard key",
+    "task_name_raw": "Tool_use/click_a_keyboard_key",
+    "valid_4s_episode_count": 40
+  },
+  "23": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 11,
+    "task_name_normalized": "articulated/flip open a diary g1",
+    "task_name_raw": "Articulated/flip_open_a_diary_g1",
+    "valid_4s_episode_count": 40
+  },
+  "230": {
+    "category_normalized": "tool use",
+    "category_raw": "Tool_use",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 114,
+    "task_name_normalized": "tool use/click a mouse",
+    "task_name_raw": "Tool_use/click_a_mouse",
+    "valid_4s_episode_count": 40
+  },
+  "231": {
+    "category_normalized": "tool use",
+    "category_raw": "Tool_use",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 115,
+    "task_name_normalized": "tool use/erase a table g1",
+    "task_name_raw": "Tool_use/erase_a_table_g1",
+    "valid_4s_episode_count": 40
+  },
+  "232": {
+    "category_normalized": "tool use",
+    "category_raw": "Tool_use",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "tool use/pick the hammer and hit desk",
+    "task_name_raw": "Tool_use/pick_the_hammer_and_hit_desk",
+    "valid_4s_episode_count": 0
+  },
+  "233": {
+    "category_normalized": "tool use",
+    "category_raw": "Tool_use",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "tool use/put tripod into container h1",
+    "task_name_raw": "Tool_use/put_tripod_into_container_h1",
+    "valid_4s_episode_count": 0
+  },
+  "234": {
+    "category_normalized": "tool use",
+    "category_raw": "Tool_use",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 116,
+    "task_name_normalized": "tool use/remove a soldering gun from its base g1",
+    "task_name_raw": "Tool_use/remove_a_soldering_gun_from_its_base_g1",
+    "valid_4s_episode_count": 40
+  },
+  "235": {
+    "category_normalized": "tool use",
+    "category_raw": "Tool_use",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "tool use/remove a soldering gun from its base h1",
+    "task_name_raw": "Tool_use/remove_a_soldering_gun_from_its_base_h1",
+    "valid_4s_episode_count": 0
+  },
+  "236": {
+    "category_normalized": "tool use",
+    "category_raw": "Tool_use",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "tool use/remove soil from box",
+    "task_name_raw": "Tool_use/remove_soil_from_box",
+    "valid_4s_episode_count": 0
+  },
+  "237": {
+    "category_normalized": "tool use",
+    "category_raw": "Tool_use",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "tool use/use a duster to dust the desk",
+    "task_name_raw": "Tool_use/use_a_duster_to_dust_the_desk",
+    "valid_4s_episode_count": 0
+  },
+  "238": {
+    "category_normalized": "tool use",
+    "category_raw": "Tool_use",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 117,
+    "task_name_normalized": "tool use/use a garden tool",
+    "task_name_raw": "Tool_use/use_a_garden_tool",
+    "valid_4s_episode_count": 39
+  },
+  "239": {
+    "category_normalized": "tool use",
+    "category_raw": "Tool_use",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "tool use/use a soft sponge to wipe off a dry surface",
+    "task_name_raw": "Tool_use/use_a_soft_sponge_to_wipe_off_a_dry_surface",
+    "valid_4s_episode_count": 0
+  },
+  "24": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "articulated/flip open a diary h1",
+    "task_name_raw": "Articulated/flip_open_a_diary_h1",
+    "valid_4s_episode_count": 0
+  },
+  "240": {
+    "category_normalized": "tool use",
+    "category_raw": "Tool_use",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "tool use/use a whiteboard eraser to erase the mark on the desk",
+    "task_name_raw": "Tool_use/use_a_whiteboard_eraser_to_erase_the_mark_on_the_desk",
+    "valid_4s_episode_count": 0
+  },
+  "241": {
+    "category_normalized": "tool use",
+    "category_raw": "Tool_use",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 118,
+    "task_name_normalized": "tool use/use eraser to wipe desk g1",
+    "task_name_raw": "Tool_use/use_eraser_to_wipe_desk_g1",
+    "valid_4s_episode_count": 40
+  },
+  "242": {
+    "category_normalized": "tool use",
+    "category_raw": "Tool_use",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 119,
+    "task_name_normalized": "tool use/use liquid hand soap",
+    "task_name_raw": "Tool_use/use_liquid_hand_soap",
+    "valid_4s_episode_count": 40
+  },
+  "243": {
+    "category_normalized": "tool use",
+    "category_raw": "Tool_use",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 120,
+    "task_name_normalized": "tool use/use the hammer",
+    "task_name_raw": "Tool_use/use_the_hammer",
+    "valid_4s_episode_count": 40
+  },
+  "244": {
+    "category_normalized": "tool use",
+    "category_raw": "Tool_use",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 121,
+    "task_name_normalized": "tool use/use the hole punch",
+    "task_name_raw": "Tool_use/use_the_hole_punch",
+    "valid_4s_episode_count": 40
+  },
+  "245": {
+    "category_normalized": "tool use",
+    "category_raw": "Tool_use",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "tool use/wipe a monitor with a cloth",
+    "task_name_raw": "Tool_use/wipe_a_monitor_with_a_cloth",
+    "valid_4s_episode_count": 0
+  },
+  "246": {
+    "category_normalized": "tool use",
+    "category_raw": "Tool_use",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "tool use/wipe a table with an eraser",
+    "task_name_raw": "Tool_use/wipe_a_table_with_an_eraser",
+    "valid_4s_episode_count": 0
+  },
+  "25": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "articulated/open a book",
+    "task_name_raw": "Articulated/open_a_book",
+    "valid_4s_episode_count": 0
+  },
+  "26": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 12,
+    "task_name_normalized": "articulated/open a drawer g1",
+    "task_name_raw": "Articulated/open_a_drawer_g1",
+    "valid_4s_episode_count": 40
+  },
+  "27": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "articulated/open a microwave door",
+    "task_name_raw": "Articulated/open_a_microwave_door",
+    "valid_4s_episode_count": 0
+  },
+  "28": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "articulated/open a small storage box lid",
+    "task_name_raw": "Articulated/open_a_small_storage_box_lid",
+    "valid_4s_episode_count": 0
+  },
+  "29": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "articulated/open a stapler",
+    "task_name_raw": "Articulated/open_a_stapler",
+    "valid_4s_episode_count": 0
+  },
+  "3": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "articulated/click a button on the mouse",
+    "task_name_raw": "Articulated/click_a_button_on_the_mouse",
+    "valid_4s_episode_count": 0
+  },
+  "30": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 13,
+    "task_name_normalized": "articulated/open the zipper of a bag",
+    "task_name_raw": "Articulated/open_the_zipper_of_a_bag",
+    "valid_4s_episode_count": 40
+  },
+  "31": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "articulated/press a big button h1",
+    "task_name_raw": "Articulated/press_a_big_button_h1",
+    "valid_4s_episode_count": 0
+  },
+  "32": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "articulated/press a paper pin puncher",
+    "task_name_raw": "Articulated/press_a_paper_pin_puncher",
+    "valid_4s_episode_count": 0
+  },
+  "33": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 14,
+    "task_name_normalized": "articulated/press the stapler g1",
+    "task_name_raw": "Articulated/press_the_stapler_g1",
+    "valid_4s_episode_count": 40
+  },
+  "34": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "articulated/pressing on a light switch",
+    "task_name_raw": "Articulated/pressing_on_a_light_switch",
+    "valid_4s_episode_count": 0
+  },
+  "35": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 15,
+    "task_name_normalized": "articulated/pull out chips tray g1",
+    "task_name_raw": "Articulated/pull_out_chips_tray_g1",
+    "valid_4s_episode_count": 40
+  },
+  "36": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "articulated/pull out chips tray h1",
+    "task_name_raw": "Articulated/pull_out_chips_tray_h1",
+    "valid_4s_episode_count": 0
+  },
+  "37": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 16,
+    "task_name_normalized": "articulated/push a button g1",
+    "task_name_raw": "Articulated/push_a_button_g1",
+    "valid_4s_episode_count": 40
+  },
+  "38": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 17,
+    "task_name_normalized": "articulated/push back chips tray g1",
+    "task_name_raw": "Articulated/push_back_chips_tray_g1",
+    "valid_4s_episode_count": 40
+  },
+  "39": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "articulated/push button on controller",
+    "task_name_raw": "Articulated/push_button_on_controller",
+    "valid_4s_episode_count": 0
+  },
+  "4": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "articulated/click a mechanical keyboard space key",
+    "task_name_raw": "Articulated/click_a_mechanical_keyboard_space_key",
+    "valid_4s_episode_count": 0
+  },
+  "40": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 18,
+    "task_name_normalized": "articulated/push the drawer back",
+    "task_name_raw": "Articulated/push_the_drawer_back",
+    "valid_4s_episode_count": 40
+  },
+  "41": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 19,
+    "task_name_normalized": "articulated/rotate a phone stand",
+    "task_name_raw": "Articulated/rotate_a_phone_stand",
+    "valid_4s_episode_count": 40
+  },
+  "42": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 20,
+    "task_name_normalized": "articulated/rotate chair",
+    "task_name_raw": "Articulated/rotate_chair",
+    "valid_4s_episode_count": 40
+  },
+  "43": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 21,
+    "task_name_normalized": "articulated/rotate sofa g1",
+    "task_name_raw": "Articulated/rotate_sofa_g1",
+    "valid_4s_episode_count": 40
+  },
+  "44": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "articulated/turn off the faucet handle",
+    "task_name_raw": "Articulated/turn_off_the_faucet_handle",
+    "valid_4s_episode_count": 0
+  },
+  "45": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "articulated/turn on the faucet handle",
+    "task_name_raw": "Articulated/turn_on_the_faucet_handle",
+    "valid_4s_episode_count": 0
+  },
+  "46": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "articulated/unfold stand on multimeter",
+    "task_name_raw": "Articulated/unfold_stand_on_multimeter",
+    "valid_4s_episode_count": 0
+  },
+  "47": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "articulated/use joystick on controller",
+    "task_name_raw": "Articulated/use_joystick_on_controller",
+    "valid_4s_episode_count": 0
+  },
+  "48": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 22,
+    "task_name_normalized": "basic/drag a white board",
+    "task_name_raw": "Basic/drag_a_white_board",
+    "valid_4s_episode_count": 40
+  },
+  "49": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/lift a kettle from base",
+    "task_name_raw": "Basic/lift_a_kettle_from_base",
+    "valid_4s_episode_count": 0
+  },
+  "5": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 1,
+    "task_name_normalized": "articulated/close a kettle lid g1",
+    "task_name_raw": "Articulated/close_a_kettle_lid_g1",
+    "valid_4s_episode_count": 40
+  },
+  "50": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/move dinasour to the left",
+    "task_name_raw": "Basic/move_dinasour_to_the_left",
+    "valid_4s_episode_count": 0
+  },
+  "51": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/pick a 3d printing filament and put it inside the container",
+    "task_name_raw": "Basic/pick_a_3d_printing_filament_and_put_it_inside_the_container",
+    "valid_4s_episode_count": 0
+  },
+  "52": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/pick a bag of fork and place it in a container",
+    "task_name_raw": "Basic/pick_a_bag_of_fork_and_place_it_in_a_container",
+    "valid_4s_episode_count": 0
+  },
+  "53": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/pick a calculator from a container and put it on the desk",
+    "task_name_raw": "Basic/pick_a_calculator_from_a_container_and_put_it_on_the_desk",
+    "valid_4s_episode_count": 0
+  },
+  "54": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/pick a chess piece and place it in a container",
+    "task_name_raw": "Basic/pick_a_chess_piece_and_place_it_in_a_container",
+    "valid_4s_episode_count": 0
+  },
+  "55": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/pick a electric screwdriver and place it in a container",
+    "task_name_raw": "Basic/pick_a_electric_screwdriver_and_place_it_in_a_container",
+    "valid_4s_episode_count": 0
+  },
+  "56": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/pick a hammer and place on table",
+    "task_name_raw": "Basic/pick_a_hammer_and_place_on_table",
+    "valid_4s_episode_count": 0
+  },
+  "57": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/pick a multi meter and place it in a container",
+    "task_name_raw": "Basic/pick_a_multi_meter_and_place_it_in_a_container",
+    "valid_4s_episode_count": 0
+  },
+  "58": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/pick a oven glove on top of the container and put it into a rectangular container",
+    "task_name_raw": "Basic/pick_a_oven_glove_on_top_of_the_container_and_put_it_into_a_rectangular_container",
+    "valid_4s_episode_count": 0
+  },
+  "59": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/pick a plastic water bottle and place it in a container",
+    "task_name_raw": "Basic/pick_a_plastic_water_bottle_and_place_it_in_a_container",
+    "valid_4s_episode_count": 0
+  },
+  "6": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "articulated/close a kettle lid h1",
+    "task_name_raw": "Articulated/close_a_kettle_lid_h1",
+    "valid_4s_episode_count": 0
+  },
+  "60": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/pick a plate and put it on the tray",
+    "task_name_raw": "Basic/pick_a_plate_and_put_it_on_the_tray",
+    "valid_4s_episode_count": 0
+  },
+  "61": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/pick a power strip and put it inside a container",
+    "task_name_raw": "Basic/pick_a_power_strip_and_put_it_inside_a_container",
+    "valid_4s_episode_count": 0
+  },
+  "62": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/pick a shampoo and place it in a container",
+    "task_name_raw": "Basic/pick_a_shampoo_and_place_it_in_a_container",
+    "valid_4s_episode_count": 0
+  },
+  "63": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/pick a smaller container and put it inside a bigger container",
+    "task_name_raw": "Basic/pick_a_smaller_container_and_put_it_inside_a_bigger_container",
+    "valid_4s_episode_count": 0
+  },
+  "64": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/pick a t shirt and place it in a container",
+    "task_name_raw": "Basic/pick_a_t-shirt_and_place_it_in_a_container",
+    "valid_4s_episode_count": 0
+  },
+  "65": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/pick a tennis ball and place it in a container",
+    "task_name_raw": "Basic/pick_a_tennis_ball_and_place_it_in_a_container",
+    "valid_4s_episode_count": 0
+  },
+  "66": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/pick a umbrella and place it in a container",
+    "task_name_raw": "Basic/pick_a_umbrella_and_place_it_in_a_container",
+    "valid_4s_episode_count": 0
+  },
+  "67": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/pick a web cam and place it in a container",
+    "task_name_raw": "Basic/pick_a_web_cam_and_place_it_in_a_container",
+    "valid_4s_episode_count": 0
+  },
+  "68": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/pick an air purify spray and put it inside a container",
+    "task_name_raw": "Basic/pick_an_air_purify_spray_and_put_it_inside_a_container",
+    "valid_4s_episode_count": 0
+  },
+  "69": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/pick the tape and place in a container",
+    "task_name_raw": "Basic/pick_the_tape_and_place_in_a_container",
+    "valid_4s_episode_count": 0
+  },
+  "7": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 2,
+    "task_name_normalized": "articulated/close a laptop g1",
+    "task_name_raw": "Articulated/close_a_laptop_g1",
+    "valid_4s_episode_count": 40
+  },
+  "70": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 23,
+    "task_name_normalized": "basic/pick up a football and put in a container",
+    "task_name_raw": "Basic/pick_up_a_football_and_put_in_a_container",
+    "valid_4s_episode_count": 40
+  },
+  "71": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/pick up a pillow",
+    "task_name_raw": "Basic/pick_up_a_pillow",
+    "valid_4s_episode_count": 0
+  },
+  "72": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/pick up a plier",
+    "task_name_raw": "Basic/pick_up_a_plier",
+    "valid_4s_episode_count": 0
+  },
+  "73": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 24,
+    "task_name_normalized": "basic/pick up a tripod and stand it on the desk",
+    "task_name_raw": "Basic/pick_up_a_tripod_and_stand_it_on_the_desk",
+    "valid_4s_episode_count": 40
+  },
+  "74": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/place a bag of coffee beans in a plastic bag and lift it",
+    "task_name_raw": "Basic/place_a_bag_of_coffee_beans_in_a_plastic_bag_and_lift_it",
+    "valid_4s_episode_count": 0
+  },
+  "75": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/place a bottle of protein shake in the plastic bag",
+    "task_name_raw": "Basic/place_a_bottle_of_protein_shake_in_the_plastic_bag",
+    "valid_4s_episode_count": 0
+  },
+  "76": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 25,
+    "task_name_normalized": "basic/place a cube in a bag",
+    "task_name_raw": "Basic/place_a_cube_in_a_bag",
+    "valid_4s_episode_count": 40
+  },
+  "77": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/place a rubix cube in a plastic bag and lift it",
+    "task_name_raw": "Basic/place_a_rubix_cube_in_a_plastic_bag_and_lift_it",
+    "valid_4s_episode_count": 0
+  },
+  "78": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/place a small rectangular container in a plastic bag and lift it",
+    "task_name_raw": "Basic/place_a_small_rectangular_container_in_a_plastic_bag_and_lift_it",
+    "valid_4s_episode_count": 0
+  },
+  "79": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/place a stack of plates in a bag",
+    "task_name_raw": "Basic/place_a_stack_of_plates_in_a_bag",
+    "valid_4s_episode_count": 0
+  },
+  "8": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "articulated/close a laptop lid h1",
+    "task_name_raw": "Articulated/close_a_laptop_lid_h1",
+    "valid_4s_episode_count": 0
+  },
+  "80": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/place a stapler in a plastic bag and lift it",
+    "task_name_raw": "Basic/place_a_stapler_in_a_plastic_bag_and_lift_it",
+    "valid_4s_episode_count": 0
+  },
+  "81": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/place the pencil case inside a container",
+    "task_name_raw": "Basic/place_the_pencil_case_inside_a_container",
+    "valid_4s_episode_count": 0
+  },
+  "82": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/pour out some sunflower seeds",
+    "task_name_raw": "Basic/pour_out_some_sunflower_seeds",
+    "valid_4s_episode_count": 0
+  },
+  "83": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 26,
+    "task_name_normalized": "basic/pour sunflower seeds on plate g1",
+    "task_name_raw": "Basic/pour_sunflower_seeds_on_plate_g1",
+    "valid_4s_episode_count": 40
+  },
+  "84": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 27,
+    "task_name_normalized": "basic/pour water from a kettle into a cup",
+    "task_name_raw": "Basic/pour_water_from_a_kettle_into_a_cup",
+    "valid_4s_episode_count": 40
+  },
+  "85": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 28,
+    "task_name_normalized": "basic/pour water from a kettle into a cup g1",
+    "task_name_raw": "Basic/pour_water_from_a_kettle_into_a_cup_g1",
+    "valid_4s_episode_count": 40
+  },
+  "86": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/pour water into a cup",
+    "task_name_raw": "Basic/pour_water_into_a_cup",
+    "valid_4s_episode_count": 0
+  },
+  "87": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 29,
+    "task_name_normalized": "basic/pull a chair away from table g1",
+    "task_name_raw": "Basic/pull_a_chair_away_from_table_g1",
+    "valid_4s_episode_count": 40
+  },
+  "88": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/push 2 dumplings together",
+    "task_name_raw": "Basic/push_2_dumplings_together",
+    "valid_4s_episode_count": 0
+  },
+  "89": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/push a box of screws from the left side of the desk to the right next to the tape",
+    "task_name_raw": "Basic/push_a_box_of_screws_from_the_left_side_of_the_desk_to_the_right_next_to_the_tape",
+    "valid_4s_episode_count": 0
+  },
+  "9": {
+    "category_normalized": "articulated",
+    "category_raw": "Articulated",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "articulated/close a microwave door",
+    "task_name_raw": "Articulated/close_a_microwave_door",
+    "valid_4s_episode_count": 0
+  },
+  "90": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 30,
+    "task_name_normalized": "basic/push duck g1",
+    "task_name_raw": "Basic/push_duck_g1",
+    "valid_4s_episode_count": 68
+  },
+  "91": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/push the pencil case next to the container",
+    "task_name_raw": "Basic/push_the_pencil_case_next_to_the_container",
+    "valid_4s_episode_count": 0
+  },
+  "92": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/push the tape towards the notebook",
+    "task_name_raw": "Basic/push_the_tape_towards_the_notebook",
+    "valid_4s_episode_count": 0
+  },
+  "93": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/put bag of coffee bean into container",
+    "task_name_raw": "Basic/put_bag_of_coffee_bean_into_container",
+    "valid_4s_episode_count": 0
+  },
+  "94": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "primary",
+    "contiguous_label_index": 31,
+    "task_name_normalized": "basic/put dumpling into plate g1",
+    "task_name_raw": "Basic/put_dumpling_into_plate_g1",
+    "valid_4s_episode_count": 80
+  },
+  "95": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/put lunchbag into container",
+    "task_name_raw": "Basic/put_lunchbag_into_container",
+    "valid_4s_episode_count": 0
+  },
+  "96": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/put notebook into container",
+    "task_name_raw": "Basic/put_notebook_into_container",
+    "valid_4s_episode_count": 0
+  },
+  "97": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/put powercord into container",
+    "task_name_raw": "Basic/put_powercord_into_container",
+    "valid_4s_episode_count": 0
+  },
+  "98": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/put small tripod upright",
+    "task_name_raw": "Basic/put_small_tripod_upright",
+    "valid_4s_episode_count": 0
+  },
+  "99": {
+    "category_normalized": "basic",
+    "category_raw": "Basic",
+    "classification_inclusion": "inactive_or_low_sample",
+    "contiguous_label_index": -1,
+    "task_name_normalized": "basic/put the duck toy into container",
+    "task_name_raw": "Basic/put_the_duck_toy_into_container",
+    "valid_4s_episode_count": 0
+  }
+}

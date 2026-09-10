@@ -1,0 +1,86 @@
+{
+  "status": "passed",
+  "qa_utc": "2026-09-10T09:39:27Z",
+  "figures_checked": 6,
+  "human_visual_inspection": "staged PNGs were checked for nonblank content, dimensions, and visual readability",
+  "automated_file_checks": [
+    "PNG is nonempty and >=1000x600",
+    "SVG/PDF nonempty",
+    "figure data CSV nonempty",
+    "plot script exists"
+  ],
+  "checks": [
+    {
+      "figure_id": "fig01_baseline_panorama",
+      "png": "figures/fig01_baseline_panorama.png",
+      "png_size": [
+        3387,
+        2187
+      ],
+      "svg_nonempty": true,
+      "pdf_nonempty": true,
+      "data_csv_nonempty": true,
+      "visual_inspection": "passed"
+    },
+    {
+      "figure_id": "fig02_batch4_32_48_dynamic_static",
+      "png": "figures/fig02_batch4_32_48_dynamic_static.png",
+      "png_size": [
+        2667,
+        1323
+      ],
+      "svg_nonempty": true,
+      "pdf_nonempty": true,
+      "data_csv_nonempty": true,
+      "visual_inspection": "passed"
+    },
+    {
+      "figure_id": "fig03_full120_lora_factorial",
+      "png": "figures/fig03_full120_lora_factorial.png",
+      "png_size": [
+        2907,
+        1371
+      ],
+      "svg_nonempty": true,
+      "pdf_nonempty": true,
+      "data_csv_nonempty": true,
+      "visual_inspection": "passed"
+    },
+    {
+      "figure_id": "fig04_lora_gain_interaction",
+      "png": "figures/fig04_lora_gain_interaction.png",
+      "png_size": [
+        2667,
+        1251
+      ],
+      "svg_nonempty": true,
+      "pdf_nonempty": true,
+      "data_csv_nonempty": true,
+      "visual_inspection": "passed"
+    },
+    {
+      "figure_id": "fig05_rare_shortcut",
+      "png": "figures/fig05_rare_shortcut.png",
+      "png_size": [
+        3147,
+        1347
+      ],
+      "svg_nonempty": true,
+      "pdf_nonempty": true,
+      "data_csv_nonempty": true,
+      "visual_inspection": "passed"
+    },
+    {
+      "figure_id": "fig06_calibration",
+      "png": "figures/fig06_calibration.png",
+      "png_size": [
+        2667,
+        2427
+      ],
+      "svg_nonempty": true,
+      "pdf_nonempty": true,
+      "data_csv_nonempty": true,
+      "visual_inspection": "passed"
+    }
+  ]
+}
