@@ -1,0 +1,34 @@
+{
+  "study_id": "CORE_B_V3_STATE_INFORMATION_VIDEO",
+  "status": "COMPLETE_DEVELOPMENT_ONLY",
+  "dev_episodes": 603,
+  "dev_windows": 2322,
+  "seeds": [
+    20260953,
+    20260954,
+    20260955
+  ],
+  "accepted_stage0": "18/18",
+  "accepted_training": "54/54",
+  "accepted_predictions": "54/54",
+  "horizons_steps": [
+    30,
+    60
+  ],
+  "conditions": [
+    "FULL",
+    "OBS",
+    "ANCHOR"
+  ],
+  "video_modes": [
+    "N",
+    "D",
+    "S"
+  ],
+  "metrics": [
+    "standardized MAE",
+    "native first difference"
+  ],
+  "final_test_access": 0,
+  "run_commit": "UNKNOWN"
+}

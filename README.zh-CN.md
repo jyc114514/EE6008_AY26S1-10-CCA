@@ -4,7 +4,7 @@
 
 **面向 Humanoid Everyday Action Anticipation 的联合嵌入预测建模**
 
-这是 NTU EE6008 AY26S1-10-CCA 五人课程项目的公开研究仓库。本分支在保留原有仓库结构的基础上，加入了路径脱敏后的 Core A 证据发布包。
+这是 NTU EE6008 AY26S1-10-CCA 课程项目的公开研究仓库，包含 Core A 与 Core B 的精选代码和证据，并分别记录实验状态、数据暴露、来源和服务器保留材料。
 
 ## 项目目标
 
@@ -18,14 +18,15 @@ V-JEPA / V-JEPA 2 baseline<br>
 → 轻量模型或训练策略修改<br>
 → ablation 与失败案例分析
 
-Core A 是 [docs/core_a/](docs/core_a/) 中记录的 development/validation task-recognition 线路，不是 action-anticipation 结果，也不包含 final-test 指标。
+Core A 包含历史 development/validation task-recognition 屏幕结果，以及后续 V2 同源 final-label 修正分析。V2 标签访问已披露，不是未触碰标签的盲测确认。Core B prediction/forecasting 证据单独记录在 [docs/core_b/](docs/core_b/)。
 
 ## 当前状态
 
-- 项目仓库骨架：已初始化；本分支加入 Core A 证据发布包。
-- Core A 数据/任务协议：G1 duplicate-safe v3、120 个 primary classes，仅 development/validation。
-- Full-120 Stage1：源证据中 9/9 通过验收；D-P-L 使用 unmerged derived inference。
-- final-test access：0；Stage2 未启动。
+- 历史 Core A Full-120 Stage1：源证据中 9/9 通过验收，仅 development/validation；D-P-L 使用 unmerged derived inference。
+- Core A V2：在披露映射修正与先前标签访问后，对 602 个同源 final labels 完成六格重评分；没有新训练，不是独立盲测确认。
+- Core B：B1/B2/B3、V3、D3、query/ablation 和 V2 CURRENT_PROFILE dev/final 结果分别编目。
+- Core B V2 final targets 在 22 个预测包封存后读取；41 个 final episode 与 Core A 视频索引重叠，session 独立性未知。
+- 结题证据仍标记团队/学术审阅、视频录制和课程提交待完成。
 - 许可：本证据导出不新增许可证声明；第三方源码、数据和模型许可仍需分别核对。
 
 ## GitHub 与 GPU Server 的分工
@@ -92,7 +93,7 @@ git push -u origin feature/<short-description>
 - owner、日期、status；
 - primary metric、secondary metric 和备注。
 
-记录位置为 `experiments/runs.csv`。当前分支只记录经过脱敏的 development/validation 证据。
+记录位置为 `experiments/runs.csv`。run registry 分开记录 development、validation 和 final/heldout scoring；历史访问状态只适用于对应 run。
 
 ## 项目材料与版权边界
 
@@ -103,3 +104,7 @@ git push -u origin feature/<short-description>
 ## 项目成员
 
 这是一个五人课程项目，当前仓库 owner 为 `jyc114514`。其他成员的 GitHub collaborator 邀请会在确认准确 username 后逐一处理，不猜测用户名。
+
+## 本次服务器同步发布
+
+上次发布以来的代码与结果索引见[发布摘要](docs/releases/server-sync-20261022T082418Z/RELEASE_SUMMARY.md)、[实验结果索引](docs/releases/server-sync-20261022T082418Z/EXPERIMENT_RESULT_INDEX.csv)和[Core B 研究索引](docs/core_b/EXPERIMENT_LINE_INDEX.md)。发布材料区分历史 development-only 访问记录与后来已披露的同源 final-label 分析。

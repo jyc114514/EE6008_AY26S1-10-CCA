@@ -1,0 +1,12 @@
+artifact_class,public_status,public_representation,reason
+raw G1 videos and frames,excluded,dataset metadata and protocol references only,Raw video is restricted and not redistributable in this code/results release.
+"decoded clips, extracted V-JEPA features, and feature caches",excluded,aggregate results and reproduction notes only,Large derived data and model features remain on the research server.
+"model checkpoints, LoRA adapters, optimizer state, and model weights",excluded,restricted artifact identifiers in run registry,Weights and training state are not part of the public source archive.
+"per-episode predictions, final targets, logits, and row-level labels",excluded,aggregate tables only,No per-episode arrays or target values are included; Core A V2 label access is disclosed in its analysis.
+"full training, inference, scheduler, and evaluation logs",excluded,dated summary documents and aggregate QA only,"Operational logs can contain absolute paths, process details, and private data."
+"TensorBoard, W&B, cache, and temporary artifacts",excluded,none,"These are execution byproducts, not curated results."
+"video recordings, slides, personal forms, and course submission materials",excluded,none,Personal or course materials are outside this technical release.
+"local absolute paths, usernames, hostnames, and path-bearing aggregate columns",redacted,portable environment paths or omitted columns,Private server identity and filesystem details are not published.
+attachment-bound or server-operation code wrappers,partially excluded,1026 selected Python files in CODE_EXPORT_INDEX.csv,18 candidates were excluded for absolute or dynamic server paths or source syntax problems; see the private audit map.
+"episode-level, trajectory, and diagnostic time-series tables/figures",excluded or aggregated,"selected aggregate tables, charts, and plot data",Only selected aggregate-level result assets are exported.
+"third-party papers, pretrained weights, and data payloads",excluded,citations or identifiers only where already documented,No new license is asserted; external licensing remains governed by its source.

@@ -16,7 +16,9 @@
 - 12-task frozen/LoRA pilot 只属于工程/探索证据，不能外推到 120 类。
 - Batch-4/32/48、R3D-18、pooled、attentive 和 nonparametric 行属于不同
   protocol，不能合并成一个排行榜。
-- 没有纳入或使用 final-test IDs、labels、predictions 或 metrics。
+- 未纳入 final-test IDs、labels 或 predictions。单独的 V2 amended analysis
+  在披露先前标签访问后，报告了 602 个同源 final labels 的 aggregate metrics；
+  这不是未触碰标签的盲测确认。
 - raw data、features、checkpoints、完整 logs、环境目录和第三方源码树均被
   有意排除，因此不声称公众可以端到端重训。
 - 数据、模型和第三方源码许可需要分别治理；本分支不为未确认再分发权利的

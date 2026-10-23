@@ -9,7 +9,10 @@
   episodes excluded; the earlier split is retired as duplicate-unsafe.
 - Primary population: 120 classes, 2,757 train episodes and 617
   development/validation episodes.
-- Final-test metrics: not computed; `final_test_accessed=0`.
+- Historical Full-120 Stage1 final-test metrics: not computed;
+  `final_test_accessed=0` for those runs. A later Core A V2 amended analysis
+  used 602 same-source final labels after prior access was disclosed; see
+  [the V2 analysis](FINAL_V2_AMENDED_ANALYSIS.md).
 
 The public repository contains task metadata and a sanitized split summary, not
 episode-level split files, raw Parquet, video, or final-test identifiers. The

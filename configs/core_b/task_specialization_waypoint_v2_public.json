@@ -1,0 +1,26 @@
+{
+  "study_id": "CORE_B_TASK_SPECIALIZATION_WAYPOINT_V2",
+  "status": "PASS_DEVELOPMENT_ONLY",
+  "tasks": [
+    119,
+    94,
+    90,
+    141,
+    230
+  ],
+  "seeds": [
+    202610131,
+    202610132,
+    202610133
+  ],
+  "corrected_split_fits": "36 screening + 36 formal + 6 waypoint accepted",
+  "metrics": [
+    "position MAE",
+    "safe-FD L1",
+    "seam safe-FD L1"
+  ],
+  "native_units": "unidentified",
+  "session_independence_established": false,
+  "final_test_access": 0,
+  "run_commit": "UNKNOWN"
+}

@@ -2,12 +2,16 @@
 
 ## Scope
 
-These conclusions are limited to the G1 duplicate-safe v3 development/validation
+These historical conclusions describe the G1 duplicate-safe v3 development/validation
 population: 2,757 train episodes, 617 development/validation episodes, and 120
-primary classes. `final_test_access=0`. The Full-120 Stage1 screen used one seed
-(`20260825`) and recovery settings of physical batch 8 with gradient accumulation
-4, i.e. effective batch 32, while the locked protocol specified batch 48 with
-accumulation 1.
+primary classes. The Full-120 Stage1 runs recorded `final_test_access=0` at their
+closeout; that statement is scoped to those runs and is not the current project-wide
+access status. Core A V2 later analyzed 602 same-source final labels after the
+prior label exposure was disclosed. That amended analysis is documented in
+[FINAL_V2_AMENDED_ANALYSIS.md](FINAL_V2_AMENDED_ANALYSIS.md) and is not an untouched
+blind confirmation. The Full-120 Stage1 screen used one seed (`20260825`) and
+recovery settings of physical batch 8 with gradient accumulation 4, i.e. effective
+batch 32, while the locked protocol specified batch 48 with accumulation 1.
 
 ## Full-120 Stage1 results
 

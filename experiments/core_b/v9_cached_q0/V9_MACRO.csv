@@ -1,0 +1,7 @@
+program,position_mae_mean,position_mae_seed_sample_sd,safe_fd_l1_mean,safe_fd_l1_seed_sample_sd,seam_safe_fd_l1_mean,seam_safe_fd_l1_seed_sample_sd,condition
+A0,0.159871,0.001343,0.829451,0.002901,0.776170,0.015822,STATE-CTRL; no training dropout
+AD,0.164050,0.000740,0.828216,0.001285,0.767115,0.014540,STATE-CTRL; 50% training dropout
+V0,0.158338,0.001486,0.819754,0.002994,0.795761,0.021558,TS11-D; no training dropout
+VD,0.161149,0.001384,0.826934,0.003999,0.776202,0.012066,TS11-D; 50% training dropout
+MIX0,0.155471,0.001066,0.818974,0.002634,0.765222,0.013308,Equal V0/STATE-CTRL output mixture
+MIXD,0.155725,0.000209,0.819831,0.001981,0.755074,0.007449,Equal VD/STATE-CTRL output mixture

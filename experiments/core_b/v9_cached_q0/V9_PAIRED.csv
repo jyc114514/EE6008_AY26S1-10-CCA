@@ -1,0 +1,10 @@
+reference,candidate_or_contrast,metric,gain_reference_minus_candidate,ci95_low,ci95_high
+V0,VD,position_mae,-0.002810,-0.005162,-0.000463
+V0,VD,safe_fd_l1,-0.007180,-0.013657,-0.001422
+V0,VD,seam_safe_fd_l1,+0.019559,+0.000476,+0.041936
+PERSISTENCE,VD,position_mae,+0.061113,+0.049380,+0.073136
+PERSISTENCE,VD,safe_fd_l1,+0.027258,+0.016722,+0.036857
+PERSISTENCE,VD,seam_safe_fd_l1,+0.026215,+0.003007,+0.047241
+MIX0,MIXD,position_mae,-0.000253,-0.001401,+0.000920
+MIX0,MIXD,safe_fd_l1,-0.000857,-0.004461,+0.002372
+MIX0,MIXD,seam_safe_fd_l1,+0.010148,+0.000126,+0.021987

@@ -8,8 +8,12 @@ inference because its BF16 merged export failed value-level equivalence.
 
 The matched effect tables do not establish dynamic-specific LoRA benefit:
 pooled Top-1 interaction is -0.810 percentage points and attentive Top-1
-interaction is -2.269 points. Stage2 was not launched. All reported results are
-development/validation-only and `final_test_access=0`.
+interaction is -2.269 points. Stage2 was not launched. These historical Stage1
+results are development/validation-only and recorded `final_test_access=0` for
+those runs. A separate later V2 amended analysis scores existing predictions on
+602 same-source final labels after prior label access was disclosed; it is not
+an untouched blind confirmation. See
+[the V2 analysis](../../docs/core_a/FINAL_V2_AMENDED_ANALYSIS.md).
 
 See [the full conclusions](../../docs/core_a/CURRENT_CONCLUSIONS.md),
 [run-level results](../../experiments/core_a/RUN_LEVEL_RESULTS.csv), and

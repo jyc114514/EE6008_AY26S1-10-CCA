@@ -1,0 +1,5 @@
+artifact_family,excluded_count,reason
+server-bound analysis and launcher wrappers,16,Absolute or dynamic host/path references could not be made portable safely within this release.
+source files with syntax errors,2,Original or sanitized source failed Python syntax parsing; excluded rather than presenting as runnable code.
+"per-episode predictions, target arrays, logits, and detailed labels",Not enumerated in this code-only register,Row-level result payloads remain server-only.
+"raw videos, features, checkpoints, and runtime logs",Not enumerated in this code-only register,Restricted or large execution artifacts remain server-only.

@@ -1,0 +1,22 @@
+{
+  "study_id": "CORE_B_B1_B2_B3",
+  "status": "accepted_with_limits",
+  "cohort": "legacy development population, 614 rows",
+  "horizon_steps": 30,
+  "target_dimensions": 28,
+  "b1_accepted_inference_bundles": "7/7",
+  "b2_true_pixel_accepted": "6/6",
+  "b2_proxy": "separate diagnostic; not true-pixel sampling",
+  "b3_logical_cells": "8/8",
+  "b3_actual_fits": 6,
+  "b3_reused_b2_controls": 2,
+  "training_seed": "single seed for B3",
+  "metrics": [
+    "standardized Arm-14 MAE",
+    "standardized Full-28 MAE",
+    "native command-value error"
+  ],
+  "physical_units": "unverified",
+  "final_test_access": 0,
+  "run_commit": "UNKNOWN"
+}

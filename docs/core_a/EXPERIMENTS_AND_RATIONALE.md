@@ -9,7 +9,10 @@ claim that every private artifact is distributable; the public files carry
 aggregate values or stable `server-only://` pointers.
 
 Core A asks whether a four-second observed RGB prefix supports task-ID
-recognition on a G1 subset. It does not evaluate future action prediction.
+recognition on a G1 subset. It does not evaluate future action prediction. This
+2026-09-10 catalog records the earlier release snapshot. Core A V2 later scored
+existing predictions on 602 same-source final labels after prior label exposure
+was disclosed; see [the V2 analysis](FINAL_V2_AMENDED_ANALYSIS.md).
 The task count, representation, head, adaptation, split, and replication unit
 must remain visible when comparing families.
 
