@@ -53,7 +53,7 @@ The deselected `test_anchor_frame_schedule_stops_at_anchor` reads the server-onl
 
 ## Remaining release gaps
 
-- The excluded hand-calibrated analyzer, P1/P2 R3D extractor and V7 single-head scorer are study-critical paths without an equivalent proven public entrypoint or repaired copy.
+- The excluded hand-calibrated analyzer, P1/P2 R3D extractor, V7 single-head scorer and collapse temporal-variation replay are study-critical paths without an equivalent proven public entrypoint or repaired copy.
 - Exact source-file binding remains UNKNOWN for the nine historical Core A Full-120 Stage1 runs.
 - A fresh independent rerun of the corrected Core B test fixture is pending.
 
