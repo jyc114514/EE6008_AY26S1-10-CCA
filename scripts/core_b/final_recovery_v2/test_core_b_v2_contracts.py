@@ -237,10 +237,10 @@ class CoreBV2ContractTests(unittest.TestCase):
                     writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
                     writer.writeheader()
                     writer.writerows(rows)
-            lock = {"final_inputs": {
-                "final_input_manifest_sha256": sha(inputs_path),
-                "final_population_metadata_sha256": sha(pop_path),
-            }}
+            lock = {
+                "inputs": {"final_input_manifest_sha256": sha(inputs_path)},
+                "final_inputs": {"final_population_metadata_sha256": sha(pop_path)},
+            }
             builder = __import__("prepare_core_b_final_prefix_v2")
             prefix_out = root / "outputs/FINAL_PREFIXES_CURRENT_PROFILE_V2.npz"
             receipt_out = root / "reports/FINAL_PREFIX_EXTRACTION_RECEIPT.json"

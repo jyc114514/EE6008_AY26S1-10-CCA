@@ -50,6 +50,17 @@ Open a pull request when the change is ready. Small documentation fixes may be m
 
 Each real run should record the dataset revision, split, Git commit, run ID, random seed, model/checkpoint identifier, restricted artifact ID, metrics, owner, date, and status in experiments/runs.csv. The run registry distinguishes development, validation, and final/heldout scoring. Historical access statements are scoped to their own runs.
 
+### Public CPU contract checks
+
+Run these checks from the repository root with the project Python environment and its declared CPU dependencies. They exercise the scorer and contract fixtures; they do not train, extract features, load checkpoints, download data, or read real final/heldout payloads. The historical study scripts are evidence archives and are not all direct-run tools; see [the entrypoint/result map](docs/releases/server-sync-20261022T082418Z/ENTRYPOINT_RESULT_MAP.csv) for server-only requirements and UNKNOWN mappings.
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES='' PYTHONPATH="scripts/core_a/final_recovery_v2:scripts/final_evaluation/v1_historical" python3 -B -m pytest -q -p no:cacheprovider scripts/core_a/final_recovery_v2/test_core_a_v2_scorer.py
+PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES='' EE6008_PROJECT_ROOT=. PYTHONPATH="scripts/core_b/final_recovery_v2:scripts/final_evaluation/v1_historical" python3 -B -m pytest -q -p no:cacheprovider scripts/core_b/final_recovery_v2/test_core_b_v2_contracts.py -k 'not anchor_frame_schedule_stops_at_anchor'
+```
+
+The deselected anchor-frame schedule test reads the server-only development and final input manifests. The independent acceptance record lists the test outcomes observed for the upload snapshot and the fixture correction; it does not represent a full experiment replay.
+
 ## Contributors
 
 This is a five-student course project owned by jyc114514. Additional collaborator invitations are pending reliable GitHub usernames from the team; no usernames are guessed in this repository.
