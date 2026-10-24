@@ -1,0 +1,5 @@
+seed,S_OPT_wall_seconds,V_MATCHED_wall_seconds,summed_child_wall_seconds,receiver_windows,interpretation
+202610131,0.767859,1.190094,1.9579529999999998,185,sum of accepted per-job elapsed times; not a measured sequential or concurrent integrated latency
+202610132,0.766805,0.558181,1.324986,185,sum of accepted per-job elapsed times; not a measured sequential or concurrent integrated latency
+202610133,0.542778,0.526567,1.069345,185,sum of accepted per-job elapsed times; not a measured sequential or concurrent integrated latency
+mean_across_three,0.6924806666666666,0.7582806666666667,1.4507613333333333,185,mean of accepted V2 per-job elapsed times; source runs predate V5

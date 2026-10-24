@@ -108,3 +108,15 @@ git push -u origin feature/<short-description>
 ## 本次服务器同步发布
 
 上次发布以来的代码与结果索引见[发布摘要](docs/releases/server-sync-20261022T082418Z/RELEASE_SUMMARY.md)、[实验结果索引](docs/releases/server-sync-20261022T082418Z/EXPERIMENT_RESULT_INDEX.csv)和[Core B 研究索引](docs/core_b/EXPERIMENT_LINE_INDEX.md)。发布材料区分历史 development-only 访问记录与后来已披露的同源 final-label 分析。
+
+## 发布后修补补充（2026-10-24）
+
+本补充接续 PR head 348469cb8c3d5ba468b32740e8c23684b9f2dcc4 的独立验收。此前 18 个排除候选中，15 项现有明确标记且绑定源哈希的修复副本；原历史文件保持不变。另有 3 个主机管理/行政包装器继续排除。逐文件来源和导出哈希见 docs/releases/server-sync-20261022T082418Z/REPAIR_SOURCE_MAP_20261024.csv。 ENTRYPOINT_RESULT_MAP.csv 中非公开服务器配置/输入引用以稳定 artifact_id 占位符表示；输入类型和访问条件仍可见，公开仓库相对路径保持原样。
+
+本补充公开了已有的 120 个聚合工件：91 个结果表/JSON 和 29 个绘图数据文件；没有重算指标。来源/导出哈希、大小、路径脱敏说明与 CSV 行数见 RESULT_EXPORT_PROVENANCE_20261024.csv。RELEASE_REPAIR_MANIFEST_20261024.csv 与 RELEASE_REPAIR_CHECKSUMS_20261024.sha256 仅覆盖列明的本轮修补载荷；原发布 manifest/checksum 仍仅适用于原快照。
+
+V7 single-head scorer 与 V7 ensemble scorer 分开；V9 context-dropout、V9 cached-Q0 和 V9 bootstrap correction supplement 也分别编目。检查范围内没有 V10 运行目录或已保存聚合结果。
+
+请使用上方 Core A 与 Core B CPU 命令执行公开合约检查。修复后的手工校准分析、R3D 特征提取和 temporal-variation replay 仍需要对应服务器工件。R3D 必须显式提供 --project-root、--study-root、--primary-inputs、--dense-inputs、--raw-root 和 --weights；源码不内置服务器数据根路径，输出元数据使用不透明 artifact_id。完整提取仍需授权后执行 GPU；脚本不下载权重。历史脚本不应统一视为开箱可运行工具。
+
+Core A 历史 Stage1 源码绑定为部分可证：V-JEPA2 源码 revision 已核实，自定义 runner 文件身份仍为 UNKNOWN。既有披露继续有效：Core A prior label exposure/amended analysis；Core B same-source overlap 与 session independence UNKNOWN；Q0 bridge FAIL_UNRESOLVED；standardized metrics 不等于 physical robot accuracy。

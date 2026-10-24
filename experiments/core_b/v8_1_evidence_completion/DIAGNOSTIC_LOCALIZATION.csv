@@ -1,0 +1,11 @@
+grain,metric,extreme,task_id,cell_index,gain_G_minus_M_mean_across_3_seeds,n_seeds,sign,interpretation
+horizon,position,most_negative_M_minus_G_gain,141,7,-0.01055231619979797,3,positive favors M; negative means M error exceeds G,descriptive post-result localization; no multiplicity correction or inference
+horizon,position,most_positive_M_minus_G_gain,119,2,0.003714713353220251,3,positive favors M; negative means M error exceeds G,descriptive post-result localization; no multiplicity correction or inference
+horizon,internal_fd,most_negative_M_minus_G_gain,141,9->10,-0.09106251418050475,3,positive favors M; negative means M error exceeds G,descriptive post-result localization; no multiplicity correction or inference
+horizon,internal_fd,most_positive_M_minus_G_gain,119,1->2,0.05715298349363651,3,positive favors M; negative means M error exceeds G,descriptive post-result localization; no multiplicity correction or inference
+axis,position,most_negative_M_minus_G_gain,141,6,-0.01577497168247109,3,positive favors M; negative means M error exceeds G,descriptive post-result localization; no multiplicity correction or inference
+axis,position,most_positive_M_minus_G_gain,119,4,0.015515113160779637,3,positive favors M; negative means M error exceeds G,descriptive post-result localization; no multiplicity correction or inference
+axis,internal_fd,most_negative_M_minus_G_gain,119,20,-0.06319883303126857,3,positive favors M; negative means M error exceeds G,descriptive post-result localization; no multiplicity correction or inference
+axis,internal_fd,most_positive_M_minus_G_gain,119,19,0.019941725425190054,3,positive favors M; negative means M error exceeds G,descriptive post-result localization; no multiplicity correction or inference
+axis,seam,most_negative_M_minus_G_gain,141,20,-0.1884027202859948,3,positive favors M; negative means M error exceeds G,descriptive post-result localization; no multiplicity correction or inference
+axis,seam,most_positive_M_minus_G_gain,119,4,0.29070673252531387,3,positive favors M; negative means M error exceeds G,descriptive post-result localization; no multiplicity correction or inference

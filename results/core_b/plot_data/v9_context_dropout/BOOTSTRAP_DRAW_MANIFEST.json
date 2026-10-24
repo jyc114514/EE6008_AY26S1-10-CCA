@@ -1,0 +1,31 @@
+{
+  "draw_sha256": "c2fc4da0fad0ad06a2124d6e9bd8638f84fd90c45d9e0a40da906aab119e03f3",
+  "draws": 5000,
+  "interpretation": "within-task paired source-group bootstrap; fixed models and repeated dev exposure; not population training-seed uncertainty",
+  "same_draws_across_all_programs_seeds_policies_mixtures": true,
+  "schema_version": 1,
+  "seed": 20261016,
+  "status": "PASS",
+  "support": {
+    "119": {
+      "episodes": 12,
+      "source_groups": 12
+    },
+    "141": {
+      "episodes": 5,
+      "source_groups": 5
+    },
+    "230": {
+      "episodes": 7,
+      "source_groups": 7
+    },
+    "90": {
+      "episodes": 11,
+      "source_groups": 11
+    },
+    "94": {
+      "episodes": 12,
+      "source_groups": 12
+    }
+  }
+}

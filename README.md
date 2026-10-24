@@ -82,3 +82,15 @@ The original local folders remain outside this public repository. Public copies 
 ## Server sync release
 
 The audited code/results export since the prior publication is indexed in [the release summary](docs/releases/server-sync-20261022T082418Z/RELEASE_SUMMARY.md), [the experiment result index](docs/releases/server-sync-20261022T082418Z/EXPERIMENT_RESULT_INDEX.csv), and [the Core B study line index](docs/core_b/EXPERIMENT_LINE_INDEX.md). The release distinguishes historical development-only access statements from later disclosed same-source final-label analyses.
+
+## Post-release repair supplement (2026-10-24)
+
+This supplement follows independent acceptance at PR head 348469cb8c3d5ba468b32740e8c23684b9f2dcc4. It adds clearly marked, source-hash-bound repaired copies for 15 of the 18 previously excluded code candidates; the original historical files remain unchanged. Three host/admin-only wrappers remain excluded. File-level source/export lineage is in docs/releases/server-sync-20261022T082418Z/REPAIR_SOURCE_MAP_20261024.csv. Non-public server configuration/input references in ENTRYPOINT_RESULT_MAP.csv are represented by stable artifact_id placeholders; input types and access conditions remain visible, while public repository-relative paths remain intact.
+
+The supplement also publishes 120 already-saved aggregate artifacts: 91 result tables/JSON and 29 plot-data files. It does not recompute metrics. Source/export hashes, sizes, path-redaction notes, and CSV row counts are in RESULT_EXPORT_PROVENANCE_20261024.csv. RELEASE_REPAIR_MANIFEST_20261024.csv and RELEASE_REPAIR_CHECKSUMS_20261024.sha256 cover only the repair payload listed there; the original release manifest/checksum remain scoped to the original snapshot.
+
+The exact V7 single-head scorer is separate from the V7 ensemble scorer. V9 context-dropout, V9 cached-Q0, and the V9 bootstrap-correction supplement are separately indexed. No V10 run directory or saved aggregate was present in the inspected export.
+
+Use the focused Core A and Core B CPU commands above for public contract checks. The repaired hand-calibrated analysis, R3D extraction, and temporal-variation replay remain research entrypoints that require study-specific server artifacts. No aggregate metric table was found for those three studies; their linked study notes remain the public result evidence. R3D requires explicit --project-root, --study-root, --primary-inputs, --dense-inputs, --raw-root and --weights inputs; no server data roots are embedded, and output metadata uses opaque artifact IDs. A full extraction still requires authorized GPU execution; the script does not download weights. Historical study code is not uniformly a set of directly runnable tools.
+
+Core A historical Stage1 source binding is partial: the V-JEPA2 source revision is verified, but custom runner file identity remains UNKNOWN. Existing disclosures remain in force: Core A prior label exposure/amended analysis; Core B same-source overlap and session independence UNKNOWN; Q0 bridge FAIL_UNRESOLVED; standardized metrics are not physical robot accuracy.

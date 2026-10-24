@@ -1,3 +1,4 @@
+# Repaired public copy of EXCL-CODE-010-DEPENDENCY; source SHA-256: 7d0ef1f38b7ceae778465a589ea27d64c96af4c18c983ffd5400b2e3748e1a54
 from __future__ import annotations
 
 import bisect
@@ -14,8 +15,8 @@ from typing import Any
 import numpy as np
 import torch
 
-PROJECT = Path(os.path.join(os.environ.get("EE6008_PROJECT_ROOT", "."), ''))
-ROOT = Path(__file__).resolve().parents[1]
+PROJECT = Path(os.environ.get("EE6008_PROJECT_ROOT", ".")).expanduser().resolve()
+ROOT = Path(os.environ.get("EE6008_V7_SINGLE_HEAD_STUDY_ROOT", Path(__file__).resolve().parents[1])).expanduser().resolve()
 REPO = PROJECT / "repo/ee6008-humanoid-vjepa"
 V2 = PROJECT / "reports/benchmarks/CORE_B_TASK_SPECIALIZATION_WAYPOINT_V2_20261013T064245Z"
 V3 = PROJECT / "reports/benchmarks/CORE_B_V3_FROZEN_SHARED_TASK_RESIDUAL_V1_20261014T053428Z"

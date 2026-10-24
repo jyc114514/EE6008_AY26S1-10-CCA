@@ -1,0 +1,5 @@
+contrast,candidate,reference,scope,metric,point_gain,ci95_low,ci95_high,draws,bootstrap_seed,source_groups_total,multiplicity_adjustment,interpretation
+MIX_VS_GT,MIX_SOFT,GT_RETRAIN,macro,position_mae,-0.0008495571531445534,-0.002180308374717974,0.0005793592200892193,5000,2026101507,47,none,exploratory conditional percentile interval
+MIX_VS_GT,MIX_SOFT,GT_RETRAIN,macro,safe_fd_l1,-0.00427405186962763,-0.008554125410310507,-0.00048090154698661133,5000,2026101507,47,none,exploratory conditional percentile interval
+MIX_VS_SELF,MIX_SOFT,SELF_SOFT,macro,position_mae,0.00019187841035582984,-0.0008647104082077088,0.0012672426390289513,5000,2026101507,47,none,exploratory conditional percentile interval
+MIX_VS_SELF,MIX_SOFT,SELF_SOFT,macro,safe_fd_l1,-0.0016196906500552573,-0.0052175768717472835,0.001436687471599463,5000,2026101507,47,none,exploratory conditional percentile interval
