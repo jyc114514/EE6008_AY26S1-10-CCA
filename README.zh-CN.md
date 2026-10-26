@@ -125,4 +125,19 @@ Core A 历史 Stage1 源码绑定为部分可证：V-JEPA2 源码 revision 已�
 
 已从 GitHub 独立下载并核对 PR head `d3c2dd144d498b9f5aa656f8a61f371fc28974de`；本次结果与未解决边界见[验收报告](docs/releases/server-sync-20261022T082418Z/POST_RELEASE_ACCEPTANCE_20261026.md)。版本化的[验收 manifest](docs/releases/server-sync-20261022T082418Z/POST_RELEASE_ACCEPTANCE_MANIFEST_20261026.csv)和[校验和](docs/releases/server-sync-20261022T082418Z/POST_RELEASE_ACCEPTANCE_CHECKSUMS_20261026.sha256)覆盖原 149 个修补载荷文件及该验收报告。两个 sidecar 不对自身计算哈希。2026-10-24 的修补 manifest/checksum 仅适用于后续修改前的历史快照。
 
-公开树中的历史 B1 runner 不是自包含工具：`checkpoint_utils.py`、`fresh_process_batch8_d_a_l_fixed.py` 与 `src.models.attentive_pooler` 模块闭包不可用。B1 表格保留为历史 development 证据，公开包不宣称能够独立重跑 B1。
+在前一版 head `47a994c6154ff5a2a9baab9fb0027dbcc10be3e6` 的验收时，历史 B1 runner 的三个导入依赖仍未公开。随后新增的 B1 专项补充已补齐公开代码依赖闭包；前一份验收报告继续作为当时 head 的快照。
+
+### B1 公开依赖闭包（2026-10-26）
+
+B1 入口现在从公开树解析项目 checkpoint 工具和固定版本的官方 V-JEPA2 attentive-pooler 源码。详见[修复说明](docs/releases/server-sync-20261022T082418Z/B1_PUBLIC_DEPENDENCY_REPAIR_20261026.md)、[来源记录](docs/releases/server-sync-20261022T082418Z/B1_SOURCE_PROVENANCE.md)和[依赖闭包表](docs/releases/server-sync-20261022T082418Z/B1_DEPENDENCY_CLOSURE.csv)，以及[B1增量校验和](docs/releases/server-sync-20261022T082418Z/B1_DEPENDENCY_DELTA_CHECKSUMS_20261026.sha256)。
+
+在仓库根目录运行合成 CPU 合约与导入检查：
+
+```bash
+B1_DIR=scripts/core_b/legacy_archives/code/b1
+PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES='' PYTHONPATH="$B1_DIR:$B1_DIR/public_support/analysis_scripts" \
+  python3 -B -m pytest -q -p no:cacheprovider "$B1_DIR/public_support/tests/test_b1_public_dependency_closure.py"
+```
+
+公开代码依赖闭包不包含 B1 服务器专用的标准化输入归档、train-only normalization 与 token-path 清单、逐 episode token 文件、输入总清单/feasibility metadata，也不包含运行回执、checkpoint 或预测。完整 B1 训练/验收仍需这些工件以及物理 GPU3。历史 helper 的逐运行源码身份仍为部分证实；本次未声称历史数值重放。
+

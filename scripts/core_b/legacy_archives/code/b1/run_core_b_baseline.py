@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import csv
 import hashlib
+import importlib
 import json
 import math
 import os
@@ -113,12 +114,91 @@ def set_seed(seed: int) -> None:
 
 
 def load_support(fix_root: Path) -> Any:
-    analysis = fix_root / "analysis_scripts"
-    if str(analysis) not in sys.path:
-        sys.path.insert(0, str(analysis))
-    import fresh_process_batch8_d_a_l_fixed as fixed
+    expected = Path(__file__).resolve().parent / "public_support"
+    support = fix_root.resolve()
+    if support != expected.resolve():
+        raise ValueError(f"--fix-root must name the public B1 support package: {expected}")
+    analysis = support / "analysis_scripts"
+    if not analysis.is_dir():
+        raise FileNotFoundError(f"public B1 analysis support is missing: {analysis}")
 
+    _reject_import_collision("fresh_process_batch8_d_a_l_fixed", analysis)
+    _reject_import_collision("checkpoint_utils", analysis)
+    if str(analysis) in sys.path:
+        sys.path.remove(str(analysis))
+    sys.path.insert(0, str(analysis))
+    fixed = importlib.import_module("fresh_process_batch8_d_a_l_fixed")
+    checkpoint_utils = importlib.import_module("checkpoint_utils")
+    if not _module_is_within(fixed, analysis):
+        raise ImportError("B1 helper did not resolve from the public support package")
+    if not _module_is_within(checkpoint_utils, analysis):
+        raise ImportError("B1 checkpoint utilities did not resolve from public support")
     return fixed
+
+
+def _module_is_within(module: Any, root: Path) -> bool:
+    origin = getattr(module, "__file__", None)
+    if origin:
+        try:
+            Path(origin).resolve().relative_to(root.resolve())
+            return True
+        except ValueError:
+            return False
+    locations = getattr(module, "__path__", ())
+    if not locations:
+        return False
+    try:
+        return all(
+            Path(location).resolve().is_relative_to(root.resolve())
+            for location in locations
+        )
+    except (OSError, ValueError):
+        return False
+
+
+def _reject_import_collision(module_name: str, root: Path) -> None:
+    loaded = sys.modules.get(module_name)
+    if loaded is not None and not _module_is_within(loaded, root):
+        raise ImportError(
+            f"{module_name} is already loaded outside the public B1 support package"
+        )
+
+
+def _load_attentive_pooler(source_root: Path) -> type[nn.Module]:
+    expected = Path(__file__).resolve().parent / "public_support" / "vjepa2"
+    source = source_root.resolve()
+    if source != expected.resolve():
+        raise ValueError(f"--source-root must name the public B1 V-JEPA2 subset: {expected}")
+    pooler_file = source / "src" / "models" / "attentive_pooler.py"
+    if not pooler_file.is_file():
+        raise FileNotFoundError(f"public V-JEPA2 attentive pooler is missing: {pooler_file}")
+
+    for name, module in tuple(sys.modules.items()):
+        if (name == "src" or name.startswith("src.")) and not _module_is_within(
+            module, source
+        ):
+            raise ImportError(f"{name} is already loaded outside the public V-JEPA2 source")
+
+    if str(source) in sys.path:
+        sys.path.remove(str(source))
+    sys.path.insert(0, str(source))
+    module = importlib.import_module("src.models.attentive_pooler")
+    for name in (
+        "src",
+        "src.models",
+        "src.models.attentive_pooler",
+        "src.models.utils",
+        "src.models.utils.modules",
+        "src.utils",
+        "src.utils.tensors",
+    ):
+        loaded = sys.modules.get(name)
+        if loaded is None or not _module_is_within(loaded, source):
+            raise ImportError(f"{name} did not resolve inside the public V-JEPA2 source")
+    pooler_type = getattr(module, "AttentivePooler", None)
+    if not isinstance(pooler_type, type) or not issubclass(pooler_type, nn.Module):
+        raise ImportError("official V-JEPA2 AttentivePooler class is unavailable")
+    return pooler_type
 
 
 class PreloadedTokenDataset(Dataset[tuple[Tensor, Tensor, Tensor, Tensor]]):
@@ -163,11 +243,7 @@ class PreloadedTokenDataset(Dataset[tuple[Tensor, Tensor, Tensor, Tensor]]):
 class AttentiveRegression(nn.Module):
     def __init__(self, source_root: Path) -> None:
         super().__init__()
-        source = source_root.resolve()
-        if str(source) not in sys.path:
-            sys.path.insert(0, str(source))
-        from src.models.attentive_pooler import AttentivePooler
-
+        AttentivePooler = _load_attentive_pooler(source_root)
         self.pooler = AttentivePooler(
             num_queries=1,
             embed_dim=768,

@@ -5,9 +5,11 @@ from __future__ import annotations
 import argparse
 import csv
 import hashlib
+import importlib
 import json
 import math
 from pathlib import Path
+import sys
 from typing import Any
 
 import numpy as np
@@ -33,6 +35,32 @@ EFFECTIVE_BATCH = 32
 MIN_EPOCHS = 5
 PATIENCE = 5
 MIN_DELTA = 0.0001
+
+
+def _ensure_public_checkpoint_support() -> Any:
+    b1_dir = Path(__file__).resolve().parent
+    support_root = b1_dir / "public_support"
+    analysis_root = support_root / "analysis_scripts"
+    if not analysis_root.is_dir():
+        raise FileNotFoundError(f"public B1 checkpoint support is missing: {analysis_root}")
+    try:
+        analysis_root.resolve().relative_to(b1_dir.resolve())
+    except ValueError as exc:
+        raise ImportError("B1 checkpoint support resolves outside this public entrypoint") from exc
+
+    loaded = sys.modules.get("checkpoint_utils")
+    if loaded is not None:
+        origin = getattr(loaded, "__file__", None)
+        if not origin or not Path(origin).resolve().is_relative_to(analysis_root.resolve()):
+            raise ImportError("checkpoint_utils is already loaded outside public B1 support")
+    if str(analysis_root) in sys.path:
+        sys.path.remove(str(analysis_root))
+    sys.path.insert(0, str(analysis_root))
+    module = importlib.import_module("checkpoint_utils")
+    origin = getattr(module, "__file__", None)
+    if not origin or not Path(origin).resolve().is_relative_to(analysis_root.resolve()):
+        raise ImportError("checkpoint_utils did not resolve from public B1 support")
+    return module
 
 
 def sha256_file(path: Path) -> str:
@@ -141,6 +169,7 @@ def preflight(run_dir: Path, lane: str) -> dict[str, object]:
         raise ValueError(f"run status incomplete: {run_dir}")
     if metrics.get("status") != "complete" or metrics.get("final_test_accessed") != 0:
         raise ValueError(f"run metrics incomplete: {run_dir}")
+    _ensure_public_checkpoint_support()
     from checkpoint_utils import load_checkpoint
 
     for checkpoint_name in ("checkpoint_best.pt", "checkpoint_last.pt"):

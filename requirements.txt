@@ -11,6 +11,8 @@ matplotlib>=3.7
 # this repository.
 torch>=2.0
 torchvision>=0.15
+# Required by the pinned public V-JEPA2 B1 attentive-pooler source subset.
+timm==1.0.28
 opencv-python>=4.8
 decord>=0.6
 pyarrow>=12.0

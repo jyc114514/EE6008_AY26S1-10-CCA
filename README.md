@@ -98,4 +98,19 @@ Core A historical Stage1 source binding is partial: the V-JEPA2 source revision 
 
 The public PR head `d3c2dd144d498b9f5aa656f8a61f371fc28974de` was independently downloaded from GitHub and checked; the current results and remaining boundaries are recorded in [the acceptance report](docs/releases/server-sync-20261022T082418Z/POST_RELEASE_ACCEPTANCE_20261026.md). The versioned [acceptance manifest](docs/releases/server-sync-20261022T082418Z/POST_RELEASE_ACCEPTANCE_MANIFEST_20261026.csv) and [checksums](docs/releases/server-sync-20261022T082418Z/POST_RELEASE_ACCEPTANCE_CHECKSUMS_20261026.sha256) cover the 149 repair-payload files plus that report. The sidecar files do not hash themselves. The 2026-10-24 repair manifest/checksum are historical and apply only to the pre-follow-up snapshot.
 
-The legacy B1 runner is not self-contained in the public tree: `checkpoint_utils.py`, `fresh_process_batch8_d_a_l_fixed.py`, and the `src.models.attentive_pooler` module closure are unavailable there. B1 tables remain historical development evidence; the public package does not claim a standalone B1 rerun.
+At acceptance of prior head `47a994c6154ff5a2a9baab9fb0027dbcc10be3e6`, the legacy B1 runner still lacked its three imported dependencies. The subsequent B1-specific follow-up below closes the public code dependency set. The earlier acceptance report remains a snapshot of that earlier head.
+
+### B1 public dependency closure (2026-10-26)
+
+The B1 entrypoints now resolve their project checkpoint helpers and the pinned official V-JEPA2 attentive-pooler source from the public tree. See the [dependency repair record](docs/releases/server-sync-20261022T082418Z/B1_PUBLIC_DEPENDENCY_REPAIR_20261026.md), [source provenance](docs/releases/server-sync-20261022T082418Z/B1_SOURCE_PROVENANCE.md), [dependency closure](docs/releases/server-sync-20261022T082418Z/B1_DEPENDENCY_CLOSURE.csv), and [B1 delta checksums](docs/releases/server-sync-20261022T082418Z/B1_DEPENDENCY_DELTA_CHECKSUMS_20261026.sha256).
+
+Run the synthetic CPU contract and import checks from the repository root:
+
+```bash
+B1_DIR=scripts/core_b/legacy_archives/code/b1
+PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES='' PYTHONPATH="$B1_DIR:$B1_DIR/public_support/analysis_scripts" \
+  python3 -B -m pytest -q -p no:cacheprovider "$B1_DIR/public_support/tests/test_b1_public_dependency_closure.py"
+```
+
+The public dependency closure does not include B1's server-only normalized input archive, train-only normalization and token-path manifests, per-episode token files, full input manifest/feasibility metadata, or run receipts/checkpoints/predictions. A complete B1 training or acceptance run still requires those artifacts and physical GPU3 execution. Historical helper source identity remains partial; B1 historical numerical replay is not claimed.
+
