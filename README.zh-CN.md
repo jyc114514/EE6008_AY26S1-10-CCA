@@ -120,3 +120,9 @@ V7 single-head scorer 与 V7 ensemble scorer 分开；V9 context-dropout、V9 ca
 请使用上方 Core A 与 Core B CPU 命令执行公开合约检查。修复后的手工校准分析、R3D 特征提取和 temporal-variation replay 仍需要对应服务器工件。R3D 必须显式提供 --project-root、--study-root、--primary-inputs、--dense-inputs、--raw-root 和 --weights；源码不内置服务器数据根路径，输出元数据使用不透明 artifact_id。完整提取仍需授权后执行 GPU；脚本不下载权重。历史脚本不应统一视为开箱可运行工具。
 
 Core A 历史 Stage1 源码绑定为部分可证：V-JEPA2 源码 revision 已核实，自定义 runner 文件身份仍为 UNKNOWN。既有披露继续有效：Core A prior label exposure/amended analysis；Core B same-source overlap 与 session independence UNKNOWN；Q0 bridge FAIL_UNRESOLVED；standardized metrics 不等于 physical robot accuracy。
+
+## 独立验收补充（2026-10-26）
+
+已从 GitHub 独立下载并核对 PR head `d3c2dd144d498b9f5aa656f8a61f371fc28974de`；本次结果与未解决边界见[验收报告](docs/releases/server-sync-20261022T082418Z/POST_RELEASE_ACCEPTANCE_20261026.md)。版本化的[验收 manifest](docs/releases/server-sync-20261022T082418Z/POST_RELEASE_ACCEPTANCE_MANIFEST_20261026.csv)和[校验和](docs/releases/server-sync-20261022T082418Z/POST_RELEASE_ACCEPTANCE_CHECKSUMS_20261026.sha256)覆盖原 149 个修补载荷文件及该验收报告。两个 sidecar 不对自身计算哈希。2026-10-24 的修补 manifest/checksum 仅适用于后续修改前的历史快照。
+
+公开树中的历史 B1 runner 不是自包含工具：`checkpoint_utils.py`、`fresh_process_batch8_d_a_l_fixed.py` 与 `src.models.attentive_pooler` 模块闭包不可用。B1 表格保留为历史 development 证据，公开包不宣称能够独立重跑 B1。
