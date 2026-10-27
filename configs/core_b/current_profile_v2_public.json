@@ -1,0 +1,39 @@
+{
+  "study_id": "CORE_B_CURRENT_PROFILE_V2",
+  "status": "DEV_AND_FINAL_SCORED",
+  "dev_lock_revision": 4,
+  "final_lock_revision": 5,
+  "profile_id": "CURRENT_PROFILE_V2",
+  "programs": [
+    "A0",
+    "AD",
+    "V0",
+    "VD",
+    "S_OPT",
+    "MIX0",
+    "MIXD",
+    "PERSISTENCE"
+  ],
+  "training_seeds": [
+    202610131,
+    202610132,
+    202610133
+  ],
+  "dev_support": {
+    "episodes": 47,
+    "anchors": 185
+  },
+  "final_support": {
+    "episodes": 41,
+    "anchors": 162
+  },
+  "prediction_bundles_per_split": 22,
+  "final_target_values_after_seal": 136080,
+  "original_q0_bridge": "FAIL_UNRESOLVED",
+  "q0_root_cause": "UNKNOWN",
+  "final_same_source_video_overlap_episodes": 41,
+  "session_independence_established": false,
+  "metric_units": "standardized; not physical robot accuracy",
+  "new_training_runs": 0,
+  "run_commit": "UNKNOWN"
+}

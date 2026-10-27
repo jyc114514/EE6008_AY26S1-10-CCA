@@ -1,0 +1,19 @@
+split,method,metric,mean,sample_sd,n_seeds,source
+train,G,position_distance_to_T,0.010673311590838258,0.0003218528944576747,3,accepted V8; descriptive distance to T
+train,G,internal_fd_distance_to_T,0.03685774694078175,0.0008628304454752517,3,accepted V8; descriptive distance to T
+train,G,seam_distance_to_T,0.08616552719286537,0.0042887134951504905,3,accepted V8; descriptive distance to T
+train,U,position_distance_to_T,0.013901128428773791,0.0005250496733718728,3,accepted V8; descriptive distance to T
+train,U,internal_fd_distance_to_T,0.053825289987519516,0.001980059595666944,3,accepted V8; descriptive distance to T
+train,U,seam_distance_to_T,0.11942207109799932,0.004667102298112306,3,accepted V8; descriptive distance to T
+train,M,position_distance_to_T,0.01287398238489857,0.00021556290649392876,3,accepted V8; descriptive distance to T
+train,M,internal_fd_distance_to_T,0.052297345518219886,0.0016481458695385917,3,accepted V8; descriptive distance to T
+train,M,seam_distance_to_T,0.1098493462623067,0.0029317810052913685,3,accepted V8; descriptive distance to T
+dev,G,position_distance_to_T,0.019022404312288216,6.538375136117307e-05,3,accepted V8; descriptive distance to T
+dev,G,internal_fd_distance_to_T,0.0675195263314803,0.0016265291334758487,3,accepted V8; descriptive distance to T
+dev,G,seam_distance_to_T,0.10627483272412006,0.00931531636479573,3,accepted V8; descriptive distance to T
+dev,U,position_distance_to_T,0.024619548100512006,0.0016298544736842227,3,accepted V8; descriptive distance to T
+dev,U,internal_fd_distance_to_T,0.09190105105792419,0.008366043742531921,3,accepted V8; descriptive distance to T
+dev,U,seam_distance_to_T,0.14661158188903872,0.008023351095897647,3,accepted V8; descriptive distance to T
+dev,M,position_distance_to_T,0.025061896917850178,0.0024325900298896464,3,accepted V8; descriptive distance to T
+dev,M,internal_fd_distance_to_T,0.0927282685789932,0.007474945828949666,3,accepted V8; descriptive distance to T
+dev,M,seam_distance_to_T,0.13859342096588617,0.01807749569170019,3,accepted V8; descriptive distance to T

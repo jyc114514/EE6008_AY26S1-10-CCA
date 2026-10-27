@@ -6,9 +6,12 @@ task recognition on the G1 Humanoid Everyday line. The release is as-of
 evidence package plus earlier hashed Core A records.
 
 The public scientific task is task-ID recognition from a four-second observed
-prefix. It is not an action-anticipation result and it does not claim final
-generalization: all reported model metrics are development/validation-only and
-`core_a_final_test_access=0`.
+prefix. It is not an action-anticipation result. This page records the original
+2026-09-10 release: its model metrics were development/validation-only and
+`core_a_final_test_access=0` for those runs. A later Core A V2 amended analysis
+used 602 same-source final labels after prior label exposure was disclosed; see
+[the V2 analysis](FINAL_V2_AMENDED_ANALYSIS.md). That analysis is not an untouched
+blind confirmation.
 
 Start here:
 

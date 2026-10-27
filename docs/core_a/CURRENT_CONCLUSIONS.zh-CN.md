@@ -2,11 +2,7 @@
 
 ## 范围
 
-以下结论只适用于 G1 duplicate-safe v3 的 development/validation
-population：2,757 个 train episodes、617 个 development/validation episodes、
-120 个 primary classes，`final_test_access=0`。Full-120 Stage1 使用单一 seed
-`20260825`，恢复设置为 physical batch 8、gradient accumulation 4，即
-effective batch 32；锁定协议原本是 batch 48、accumulation 1。
+以下结论描述历史 G1 duplicate-safe v3 development/validation 屏幕结果：2,757 个 train episodes、617 个 development/validation episodes、120 个 primary classes。`final_test_access=0` 仅适用于这些 Stage1 runs。后续 V2 分析在披露先前标签访问后，对 602 个同源 final labels 评分；详见 [FINAL_V2_AMENDED_ANALYSIS.zh-CN.md](FINAL_V2_AMENDED_ANALYSIS.zh-CN.md)，该结果不是未触碰标签的盲测确认。历史 Full-120 Stage1 使用单一 seed `20260825`，恢复设置为 physical batch 8、gradient accumulation 4，即 effective batch 32；锁定协议原本是 batch 48、accumulation 1。
 
 ## Full-120 Stage1 结果
 

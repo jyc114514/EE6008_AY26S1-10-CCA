@@ -6,8 +6,10 @@ recognition。本文档版本截至 2026-09-10，主要依据已封存的
 记录。
 
 公开科学任务是根据四秒 observed prefix 进行 task-ID recognition。它不是
-action anticipation 结果，也不代表最终泛化：所有模型指标都只来自
-development/validation，且 `core_a_final_test_access=0`。
+action anticipation 结果。本页记录 2026-09-10 的原始发布：当时这些 runs 的
+模型指标仅来自 development/validation，且 `core_a_final_test_access=0`。后续
+Core A V2 amended analysis 在披露先前标签访问后，使用 602 个同源 final labels
+评分；见 [V2 分析](FINAL_V2_AMENDED_ANALYSIS.zh-CN.md)。这不是未触碰标签的盲测确认。
 
 建议入口：
 

@@ -1,0 +1,20 @@
+{
+  "study_id": "CORE_B_JY02_RESIDUAL_TEMPORAL_DECODER_STAGE2",
+  "status": "PASS_DEVELOPMENT_CONFIRMATION",
+  "candidate": "JY02-F-R-D",
+  "fresh_seeds": [
+    20260921,
+    20260922,
+    20260923
+  ],
+  "configurations": [
+    "JY02-S-A-D",
+    "JY02-F-A-D",
+    "JY02-S-R-D",
+    "JY02-F-R-D"
+  ],
+  "engineering_acceptance": "12/12",
+  "final_test_access": 0,
+  "physical_semantics": "unverified; report numeric action slices only",
+  "run_commit": "UNKNOWN"
+}

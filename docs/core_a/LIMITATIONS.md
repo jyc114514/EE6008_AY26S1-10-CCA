@@ -16,7 +16,10 @@
   they cannot be extrapolated to 120 classes.
 - Historical Batch-4/32/48, R3D-18, pooled, attentive, and nonparametric rows
   use distinct protocols and should not be collapsed into one leaderboard.
-- No final-test IDs, labels, predictions, or metrics are included or used.
+- No final-test IDs, labels, or predictions are included. The separate V2
+  amended analysis reports aggregate metrics on 602 same-source final labels
+  after prior label exposure was disclosed; it is not an untouched blind
+  confirmation.
 - Raw data, features, checkpoints, full logs, environment directories, and
   third-party source trees are intentionally absent, so end-to-end public
   retraining is not claimed.

@@ -1,0 +1,47 @@
+{
+  "created_utc": "2026-10-15T06:15:26.161285Z",
+  "gain_sign": "L(reference)-L(candidate); positive favors H_SV",
+  "schema_version": 1,
+  "task_means_across_three_formal_seeds": [
+    {
+      "BIAS_VIDEO_minus_HSV_position_gain": -0.0010543393557903337,
+      "S_minus_HSV_position_gain": -0.0038673994597504626,
+      "V_minus_HSV_position_gain": -0.0009234511564838785,
+      "anchors": 48,
+      "episodes": 12,
+      "task_id": 119
+    },
+    {
+      "BIAS_VIDEO_minus_HSV_position_gain": -0.0027492578167529966,
+      "S_minus_HSV_position_gain": -0.003848895720666595,
+      "V_minus_HSV_position_gain": -0.00268584529899244,
+      "anchors": 48,
+      "episodes": 12,
+      "task_id": 94
+    },
+    {
+      "BIAS_VIDEO_minus_HSV_position_gain": -0.0009529932973948377,
+      "S_minus_HSV_position_gain": -6.412121346749488e-06,
+      "V_minus_HSV_position_gain": 1.6921736328025e-05,
+      "anchors": 41,
+      "episodes": 11,
+      "task_id": 90
+    },
+    {
+      "BIAS_VIDEO_minus_HSV_position_gain": -0.0035695698246623435,
+      "S_minus_HSV_position_gain": -0.003200502657904445,
+      "V_minus_HSV_position_gain": -0.003493419979092317,
+      "anchors": 20,
+      "episodes": 5,
+      "task_id": 141
+    },
+    {
+      "BIAS_VIDEO_minus_HSV_position_gain": -4.0820584401865386e-05,
+      "S_minus_HSV_position_gain": 2.1807318377841788e-06,
+      "V_minus_HSV_position_gain": 7.902296099877627e-05,
+      "anchors": 28,
+      "episodes": 7,
+      "task_id": 230
+    }
+  ]
+}

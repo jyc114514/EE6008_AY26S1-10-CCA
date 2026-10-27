@@ -1,0 +1,6 @@
+claim,evidence,boundary
+Episode-specific correspondence,All same-task-donor vs MATCHED-D Arm/Hand effects are positive; crossed CIs exclude zero; conditional Holm p < 0.001.,Conditioned on locked dev donor maps; not a physical causal intervention.
+Dynamic multi-frame video beyond repeated-last-frame static,All MATCHED-S vs MATCHED-D Arm/Hand MAE comparisons are positive in ANCHOR and ROBUST_STRESS; conditional Holm p < 0.001.,Supports a multi-frame signal; does not prove raw-frame temporal-order understanding.
+Breadth across tasks/joints,"93 tasks and 14 Arm/14 Hand joints are tabulated; per-task outcomes are descriptive, not individually tested.",Task imbalance and development reuse remain.
+Cross-task donor degradation,Cross-task donors have larger feature distance and can reduce baseline-relative skill.,OOD feature shift is a competing explanation; not a clean task-causal contrast.
+Real network failure recovery / final generalization,Not tested.,"No physical intervention, held-out/final access, or real network delay."

@@ -1,0 +1,118 @@
+{
+  "candidate_base_head": "47a994c6154ff5a2a9baab9fb0027dbcc10be3e6",
+  "candidate_source": "independent public copy of the verified PR head plus B1-only staged changes",
+  "commands": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES='' PYTHONPATH='scripts/core_a/final_recovery_v2:scripts/final_evaluation/v1_historical' python3 -B -m pytest -q -p no:cacheprovider scripts/core_a/final_recovery_v2/test_core_a_v2_scorer.py",
+      "counts": {
+        "deselected": 0,
+        "failed": 0,
+        "passed": 7,
+        "skipped": 0
+      },
+      "duration": "1.16s",
+      "exit_code": 0,
+      "name": "Core A V2 scorer CPU tests",
+      "status": "PASS"
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES='' EE6008_PROJECT_ROOT=. PYTHONPATH='scripts/core_b/final_recovery_v2:scripts/final_evaluation/v1_historical' python3 -B -m pytest -q -p no:cacheprovider scripts/core_b/final_recovery_v2/test_core_b_v2_contracts.py -k 'not anchor_frame_schedule_stops_at_anchor'",
+      "counts": {
+        "deselected": 1,
+        "failed": 0,
+        "passed": 6,
+        "skipped": 0
+      },
+      "deselected_test": {
+        "name": "test_anchor_frame_schedule_stops_at_anchor",
+        "reason": "reads DEV_CURRENT_PROFILE_INPUTS.csv and FINAL_CURRENT_PROFILE_INPUTS.csv, which are not present in the public copy",
+        "status": "REQUIRES_SERVER_ARTIFACT"
+      },
+      "duration": "3.75s",
+      "exit_code": 0,
+      "name": "Core B V2 safe contract subset",
+      "status": "PASS"
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES='' PYTHONPATH='scripts/core_b/legacy_archives/code/b1:scripts/core_b/legacy_archives/code/b1/public_support/analysis_scripts' python3 -B -m pytest -q -p no:cacheprovider scripts/core_b/legacy_archives/code/b1/public_support/tests/test_b1_public_dependency_closure.py",
+      "counts": {
+        "deselected": 0,
+        "failed": 0,
+        "passed": 12,
+        "skipped": 0
+      },
+      "coverage": "public module paths; import-time side effects; CPU autocast; strict synthetic checkpoint build/validation; mocked weights_only CPU loader dispatch; public-root and src-collision guards; small official AttentivePooler CPU forward; preserved B1 model constructor configuration",
+      "duration": "7.79s",
+      "exit_code": 0,
+      "name": "B1 dependency closure CPU contracts and clean-process import smoke",
+      "status": "PASS",
+      "warnings": 2
+    }
+  ],
+  "data_and_claim_boundary": {
+    "B1_source_identity": "PARTIAL; see B1_SOURCE_PROVENANCE.md",
+    "checkpoint_files": "NOT_READ",
+    "historical_B1_numerical_replay": "NOT_RUN",
+    "real_final_or_heldout_labels_predictions": "NOT_READ",
+    "real_input_payloads": "NOT_READ",
+    "result_metrics_recomputed": "NOT_RUN"
+  },
+  "device_boundary": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "gpu_access": "NOT_RUN",
+    "torch_cuda_device_queries": "none; import smoke replaced is_available/manual_seed_all/synchronize/mem_get_info with fail-fast sentinels",
+    "training_inference_feature_extraction_checkpoint_load": "NOT_RUN"
+  },
+  "diagnostic_attempts": [
+    {
+      "command": "EE6008_PROJECT_ROOT=. CUDA_VISIBLE_DEVICES='' PYTHONPATH='scripts/core_b/final_recovery_v2:scripts/final_evaluation/v1_historical' python3 -B -m pytest -q scripts/core_b/final_recovery_v2/test_core_b_v2_contracts.py",
+      "counts": {
+        "failed": 1,
+        "passed": 6
+      },
+      "exit_code": 1,
+      "failure": "FileNotFoundError for reports/final_evaluation/EE6008_FINAL_RECOVERY_V2_20261020T053953Z/core_b/DEV_CURRENT_PROFILE_INPUTS.csv inside the isolated public checkout. The explicit public root prevented access to the private project tree; no manifest content was read. The test is deselected in the passing safe command above.",
+      "name": "Core B unfiltered manifest probe"
+    }
+  ],
+  "generated_at_utc": "2026-10-26T04:25:04Z",
+  "interpreter": {
+    "command_name": "python3.12",
+    "environment": "project Python environment; absolute local prefix intentionally omitted from the public record",
+    "version": "3.12.14"
+  },
+  "packages": {
+    "numpy": "2.5.2",
+    "pyarrow": "25.0.1",
+    "pytest": "9.1.1",
+    "timm": "1.0.28",
+    "torch": "2.12.1+cu130",
+    "torchvision": "0.27.1+cu130"
+  },
+  "public_resolution": {
+    "external_modules": [
+      "numpy",
+      "torch",
+      "timm"
+    ],
+    "project_owned_modules": "all resolved __file__ paths were under the public B1 directory/support package",
+    "third_party_modules": "all src.* module __file__ paths were under the vendored public V-JEPA2 subset"
+  },
+  "record_id": "B1_CPU_VALIDATION_20261026",
+  "tested_file_sha256": {
+    "scripts/core_b/legacy_archives/code/b1/accept_core_b_b1.py": "e2ff36ebdefca0de4682e9d1d59721dff47b4f4e386f970b386b2ad4e377d50a",
+    "scripts/core_b/legacy_archives/code/b1/public_support/analysis_scripts/checkpoint_utils/__init__.py": "bfbc397e6e18063bb469cfaf1cab08ce0fb838a559f838395cbb830efc1907a8",
+    "scripts/core_b/legacy_archives/code/b1/public_support/analysis_scripts/checkpoint_utils/checkpoint_contract.py": "b62f5b2a2152c19c4e593d92796306d33a9216e4e2728499ff13ccade09bef7b",
+    "scripts/core_b/legacy_archives/code/b1/public_support/analysis_scripts/fresh_process_batch8_d_a_l_fixed.py": "77682844e396e84d001e8f300b0b2e85adbeeb9261145142d74bc76d6859d63b",
+    "scripts/core_b/legacy_archives/code/b1/public_support/tests/test_b1_public_dependency_closure.py": "bb3c63baeb6cf723f0f2581d226be51cdcfdc16d74ebfbc94ca245c9696f53d2",
+    "scripts/core_b/legacy_archives/code/b1/public_support/vjepa2/src/__init__.py": "d15260bf96c10cf5d7370a9ff9a4f65f538dbcdaf3a2e59bea53ecbc5b7cab5d",
+    "scripts/core_b/legacy_archives/code/b1/public_support/vjepa2/src/models/__init__.py": "e940902f2eaf4c13bfe112024bb017945f47b88ebad3953b46d8a2eeed628452",
+    "scripts/core_b/legacy_archives/code/b1/public_support/vjepa2/src/models/attentive_pooler.py": "9be7047d6bfce50575956a57e36d87a37bf63ae84ec92a9ba8649bf1ab7d5feb",
+    "scripts/core_b/legacy_archives/code/b1/public_support/vjepa2/src/models/utils/__init__.py": "bf3ba8f398bdfa9ce14188c997f0e37967d380eff61064ad39486189ebb445ce",
+    "scripts/core_b/legacy_archives/code/b1/public_support/vjepa2/src/models/utils/modules.py": "b93f6c7e0747deb216419c000c2878f11a9189024a9adeacfd437e172396dff0",
+    "scripts/core_b/legacy_archives/code/b1/public_support/vjepa2/src/utils/__init__.py": "9ba48bb5b4912ae5f39d300ff047e364207a8eb537baf894ffa9377fd922f49a",
+    "scripts/core_b/legacy_archives/code/b1/public_support/vjepa2/src/utils/tensors.py": "782b58bd2af456e184750e5318ab773105108383f61b280fe4c7a90f46add2c8",
+    "scripts/core_b/legacy_archives/code/b1/run_core_b_baseline.py": "de5fcf8561bfe197ca9a05838450764d030bdb8f189e2759897cce923b9c4102"
+  },
+  "working_directory": ". (repository root of the isolated public candidate)"
+}

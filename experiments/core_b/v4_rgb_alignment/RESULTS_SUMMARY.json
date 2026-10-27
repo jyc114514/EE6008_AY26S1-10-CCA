@@ -1,0 +1,30 @@
+{
+  "B_MATCHED_reused_fits": 3,
+  "exposure_summary": {
+    "cumulative": 35520,
+    "cumulative_including_figure_reads": 35523,
+    "prior": 27750,
+    "target_archive_load_operations_total": 4,
+    "v4_metric_audit": 3330,
+    "v4_new_prediction_scoring": 4440,
+    "v4_total": 7770,
+    "v4_total_new_including_figure_reads": 7773,
+    "v4_trajectory_figure_target_rows": 3
+  },
+  "final_heldout_payload_access": 0,
+  "interpretation_changed_by_v3_native_audit": false,
+  "map_count": 3,
+  "metrics": [
+    "position_mae",
+    "safe_fd_l1",
+    "seam_safe_fd_l1"
+  ],
+  "new_prediction_jobs": 24,
+  "new_training_fits": 6,
+  "positive_gain_gate": false,
+  "schema_version": 1,
+  "status": "PASS",
+  "unique_dev_receivers": 185,
+  "v3_zero_effect_float32_drift_cases": 30,
+  "v4_development_only": true
+}

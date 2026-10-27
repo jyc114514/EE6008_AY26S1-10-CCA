@@ -1,0 +1,28 @@
+model_role,program_id,seed,input_mode,parameters,inference_requires_teacher,standalone_inference_inputs,encoder_cost_included,training_teacher_role,latency_scope,median_forward_ms_batch32,teacher_role
+student,ST_SELF,202610131,STATE-CTRL,891548,False,label-free prefix + fixed normalizer,False,A,not measured for this seed/role,,
+student,ST_SELF,202610132,STATE-CTRL,891548,False,label-free prefix + fixed normalizer,False,A,not measured for this seed/role,,
+student,ST_SELF,202610133,STATE-CTRL,891548,False,label-free prefix + fixed normalizer,False,A,not measured for this seed/role,,
+student,ST_SS,202610131,STATE-CTRL,891548,False,label-free prefix + fixed normalizer,False,SS50,not measured for this seed/role,,
+student,ST_SS,202610132,STATE-CTRL,891548,False,label-free prefix + fixed normalizer,False,SS50,not measured for this seed/role,,
+student,ST_SS,202610133,STATE-CTRL,891548,False,label-free prefix + fixed normalizer,False,SS50,not measured for this seed/role,,
+student,ST_SV,202610131,STATE-CTRL,891548,False,label-free prefix + fixed normalizer,False,SV50,not measured for this seed/role,,
+student,ST_SV,202610132,STATE-CTRL,891548,False,label-free prefix + fixed normalizer,False,SV50,not measured for this seed/role,,
+student,ST_SV,202610133,STATE-CTRL,891548,False,label-free prefix + fixed normalizer,False,SV50,not measured for this seed/role,,
+student,VD_SELF,202610131,TS11-D,891548,False,label-free prefix + fixed normalizer + accepted Q0 feature cache,False,V,not measured for this seed/role,,
+student,VD_SELF,202610132,TS11-D,891548,False,label-free prefix + fixed normalizer + accepted Q0 feature cache,False,V,not measured for this seed/role,,
+student,VD_SELF,202610133,TS11-D,891548,False,label-free prefix + fixed normalizer + accepted Q0 feature cache,False,V,not measured for this seed/role,,
+student,VD_SS,202610131,TS11-D,891548,False,label-free prefix + fixed normalizer + accepted Q0 feature cache,False,SS50,not measured for this seed/role,,
+student,VD_SS,202610132,TS11-D,891548,False,label-free prefix + fixed normalizer + accepted Q0 feature cache,False,SS50,not measured for this seed/role,,
+student,VD_SS,202610133,TS11-D,891548,False,label-free prefix + fixed normalizer + accepted Q0 feature cache,False,SS50,not measured for this seed/role,,
+student,VD_SV,202610131,TS11-D,891548,False,label-free prefix + fixed normalizer + accepted Q0 feature cache,False,SV50,cached-feature Q0 head only; shared encoder cost excluded,3.2469748985022306,
+student,VD_SV,202610132,TS11-D,891548,False,label-free prefix + fixed normalizer + accepted Q0 feature cache,False,SV50,not measured for this seed/role,,
+student,VD_SV,202610133,TS11-D,891548,False,label-free prefix + fixed normalizer + accepted Q0 feature cache,False,SV50,not measured for this seed/role,,
+frozen_teacher,,202610131,STATE-CTRL,891548,False,label-free prefix + fixed normalizer,False,,not measured for this seed/role,,A_COMMON
+frozen_teacher,,202610131,STATE-CTRL,891548,False,label-free prefix + fixed normalizer,False,,cached-feature Q0 head only; shared encoder cost excluded,3.1226850114762783,S_OPT
+frozen_teacher,,202610131,TS11-D,891548,False,label-free prefix + fixed normalizer + accepted Q0 feature cache,False,,cached-feature Q0 head only; shared encoder cost excluded,5.465660477057099,V_MATCHED
+frozen_teacher,,202610132,STATE-CTRL,891548,False,label-free prefix + fixed normalizer,False,,not measured for this seed/role,,A_COMMON
+frozen_teacher,,202610132,STATE-CTRL,891548,False,label-free prefix + fixed normalizer,False,,not measured for this seed/role,,S_OPT
+frozen_teacher,,202610132,TS11-D,891548,False,label-free prefix + fixed normalizer + accepted Q0 feature cache,False,,not measured for this seed/role,,V_MATCHED
+frozen_teacher,,202610133,STATE-CTRL,891548,False,label-free prefix + fixed normalizer,False,,not measured for this seed/role,,A_COMMON
+frozen_teacher,,202610133,STATE-CTRL,891548,False,label-free prefix + fixed normalizer,False,,not measured for this seed/role,,S_OPT
+frozen_teacher,,202610133,TS11-D,891548,False,label-free prefix + fixed normalizer + accepted Q0 feature cache,False,,not measured for this seed/role,,V_MATCHED

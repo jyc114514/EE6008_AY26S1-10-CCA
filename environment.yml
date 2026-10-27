@@ -14,6 +14,6 @@ dependencies:
   - pip:
       - -r requirements.txt
 
-# PyTorch, torchvision, OpenCV, and decord must match the authorized runtime
+# PyTorch, torchvision, timm, OpenCV, and decord must match the authorized runtime
 # and are listed in requirements.txt for reference. The public clone does not
 # contain V-JEPA weights or raw data.

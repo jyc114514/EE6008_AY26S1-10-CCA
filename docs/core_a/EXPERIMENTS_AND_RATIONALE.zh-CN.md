@@ -8,7 +8,9 @@ run manifest、Full-120 Stage1 acceptance 和封存的 unified analysis 整理�
 `server-only://` 指针，不代表所有服务器 artifact 都可再分发。
 
 Core A 的问题是：四秒 observed RGB prefix 能否支持 G1 子集的 task-ID
-recognition。它不评估 future action prediction。比较不同 family 时必须
+recognition。它不评估 future action prediction。本 catalog 记录 2026-09-10
+的历史发布快照。后续 Core A V2 在披露先前标签访问后，对 602 个同源 final
+labels 评分；见 [V2 分析](FINAL_V2_AMENDED_ANALYSIS.zh-CN.md)。比较不同 family 时必须
 同时保留 task 数、representation、head、adaptation、split 和重复单位。
 
 ## Family 覆盖

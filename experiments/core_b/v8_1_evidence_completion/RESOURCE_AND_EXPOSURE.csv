@@ -1,0 +1,38 @@
+metric,value,unit,scope,source,notes
+target archive npz loads,1,loads,V8.1 only,artifact_id:V8_1_RESOURCE_SOURCE_001,One allow_pickle=False load; same 185 locked dev windows; no reread after cache seal.
+historical target archive loads,2,loads,V7+V8 historical,artifact_id:V8_1_RESOURCE_SOURCE_002,Kept separate from V8.1 resource total.
+target archive hash passes,2,passes,V8.1 only,artifact_id:V8_1_RESOURCE_SOURCE_003,Preflight source binding plus immediate pre-open recheck; hash-only passes are not npz loads.
+dev target archive file size,435083,bytes,V2 read-only source,artifact_id:V8_1_RESOURCE_SOURCE_004,File stat only in finalizer; no archive or label load.
+label-free prefix archive file size,910534,bytes,V4 read-only source,artifact_id:V8_1_RESOURCE_SOURCE_005,File stat only; whitelist fields were read during preflight and the two analysis runs.
+target unique windows loaded,185,windows,V8.1 only,artifact_id:V8_1_RESOURCE_SOURCE_006,185 unique dev windows; no final/heldout payload.
+target native scalar values,155400,scalars,V8.1 only,artifact_id:V8_1_RESOURCE_SOURCE_007,"Shape [185,30,28]; values persisted only in artifact_id:V8_1_RESOURCE_NOTE_SOURCE_007_01 and the required private trajectory figure data."
+prefix archive loads,3,loads,V8.1 only,artifact_id:V8_1_RESOURCE_SOURCE_008,Label-free accepted ID/episode/task/group/frame/anchor fields only; preflight and two analysis runs.
+scorer cache package loads,2,loads,V8.1 only,artifact_id:V8_1_RESOURCE_SOURCE_009,One immediate readback after write; one resume from sealed cache after a result-assembly failure.
+prediction file hash passes,36,file checks,V8.1 only,12 sealed bundles × preflight + initial scoring attempt + cache-resumed scoring attempt,Prediction files remained in V7/V5 roots and were read-only.
+prediction tensor decodes,24,loads,V8.1 only,12 bundles × 2 analysis runs,Existing G/U/M from V7 and T/MIX50 from V5; no new predictions.
+prediction row-map reads,36,reads,V8.1 only,12 row maps × preflight + two analysis attempts,Each map was joined by anchor ID and episode/task/frame/rank/source group.
+accepted V7 per-window rows reused,2220,unique rows,V8.1 reconciliation,artifact_id:V8_1_RESOURCE_SOURCE_013,4 methods × 3 seeds × 185 anchors; source file parsed in 3 bounded passes.
+accepted V7 task/seed/macro rows reused,72,unique rows,V8.1 reconciliation,artifact_id:V8_1_RESOURCE_SOURCE_014,4 methods × 3 seeds × 6 scopes; source file parsed in 3 bounded passes.
+per-window scored diagnostic units,2220,method-seed-window units,V8.1 only,12 accepted bundles × 185 windows,Not a new independent sample count.
+error checkpoint writes,12,slots,V8.1 only,artifact_id:V8_1_RESOURCE_SOURCE_016,All 12 method-seed error slots sealed; no Y stored in checkpoints.
+error checkpoint package loads,24,loads,V8.1 only,artifact_id:V8_1_RESOURCE_SOURCE_017,12 readbacks after write plus 12 checkpoint-only resume reads.
+horizon error table,4248,rows,V8.1 only,artifact_id:V8_1_RESOURCE_SOURCE_018,"Position 1..30 and internal FD 1→2..29→30 across 6 scopes, 4 methods, 3 seeds."
+axis error table,6048,rows,V8.1 only,artifact_id:V8_1_RESOURCE_SOURCE_019,"Position, internal FD, and separate seam across 28 coordinates."
+macro reconciliation table,216,rows,V8.1 only,artifact_id:V8_1_RESOURCE_SOURCE_020,All direct/step/axis rows pass locked 1e-12 absolute and 1e-10 relative tolerance.
+new aggregate figure files,14,PNGs,V8.1 only,artifact_id:V8_1_RESOURCE_SOURCE_021,"Agent visual review PASS; 3-seed bands are min–max, not CI."
+new trajectory figure files,15,PNGs,V8.1 only,artifact_id:V8_1_RESOURCE_SOURCE_022,"Seed 202610131, fixed V8 cases and axes 2/20; includes already exposed Y."
+reused V8 figure files,4,PNGs,byte-identical V8 reuse,artifact_id:V8_1_RESOURCE_SOURCE_023,artifact_id:V8_1_RESOURCE_NOTE_SOURCE_023_01 verifies byte identity.
+scorer cache size,1290967,bytes,V8.1 private cache,artifact_id:V8_1_RESOURCE_SOURCE_024,Directory 0700; cache files 0600; scorer-only exposed-dev role.
+error checkpoint size,27661760,bytes,V8.1 private checkpoints,artifact_id:V8_1_RESOURCE_SOURCE_025,Error-only sufficient arrays; no raw Y or model state.
+existing prediction payload bytes,14920344,bytes,read-only V7/V5 inputs,12 prediction assets,"Input sizes, not copied into V8.1."
+prediction row-map bytes,228528,bytes,read-only V7/V5 inputs,12 row-map assets,"Input sizes, not copied into V8.1."
+new scientific figure size,9814561,bytes,V8.1 only,29 PNGs,PNG sizes from final figure QA.
+reused V8 figure size,550132,bytes,byte-identical V8 reuse,4 PNGs,Copied into separate V8.1 reuse directory.
+CPU process elapsed,1.5967763592489064,seconds,source preflight,artifact_id:V8_1_RESOURCE_SOURCE_030,Wall elapsed; CPU user/system time not collected.
+CPU process elapsed,2.6641862359829247,seconds,successful cache-resumed scoring,artifact_id:V8_1_RESOURCE_SOURCE_031,Wall elapsed; CPU user/system time not collected.
+CPU process elapsed,15.120542576070875,seconds,latest figure build,artifact_id:V8_1_RESOURCE_SOURCE_032,Wall elapsed; CPU user/system time not collected.
+peak RSS,351272,KiB,source preflight,artifact_id:V8_1_RESOURCE_SOURCE_033,Observed process peak; no rerun for resource sampling.
+peak RSS,105820,KiB,successful cache-resumed scoring,artifact_id:V8_1_RESOURCE_SOURCE_034,Observed process peak; no GPU memory metrics.
+V7 historical resource supplement rows,9,rows,accepted V8 reuse only,artifact_id:V8_1_RESOURCE_SOURCE_035,Copied for provenance; not counted as V8.1 resource or recomputed.
+GPU commands,0,commands,V8.1 only,policy lock,"No GPU, CUDA, NVML, or shared watcher command executed."
+new fit / optimizer update / forward / dev prediction / encoder / bootstrap / search,0,operations,V8.1 only,artifact_id:V8_1_RESOURCE_SOURCE_037,All remain zero.

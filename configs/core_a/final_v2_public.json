@@ -1,0 +1,31 @@
+{
+  "study_id": "CORE_A_FINAL_V2_AMENDED",
+  "status": "COMPLETED_AS_AMENDED_ANALYSIS",
+  "estimand": "A-FULL602",
+  "split": "same-source final primary population; prior label access disclosed",
+  "primary_rows": 602,
+  "classes": 120,
+  "programs": [
+    "A_DYNAMIC",
+    "A_STATIC"
+  ],
+  "seeds": [
+    20260825,
+    20260826,
+    20260827
+  ],
+  "bootstrap_draws": 5000,
+  "bootstrap_seed": 2026101901,
+  "metrics": [
+    "top1_accuracy",
+    "top5_accuracy",
+    "macro_f1_true_classes"
+  ],
+  "final_confirmation": "not_independent_blind_confirmation",
+  "run_commit": "UNKNOWN",
+  "path_parameters": {
+    "project_root": "${EE6008_PROJECT_ROOT}",
+    "output_root": "${EE6008_OUTPUT_ROOT}",
+    "log_root": "${EE6008_LOG_ROOT}"
+  }
+}

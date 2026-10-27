@@ -1,0 +1,31 @@
+contrast,metric,point_estimate,ci_low,ci_high,ci_level,draws,seed,n_source_groups,source_group_task_nested,pairing,independent_confirmation
+MIX50_DIAG_MEAN3_vs_S,position_mae,0.002083948268251571,0.0006677482423250964,0.00343350932424016,0.95,5000,2026101506,47,True,same target groups paired across three fixed MIX50 pairs and matched references,False
+MIX50_DIAG_MEAN3_vs_S,safe_fd_l1,0.011833377443234028,0.008675217476985636,0.0152946333374432,0.95,5000,2026101506,47,True,same target groups paired across three fixed MIX50 pairs and matched references,False
+MIX50_DIAG_MEAN3_vs_S,seam_safe_fd_l1,0.0017203459446198499,-0.013244864344834947,0.012330200965172334,0.95,5000,2026101506,47,True,same target groups paired across three fixed MIX50 pairs and matched references,False
+MIX50_DIAG_MEAN3_vs_V,position_mae,0.00286679976636929,0.0013876918720362964,0.0045541184977557015,0.95,5000,2026101506,47,True,same target groups paired across three fixed MIX50 pairs and matched references,False
+MIX50_DIAG_MEAN3_vs_V,safe_fd_l1,0.0007805564060853643,-0.002465013762860834,0.003862939235701375,0.95,5000,2026101506,47,True,same target groups paired across three fixed MIX50 pairs and matched references,False
+MIX50_DIAG_MEAN3_vs_V,seam_safe_fd_l1,0.030538750243501556,0.017088675556701415,0.04756761580728144,0.95,5000,2026101506,47,True,same target groups paired across three fixed MIX50 pairs and matched references,False
+MIX50_DIAG_MEAN3_vs_BIAS_STATE,position_mae,0.0018299495077908716,0.00041686035297147726,0.003211306261575851,0.95,5000,2026101506,47,True,same target groups paired across three fixed MIX50 pairs and matched references,False
+MIX50_DIAG_MEAN3_vs_BIAS_STATE,safe_fd_l1,0.011833377443234028,0.008675217476985636,0.0152946333374432,0.95,5000,2026101506,47,True,same target groups paired across three fixed MIX50 pairs and matched references,False
+MIX50_DIAG_MEAN3_vs_BIAS_STATE,seam_safe_fd_l1,0.05400971330314821,0.03750184192283561,0.06703203335033539,0.95,5000,2026101506,47,True,same target groups paired across three fixed MIX50 pairs and matched references,False
+MIX50_DIAG_MEAN3_vs_BIAS_VIDEO,position_mae,0.0025947579380171865,0.0010842098163270913,0.004312234216488385,0.95,5000,2026101506,47,True,same target groups paired across three fixed MIX50 pairs and matched references,False
+MIX50_DIAG_MEAN3_vs_BIAS_VIDEO,safe_fd_l1,0.0007805564060853643,-0.002465013762860834,0.003862939235701375,0.95,5000,2026101506,47,True,same target groups paired across three fixed MIX50 pairs and matched references,False
+MIX50_DIAG_MEAN3_vs_BIAS_VIDEO,seam_safe_fd_l1,0.0827210334267998,0.06712564719827542,0.10195332071669597,0.95,5000,2026101506,47,True,same target groups paired across three fixed MIX50 pairs and matched references,False
+SV_vs_SS,position_mae,0.0003621214969437847,-0.0010627410754654233,0.0016983892977634149,0.95,5000,2026101506,47,True,same source-group draw across all fixed pair systems,False
+SV_vs_VV,position_mae,0.001281170711814661,-0.00023518428325521932,0.0030239152482188425,0.95,5000,2026101506,47,True,same source-group draw across all fixed pair systems,False
+SV_vs_SA,position_mae,0.001478136123699736,0.00024935399929162076,0.002675933662318205,0.95,5000,2026101506,47,True,same source-group draw across all fixed pair systems,False
+AV_vs_AA,position_mae,0.00143189000792443,0.00019242529538694876,0.002629340654713643,0.95,5000,2026101506,47,True,same source-group draw across all fixed pair systems,False
+AV_vs_VV,position_mae,-0.0005122654254107462,-0.0018429781154229938,0.0009695472366492112,0.95,5000,2026101506,47,True,same source-group draw across all fixed pair systems,False
+SV_pairing_effect,position_mae,7.3004932738540695e-06,-9.812972651742023e-05,0.00011403524029929723,0.95,5000,2026101506,47,True,same source-group draw across all fixed SV pair systems,False
+SV_vs_SS,safe_fd_l1,0.0064744108129569655,0.003220936460636777,0.009920937930717846,0.95,5000,2026101506,47,True,same source-group draw across all fixed pair systems,False
+SV_vs_VV,safe_fd_l1,-0.0032425291695137304,-0.0063107152200859995,-0.00036988611126161135,0.95,5000,2026101506,47,True,same source-group draw across all fixed pair systems,False
+SV_vs_SA,safe_fd_l1,0.0064036336075973255,0.003193417275707417,0.01018654339222575,0.95,5000,2026101506,47,True,same source-group draw across all fixed pair systems,False
+AV_vs_AA,safe_fd_l1,0.006499673808826767,0.003118860266445947,0.010554257762249497,0.95,5000,2026101506,47,True,same source-group draw across all fixed pair systems,False
+AV_vs_VV,safe_fd_l1,-0.0037625857119367723,-0.00697542762318358,-0.0010131972876584162,0.95,5000,2026101506,47,True,same source-group draw across all fixed pair systems,False
+SV_pairing_effect,safe_fd_l1,-0.0001608233196753739,-0.0003600450171618519,4.186442521517259e-05,0.95,5000,2026101506,47,True,same source-group draw across all fixed SV pair systems,False
+SV_vs_SS,seam_safe_fd_l1,-0.009972214706139737,-0.025838596483001415,0.0014442528761983082,0.95,5000,2026101506,47,True,same source-group draw across all fixed pair systems,False
+SV_vs_VV,seam_safe_fd_l1,0.016921601641839756,0.0052019393936430505,0.03236716190694353,0.95,5000,2026101506,47,True,same source-group draw across all fixed pair systems,False
+SV_vs_SA,seam_safe_fd_l1,-0.004730489244286873,-0.02349981668748129,0.009366047445351654,0.95,5000,2026101506,47,True,same source-group draw across all fixed pair systems,False
+AV_vs_AA,seam_safe_fd_l1,-0.004869470408264354,-0.023423429089497384,0.009138488455930656,0.95,5000,2026101506,47,True,same source-group draw across all fixed pair systems,False
+AV_vs_VV,seam_safe_fd_l1,0.010245021404359678,-0.003639220650074601,0.028299583672395833,0.95,5000,2026101506,47,True,same source-group draw across all fixed pair systems,False
+SV_pairing_effect,seam_safe_fd_l1,0.00046222761713221594,-0.0007495527705686347,0.001627847330609544,0.95,5000,2026101506,47,True,same source-group draw across all fixed SV pair systems,False

@@ -1,0 +1,24 @@
+{
+  "study_id": "CORE_B_D3_EQ_CORRECTED_SCHEDULER",
+  "status": "COMPLETE_DEVELOPMENT_ONLY",
+  "configurations": [
+    "TS11-D",
+    "STATE-CTRL"
+  ],
+  "horizons_steps": [
+    30,
+    60
+  ],
+  "seeds": [
+    20261001,
+    20261002,
+    20261003
+  ],
+  "formal_fits": "12/12",
+  "train_predictions": "12/12",
+  "dev_predictions": "12/12",
+  "dense_secondary_predictions": "24/24",
+  "scheduler_contract": "one scheduler call after every optimizer update; 11,120 updates per formal fit",
+  "final_test_access": 0,
+  "run_commit": "UNKNOWN"
+}

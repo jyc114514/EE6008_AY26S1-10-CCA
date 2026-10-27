@@ -1,0 +1,31 @@
+{
+  "study_id": "CORE_B_V3_MULTI_ANCHOR_TEMPORAL",
+  "status": "COMPLETE_DEVELOPMENT_ONLY",
+  "train_episodes": 2712,
+  "train_windows": 17757,
+  "dev_episodes": 603,
+  "dev_windows": 2322,
+  "seeds": [
+    20260950,
+    20260951,
+    20260952
+  ],
+  "cells": [
+    "S-HIST",
+    "F-POOL-D",
+    "F-TOK-D",
+    "F-TOK-S",
+    "V-TOK-D-A",
+    "V-TOK-S-A"
+  ],
+  "horizons_steps": [
+    30,
+    60
+  ],
+  "target_dimensions": 28,
+  "metric": "Full-28 standardized MAE; lower is better",
+  "normalizer": "primary train only",
+  "encoder_updated": false,
+  "final_test_access": 0,
+  "run_commit": "UNKNOWN"
+}
