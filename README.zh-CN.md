@@ -4,134 +4,67 @@
 
 **面向 Humanoid Everyday Action Anticipation 的联合嵌入预测建模**
 
-这是 NTU EE6008 AY26S1-10-CCA 课程项目的公开研究仓库，包含 Core A 与 Core B 的精选代码和证据，并分别记录实验状态、数据暴露、来源和服务器保留材料。
+这是 NTU EE6008 课程项目的公开仓库，收录两条相关研究线的代码、精选实验依据和复现说明：Core A 视频任务识别，以及 Core B 状态/动作轨迹预测研究。
 
-## 项目目标
+> **快照范围：** 本说明依据 `main` 分支在 2026-10-27 的公开版本 `3343154b65dc98a3758d131c059e5806d2bc58ab`，以及下方链接的按日期整理的发布记录和 B1 修补记录。它不代表该快照之后尚未公开的项目进展。
 
-项目拟研究 joint-embedding video representation 在 humanoid everyday action understanding 与 action anticipation 中的作用。当前暂定流程如下：
+## 研究方向
 
-V-JEPA / V-JEPA 2 baseline<br>
-→ 选择并审核公开数据的 metadata 与小规模数据子集<br>
-→ feature extraction 或 frozen representation<br>
-→ current-action recognition baseline<br>
-→ action anticipation / 其他下游任务<br>
-→ 轻量模型或训练策略修改<br>
-→ ablation 与失败案例分析
+### Core A：部分观测下的任务识别
 
-Core A 包含历史 development/validation task-recognition 屏幕结果，以及后续 V2 同源 final-label 修正分析。V2 标签访问已披露，不是未触碰标签的盲测确认。Core B prediction/forecasting 证据单独记录在 [docs/core_b/](docs/core_b/)。
+Core A 研究如何根据 G1 视频中四秒的观测前缀识别 task ID。公开代码包含 V-JEPA 2.1 特征提取流程、任务识别基线、probe 与模型适配工具、评估代码和整理后的实验依据。
 
-## 当前状态
+历史 Full-120 Stage1 的 9/9 工件/运行验收通过。该批次使用一个 seed 和 development/validation 数据；9/9 并不表示所有科学假设都成立。D-P-L 结果标记为 `accepted_derived_unmerged`：合并导出路径失败后，依据未合并的 base-plus-adapter 预测重新计算。
 
-- 历史 Core A Full-120 Stage1：源证据中 9/9 通过验收，仅 development/validation；D-P-L 使用 unmerged derived inference。
-- Core A V2：在披露映射修正与先前标签访问后，对 602 个同源 final labels 完成六格重评分；没有新训练，不是独立盲测确认。
-- Core B：B1/B2/B3、V3、D3、query/ablation 和 V2 CURRENT_PROFILE dev/final 结果分别编目。
-- Core B V2 final targets 在 22 个预测包封存后读取；41 个 final episode 与 Core A 视频索引重叠，session 独立性未知。
-- 结题证据仍标记团队/学术审阅、视频录制和课程提交待完成。
-- 许可：本证据导出不新增许可证声明；第三方源码、数据和模型许可仍需分别核对。
+Core A V2 在事先披露标签访问与类别映射修正后，对六组已有预测在 602 个同源 final labels 上重新评分。它没有新增训练或模型 forward pass；这是修正后的同源分析，不是未触碰标签的盲测确认。结果在不同指标上的方向并不一致，不能据此证明 action anticipation、独立的运动理解或机器人部署表现。
 
-## GitHub 与 GPU Server 的分工
+可从[当前结论](docs/core_a/CURRENT_CONCLUSIONS.zh-CN.md)、[V2 修正分析](docs/core_a/FINAL_V2_AMENDED_ANALYSIS.zh-CN.md)和 [Core A 指南](docs/core_a/README.zh-CN.md)开始阅读。
 
-GitHub 中保存：
+### Core B：状态/动作轨迹预测研究
 
-- 源代码、配置文件和小型工具；
-- 数据 metadata、manifest、label map 和 split 定义；
-- 项目范围、会议记录、周报和学习笔记；
-- 小型、经过整理并带有 provenance 的最终结果。
+Core B 收录针对不同模型、输入和时间预测设置的独立研究及聚合结果。最新编目的 CURRENT_PROFILE_V2 流程使用已训练的 checkpoint 对 development 与 final split 评分，没有新增训练。记录显示每个 split 均有 22 个已封存 prediction bundles；final targets 仅在 final prediction seal 通过后读取。
 
-GPU Server 中保存：
+| Split | Episode / anchor 数 | V0 position MAE | Persistence position MAE |
+| --- | ---: | ---: | ---: |
+| Development | 47 / 185 | 0.158397 | 0.222262 |
+| Final recovery | 41 / 162 | 0.178383 | 0.238057 |
 
-- raw videos、frames 和其他原始数据；
-- V-JEPA checkpoint；
-- extracted feature tensors；
-- training outputs、logs、cache 和临时文件。
+这些是标准化指标，不代表机器人实际精度。这组同源 final 评估的 41 个 episodes 与 Core A 编目视频群体重叠，session 独立性未得到证明；它不是独立确认。原始 Q0 bridge 仍为 `FAIL_UNRESOLVED`，原因是 `UNKNOWN`。详见[当前结果与局限](docs/core_b/CURRENT_RESULTS_AND_LIMITATIONS.md)、[研究索引](docs/core_b/EXPERIMENT_LINE_INDEX.md)和 [Core B 指南](docs/core_b/README.zh-CN.md)。
 
-`data_metadata/` 不是 `data_raw/`，`results/` 不是 `outputs/`。不要把原始数据、模型权重或大规模训练产物提交到 GitHub。
+## 仓库导航
 
-## 仓库结构
-
-| 路径 | 用途 |
+| 路径 | 内容 |
 | --- | --- |
-| `configs/` | 可移植的实验配置骨架，使用环境变量表示机器路径。 |
-| `docs/` | 项目范围、协作规范、服务器布局、会议/周报模板和整理后的公开材料。 |
-| `data_metadata/` | 小型 manifest、label map 和 split 定义。 |
-| `src/` | project-authored Core A package 与原有骨架模块。 |
-| `scripts/` | 可移植 Core A runner、审计和图表 QA 入口。 |
-| `experiments/` | Core A catalog、run-level aggregate、effects 和 acceptance summary。 |
-| `results/` | 小型 Core A 汇总、plot data 和图，不存放原始训练输出。 |
-| `tests/` | Core A 单元和 contract tests。 |
+| `src/ee6008/` | 当前 project-authored Core A package，包含模型加载、配置、基线、probe 和工具。 |
+| `src/models/`、`src/training/`、`src/evaluation/` | 旧 scaffold 目录；其中 README 描述的是约定，并非当前实现。 |
+| `scripts/core_a/`、`scripts/core_b/`、`scripts/final_evaluation/`、`scripts/audits/` | Core A/B runner、历史 study 入口、评估和审计工具。各入口依赖的数据与环境不同。 |
+| `configs/`、`data_metadata/` | 公开配置摘要和 metadata，不含原始数据集。 |
+| `docs/core_a/`、`docs/core_b/` | 研究范围、结论、局限和复现边界。 |
+| `experiments/core_a/`、`experiments/core_b/` | 精选聚合表和实验索引。 |
+| `results/core_a/`、`results/core_b/` | 选定图表和绘图输入，不含完整训练输出。 |
+| `tests/` | 有针对性的单元与 contract tests。 |
 
-## 协作流程
+## 环境与公开 CPU 检查
 
-`main` 作为相对稳定分支。分支名称按工作内容命名，例如：
-
-- `feature/vjepa2-loader`
-- `experiment/g1-recognition-baseline`
-- `fix/dataset-path`
-- `docs/weekly-update`
-
-不要为每个人创建永久个人分支。
+项目环境面向 Python 3.11–3.12。请查看 [environment.yml](environment.yml) 与 [requirements.txt](requirements.txt)；PyTorch 和视频依赖可能需要换成适配已授权运行环境的构建版本。以下建环境命令仅为文档说明，本次 README 更新没有实际运行：
 
 ```bash
-git pull origin main
-git switch -c feature/<short-description>
-git add -- <confirmed-paths>
-git commit -m "<type>: <short description>"
-git push -u origin feature/<short-description>
+conda env create -f environment.yml
+conda activate ee6008-cca
 ```
 
-准备好后通过 pull request 合并。小型文档修正是否直接合并到 `main`，由团队协商决定。任何提交都必须避免 raw data、credential、checkpoint 和未经审核的大文件。
+公开仓库不包含原始视频、feature tensor、真实 checkpoint、逐样本预测/目标数组或执行日志。完整训练或重放需要相应的授权数据、权重、运行环境和服务器工件。
 
-## 实验可复现性
+在仓库根目录使用 Bash 兼容的 shell，可执行已发布的 CPU contract checks：
 
-每次真实实验至少记录：
+```bash
+PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES='' PYTHONPATH="scripts/core_a/final_recovery_v2:scripts/final_evaluation/v1_historical" python3 -B -m pytest -q -p no:cacheprovider scripts/core_a/final_recovery_v2/test_core_a_v2_scorer.py
+PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES='' EE6008_PROJECT_ROOT=. PYTHONPATH="scripts/core_b/final_recovery_v2:scripts/final_evaluation/v1_historical" python3 -B -m pytest -q -p no:cacheprovider scripts/core_b/final_recovery_v2/test_core_b_v2_contracts.py -k 'not anchor_frame_schedule_stops_at_anchor'
+```
 
-- dataset revision 与 split；
-- config 路径；
-- Git commit hash；
-- run ID、seed、model/checkpoint；
-- server 与 output path；
-- owner、日期、status；
-- primary metric、secondary metric 和备注。
+Core B 的 schedule 测试因读取仅存在于服务器的 development/final input manifests 而排除。这些检查覆盖公开 scorer 和 contract fixtures，不会执行训练、完整推理、视频特征提取或历史实验重放。
 
-记录位置为 `experiments/runs.csv`。run registry 分开记录 development、validation 和 final/heldout scoring；历史访问状态只适用于对应 run。
-
-## 项目材料与版权边界
-
-原始本地资料目录继续保留在本机，没有被移动或删除。公开仓库只保留经过筛选的项目说明、学习卡片和公开来源链接。版权许可不明确的论文 PDF、登录态文件、私有表单、原始数据、checkpoint 和大规模审计产物不上传到 Public repository。
-
-论文、数据集和模型权重的许可是相互独立的。引用链接不等于获得再分发许可；实际使用前应回到官方 source、revision 和 license 核对。
-
-## 项目成员
-
-这是一个五人课程项目，当前仓库 owner 为 `jyc114514`。其他成员的 GitHub collaborator 邀请会在确认准确 username 后逐一处理，不猜测用户名。
-
-## 本次服务器同步发布
-
-上次发布以来的代码与结果索引见[发布摘要](docs/releases/server-sync-20261022T082418Z/RELEASE_SUMMARY.md)、[实验结果索引](docs/releases/server-sync-20261022T082418Z/EXPERIMENT_RESULT_INDEX.csv)和[Core B 研究索引](docs/core_b/EXPERIMENT_LINE_INDEX.md)。发布材料区分历史 development-only 访问记录与后来已披露的同源 final-label 分析。
-
-## 发布后修补补充（2026-10-24）
-
-本补充接续 PR head 348469cb8c3d5ba468b32740e8c23684b9f2dcc4 的独立验收。此前 18 个排除候选中，15 项现有明确标记且绑定源哈希的修复副本；原历史文件保持不变。另有 3 个主机管理/行政包装器继续排除。逐文件来源和导出哈希见 docs/releases/server-sync-20261022T082418Z/REPAIR_SOURCE_MAP_20261024.csv。 ENTRYPOINT_RESULT_MAP.csv 中非公开服务器配置/输入引用以稳定 artifact_id 占位符表示；输入类型和访问条件仍可见，公开仓库相对路径保持原样。
-
-本补充公开了已有的 120 个聚合工件：91 个结果表/JSON 和 29 个绘图数据文件；没有重算指标。来源/导出哈希、大小、路径脱敏说明与 CSV 行数见 RESULT_EXPORT_PROVENANCE_20261024.csv。RELEASE_REPAIR_MANIFEST_20261024.csv 与 RELEASE_REPAIR_CHECKSUMS_20261024.sha256 仅覆盖列明的本轮修补载荷；原发布 manifest/checksum 仍仅适用于原快照。
-
-V7 single-head scorer 与 V7 ensemble scorer 分开；V9 context-dropout、V9 cached-Q0 和 V9 bootstrap correction supplement 也分别编目。检查范围内没有 V10 运行目录或已保存聚合结果。
-
-请使用上方 Core A 与 Core B CPU 命令执行公开合约检查。修复后的手工校准分析、R3D 特征提取和 temporal-variation replay 仍需要对应服务器工件。R3D 必须显式提供 --project-root、--study-root、--primary-inputs、--dense-inputs、--raw-root 和 --weights；源码不内置服务器数据根路径，输出元数据使用不透明 artifact_id。完整提取仍需授权后执行 GPU；脚本不下载权重。历史脚本不应统一视为开箱可运行工具。
-
-Core A 历史 Stage1 源码绑定为部分可证：V-JEPA2 源码 revision 已核实，自定义 runner 文件身份仍为 UNKNOWN。既有披露继续有效：Core A prior label exposure/amended analysis；Core B same-source overlap 与 session independence UNKNOWN；Q0 bridge FAIL_UNRESOLVED；standardized metrics 不等于 physical robot accuracy。
-
-## 独立验收补充（2026-10-26）
-
-已从 GitHub 独立下载并核对 PR head `d3c2dd144d498b9f5aa656f8a61f371fc28974de`；本次结果与未解决边界见[验收报告](docs/releases/server-sync-20261022T082418Z/POST_RELEASE_ACCEPTANCE_20261026.md)。版本化的[验收 manifest](docs/releases/server-sync-20261022T082418Z/POST_RELEASE_ACCEPTANCE_MANIFEST_20261026.csv)和[校验和](docs/releases/server-sync-20261022T082418Z/POST_RELEASE_ACCEPTANCE_CHECKSUMS_20261026.sha256)覆盖原 149 个修补载荷文件及该验收报告。两个 sidecar 不对自身计算哈希。2026-10-24 的修补 manifest/checksum 仅适用于后续修改前的历史快照。
-
-在前一版 head `47a994c6154ff5a2a9baab9fb0027dbcc10be3e6` 的验收时，历史 B1 runner 的三个导入依赖仍未公开。随后新增的 B1 专项补充已补齐公开代码依赖闭包；前一份验收报告继续作为当时 head 的快照。
-
-### B1 公开依赖闭包（2026-10-26）
-
-B1 入口现在从公开树解析项目 checkpoint 工具和固定版本的官方 V-JEPA2 attentive-pooler 源码。详见[修复说明](docs/releases/server-sync-20261022T082418Z/B1_PUBLIC_DEPENDENCY_REPAIR_20261026.md)、[来源记录](docs/releases/server-sync-20261022T082418Z/B1_SOURCE_PROVENANCE.md)和[依赖闭包表](docs/releases/server-sync-20261022T082418Z/B1_DEPENDENCY_CLOSURE.csv)，以及[B1增量校验和](docs/releases/server-sync-20261022T082418Z/B1_DEPENDENCY_DELTA_CHECKSUMS_20261026.sha256)。
-
-在仓库根目录运行合成 CPU 合约与导入检查：
+B1 公开依赖闭包另有合成 CPU/import 检查：
 
 ```bash
 B1_DIR=scripts/core_b/legacy_archives/code/b1
@@ -139,5 +72,18 @@ PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES='' PYTHONPATH="$B1_DIR:$B1_DIR/pu
   python3 -B -m pytest -q -p no:cacheprovider "$B1_DIR/public_support/tests/test_b1_public_dependency_closure.py"
 ```
 
-公开代码依赖闭包不包含 B1 服务器专用的标准化输入归档、train-only normalization 与 token-path 清单、逐 episode token 文件、输入总清单/feasibility metadata，也不包含运行回执、checkpoint 或预测。完整 B1 训练/验收仍需这些工件以及物理 GPU3。历史 helper 的逐运行源码身份仍为部分证实；本次未声称历史数值重放。
+它会检查公开导入、路径保护和合成 CPU contract，其中包括随机初始化 pooler 与合成 checkpoint payload。它不会重放历史 B1 结果，也不会运行 B1 训练。历史 helper 的源码身份仅得到部分证实，完整 B1 数值重放未执行。物理 GPU 3 是历史 B1 runner 对应配置的要求，并非所有项目流程都必须使用 GPU 3。详见 [B1 修补记录](docs/releases/server-sync-20261022T082418Z/B1_PUBLIC_DEPENDENCY_REPAIR_20261026.md)和 [entrypoint/result map](docs/releases/server-sync-20261022T082418Z/ENTRYPOINT_RESULT_MAP.csv)。
 
+Core A 图表可依据[脚本说明](scripts/core_a/README.md)，从整理后的绘图输入重新生成。重新绘图不等于重复实验。
+
+## 协作与实验记录
+
+这是一个五人课程项目。`main` 是稳定分支；请在按任务命名的工作分支上修改，并通过 pull request 提交。每次真实实验都应在 `experiments/runs.csv` 记录 dataset revision 与 split、Git commit、run ID、seed、model/checkpoint、指标、负责人、日期和状态。development、validation、final/heldout 记录分开管理；数据访问说明只适用于对应 run。
+
+## 数据、来源与许可
+
+原始视频与帧、checkpoint、feature cache、完整预测和目标值，以及运行日志都保留在获授权的研究环境中。公开 artifact ID 是引用标识，不是可下载的数据。请参阅按日期整理的[服务器同步摘要](docs/releases/server-sync-20261022T082418Z/RELEASE_SUMMARY.md)和[实验/结果索引](docs/releases/server-sync-20261022T082418Z/EXPERIMENT_RESULT_INDEX.csv)，了解导出来源及历史研究边界。早期 development-only 访问记录仅适用于对应研究；后续 V2 final-label 访问情况另有披露。
+
+根目录的 [SHA256SUMS](SHA256SUMS) 和 [Core A publication manifest](docs/core_a/publication/PUBLICATION_MANIFEST.csv) 保留 2026-09-10 Core A 发布快照的校验值。两份 README 的对应哈希与 [f43c07b 提交](https://github.com/jyc114514/EE6008_AY26S1-10-CCA/tree/f43c07b6055e993986ee1fd6a952261ec6634b71)上的文件一致；它们不能用于校验当前 `main` 全树。
+
+本证据导出没有新增统一开源许可证。项目、第三方代码、数据集和模型权重可能各自适用不同条款；引用或来源链接并不自动授予再分发权。
