@@ -21,11 +21,11 @@
 
 B1/B2/B3、V3、D3、V4–V9 及其他早期 study 分别保留其对应的 development-only 范围记录。Core A V2 与 Core B CURRENT_PROFILE_V2 后续 final scoring 的标签访问事件另有披露；不要把较早 study 中的 `final_test_access=0` 当作后续 study 的整体结论。
 
-服务器保留原始视频、源 Parquet、特征 tensor、checkpoint、完整预测/目标数组、完整训练输出和日志。这些文件未包含在公开目录中；受限工件类别与索引见定期发布材料。公开聚合表和图不能替代原始数据或运行工件。
+服务器保留原始视频、源 Parquet、特征 tensor、checkpoint、完整预测/目标数组、完整训练输出和日志。这些文件未包含在公开目录中；受限工件类别与索引见按日期整理的发布材料。公开聚合表和图不能替代原始数据或运行工件。
 
 ## 复现边界与链接
 
-公开源代码包含训练和推理入口，但本次发布没有执行这些入口。完整实验需具体 study 的获授权输入、checkpoint、运行锁、外部运行环境和服务器工件；脚本本身不表示全流程能从公开 clone 独立复现。
+公开源代码包含训练和推理入口，但2026-10-22 的服务器同步发布未执行这些入口。完整实验需具体 study 的获授权输入、checkpoint、运行锁、外部运行环境和服务器工件；脚本本身不表示全流程能从公开 clone 独立复现。
 
 - [便携代码路径与入口要求](PORTABLE_REPRODUCTION.md)
 - [当前结果与局限](CURRENT_RESULTS_AND_LIMITATIONS.md)
