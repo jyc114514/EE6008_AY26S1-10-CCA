@@ -45,7 +45,9 @@ class ExplicitPathCliTests(unittest.TestCase):
 
     def _write_stubs(self) -> None:
         (self.stub_root / "torch.py").write_text(
-            '"""Import-only stub used by CLI argument tests."""\n',
+            '"""Import-only stub used by CLI argument tests."""\n'
+            "def inference_mode():\n"
+            "    return lambda function: function\n",
             encoding="utf-8",
         )
         package = self.stub_root / "src"
