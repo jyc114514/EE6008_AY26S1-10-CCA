@@ -1,5 +1,9 @@
 # Core B evidence and results
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
+The [current results and limitations](CURRENT_RESULTS_AND_LIMITATIONS.md) summarize the V2 scoring and its access and metric boundaries. The [experiment line index](EXPERIMENT_LINE_INDEX.md) links the dated study archive.
+
 This folder contains dated, study-specific summaries from the server research archive and the current V2 closeout. Separate studies remain separate: B1/B2/B3; history×video; JY-02; V3 multi-anchor; V3 state×video; observation delay; fixed-model video correspondence; D3; V4–V9; VideoMAE handoff; and CURRENT_PROFILE_V2.
 
 Start with [current results and limits](CURRENT_RESULTS_AND_LIMITATIONS.md), then browse the [study summaries](studies/) and [result tables](../../experiments/core_b/). The release index links each result to exported source code, a public config/contract summary, figures, and provenance status.
