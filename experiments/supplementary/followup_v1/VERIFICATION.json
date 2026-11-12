@@ -1,0 +1,52 @@
+{
+  "status": "PASS_WITH_STATED_EXPERIMENT_LIMITATIONS",
+  "verification_completed_utc": "2026-11-07T17:37:39.111452+00:00",
+  "verification_scope": "Saved run artifacts, checkpoints, sealed predictions and original scoring targets; independent rescoring, not retraining.",
+  "source_report_sha256": "bf5adade9546ec4ec56aaa0944e5b930c4afee90ec0ea89e3c44e1cc2da08665",
+  "artifact_hash_checks": {
+    "local_artifacts_matching_saved_server_bytes": 361,
+    "mismatches": 0,
+    "historical_core_a_prediction_archives_matching": 6,
+    "trained_core_a_checkpoints_matching": 3,
+    "trained_core_b_expert_checkpoints_matching": 15,
+    "trained_core_b_new_shared_checkpoints_matching": 3
+  },
+  "core_a": {
+    "final_prediction_archives_independently_rescored": 9,
+    "saved_validation_epoch_outputs_independently_rescored": 54,
+    "max_absolute_difference_to_saved_metric": 0.0,
+    "paired_bootstrap_saved_draws_reproduced": true
+  },
+  "core_b": {
+    "sealed_prediction_files_independently_read": 112,
+    "episode_score_rows_independently_recomputed": 8856,
+    "maximum_abs_recomputed_score_difference": 0.0,
+    "final_exact_task_substitution_array_pairs": {
+      "D2": 21,
+      "D3": 6
+    },
+    "all_final_task_substitution_array_pairs_exact": true
+  },
+  "omitted_from_public_receipt": [
+    "hostnames",
+    "accountnames",
+    "absolute_paths",
+    "individual_example_identifiers",
+    "prediction_or_target_payloads",
+    "modelweights",
+    "full_execution_logs"
+  ],
+  "limitations": [
+    "No new blind final set; final data were previously evaluated.",
+    "Historical recognition controls differ in execution environment.",
+    "Short repeated clip preserves within-second motion; timing effect is not isolated.",
+    "Correct final task labels make forecast equality expected; incorrect in-scope routing was not tested.",
+    "Expert bank has unequal total capacity/update budget.",
+    "Confidence intervals condition on fixed fitted models; do not include training-seed uncertainty.",
+    "Historical training-cache/current-evaluation-feature numerical equivalence remains unresolved.",
+    "Offline scores do not establish closed-loop robot performance."
+  ],
+  "public_export_created_utc": "2026-11-12T08:27:49.140635+00:00",
+  "fresh_server_check_during_public_export": false,
+  "audit_date_note": "Prior live verification occurred on 2026-11-07 UTC (2026-11-08 UTC+8). Export prepared on 2026-11-12; no new server query."
+}

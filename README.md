@@ -6,7 +6,7 @@
 
 This public NTU EE6008 course-project repository contains research code, curated experiment evidence, and reproduction notes for two related lines of work: Core A video-based task recognition and Core B state/action trajectory prediction studies.
 
-> **Snapshot scope:** This overview reflects the public `main` tree at commit `3343154b65dc98a3758d131c059e5806d2bc58ab` (2026-10-27), plus the dated release and B1 repair records linked below. It does not establish the status of unpublished work after that snapshot.
+> **Snapshot scope:** The historical Core A/Core B summaries below describe the 2026-10-27 public snapshot and the linked dated release records. The separately dated 7 November supplementary studies are indexed below. Training, scoring and label-access statements apply to their named study.
 
 ## Research lines
 
@@ -22,7 +22,7 @@ Start with [current conclusions](docs/core_a/CURRENT_CONCLUSIONS.md), the [amend
 
 ### Core B: state/action trajectory prediction studies
 
-Core B contains separate dated studies and aggregate results for multiple model, input, and temporal-prediction settings. Its latest indexed CURRENT_PROFILE_V2 path scored development and final splits from previously fitted checkpoints; it added no training. The records show 22 prediction bundles sealed for each split; final targets were read only after the final prediction seal passed.
+Core B contains separate dated studies and aggregate results for multiple model, input, and temporal-prediction settings. Its historical CURRENT_PROFILE_V2 path scored development and final splits from previously fitted checkpoints; it added no training. The records show 22 prediction bundles sealed for each split; final targets were read only after the final prediction seal passed.
 
 | Split | Episodes / anchors | V0 position MAE | Persistence position MAE |
 | --- | ---: | ---: | ---: |
@@ -30,6 +30,12 @@ Core B contains separate dated studies and aggregate results for multiple model,
 | Final recovery | 41 / 162 | 0.178383 | 0.238057 |
 
 These are standardized metrics, not physical robot accuracy. The 41 same-source final episodes overlap the Core A indexed-video population, and session independence was not established. This final evaluation is not an independent confirmation. The original Q0 bridge remains `FAIL_UNRESOLVED`; its cause is `UNKNOWN`. See [current results and limitations](docs/core_b/CURRENT_RESULTS_AND_LIMITATIONS.md), the [study index](docs/core_b/EXPERIMENT_LINE_INDEX.md), and the [Core B guide](docs/core_b/README.md).
+
+## Supplementary studies completed 7 November 2026
+
+The [three-study supplement](docs/supplementary/SUPPLEMENTARY_EXPERIMENTS_V1_20261107.md) records a repeated fourth-second recognition clip, predicted-task conditioning with retained forecasting weights, and five newly trained task experts against fresh shared controls. It includes aggregate results, a public settings summary, source exports and retained verification evidence.
+
+The repeated clip does not match the historical dynamic Top-1 result. Correct final task predictions preserve forecasts on the evaluated subset. Experts reduce final Position MAE by 3.26% but increase Seam error by 13.43% against the fresh shared control. The supplement documents previous final-set exposure, conditional uncertainty and unequal model/update budgets. These studies are separate from the earlier development-only task-specialization waypoint.
 
 ## Repository map
 

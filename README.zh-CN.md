@@ -6,7 +6,7 @@
 
 这是 NTU EE6008 课程项目的公开仓库，收录两条相关研究线的代码、精选实验依据和复现说明：Core A 视频任务识别，以及 Core B 状态/动作轨迹预测研究。
 
-> **快照范围：** 本说明依据 `main` 分支在 2026-10-27 的公开版本 `3343154b65dc98a3758d131c059e5806d2bc58ab`，以及下方链接的按日期整理的发布记录和 B1 修补记录。它不代表该快照之后尚未公开的项目进展。
+> **快照范围：** 下方 Core A/Core B 历史摘要对应 2026-10-27 公开快照及所链接的按日期整理的发布记录。11 月 7 日完成的三项补充实验在下方单独编目；训练、评分和标签访问说明仅适用于各自对应的研究。
 
 ## 研究方向
 
@@ -22,7 +22,7 @@ Core A V2 在事先披露标签访问与类别映射修正后，对六组已有�
 
 ### Core B：状态/动作轨迹预测研究
 
-Core B 收录针对不同模型、输入和时间预测设置的独立研究及聚合结果。最新编目的 CURRENT_PROFILE_V2 流程使用已训练的 checkpoint 对 development 与 final split 评分，没有新增训练。记录显示每个 split 均有 22 个已封存 prediction bundles；final targets 仅在 final prediction seal 通过后读取。
+Core B 收录针对不同模型、输入和时间预测设置的独立研究及聚合结果。历史 CURRENT_PROFILE_V2 流程使用已训练的 checkpoint 对 development 与 final split 评分，没有新增训练。记录显示每个 split 均有 22 个已封存 prediction bundles；final targets 仅在 final prediction seal 通过后读取。
 
 | Split | Episode / anchor 数 | V0 position MAE | Persistence position MAE |
 | --- | ---: | ---: | ---: |
@@ -30,6 +30,12 @@ Core B 收录针对不同模型、输入和时间预测设置的独立研究及�
 | Final recovery | 41 / 162 | 0.178383 | 0.238057 |
 
 这些是标准化指标，不代表机器人实际精度。这组同源 final 评估的 41 个 episodes 与 Core A 编目视频群体重叠，session 独立性未得到证明；它不是独立确认。原始 Q0 bridge 仍为 `FAIL_UNRESOLVED`，原因是 `UNKNOWN`。详见[当前结果与局限](docs/core_b/CURRENT_RESULTS_AND_LIMITATIONS.md)、[研究索引](docs/core_b/EXPERIMENT_LINE_INDEX.md)和 [Core B 指南](docs/core_b/README.zh-CN.md)。
+
+## 2026 年 11 月 7 日完成的补充实验
+
+[三项补充实验说明](docs/supplementary/SUPPLEMENTARY_EXPERIMENTS_V1_20261107.md)收录第四秒片段重复输入、保留预测模型权重的类别预测条件替换，以及五类专家与同环境新训练共享模型的比较，并提供聚合结果、公开配置摘要、代码导出及既有核验记录。
+
+第四秒重复片段没有达到历史动态输入的 Top-1 结果；在最终评估子集上，正确的类别预测保留了原有预测输出；五类专家相对新共享对照将 Position MAE 降低 3.26%，同时将 Seam 误差提高 13.43%。说明保留了最终数据已被评估、置信区间的条件性以及模型容量和更新预算不等的限制。这三项补充实验与十月的 development-only 类别专门化研究分别记录。
 
 ## 仓库导航
 

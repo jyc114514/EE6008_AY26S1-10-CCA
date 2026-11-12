@@ -1,0 +1,10 @@
+split,condition,metric,mean_percent,sample_sd_percentage_points,fitted_seeds,episodes,classes,fit_origin
+final_test,A_STATIC_FIRST_FRAME,top1_accuracy,93.189368770764119,1.4764442553680381,3,602,120,historical_retained_fit
+final_test,A_STATIC_FIRST_FRAME,top5_accuracy,99.612403100775211,0.095905360330505424,3,602,120,historical_retained_fit
+final_test,A_STATIC_FIRST_FRAME,macro_f1_120,87.897834781413209,2.728559760153475,3,602,120,historical_retained_fit
+final_test,A_SECOND4_CYCLE,top1_accuracy,93.30011074197121,1.4127741774278031,3,602,120,new_supplementary_fit
+final_test,A_SECOND4_CYCLE,top5_accuracy,98.228128460686591,0.58336953227313282,3,602,120,new_supplementary_fit
+final_test,A_SECOND4_CYCLE,macro_f1_120,86.101062154983723,2.2529056695244409,3,602,120,new_supplementary_fit
+final_test,A_DYNAMIC,top1_accuracy,95.016611295681059,0.28771608099150808,3,602,120,historical_retained_fit
+final_test,A_DYNAMIC,top5_accuracy,98.837209302325576,0.43949357326653998,3,602,120,historical_retained_fit
+final_test,A_DYNAMIC,macro_f1_120,86.103177443089706,0.88443924023305087,3,602,120,historical_retained_fit
