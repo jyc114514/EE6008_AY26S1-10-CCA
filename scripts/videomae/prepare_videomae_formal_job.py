@@ -8,6 +8,8 @@ from pathlib import Path
 import subprocess
 import sys
 
+from path_config import scratch_name, scratch_root
+
 
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -23,7 +25,7 @@ def main():
     parser.add_argument("--job-root", type=Path, required=True)
     args = parser.parse_args()
     project, root, runner = args.project_root.resolve(), args.job_root.resolve(), args.runner.resolve()
-    scratch = (project / "tmp/s126mdg33_02").resolve()
+    scratch = (scratch_root(project)).resolve()
     if root == scratch or not root.is_relative_to(scratch):
         raise ValueError("New personal job directory required")
     check_root = args.resume_check_root.resolve()
@@ -52,7 +54,8 @@ def main():
                        "--mode", "TS11-D", "--horizon", "60", "--seed", "20261001"],
            "resource_estimate": {"peak_memory_mib": 20480,
                                  "basis": "conservative training reservation; smoke peak not formal peak"},
-           "max_oom_requeues": 0, "runner_sha256": runner_hash,
+           "max_oom_requeues": 0,
+            "environment": {"EE6008_VIDEOMAE_SCRATCH_NAME": scratch_name()}, "runner_sha256": runner_hash,
            "resume_acceptance_sha256": digest(accepted_path),
            "gpu_authorization": "physical 0/1/2/3; one child; shared maximum two"}
     path = root / "job.json"

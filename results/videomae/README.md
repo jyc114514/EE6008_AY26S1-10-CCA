@@ -26,3 +26,20 @@ These development and acceptance records must not be combined with the different
 ## Restricted artifacts
 
 The full handoff remains in the server archive identified as `server-only://project-artifacts/reports/benchmarks/VIDEOMAE_CORE_B_HANDOFF_V2_20261013T065841Z`. Obtain access through the team owner. It contains model manifests, original and safe weights, per-run configs, train/dev predictions, metrics, caches and normalizers. No claim is made that those large artifacts are uploaded by this contribution.
+
+
+## Public source paths and evidence scope
+
+The public script copies now use configurable paths and contain no account-specific path defaults. They change only path configuration and validation; no training, scoring, video extraction, or replay was performed, and the saved result records above were not recomputed.
+
+The contribution's `FILE_MANIFEST.json` identifies the current public export bytes. Its hashes do not establish which exact source bytes produced the historical predictions or server replay.
+
+The historical CPU zero-tolerance replay remains `FAIL_REPLAY_TOLERANCE`. The separate 18 October GPU replay reported 24/24 prediction arrays matching; the overall handoff remained partial with provenance and erratum items outstanding. This path update does not change either record.
+
+## 公开源码路径与证据范围
+
+公开脚本副本已改为使用可配置路径，且不再包含账号专属的路径默认值。修改限于路径配置和验证；没有执行训练、评分、视频特征提取或重放，上述已保存结果没有重新计算。
+
+本贡献的 `FILE_MANIFEST.json` 标识当前公开导出文件的字节。其哈希不证明历史预测或服务器重放使用的源码与当前公开副本完全一致。
+
+历史 CPU zero-tolerance 重放仍记录为 `FAIL_REPLAY_TOLERANCE`。另有 10 月 18 日 GPU 重放记录称 24/24 预测数组一致，但整体 handoff 仍为 partial，且 provenance 与 erratum 项尚待处理。本次路径调整不会改变这两份历史记录。

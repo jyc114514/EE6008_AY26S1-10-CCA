@@ -10,6 +10,8 @@ from pathlib import Path
 import subprocess
 import sys
 
+from path_config import scratch_name, scratch_root
+
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
@@ -40,10 +42,10 @@ def main() -> int:
                     "stage0_manifest": str(args.stage0_manifest.resolve()),
                     "stage0_manifest_sha256": hashlib.sha256(args.stage0_manifest.read_bytes()).hexdigest()}
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
-    root = project / "tmp/s126mdg33_02" / f"videomae_cache_{args.phase}_{stamp}"
+    root = scratch_root(project) / f"videomae_cache_{args.phase}_{stamp}"
     if args.job_root is not None:
         root = args.job_root.resolve()
-        scratch = (project / "tmp/s126mdg33_02").resolve()
+        scratch = (scratch_root(project)).resolve()
         if root == scratch or not root.is_relative_to(scratch):
             raise ValueError("Job root must be a new directory inside personal project scratch")
     root.mkdir(parents=True, exist_ok=False)
@@ -55,7 +57,8 @@ def main() -> int:
            "protocol_id": "VIDEOMAE_CORE_B_32FRAME_CACHE_V1",
            "output_root": str(root), "command": command,
            "resource_estimate": resource, "max_oom_requeues": 0,
-           "environment": {"HF_HUB_OFFLINE": "1", "TRANSFORMERS_OFFLINE": "1"},
+           "environment": {"HF_HUB_OFFLINE": "1", "TRANSFORMERS_OFFLINE": "1",
+                         "EE6008_VIDEOMAE_SCRATCH_NAME": scratch_name()},
            "gpu_authorization": "all visible physical GPUs 0,1,2,3; max two shared project children",
            "extractor_sha256": script_hash}
     path = root / "job.json"

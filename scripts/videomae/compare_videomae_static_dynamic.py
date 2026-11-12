@@ -11,17 +11,12 @@ import torch
 from audit_videomae_task_a import calculate_metrics, require
 
 
-RUN = Path(
-    "/usr1/home/s126mdg33_02/EE6008 AY26S1-10-CCA Project/tmp/"
-    "s126mdg33_02/videomae_baseline_20260907"
-)
-
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Read-only matched VideoMAE static/dynamic comparison."
     )
-    parser.add_argument("--run-dir", type=Path, default=RUN)
+    parser.add_argument("--run-dir", type=Path, required=True, help="Root directory containing the VideoMAE run outputs.")
     parser.add_argument("--seeds", type=int, nargs="+", default=[6008, 7, 42])
     return parser.parse_args()
 

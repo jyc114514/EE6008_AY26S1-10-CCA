@@ -8,6 +8,8 @@ from pathlib import Path
 import subprocess
 import sys
 
+from path_config import scratch_name, scratch_root
+
 
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -24,6 +26,18 @@ def require(condition, message):
         raise ValueError(message)
 
 
+def with_scratch_environment(environment, configured_name):
+    """Normalize a job environment and pin it to the configured scratch name."""
+    if environment is None:
+        environment = {}
+    if not isinstance(environment, dict):
+        raise ValueError("Job environment must be a mapping")
+    recorded_name = environment.get("EE6008_VIDEOMAE_SCRATCH_NAME")
+    if recorded_name not in (None, configured_name):
+        raise ValueError("Job scratch setting differs from the configured scratch")
+    return {**environment, "EE6008_VIDEOMAE_SCRATCH_NAME": configured_name}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--project-root", type=Path, required=True)
@@ -32,8 +46,8 @@ def main():
     parser.add_argument("--execute", action="store_true")
     args = parser.parse_args()
     project, root = args.project_root.resolve(), args.queue_root.resolve()
-    scratch = (project / "tmp/s126mdg33_02").resolve()
-    require(root != scratch and root.is_relative_to(scratch), "Personal queue directory required")
+    scratch = (scratch_root(project)).resolve()
+    require(root != scratch and root.is_relative_to(scratch), "Configured queue directory required")
     watcher = project / "repo/ee6008-humanoid-vjepa/tools/gpu_lease_watcher.py"
     lease = project / "repo/ee6008-humanoid-vjepa/reports/locks/gpu_lease"
     queue_path = root / "QUEUE.json"
@@ -46,7 +60,7 @@ def main():
     if not args.execute:
         require(args.reference_job_root is not None, "Reference job required for preparation")
         reference = args.reference_job_root.resolve()
-        require(reference.is_relative_to(scratch), "Personal reference required")
+        require(reference.is_relative_to(scratch), "Configured reference required")
         status = json.loads((reference / "watcher_status.json").read_text())
         complete = json.loads((reference / "run/RUN_STATUS.json").read_text())
         config = json.loads((reference / "run/CONFIG.json").read_text())
@@ -56,6 +70,7 @@ def main():
         require((config["mode"], config["horizon"], config["seed"]) == ("TS11-D", 60, 20261001), "Reference cell mismatch")
         require(digest(reference / "run/checkpoint_last.pt") == complete["checkpoint_sha256"], "Reference checkpoint mismatch")
         original = json.loads((reference / "job.json").read_text())
+        environment = with_scratch_environment(original.get("environment"), scratch_name())
         command = original["command"]
         require(command[1] == "python" and "--resume" not in command and "--resume-check" not in command, "Reference command mismatch")
         runner = Path(command[2])
@@ -77,7 +92,9 @@ def main():
                     job = {"job_id": f"videomae-{root.name}-{name}",
                            "protocol_id": "VIDEOMAE_CORE_B_CORRECTED_FORMAL_V1", "output_root": str(cell),
                            "command": argv, "resource_estimate": original["resource_estimate"],
-                           "max_oom_requeues": 0, "runner_sha256": config["runner_sha256"]}
+                           "max_oom_requeues": 0,
+                           "environment": environment,
+                           "runner_sha256": config["runner_sha256"]}
                     path = cell / "job.json"
                     write(path, job)
                     subprocess.run(watcher_command(path, dry=True), check=True)
@@ -94,6 +111,7 @@ def main():
     for number, entry in enumerate(queue["cells"], 1):
         path = Path(entry["job"]).resolve()
         require(path.is_relative_to(root) and digest(path) == entry["job_sha256"], "Queue job changed")
+        with_scratch_environment(json.loads(path.read_text()).get("environment"), scratch_name())
         require(digest(Path(queue["runner"])) == queue["runner_sha256"], "Runner changed during queue")
         complete_path = path.parent / "run/RUN_STATUS.json"
         if complete_path.exists():

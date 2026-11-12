@@ -8,32 +8,16 @@ import math
 from pathlib import Path
 
 
-PROJECT = Path(
-    "/usr1/home/s126mdg33_02/EE6008 AY26S1-10-CCA Project"
-)
-RUN = PROJECT / "tmp/s126mdg33_02/videomae_baseline_20260907"
-ARCHIVE_SOURCE = (
-    PROJECT
-    / "research_archive/CORE_A_CORE_B_EVIDENCE_20260909T045416Z/core_a/"
-    "analysis/CORE_A_UNIFIED_ANALYSIS_20260909T052330Z/SOURCE_MANIFEST.csv"
-)
-MANIFEST = (
-    PROJECT
-    / "repo/ee6008-humanoid-vjepa/manifests/"
-    "g1_6b6b599def75e3558b2736062e79bdbeec6cd224/splits/"
-    "core_a_protocol_v3_duplicate_safe/train_validation_label_manifest.parquet"
-)
-
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Read-only validation audit of the VideoMAE linear probe."
     )
-    parser.add_argument("--manifest", type=Path, default=MANIFEST)
-    parser.add_argument("--feature-dir", type=Path, default=RUN / "outputs/features")
-    parser.add_argument("--result-dir", type=Path, default=RUN / "outputs/linear_probe")
+    parser.add_argument("--manifest", type=Path, required=True, help="Train/validation label manifest.")
+    parser.add_argument("--feature-dir", type=Path, required=True, help="Directory containing train/validation feature files.")
+    parser.add_argument("--result-dir", type=Path, required=True, help="Directory containing linear probe results.")
     parser.add_argument("--seeds", type=int, nargs="+", default=[6008, 7, 42])
-    parser.add_argument("--archive-source", type=Path, default=ARCHIVE_SOURCE)
+    parser.add_argument("--archive-source", type=Path, required=True, help="Archive source manifest for the reference cell.")
     parser.add_argument("--reference-cell", default="D-P-F")
     return parser.parse_args()
 

@@ -7,6 +7,8 @@ from pathlib import Path
 import subprocess
 import sys
 
+from path_config import scratch_name, scratch_root
+
 from evaluate_videomae_core_b import digest, require
 
 
@@ -17,7 +19,7 @@ def main():
     parser.add_argument("--job-root", type=Path, required=True)
     args = parser.parse_args()
     project, runner, root = [p.resolve() for p in (args.project_root, args.runner, args.job_root)]
-    scratch = (project / "tmp/s126mdg33_02").resolve()
+    scratch = (scratch_root(project)).resolve()
     require(root.is_relative_to(scratch) and root != scratch and not root.exists() and runner.is_file(), "Fresh personal job and runner required")
     root.mkdir(parents=True, exist_ok=False)
     job = {"job_id": "videomae-gpu-parity-" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ"),
@@ -25,7 +27,8 @@ def main():
            "command": [str(project / "envs/run_jyc.sh"), "python", str(runner),
                        "--project-root", str(project), "--output-root", str(root / "check"), "--device", "cuda"],
            "resource_estimate": {"peak_memory_mib": 20480, "basis": "conservative diagnostic bound, not measured"},
-           "max_oom_requeues": 0, "runner_sha256": digest(runner)}
+           "max_oom_requeues": 0,
+            "environment": {"EE6008_VIDEOMAE_SCRATCH_NAME": scratch_name()}, "runner_sha256": digest(runner)}
     path = root / "job.json"
     path.write_text(json.dumps(job, indent=2) + "\n", encoding="utf-8")
     subprocess.run([sys.executable, str(project / "repo/ee6008-humanoid-vjepa/tools/gpu_lease_watcher.py"),

@@ -21,21 +21,6 @@ from src.models.videomae_encoder import (  # noqa: E402
 )
 
 
-DEFAULT_MANIFEST = (
-    "/usr1/home/s126mdg33_02/EE6008 AY26S1-10-CCA Project/repo/"
-    "ee6008-humanoid-vjepa/manifests/"
-    "g1_6b6b599def75e3558b2736062e79bdbeec6cd224/splits/"
-    "core_a_protocol_v3_duplicate_safe/train_validation_label_manifest.parquet"
-)
-DEFAULT_G1_ROOT = (
-    "/usr1/home/s126mdg33_02/EE6008 AY26S1-10-CCA Project/data_raw/"
-    "HumanoidEveryday/G1/USC-PSI-Lab-Humanoid-Everyday-G1__6b6b599d"
-)
-DEFAULT_OUTPUT_DIR = (
-    "/usr1/home/s126mdg33_02/EE6008 AY26S1-10-CCA Project/tmp/"
-    "s126mdg33_02/videomae_baseline_20260907/outputs/features"
-)
-
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
@@ -46,9 +31,9 @@ def parse_args() -> argparse.Namespace:
         default=str(PROJECT_ROOT / "configs" / "videomae_profile.yaml"),
         help="Path to the VideoMAE profile YAML.",
     )
-    parser.add_argument("--manifest", default=DEFAULT_MANIFEST)
-    parser.add_argument("--g1-root", default=DEFAULT_G1_ROOT)
-    parser.add_argument("--output-dir", default=DEFAULT_OUTPUT_DIR)
+    parser.add_argument("--manifest", required=True, help="Path to the train/validation manifest.")
+    parser.add_argument("--g1-root", required=True, help="Root directory of the authorized G1 dataset.")
+    parser.add_argument("--output-dir", required=True, help="Directory for extracted features.")
     parser.add_argument(
         "--split",
         choices=["train", "validation"],

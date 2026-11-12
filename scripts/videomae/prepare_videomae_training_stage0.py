@@ -8,6 +8,8 @@ from pathlib import Path
 import subprocess
 import sys
 
+from path_config import scratch_name, scratch_root
+
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
@@ -17,7 +19,7 @@ def main():
     parser.add_argument("--job-root", type=Path, required=True)
     args = parser.parse_args()
     project, root, runner = args.project_root.resolve(), args.job_root.resolve(), args.runner.resolve()
-    if not root.is_relative_to((project / "tmp/s126mdg33_02").resolve()) or not runner.is_file():
+    if not root.is_relative_to((scratch_root(project)).resolve()) or not runner.is_file():
         raise ValueError("Personal job root and existing runner required")
     cache_run = args.cache_run.resolve()
     normalizer = cache_run / "normalization/VIDEOMAE_VIDEO_NORMALIZER.json"
@@ -33,6 +35,7 @@ def main():
            "resource_estimate": {"peak_memory_mib": 20480,
                                  "basis": "conservative preregistration for training; not cache extraction peak"},
            "max_oom_requeues": 0,
+            "environment": {"EE6008_VIDEOMAE_SCRATCH_NAME": scratch_name()},
            "runner_sha256": hashlib.sha256(runner.read_bytes()).hexdigest(),
            "gpu_authorization": "physical 0/1/2/3; one child; shared maximum two"}
     path = root / "job.json"

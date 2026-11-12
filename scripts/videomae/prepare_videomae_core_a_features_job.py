@@ -7,6 +7,8 @@ from pathlib import Path
 import subprocess
 import sys
 
+from path_config import scratch_name, scratch_root
+
 from evaluate_videomae_core_b import digest, require
 
 
@@ -18,7 +20,7 @@ def main():
     parser.add_argument("--job-root", type=Path, required=True)
     args = parser.parse_args()
     project, root = args.project_root.resolve(), args.job_root.resolve()
-    scratch = (project / "tmp/s126mdg33_02").resolve()
+    scratch = (scratch_root(project)).resolve()
     require(root.is_relative_to(scratch) and root != scratch and not root.exists(), "Fresh personal job required")
     report = json.loads(args.preflight_report.read_text(encoding="utf-8"))
     require(report["status"] == "PASS_CORE_A_STRICT_CPU_PREFLIGHT" and report["strict_load"]
@@ -31,7 +33,8 @@ def main():
                        "--project-root", str(project), "--output-root", str(root / "features"),
                        "--phase", "full", "--device", "cuda", "--preflight-report", str(args.preflight_report.resolve())],
            "resource_estimate": {"peak_memory_mib": 20480, "basis": "conservative bound; not measured for Core A"},
-           "max_oom_requeues": 0, "extractor_sha256": digest(args.extractor),
+           "max_oom_requeues": 0,
+            "environment": {"EE6008_VIDEOMAE_SCRATCH_NAME": scratch_name()}, "extractor_sha256": digest(args.extractor),
            "preflight_sha256": digest(args.preflight_report)}
     path = root / "job.json"
     path.write_text(json.dumps(job, indent=2) + "\n", encoding="utf-8")

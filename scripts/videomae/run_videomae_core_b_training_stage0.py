@@ -10,6 +10,8 @@ from pathlib import Path
 import random
 import sys
 
+from path_config import scratch_name, scratch_root
+
 
 def digest(path):
     value = hashlib.sha256()
@@ -35,7 +37,7 @@ def main():
     require(physical in {"0", "1", "2", "3"} and os.environ.get("CUDA_VISIBLE_DEVICES") == physical,
             "Shared GPU watcher required")
     project, cache, output = args.project_root.resolve(), args.cache_root.resolve(), args.output_root.resolve()
-    require(output.is_relative_to((project / "tmp/s126mdg33_02").resolve()), "Personal output required")
+    require(output.is_relative_to((scratch_root(project)).resolve()), "Personal output required")
     require(not output.exists(), "Fresh Stage0 output required")
     import numpy as np
     import torch

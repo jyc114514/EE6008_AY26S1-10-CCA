@@ -8,6 +8,8 @@ import hashlib
 import json
 import subprocess
 import sys
+
+from path_config import scratch_name, scratch_root
 from pathlib import Path
 
 
@@ -21,7 +23,7 @@ def main() -> int:
     if not extractor.is_file():
         raise FileNotFoundError(extractor)
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
-    root = project / "tmp/s126mdg33_02" / f"videomae_stage0_{stamp}"
+    root = scratch_root(project) / f"videomae_stage0_{stamp}"
     root.mkdir(parents=True, exist_ok=False)
     job = {
         "job_id": f"videomae-core-b-stage0-{stamp}",
@@ -36,7 +38,8 @@ def main() -> int:
             "formal_registration": "replace with same-runner measured reserved peak after Stage0",
         },
         "max_oom_requeues": 0,
-        "environment": {"HF_HUB_OFFLINE": "1", "TRANSFORMERS_OFFLINE": "1"},
+        "environment": {"HF_HUB_OFFLINE": "1", "TRANSFORMERS_OFFLINE": "1",
+                         "EE6008_VIDEOMAE_SCRATCH_NAME": scratch_name()},
         "extractor_sha256": hashlib.sha256(extractor.read_bytes()).hexdigest(),
         "gpu_authorization": "pending; add --allowed-gpus only after current task allocation is known",
     }

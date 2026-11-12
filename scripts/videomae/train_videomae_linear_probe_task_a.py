@@ -11,22 +11,13 @@ from pathlib import Path
 import torch
 
 
-DEFAULT_FEATURE_DIR = (
-    "/usr1/home/s126mdg33_02/EE6008 AY26S1-10-CCA Project/tmp/"
-    "s126mdg33_02/videomae_baseline_20260907/outputs/features"
-)
-DEFAULT_OUTPUT_DIR = (
-    "/usr1/home/s126mdg33_02/EE6008 AY26S1-10-CCA Project/tmp/"
-    "s126mdg33_02/videomae_baseline_20260907/outputs/linear_probe"
-)
-
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Train a linear probe on frozen VideoMAE pooled features."
     )
-    parser.add_argument("--feature-dir", default=DEFAULT_FEATURE_DIR)
-    parser.add_argument("--output-dir", default=None)
+    parser.add_argument("--feature-dir", required=True, help="Directory containing train/validation feature files.")
+    parser.add_argument("--output-dir", required=True, help="Directory for metrics, checkpoints, and predictions.")
     parser.add_argument("--variant", choices=["dynamic", "static"], default="dynamic")
     parser.add_argument("--seed", type=int, default=6008)
     parser.add_argument("--epochs", type=int, default=100)
@@ -140,10 +131,7 @@ def main() -> int:
     )
 
     feature_dir = Path(args.feature_dir)
-    output_dir = Path(
-        args.output_dir
-        or (DEFAULT_OUTPUT_DIR + "_static" if args.variant == "static" else DEFAULT_OUTPUT_DIR)
-    )
+    output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
     suffix = "_static" if args.variant == "static" else ""
