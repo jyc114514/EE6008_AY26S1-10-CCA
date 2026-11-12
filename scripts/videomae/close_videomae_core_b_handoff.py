@@ -11,9 +11,17 @@ import sys
 
 from evaluate_videomae_core_b import digest, require
 
+from path_config import scratch_root
 V3 = "repo/ee6008-humanoid-vjepa/reports/core_b/CORE_B_V3_MULTI_ANCHOR_TEMPORAL_V1_20260919T103147Z/data"
 CODE = "reports/benchmarks/D3_EQ_CORRECTED_SCHEDULER_V1_20261006T073406Z/code"
-CACHE = "tmp/s126mdg33_02/videomae_cache_full_20261008T074027Z"
+CACHE = Path("videomae_cache_full_20261008T074027Z")
+
+
+def cache_root(project: Path) -> Path:
+    """Locate the archive cache under the caller-selected scratch name."""
+    return scratch_root(project) / CACHE
+
+
 TARGET = "reports/benchmarks/CORE_B_D3_EPISODE_EQUAL_SENSITIVITY_V1_20260924T095800Z/d3/train_targets_trainonly.npz"
 SPLIT = "repo/ee6008-humanoid-vjepa/manifests/g1_6b6b599def75e3558b2736062e79bdbeec6cd224/splits/core_a_protocol_v3_duplicate_safe/split_manifest.parquet"
 
@@ -88,11 +96,11 @@ def prepare(args):
         copy(project / rel)
     for path in (project / CODE).glob("*.py"):
         copy(path)
-    manifest = read(project / CACHE / "cache/CACHE_MANIFEST.json")
+    manifest = read(cache_root(project) / "cache/CACHE_MANIFEST.json")
     for shard in manifest["shards"]:
         copy(shard["array"], shard["sha256"])
-    copy(project / CACHE / "cache/ANCHOR_INDEX.npz", manifest["anchor_index_sha256"])
-    snapshots = project / "tmp/s126mdg33_02/hf_cache/hub/models--MCG-NJU--videomae-small-finetuned-kinetics/snapshots"
+    copy(cache_root(project) / "cache/ANCHOR_INDEX.npz", manifest["anchor_index_sha256"])
+    snapshots = scratch_root(project) / "hf_cache/hub/models--MCG-NJU--videomae-small-finetuned-kinetics/snapshots"
     for rev, name in (("1bf2b82c809609f5df1ea7648aee577e2e486b63", "config.json"),
                       ("1bf2b82c809609f5df1ea7648aee577e2e486b63", "preprocessor_config.json"),
                       ("240e9734611173accbbf74cbdf4b641e4c431264", "model.safetensors")):
@@ -133,7 +141,7 @@ def prepare(args):
                          "metrics": relative(c["metrics"], project)})
         print(json.dumps({"exported": name}), flush=True)
     (output / "code").mkdir()
-    for name in ("close_videomae_core_b_handoff.py", "evaluate_videomae_core_b.py", "extract_videomae_core_b_cache.py"):
+    for name in ("close_videomae_core_b_handoff.py", "evaluate_videomae_core_b.py", "extract_videomae_core_b_cache.py", "path_config.py"):
         shutil.copy2(Path(__file__).parent / name, output / "code" / name)
     write(output / "ENVIRONMENT_EXPORT.json", {"python": sys.version, "torch": torch.__version__})
     for path in output.rglob("*"):
@@ -183,16 +191,16 @@ def replay(args):
         ids, episodes, codes = [data[k].copy() for k in ("anchor_id", "episode_index", "split_code")]
         x = [data[k].astype(np.float32) for k in ("history_standardized", "history_mask", "history_relative_delta_standardized", "anchor_command_native")]
     require(set(codes.tolist()) == {0, 1}, "Train/dev only required")
-    manifest = read(root / CACHE / "cache/CACHE_MANIFEST.json")
-    normalizer = read(root / CACHE / "normalization/VIDEOMAE_VIDEO_NORMALIZER.json")
+    manifest = read(cache_root(root) / "cache/CACHE_MANIFEST.json")
+    normalizer = read(cache_root(root) / "normalization/VIDEOMAE_VIDEO_NORMALIZER.json")
     sigma = torch.tensor(read(root / V3 / "V3_NORMALIZERS.json")["target_sigma"], dtype=torch.float32, device=args.device)
     original_root = Path(archive["original_project"])
     shards = [(s, np.load(root / relative(s["array"], original_root), mmap_mode="r", allow_pickle=False)) for s in manifest["shards"]]
     reports = []
     for cell in archive["cells"]:
         model, config = load_model(root, cell, args.device)
-        require(digest(root / CACHE / "cache/CACHE_MANIFEST.json") == config["cache_manifest_sha256"]
-                and digest(root / CACHE / "normalization/VIDEOMAE_VIDEO_NORMALIZER.json") == config["normalizer_sha256"], "Feature binding mismatch")
+        require(digest(cache_root(root) / "cache/CACHE_MANIFEST.json") == config["cache_manifest_sha256"]
+                and digest(cache_root(root) / "normalization/VIDEOMAE_VIDEO_NORMALIZER.json") == config["normalizer_sha256"], "Feature binding mismatch")
         require(digest(root / V3 / "V3_MAIN_INPUTS.npz") == manifest["input_sha256"]
                 and digest(root / V3 / "V3_NORMALIZERS.json") == config["target_normalizer_sha256"], "Input/target scale binding mismatch")
         run = dest / cell["name"]

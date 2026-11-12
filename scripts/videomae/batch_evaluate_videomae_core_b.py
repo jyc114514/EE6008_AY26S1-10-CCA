@@ -9,6 +9,7 @@ import subprocess
 import sys
 
 
+from path_config import scratch_root
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -32,8 +33,8 @@ def main():
     parser.add_argument("--resume", action="store_true")
     args = parser.parse_args()
     project, queue_root, output = args.project_root.resolve(), args.queue_root.resolve(), args.output_root.resolve()
-    scratch = (project / "tmp/s126mdg33_02").resolve()
-    require(output != scratch and output.is_relative_to(scratch), "Personal output required")
+    scratch = scratch_root(project)
+    require(output != scratch and output.is_relative_to(scratch), "Output is outside the configured scratch root")
     require(not output.exists() or args.resume, "Existing output requires --resume")
     require(not args.resume or output.is_dir(), "Resume directory missing")
     queue_path = queue_root / "QUEUE.json"

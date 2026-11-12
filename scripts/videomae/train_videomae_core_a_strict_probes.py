@@ -9,6 +9,7 @@ import statistics
 from evaluate_videomae_core_b import digest, require
 
 
+from path_config import scratch_root
 def write(path, data):
     path.write_text(json.dumps(data, indent=2, allow_nan=False) + "\n", encoding="utf-8")
 
@@ -20,7 +21,7 @@ def main():
     parser.add_argument("--output-root", type=Path, required=True)
     args = parser.parse_args()
     project, features, output = [p.resolve() for p in (args.project_root, args.feature_root, args.output_root)]
-    scratch = (project / "tmp/s126mdg33_02").resolve()
+    scratch = scratch_root(project)
     require(features.is_relative_to(scratch) and output.is_relative_to(scratch) and output != scratch
             and not output.exists(), "Fresh personal output required")
     import numpy as np

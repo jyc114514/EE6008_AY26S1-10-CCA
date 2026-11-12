@@ -9,6 +9,7 @@ import json
 from pathlib import Path
 
 
+from path_config import scratch_root
 def digest(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -24,8 +25,8 @@ def main() -> int:
     torch.set_num_threads(2)
     project = args.project_root.resolve()
     feature = args.feature_file.resolve()
-    if not feature.is_relative_to((project / "tmp/s126mdg33_02").resolve()):
-        raise ValueError("Expected an isolated personal smoke feature file")
+    if not feature.is_relative_to(scratch_root(project)):
+        raise ValueError("Expected a smoke feature inside configured scratch")
     sidecar = json.loads(feature.with_name("SMOKE_REPORT.json").read_text())
     if sidecar.get("status") != "PASS_CORE_B_FEATURE_SMOKE_CPU" or digest(feature) != sidecar["feature_sha256"]:
         raise AssertionError("Feature smoke bundle is not accepted")

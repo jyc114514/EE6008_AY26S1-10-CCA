@@ -13,6 +13,7 @@ import shutil
 import time
 
 
+from path_config import scratch_root
 CONFIG_SHA = "20b05a5026313946ec026dc0c7be4f1f641c47ab66ec7125d406403ce251165c"
 WEIGHT_SHA = "6af658f96396ed5f1207244a5a409ca4f6686f05f63b1be6b3609deee195eca7"
 INPUT_SHA = "61e8c9bbac6bb83b7d323d6ac07d0edaf5a745caf4c58407de97fdedc7d9ce78"
@@ -46,9 +47,9 @@ def main() -> int:
     parser.add_argument("--resume", action="store_true")
     args = parser.parse_args()
     project, output = args.project_root.resolve(), args.output_root.resolve()
-    scratch = (project / "tmp/s126mdg33_02").resolve()
+    scratch = scratch_root(project)
     if output == scratch or not output.is_relative_to(scratch):
-        raise ValueError("Cache output must be an isolated personal scratch child")
+        raise ValueError("Cache output must be an isolated configured scratch child")
     physical = os.environ.get("GPU_WATCHER_PHYSICAL_GPU")
     if physical not in {"0", "1", "2", "3"} or os.environ.get("CUDA_VISIBLE_DEVICES") != physical:
         raise RuntimeError("Extraction must run through the shared watcher with an authorized GPU")
@@ -68,7 +69,7 @@ def main() -> int:
         raise RuntimeError("Assigned CUDA device unavailable")
     torch.cuda.set_device(0)
     torch.cuda.reset_peak_memory_stats()
-    snapshots = project / "tmp/s126mdg33_02/hf_cache/hub/models--MCG-NJU--videomae-small-finetuned-kinetics/snapshots"
+    snapshots = scratch_root(project) / "hf_cache/hub/models--MCG-NJU--videomae-small-finetuned-kinetics/snapshots"
     config_dir = snapshots / "1bf2b82c809609f5df1ea7648aee577e2e486b63"
     weights_file = snapshots / "240e9734611173accbbf74cbdf4b641e4c431264/model.safetensors"
     inputs_file = project / "repo/ee6008-humanoid-vjepa/reports/core_b/CORE_B_V3_MULTI_ANCHOR_TEMPORAL_V1_20260919T103147Z/data/V3_MAIN_INPUTS.npz"

@@ -11,6 +11,7 @@ import os
 from evaluate_videomae_core_b import digest, require
 
 
+from path_config import scratch_root
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--project-root", type=Path, required=True)
@@ -18,7 +19,7 @@ def main():
     parser.add_argument("--device", choices=("cpu", "cuda"), default="cpu")
     args = parser.parse_args()
     project, output = args.project_root.resolve(), args.output_root.resolve()
-    scratch = (project / "tmp/s126mdg33_02").resolve()
+    scratch = scratch_root(project)
     require(output.is_relative_to(scratch) and output != scratch and not output.exists(), "Fresh personal output required")
     import numpy as np
     import torch

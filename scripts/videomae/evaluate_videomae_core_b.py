@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 
 
+from path_config import scratch_root
 def digest(path):
     value = hashlib.sha256()
     with path.open("rb") as handle:
@@ -42,7 +43,7 @@ def main():
     import pyarrow.parquet as pq
 
     project, run, output = args.project_root.resolve(), args.run_root.resolve(), args.output_root.resolve()
-    scratch = (project / "tmp/s126mdg33_02").resolve()
+    scratch = scratch_root(project)
     if args.archive:
         require((project / "ARCHIVE.json").is_file() and run.is_relative_to(project / "replay")
                 and output.is_relative_to(project / "replay"), "Archive replay paths required")

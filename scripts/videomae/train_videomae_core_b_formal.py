@@ -12,6 +12,7 @@ import sys
 import time
 
 
+from path_config import scratch_root
 def digest(path):
     result = hashlib.sha256()
     with path.open("rb") as handle:
@@ -47,7 +48,7 @@ def main():
     physical = os.environ.get("GPU_WATCHER_PHYSICAL_GPU")
     require(physical in {"0", "1", "2", "3"} and os.environ.get("CUDA_VISIBLE_DEVICES") == physical, "Shared watcher required")
     project, cache_run, output = args.project_root.resolve(), args.cache_run.resolve(), args.output_root.resolve()
-    require(output.is_relative_to((project / "tmp/s126mdg33_02").resolve()), "Personal output required")
+    require(output.is_relative_to(scratch_root(project)), "Output is outside the configured scratch root")
     require(not output.exists() or args.resume, "Existing output requires --resume")
     require(not args.resume or output.is_dir(), "Resume directory missing")
     require(not (args.resume and args.resume_check), "Resume-check requires a fresh run")

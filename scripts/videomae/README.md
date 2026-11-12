@@ -39,7 +39,7 @@ The study code already under `scripts/core_b/studies/VIDEOMAE_CORE_B_HANDOFF_V2_
 
 ## Path configuration
 
-The Core B helpers and job generators use `EE6008_VIDEOMAE_SCRATCH_NAME` as a single directory name. Set it to one ASCII name matching `[A-Za-z0-9][A-Za-z0-9_-]{0,63}`; the resolved scratch directory is under `<project-root>/tmp/<name>`. The helper validates this boundary when the path is used. Newly prepared job JSON records the validated name in its environment, and the queue preserves it for child jobs.
+The Core B helpers and job generators use `EE6008_VIDEOMAE_SCRATCH_NAME` as a single directory name. Set it to one ASCII name matching `[A-Za-z0-9][A-Za-z0-9_-]{0,63}`; the resolved scratch directory is under `<project-root>/tmp/<name>`. The helper validates this boundary when the path is used. Newly prepared job JSON records the validated name in its environment, and the queue preserves it for child jobs. For archive replay, use the same scratch name that was used when the archive was prepared. Archives, manifests, job files, and metadata may contain actual server paths; review them before sharing.
 
 The Task A command-line tools now require explicit paths:
 
@@ -56,7 +56,7 @@ These path changes do not make the public clone a complete runtime. Authorized v
 
 ## 路径配置
 
-Core B helper 和任务生成脚本使用 `EE6008_VIDEOMAE_SCRATCH_NAME` 作为单个目录名。它须是匹配 `[A-Za-z0-9][A-Za-z0-9_-]{0,63}` 的 ASCII 名称；实际 scratch 位于 `<项目根目录>/tmp/<名称>` 下，并在使用路径时检查边界。新准备的 job JSON 会记录该值，队列会把它传给子任务。
+Core B helper 和任务生成脚本使用 `EE6008_VIDEOMAE_SCRATCH_NAME` 作为单个目录名。它须是匹配 `[A-Za-z0-9][A-Za-z0-9_-]{0,63}` 的 ASCII 名称；实际 scratch 位于 `<项目根目录>/tmp/<名称>` 下，并在使用路径时检查边界。新准备的 job JSON 会记录该值，队列会把它传给子任务。 重放归档时应使用准备该归档时相同的 scratch 名称。归档、manifest、job 文件和 metadata 可能包含实际服务器路径，分享前请检查。
 
 Core A Task A 命令行工具现在要求显式提供路径参数：
 

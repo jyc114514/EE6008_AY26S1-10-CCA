@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 
 
+from path_config import scratch_root
 def digest(path):
     value = hashlib.sha256()
     with path.open("rb") as handle:
@@ -30,8 +31,8 @@ def main():
     import numpy as np
 
     project, cache, output = args.project_root.resolve(), args.cache_root.resolve(), args.output.resolve()
-    scratch = (project / "tmp/s126mdg33_02").resolve()
-    require(cache.is_relative_to(scratch) and output.is_relative_to(scratch), "Personal scratch paths required")
+    scratch = scratch_root(project)
+    require(cache.is_relative_to(scratch) and output.is_relative_to(scratch), "Paths are outside the configured scratch root")
     require(not output.exists(), "Refusing to overwrite existing normalizer")
     manifest_path = cache / "CACHE_MANIFEST.json"
     manifest = json.loads(manifest_path.read_text())

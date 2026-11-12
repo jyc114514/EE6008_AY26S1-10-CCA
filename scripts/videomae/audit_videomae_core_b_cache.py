@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 
 
+from path_config import scratch_root
 def digest(path):
     result = hashlib.sha256()
     with path.open("rb") as handle:
@@ -27,7 +28,7 @@ def main():
     import numpy as np
 
     project, cache = args.project_root.resolve(), args.cache_root.resolve()
-    require(cache.is_relative_to(project / "tmp/s126mdg33_02"), "Not a personal cache")
+    require(cache.is_relative_to(scratch_root(project)), "Cache is outside the configured scratch root")
     manifest = json.loads((cache / "CACHE_MANIFEST.json").read_text())
     require(manifest["status"] == "PASS" and manifest["stage0"] is False, "Full cache required")
     require(manifest["logical_shape"] == [20079, 2, 16, 4, 384], "Logical shape mismatch")

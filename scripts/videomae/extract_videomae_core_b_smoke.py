@@ -10,6 +10,7 @@ import math
 from pathlib import Path
 
 
+from path_config import scratch_root
 CONFIG_SHA = "20b05a5026313946ec026dc0c7be4f1f641c47ab66ec7125d406403ce251165c"
 WEIGHTS_SHA = "6af658f96396ed5f1207244a5a409ca4f6686f05f63b1be6b3609deee195eca7"
 
@@ -32,9 +33,9 @@ def main() -> int:
     args = parser.parse_args()
     project = args.project_root.resolve()
     output = args.output_root.resolve()
-    scratch = (project / "tmp/s126mdg33_02").resolve()
+    scratch = scratch_root(project)
     if not output.is_relative_to(scratch) or output == scratch:
-        raise ValueError("Output must be an isolated child of project/tmp/s126mdg33_02")
+        raise ValueError("Output must be an isolated child of the configured scratch directory")
     if output.exists():
         raise FileExistsError("Use a fresh smoke output directory")
 
@@ -57,7 +58,7 @@ def main() -> int:
         torch.cuda.set_device(0)
         device = torch.device("cuda:0")
         torch.cuda.reset_peak_memory_stats()
-    snapshots = project / "tmp/s126mdg33_02/hf_cache/hub/models--MCG-NJU--videomae-small-finetuned-kinetics/snapshots"
+    snapshots = scratch_root(project) / "hf_cache/hub/models--MCG-NJU--videomae-small-finetuned-kinetics/snapshots"
     config_dir = snapshots / "1bf2b82c809609f5df1ea7648aee577e2e486b63"
     weights_path = snapshots / "240e9734611173accbbf74cbdf4b641e4c431264/model.safetensors"
     if sha(config_dir / "config.json") != CONFIG_SHA or sha(weights_path) != WEIGHTS_SHA:

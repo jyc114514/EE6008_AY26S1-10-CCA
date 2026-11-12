@@ -10,6 +10,7 @@ import os
 from pathlib import Path
 
 
+from path_config import scratch_root
 def inspect_json(path: Path) -> dict:
     if not path.is_file():
         return {"path": str(path), "status": "missing"}
@@ -52,7 +53,7 @@ def main() -> int:
 
     # Only inspect the exact model's small snapshot configuration files.
     cache_roots = {
-        root / "tmp/s126mdg33_02/hf_cache/hub",
+        scratch_root(root) / "hf_cache/hub",
         Path.home() / ".cache/huggingface/hub",
     }
     if os.environ.get("HF_HOME"):

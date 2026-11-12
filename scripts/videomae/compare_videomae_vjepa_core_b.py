@@ -8,6 +8,7 @@ from pathlib import Path
 from evaluate_videomae_core_b import digest, require
 
 
+from path_config import scratch_root
 def read(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -28,9 +29,9 @@ def main():
     import numpy as np
 
     project, batch, output = [p.resolve() for p in (args.project_root, args.batch_root, args.output_root)]
-    scratch = (project / "tmp/s126mdg33_02").resolve()
+    scratch = scratch_root(project)
     require(batch.is_relative_to(scratch) and output.is_relative_to(scratch) and output != scratch,
-            "Personal paths required")
+            "Paths are outside the configured scratch root")
     require(not output.exists() and args.bootstrap_draws >= 1000, "Fresh output and at least 1000 draws required")
     require(read(batch / "BATCH_STATUS.json")["status"] == "PASS_12_CELL_AUDIT_AND_EVALUATION", "Batch incomplete")
     task = project / "reports/benchmarks/D3_EQ_CORRECTED_SCHEDULER_V1_20261006T073406Z"

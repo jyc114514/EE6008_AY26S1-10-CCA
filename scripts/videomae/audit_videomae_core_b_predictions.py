@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 
 
+from path_config import scratch_root
 def digest(path):
     value = hashlib.sha256()
     with path.open("rb") as handle:
@@ -27,7 +28,7 @@ def main():
     import numpy as np
 
     project, run = args.project_root.resolve(), args.run_root.resolve()
-    require(run.is_relative_to((project / "tmp/s126mdg33_02").resolve()), "Personal run required")
+    require(run.is_relative_to(scratch_root(project)), "Run is outside the configured scratch root")
     config = json.loads((run / "CONFIG.json").read_text())
     status = json.loads((run / "RUN_STATUS.json").read_text())
     require(status["status"] == "PASS_TRAIN_AND_EXPORT" and status["epochs"] == 40

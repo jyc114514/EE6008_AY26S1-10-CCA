@@ -11,6 +11,7 @@ import sys
 from evaluate_videomae_core_b import digest, require
 
 
+from path_config import scratch_root
 def read(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -31,9 +32,9 @@ def main():
     project = args.project_root.resolve()
     a, queue, batch, comparison, output = [p.resolve() for p in
         (args.core_a_root, args.core_b_queue, args.core_b_batch, args.comparison, args.output_root)]
-    scratch = (project / "tmp/s126mdg33_02").resolve()
+    scratch = scratch_root(project)
     require(all(p.is_relative_to(scratch) and p != scratch for p in (a, queue, batch, comparison, output))
-            and not output.exists(), "Existing personal artifacts and fresh output required")
+            and not output.exists(), "Artifacts must be inside configured scratch and output must be fresh")
     import numpy as np
     import torch
     torch.set_num_threads(2)
@@ -140,7 +141,7 @@ def main():
                   "train_videomae_core_a_strict_probes.py", "preflight_videomae_core_a_strict.py",
                   "train_videomae_core_b_formal.py", "extract_videomae_core_b_cache.py",
                   "fit_videomae_core_b_normalizer.py", "batch_evaluate_videomae_core_b.py",
-                  "compare_videomae_vjepa_core_b.py")
+                  "compare_videomae_vjepa_core_b.py", "path_config.py")
     (output / "code").mkdir()
     for name in code_names:
         require((scripts / name).is_file(), f"Upload runnable source before packaging: {name}")

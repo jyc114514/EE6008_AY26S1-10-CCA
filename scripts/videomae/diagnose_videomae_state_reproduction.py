@@ -8,6 +8,7 @@ import importlib.util
 from evaluate_videomae_core_b import digest, require
 
 
+from path_config import scratch_root
 def read(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -22,7 +23,7 @@ def main():
     args = parser.parse_args()
     project, queue, comparison, output = [p.resolve() for p in
                                          (args.project_root, args.queue_root, args.comparison, args.output)]
-    scratch = (project / "tmp/s126mdg33_02").resolve()
+    scratch = scratch_root(project)
     require(all(p.is_relative_to(scratch) for p in (queue, comparison, output))
             and output != scratch and not output.exists(), "Fresh personal output required")
     require(read(queue / "QUEUE_STATUS.json")["status"] == "PASS_11_REMAINING_TRAIN_EXPORT", "Queue incomplete")
