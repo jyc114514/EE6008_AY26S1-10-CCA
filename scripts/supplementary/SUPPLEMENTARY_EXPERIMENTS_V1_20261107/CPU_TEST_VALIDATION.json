@@ -1,0 +1,75 @@
+{
+  "status": "PASS_WITH_PLATFORM_SKIP",
+  "source_exports": 12,
+  "python_syntax": "PASS",
+  "utf8_lf_and_private_path_scan": "PASS",
+  "export_sha256_verification": "PASS",
+  "synthetic_checks_or_tests": 16,
+  "passed": 15,
+  "skipped": 1,
+  "tests": [
+    {
+      "script": "core_a/check_protocol.py",
+      "checks_or_tests": 1,
+      "passed": 1,
+      "skipped": 0,
+      "status": "PASS",
+      "optional_scikit_learn_reference": false
+    },
+    {
+      "script": "core_b/test_contracts.py",
+      "checks_or_tests": 6,
+      "passed": 6,
+      "skipped": 0,
+      "status": "PASS",
+      "optional_scikit_learn_reference": false
+    },
+    {
+      "script": "core_b_experts/test_train_experts.py",
+      "checks_or_tests": 4,
+      "passed": 3,
+      "skipped": 1,
+      "status": "PASS_WITH_SKIP",
+      "optional_scikit_learn_reference": false
+    },
+    {
+      "script": "test_export_configuration.py",
+      "checks_or_tests": 3,
+      "passed": 3,
+      "skipped": 0,
+      "status": "PASS",
+      "optional_scikit_learn_reference": false
+    },
+    {
+      "script": "analysis_a/test_compare_core_a.py",
+      "checks_or_tests": 2,
+      "passed": 2,
+      "skipped": 0,
+      "status": "PASS",
+      "optional_scikit_learn_reference": true
+    }
+  ],
+  "training_rerun": false,
+  "real_data_evaluation_rerun": false,
+  "network_used": false,
+  "notes": [
+    "CPU tests used synthetic fixtures only.",
+    "A workspace temporary directory was selected for this sandbox; no production data was read.",
+    "The Windows sandbox does not permit hardlinks; the original atomic-cache-lock test is explicitly skipped when its capability probe fails. Production atomic-lock behavior is unchanged.",
+    "The optional scikit-learn test used an existing local dependency installation without vendoring it.",
+    "Passing these checks does not validate full external-data training/replay or historical runtime equivalence."
+  ],
+  "help_without_external_assets": {
+    "status": "PASS",
+    "scripts": [
+      "core_a/run_core_a_followup.py",
+      "core_b/run_cascade.py",
+      "core_b/score_cascade.py",
+      "core_b_experts/prepare_protocol.py",
+      "core_b_experts/train_experts.py",
+      "core_b_experts/evaluate_experts.py",
+      "baseline_a/decode_original_predictions.py",
+      "analysis_a/compare_core_a.py"
+    ]
+  }
+}

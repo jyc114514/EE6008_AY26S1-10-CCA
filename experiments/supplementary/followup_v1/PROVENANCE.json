@@ -1,0 +1,533 @@
+{
+  "schema_version": 1,
+  "study_id": "supplementary_20261107",
+  "publication_scope": "Aggregate result tables and sanitized verification only.",
+  "source_report": "V6 Appendix D; Tables D1–D4",
+  "source_report_sha256": "bf5adade9546ec4ec56aaa0944e5b930c4afee90ec0ea89e3c44e1cc2da08665",
+  "prior_verification_completed_utc": "2026-11-07T17:37:39.111452+00:00",
+  "fresh_server_check_at_export": false,
+  "numeric_policy": "Original CSV numerical tokens are preserved. Derived relative percentages use unrounded means. Numeric JSON projections are serialized to 17 significant digits in CSV.",
+  "comparator_definitions": {
+    "A": "New fourth-second clip models versus retained historical repeated-first-frame and dynamic models. Four repetitions construct 32 frames; three fitted seeds. Hardware/software differences and the motion confound remain.",
+    "B_predicted_task": "Original dynamic Core A 120-class Top-1 predictions replace the true task token in seven fixed pretrained Core B conditions. Inference and scoring are rerun; no new Core B training. Unsupported classes cause abstention, with no true-label fallback.",
+    "B_experts": "15 fresh downstream V0 experts versus 3 fresh shared V0 models in the same environment. Original seed initializations, frozen encoder, 160 epochs, no context dropout. The primary comparison uses this new shared control; historical V0 is secondary context only. Total capacity and optimizer-update budgets differ."
+  },
+  "sources": {
+    "verification_final": {
+      "logical_description": "Final review receipt",
+      "sha256": "896a1bd6efb0d231478eae2eee5007631d3ae7d79bae1940e7ce101a49032257",
+      "bytes": 4469,
+      "kind": "private_verification_record",
+      "verification": "retained_independent_audit_or_verification_record"
+    },
+    "verification_live_hashes": {
+      "logical_description": "Prior read-only checkpoint and artifact hash verification",
+      "sha256": "196d844d343633cb30bf3e99509c5f56ae856fd2e8f3af3e2e175f7d6ab94f7f",
+      "bytes": 12479,
+      "kind": "private_verification_record",
+      "verification": "retained_independent_audit_or_verification_record"
+    },
+    "verification_live_arrays": {
+      "logical_description": "Prior independent raw-array score replay",
+      "sha256": "573170936f4d8a53f64463041a13dc2c8cc6c53c29ef6e39129a15031f0dc159",
+      "bytes": 19838,
+      "kind": "private_verification_record",
+      "verification": "retained_independent_audit_or_verification_record"
+    },
+    "verification_expected_hashes": {
+      "logical_description": "Expected artifact hashes used by the prior live check",
+      "sha256": "6b5005b20a9ab18f109761abac0a65c6377f67eb8ab255708a9768e3975d697b",
+      "bytes": 69887,
+      "kind": "private_verification_record",
+      "verification": "retained_independent_audit_or_verification_record"
+    },
+    "verification_a_baselines": {
+      "logical_description": "Prior original recognition prediction hash check",
+      "sha256": "4ee41a1991244d4dc517dd960a64fb280aef73d77240ef10e97d0c09d6c83096",
+      "bytes": 4130,
+      "kind": "private_verification_record",
+      "verification": "retained_independent_audit_or_verification_record"
+    },
+    "audit_core_a": {
+      "logical_description": "Independent recognition rescore and paired bootstrap audit",
+      "sha256": "89145ded5f6aa98eba9b647df06c5d57b32a772928414b6112c027c9a9ff2458",
+      "bytes": 30888,
+      "kind": "private_derived_audit",
+      "verification": "retained_independent_audit_or_verification_record"
+    },
+    "audit_core_b": {
+      "logical_description": "Independent forecasting aggregate and bootstrap audit",
+      "sha256": "0b011b0d96baf05dcdd6955397d40272eb0d63f34be09efa1ba0b8926e48efc1",
+      "bytes": 30430,
+      "kind": "private_derived_audit",
+      "verification": "retained_independent_audit_or_verification_record"
+    },
+    "b_cascade_dev_summary": {
+      "logical_description": "Predicted-task cascade dev summary",
+      "sha256": "d47919345b12afaa61b90e0bf19d371dae51a129a5817521edaf911c2125238c",
+      "bytes": 4167,
+      "kind": "original_aggregate_csv",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "b_cascade_final_test_summary": {
+      "logical_description": "Predicted-task cascade final_test summary",
+      "sha256": "4c50a24937a2cb1c507b330b8aa1d757b01174393ba09519e2078284781a44b9",
+      "bytes": 4126,
+      "kind": "original_aggregate_csv",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "b_cascade_dev_per_seed": {
+      "logical_description": "Predicted-task cascade dev per_seed",
+      "sha256": "b23cdd785eaec35a3461a0fd1811c474334e889a0d4d2c5a79f809816a6c8dc1",
+      "bytes": 8554,
+      "kind": "original_aggregate_csv",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "b_cascade_final_test_per_seed": {
+      "logical_description": "Predicted-task cascade final_test per_seed",
+      "sha256": "daff6123033dfb7ad25e4091a5731d265ffded7b54f12c206eececb0493109c2",
+      "bytes": 8552,
+      "kind": "original_aggregate_csv",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "b_cascade_dev_coverage": {
+      "logical_description": "Predicted-task cascade dev coverage",
+      "sha256": "f60e6a6b2bd24c9afd0bfee259ae19c1191e99bd2e32f065cd701bd0470d53f7",
+      "bytes": 1028,
+      "kind": "original_aggregate_csv",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "b_cascade_final_test_coverage": {
+      "logical_description": "Predicted-task cascade final_test coverage",
+      "sha256": "1c99d4169219d89beb0bd9c65e72c5d8ea4863afeeb5eff2cce3bfc48c9860a0",
+      "bytes": 992,
+      "kind": "original_aggregate_csv",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "b_cascade_dev_paired_intervals": {
+      "logical_description": "Predicted-task cascade dev paired_intervals",
+      "sha256": "add8b75d950df60338a2e3f18a99ca416e390cad0fcd85c3402e14b1c8fbe159",
+      "bytes": 5175,
+      "kind": "original_aggregate_csv",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "b_cascade_final_test_paired_intervals": {
+      "logical_description": "Predicted-task cascade final_test paired_intervals",
+      "sha256": "40421f93f6d4e16e584f3ce76361924d168efccc382653456263fca8f53e554a",
+      "bytes": 3993,
+      "kind": "original_aggregate_csv",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "b_experts_dev_summary": {
+      "logical_description": "New expert/shared dev summary",
+      "sha256": "93e2650467eb17bbb8c3203e1cf5e078e92fa420857cab51d09ee1a819fb6e9c",
+      "bytes": 2457,
+      "kind": "original_aggregate_csv",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "b_experts_dev_ci": {
+      "logical_description": "New expert/shared dev ci",
+      "sha256": "b39ab692203b6df923e98475d899fd827341166e18991562f39b8417c50461e3",
+      "bytes": 8383,
+      "kind": "original_aggregate_csv",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "b_experts_dev_tasksummary": {
+      "logical_description": "New expert/shared dev tasksummary",
+      "sha256": "4d615a00d6fe372f0ec64c4aff3f664207705a317a2b6ef9018f4e04f1095319",
+      "bytes": 11326,
+      "kind": "original_aggregate_csv",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "b_experts_dev_taskci": {
+      "logical_description": "New expert/shared dev taskci",
+      "sha256": "e3a078e0d36dbfce277cc41787b3204f592a18f0a7c1830419beb08a33b9296d",
+      "bytes": 24692,
+      "kind": "original_aggregate_csv",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "b_experts_dev_seed": {
+      "logical_description": "New expert/shared dev seed",
+      "sha256": "70d5c604a59eff4f10a9b46a5b47671ff4b068de250161d06959b78ea6486da1",
+      "bytes": 5097,
+      "kind": "original_aggregate_csv",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "b_experts_dev_pairedseed": {
+      "logical_description": "New expert/shared dev pairedseed",
+      "sha256": "4ef96f8c169e84b71a38871fbac689003bd744bddccffc1592b67766aa45c5fc",
+      "bytes": 3175,
+      "kind": "original_aggregate_csv",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "b_experts_dev_pairedtaskseed": {
+      "logical_description": "New expert/shared dev pairedtaskseed",
+      "sha256": "71f3845bb946f49e52c0c23de737924d23a1d025111d44a67d4b931f5f732531",
+      "bytes": 14133,
+      "kind": "original_aggregate_csv",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "b_experts_final_test_summary": {
+      "logical_description": "New expert/shared final_test summary",
+      "sha256": "eac2aa493480ee4db4ebe2d53749d84c404a6e2e1a63feee088b58f85dd940e4",
+      "bytes": 2415,
+      "kind": "original_aggregate_csv",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "b_experts_final_test_ci": {
+      "logical_description": "New expert/shared final_test ci",
+      "sha256": "7e76543e52632a64bebec92896888800fa2c0cb7ddf4694a100030e810a378c3",
+      "bytes": 8049,
+      "kind": "original_aggregate_csv",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "b_experts_final_test_tasksummary": {
+      "logical_description": "New expert/shared final_test tasksummary",
+      "sha256": "c41016e2b98a94bb89632aff53cc9d56255d34ae580ed3d380f1ad216ddf36f5",
+      "bytes": 11321,
+      "kind": "original_aggregate_csv",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "b_experts_final_test_taskci": {
+      "logical_description": "New expert/shared final_test taskci",
+      "sha256": "30ab6f6b039d66e61828aab387f3b7ceb34d784395cca1a33b7465e7bd4d6dd5",
+      "bytes": 24063,
+      "kind": "original_aggregate_csv",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "b_experts_final_test_seed": {
+      "logical_description": "New expert/shared final_test seed",
+      "sha256": "128d8e9b6e972d082422dafc421e5a8412069c32399d1c147751bfe95fb9f069",
+      "bytes": 5110,
+      "kind": "original_aggregate_csv",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "b_experts_final_test_pairedseed": {
+      "logical_description": "New expert/shared final_test pairedseed",
+      "sha256": "ed4cac8347f53f35114e8bd0a8eead6f0a307045a08403a7cc6d0708b52c4e31",
+      "bytes": 3037,
+      "kind": "original_aggregate_csv",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "b_experts_final_test_pairedtaskseed": {
+      "logical_description": "New expert/shared final_test pairedtaskseed",
+      "sha256": "395e09823824848ced492164a6d037acc339b9bbbf9ce82ce734b74da66eb0b6",
+      "bytes": 13894,
+      "kind": "original_aggregate_csv",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "train_shared_seed202610131": {
+      "logical_description": "Final training metadata for shared seed202610131",
+      "sha256": "a3e7a3cb0b63dbedcd152fedd2ca18513db22bcb8211cd5d70497147a2270a75",
+      "bytes": 6033,
+      "kind": "private_training_manifest",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "train_shared_seed202610132": {
+      "logical_description": "Final training metadata for shared seed202610132",
+      "sha256": "5f2c893d6a9df6831e67c532bf0b0af890b9aa568a868bb36602143521d0d4e7",
+      "bytes": 6032,
+      "kind": "private_training_manifest",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "train_shared_seed202610133": {
+      "logical_description": "Final training metadata for shared seed202610133",
+      "sha256": "014b77eebeec18c1c314927023c17c7cd2f3d1e6277924aeca97af83f8a137b0",
+      "bytes": 6033,
+      "kind": "private_training_manifest",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "train_task_119_seed202610131": {
+      "logical_description": "Final training metadata for task_119 seed202610131",
+      "sha256": "74479361b9f385a0c829683854536a173cdac4c720e195668e03a060e8d92bbd",
+      "bytes": 5988,
+      "kind": "private_training_manifest",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "train_task_119_seed202610132": {
+      "logical_description": "Final training metadata for task_119 seed202610132",
+      "sha256": "bf4d9bcedd554257ee9d2ef83a6fbb6320fdd7d475eee33289eb2c615325d3f4",
+      "bytes": 5988,
+      "kind": "private_training_manifest",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "train_task_119_seed202610133": {
+      "logical_description": "Final training metadata for task_119 seed202610133",
+      "sha256": "ee88e8dcd65e989edfb3eb6baa5e9bfa30d5890835bfd0ccf756ddf7507e6971",
+      "bytes": 5987,
+      "kind": "private_training_manifest",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "train_task_94_seed202610131": {
+      "logical_description": "Final training metadata for task_94 seed202610131",
+      "sha256": "6e283a797affbc8eff577a457bcb543583608c2d022d34849c569bdd4fbff7ad",
+      "bytes": 5983,
+      "kind": "private_training_manifest",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "train_task_94_seed202610132": {
+      "logical_description": "Final training metadata for task_94 seed202610132",
+      "sha256": "529117923b8f5a8fb7ccb2b53a18293d4676024d73fb1dd26bd8f8aab9803483",
+      "bytes": 5984,
+      "kind": "private_training_manifest",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "train_task_94_seed202610133": {
+      "logical_description": "Final training metadata for task_94 seed202610133",
+      "sha256": "e1ec1d77062732abd5b84eac8c8294de771bc0b3dbfe16b1e25fad2f4e3cd37e",
+      "bytes": 5984,
+      "kind": "private_training_manifest",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "train_task_90_seed202610131": {
+      "logical_description": "Final training metadata for task_90 seed202610131",
+      "sha256": "2eb037c3aeaac5461940567bae73ad3dbbd2e5963a9a75ba7f3f13d37848ed92",
+      "bytes": 5982,
+      "kind": "private_training_manifest",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "train_task_90_seed202610132": {
+      "logical_description": "Final training metadata for task_90 seed202610132",
+      "sha256": "33998a6896c0468a0a442ac684f188c1f6a82a2759d1f968436f87f13b191e70",
+      "bytes": 5983,
+      "kind": "private_training_manifest",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "train_task_90_seed202610133": {
+      "logical_description": "Final training metadata for task_90 seed202610133",
+      "sha256": "9a255f68de2a2b2f6f547e1b0bf9eec011abf0c058535a0984e5a60c925a8dd9",
+      "bytes": 5983,
+      "kind": "private_training_manifest",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "train_task_141_seed202610131": {
+      "logical_description": "Final training metadata for task_141 seed202610131",
+      "sha256": "6dbaf61a418edb963ae2c1227647f3d91a571affbb626b92b69c172efab7f4d8",
+      "bytes": 6002,
+      "kind": "private_training_manifest",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "train_task_141_seed202610132": {
+      "logical_description": "Final training metadata for task_141 seed202610132",
+      "sha256": "1dcee48ffc0119662635480c26b1938a8995f3e25aa6e73d0de0b92431acfda5",
+      "bytes": 6003,
+      "kind": "private_training_manifest",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "train_task_141_seed202610133": {
+      "logical_description": "Final training metadata for task_141 seed202610133",
+      "sha256": "b94b918df697005deaf9f23fce504cf8be76de26039595d581f5ca99a669ff2f",
+      "bytes": 6003,
+      "kind": "private_training_manifest",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "train_task_230_seed202610131": {
+      "logical_description": "Final training metadata for task_230 seed202610131",
+      "sha256": "b777992068bdbd8e309b1edc22186796d40a056875ba09042a8d7f8deb8e1c73",
+      "bytes": 5986,
+      "kind": "private_training_manifest",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "train_task_230_seed202610132": {
+      "logical_description": "Final training metadata for task_230 seed202610132",
+      "sha256": "fd05c0a3d98bc9ed79f3671f98efa1864e4cbf39e04d1db9e5a78bc3a6f46397",
+      "bytes": 5985,
+      "kind": "private_training_manifest",
+      "verification": "matches_prior_live_hash_record"
+    },
+    "train_task_230_seed202610133": {
+      "logical_description": "Final training metadata for task_230 seed202610133",
+      "sha256": "bae2cb56fe934bd5a2f3a5c1cd350cccfec58ad9bf08b549b04d016d1efb9fa8",
+      "bytes": 5986,
+      "kind": "private_training_manifest",
+      "verification": "matches_prior_live_hash_record"
+    }
+  },
+  "outputs": [
+    {
+      "file": "CORE_A_FINAL_SUMMARY.csv",
+      "sha256": "810b6dd9813f10bae59f2f3ec5b3285c4d4d3b2cee1ef423139f9786a446a1cd",
+      "bytes": 1114,
+      "rows": 9,
+      "source_ids": [
+        "audit_core_a"
+      ],
+      "derivation": "Three conditions×three metrics from independently rescored retained recognition outputs. Values use percentages; sample SD is in percentage points."
+    },
+    {
+      "file": "CORE_A_PER_SEED.csv",
+      "sha256": "75fcc25948b0ec44cfd1c1b6da57a5bbca323f76aa508f583db4c51503bba921",
+      "bytes": 1228,
+      "rows": 9,
+      "source_ids": [
+        "audit_core_a"
+      ],
+      "derivation": "Nine fitted-model aggregate rows; percentages from the same independent recognition audit used by the summary. No individual-example identifiers."
+    },
+    {
+      "file": "CORE_A_PAIRED_DIFFERENCES.csv",
+      "sha256": "5fb3bd237bacb55a89cc6bb422d197cb600859c7668b01ad272a9abf60115a9d",
+      "bytes": 1468,
+      "rows": 6,
+      "source_ids": [
+        "audit_core_a"
+      ],
+      "derivation": "New fourth-second condition minus each historical comparator; paired conditional 95% episode-cluster bootstrap intervals."
+    },
+    {
+      "file": "CORE_B_PREDICTED_TASK_SUMMARY.csv",
+      "sha256": "b51b34acf0081705995da238d5798dbb85cdd171623a891210c9d7adf72d42d3",
+      "bytes": 8386,
+      "rows": 46,
+      "source_ids": [
+        "b_cascade_dev_summary",
+        "b_cascade_final_test_summary"
+      ],
+      "derivation": "Concatenate splits; preserve original aggregate fields, scopes, and numeric CSV tokens verbatim."
+    },
+    {
+      "file": "CORE_B_PREDICTED_TASK_PER_SEED.csv",
+      "sha256": "ea547abd6fb4df31c38c5ed7b29ac53da05aa83d5726ae909a43ea07b406affd",
+      "bytes": 17859,
+      "rows": 134,
+      "source_ids": [
+        "b_cascade_dev_per_seed",
+        "b_cascade_final_test_per_seed"
+      ],
+      "derivation": "Concatenate splits; preserve original aggregate fields, scopes, and numeric CSV tokens verbatim."
+    },
+    {
+      "file": "CORE_B_PREDICTED_TASK_COVERAGE.csv",
+      "sha256": "505315c371596553158fb75ae5a79fe4d4550c0a5f0353f26046c993397fd310",
+      "bytes": 2098,
+      "rows": 36,
+      "source_ids": [
+        "b_cascade_dev_coverage",
+        "b_cascade_final_test_coverage"
+      ],
+      "derivation": "Concatenate splits; preserve original aggregate fields, scopes, and numeric CSV tokens verbatim."
+    },
+    {
+      "file": "CORE_B_PREDICTED_TASK_PAIRED_INTERVALS.csv",
+      "sha256": "4113bb2b6f894f3ef164fe94a5ac95f275e274155f29e8f5afade2a32efb4e59",
+      "bytes": 9282,
+      "rows": 42,
+      "source_ids": [
+        "b_cascade_dev_paired_intervals",
+        "b_cascade_final_test_paired_intervals"
+      ],
+      "derivation": "Concatenate splits; preserve original aggregate fields, scopes, and numeric CSV tokens verbatim."
+    },
+    {
+      "file": "CORE_B_EXPERTS_MACRO.csv",
+      "sha256": "b6b0a8e748f2531e386c3cb4030b4caf770ed66f494deeaffd51b2d5d6aee761",
+      "bytes": 2130,
+      "rows": 6,
+      "source_ids": [
+        "b_experts_dev_summary",
+        "b_experts_dev_ci",
+        "b_experts_final_test_summary",
+        "b_experts_final_test_ci"
+      ],
+      "derivation": "Join original mean/SD and paired full-cohort intervals; relative percent = 100 × (expert − new shared) / new shared, using unrounded means. Existing CSV numeric tokens preserved."
+    },
+    {
+      "file": "CORE_B_EXPERTS_PER_TASK.csv",
+      "sha256": "9b2836e13d63d5f390d07e18570ff273a39485ea734f5e079792c2876e0951d7",
+      "bytes": 7099,
+      "rows": 30,
+      "source_ids": [
+        "b_experts_dev_tasksummary",
+        "b_experts_dev_taskci",
+        "b_experts_final_test_tasksummary",
+        "b_experts_final_test_taskci"
+      ],
+      "derivation": "Join original task mean/SD and paired task intervals; task intervals are conditional, unadjusted for multiplicity; no individual examples."
+    },
+    {
+      "file": "CORE_B_EXPERTS_PER_SEED.csv",
+      "sha256": "3ac5b4288804dc8f39c8ff69477c0d3135eed699efcb2b06b76d66161f1bb97b",
+      "bytes": 1945,
+      "rows": 12,
+      "source_ids": [
+        "b_experts_dev_seed",
+        "b_experts_final_test_seed"
+      ],
+      "derivation": "Keep oracle/full-population shared and expert aggregate cells only. Three fixed training seeds; no per-example output."
+    },
+    {
+      "file": "CORE_B_EXPERTS_PAIRED_PER_SEED.csv",
+      "sha256": "29f9dfbff3bff0df5c808e1bc04c0d6610670fe8a179aed27d582f89aeca1156",
+      "bytes": 1454,
+      "rows": 6,
+      "source_ids": [
+        "b_experts_dev_pairedseed",
+        "b_experts_final_test_pairedseed"
+      ],
+      "derivation": "Keep expert−shared oracle/full-population paired aggregate comparisons only."
+    },
+    {
+      "file": "CORE_B_EXPERTS_PAIRED_PER_TASK_SEED.csv",
+      "sha256": "21e3e7d016e99d9c7c572e01ffe5d780045cac0a863408da3b4ec8e564634fa3",
+      "bytes": 6366,
+      "rows": 30,
+      "source_ids": [
+        "b_experts_dev_pairedtaskseed",
+        "b_experts_final_test_pairedtaskseed"
+      ],
+      "derivation": "Keep expert−shared oracle/full-population task×seed aggregate comparisons only."
+    },
+    {
+      "file": "CORE_B_EXPERTS_BUDGET.csv",
+      "sha256": "64e1fb5dbd4f62c070e01917f9ea75b94abe05416d52b3aa531b84c8c926317e",
+      "bytes": 385,
+      "rows": 2,
+      "source_ids": [
+        "train_shared_seed202610131",
+        "train_shared_seed202610132",
+        "train_shared_seed202610133",
+        "train_task_119_seed202610131",
+        "train_task_119_seed202610132",
+        "train_task_119_seed202610133",
+        "train_task_94_seed202610131",
+        "train_task_94_seed202610132",
+        "train_task_94_seed202610133",
+        "train_task_90_seed202610131",
+        "train_task_90_seed202610132",
+        "train_task_90_seed202610133",
+        "train_task_141_seed202610131",
+        "train_task_141_seed202610132",
+        "train_task_141_seed202610133",
+        "train_task_230_seed202610131",
+        "train_task_230_seed202610132",
+        "train_task_230_seed202610133"
+      ],
+      "derivation": "Aggregate 18 training manifests matched to prior hashes into shared/expert-bank per-seed budgets; identical budgets across the three seeds. Excludes paths, hosts and individual checkpoint identities."
+    },
+    {
+      "file": "VERIFICATION.json",
+      "sha256": "7a5cb6ee0d8bcd461a2a7f04b34de7832520c8d94767e4d4546ebc3b72e17141",
+      "bytes": 2454,
+      "source_ids": [
+        "verification_final",
+        "verification_live_hashes",
+        "verification_live_arrays",
+        "verification_a_baselines",
+        "audit_core_a",
+        "audit_core_b"
+      ],
+      "derivation": "Explicit aggregate-only projection of prior verification receipts; host/account paths and rejected-example records omitted."
+    }
+  ],
+  "privacy_boundary": "No raw datasets, features, individual example IDs, predictions, targets, model weights, full logs, hostnames, account names or private paths are included.",
+  "reproducibility_limit": "Public aggregates reproduce reported tables/contrasts and audit counts; they do not enable raw-data rescoring or retraining without separately authorized private assets.",
+  "checks": [
+    "Independent audits and live receipts match the prior final-review evidence hashes.",
+    "All nine recognition prediction source SHA values still match the retained prior-live verification; no raw predictions exported.",
+    "All original aggregate CSVs and 18 training manifests match expected hashes proven by the retained prior-live PASS receipt.",
+    "Public outputs use original CSV numeric tokens; new relative calculations and numeric JSON projections use 17 significant digits, with no hand-transcribed metrics.",
+    "Public recognition and predicted-task cascade per-seed files independently reproduce the published means, sample standard deviations and population ranges.",
+    "All exported payloads pass individual-example-key/private-location/account-pattern exclusion checks.",
+    "Expert relative effects reproduce V6: Position −3.26%, Seam +13.43%; Safe-FD +0.24% relative change, with its conditional confidence interval crossing zero."
+  ]
+}

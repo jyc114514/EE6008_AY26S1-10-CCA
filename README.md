@@ -4,107 +4,75 @@
 
 **Joint-Embedding Predictive Modelling for Humanoid Everyday Action Anticipation**
 
-This is the public research repository for the NTU EE6008 AY26S1-10-CCA course project. It contains curated code and evidence for Core A and Core B, with experiment status, data exposure, provenance, and server-only artifact boundaries recorded separately.
+This public NTU EE6008 course-project repository contains research code, curated experiment evidence, and reproduction notes for two related lines of work: Core A video-based task recognition and Core B state/action trajectory prediction studies.
 
-## Objective
+> **Snapshot scope:** The historical Core A/Core B summaries below describe the 2026-10-27 public snapshot and the linked dated release records. The separately dated 7 November supplementary studies are indexed below. Training, scoring and label-access statements apply to their named study.
 
-The working direction is to evaluate joint-embedding video representations for humanoid everyday action understanding and anticipation. The tentative pipeline is:
+## Research lines
 
-V-JEPA / V-JEPA 2 baseline -> selected public metadata and a verified dataset subset -> feature extraction or frozen representation -> current-action recognition baseline -> action anticipation / additional task -> small modification -> ablation and failure analysis.
+### Core A: partial-observation task recognition
 
-The historical Core A Full-120 Stage1 line documented in [docs/core_a/](docs/core_a/) is development/validation evidence, not an action-anticipation result. A separate Core A V2 amended analysis scores existing predictions on disclosed same-source final labels; it is not an untouched blind confirmation.
+Core A studies G1 task-ID recognition from a four-second observed video prefix. The public package includes a V-JEPA 2.1 feature-extraction path, recognition baselines, probe and adaptation utilities, evaluation code, and curated evidence.
 
-## Repository versus GPU Server
+The historical Full-120 Stage1 screen passed its 9/9 artifact/run acceptance checks. Those runs used one seed and development/validation data; 9/9 is not a claim that every scientific hypothesis passed. The D-P-L result is marked `accepted_derived_unmerged`: it was recomputed from the unmerged base-plus-adapter prediction after the merged export path failed.
 
-GitHub contains source code, configs, metadata, notes, small final summaries, and reproducibility records. The GPU Server contains raw videos, checkpoints, extracted features, training outputs, logs, and temporary files. data_metadata is not data_raw; results is not outputs.
+Core A V2 rescored six existing prediction cells on 602 same-source final labels after prior label exposure and a class-mapping correction had been disclosed. It added no training or model forward pass and is an amended analysis, not an untouched blind confirmation. The results are mixed across metrics and do not establish action anticipation, isolated motion understanding, or robot deployment performance.
 
-## Structure
+Start with [current conclusions](docs/core_a/CURRENT_CONCLUSIONS.md), the [amended V2 analysis](docs/core_a/FINAL_V2_AMENDED_ANALYSIS.md), and the [Core A guide](docs/core_a/README.md).
 
-| Path | Purpose |
+### Core B: state/action trajectory prediction studies
+
+Core B contains separate dated studies and aggregate results for multiple model, input, and temporal-prediction settings. Its historical CURRENT_PROFILE_V2 path scored development and final splits from previously fitted checkpoints; it added no training. The records show 22 prediction bundles sealed for each split; final targets were read only after the final prediction seal passed.
+
+| Split | Episodes / anchors | V0 position MAE | Persistence position MAE |
+| --- | ---: | ---: | ---: |
+| Development | 47 / 185 | 0.158397 | 0.222262 |
+| Final recovery | 41 / 162 | 0.178383 | 0.238057 |
+
+These are standardized metrics, not physical robot accuracy. The 41 same-source final episodes overlap the Core A indexed-video population, and session independence was not established. This final evaluation is not an independent confirmation. The original Q0 bridge remains `FAIL_UNRESOLVED`; its cause is `UNKNOWN`. See [current results and limitations](docs/core_b/CURRENT_RESULTS_AND_LIMITATIONS.md), the [study index](docs/core_b/EXPERIMENT_LINE_INDEX.md), and the [Core B guide](docs/core_b/README.md).
+
+## Supplementary studies completed 7 November 2026
+
+The [three-study supplement](docs/supplementary/SUPPLEMENTARY_EXPERIMENTS_V1_20261107.md) records a repeated fourth-second recognition clip, predicted-task conditioning with retained forecasting weights, and five newly trained task experts against fresh shared controls. It includes aggregate results, a public settings summary, source exports and retained verification evidence.
+
+The repeated clip does not match the historical dynamic Top-1 result. Correct final task predictions preserve forecasts on the evaluated subset. Experts reduce final Position MAE by 3.26% but increase Seam error by 13.43% against the fresh shared control. The supplement documents previous final-set exposure, conditional uncertainty and unequal model/update budgets. These studies are separate from the earlier development-only task-specialization waypoint.
+
+## Repository map
+
+| Path | Contents |
 | --- | --- |
-| configs/ | Portable experiment configuration skeletons; paths use environment variables. |
-| docs/ | Scope, collaboration rules, server layout, templates, and sanitized project materials. |
-| data_metadata/ | Small manifests, label maps, and split definitions only. |
-| docs/core_b/ | Dated Core B study summaries, result boundaries, and reproduction notes. |
-| experiments/core_b/ | Public aggregate Core B result tables and study indexes. |
-| results/core_b/ | Selected aggregate figures and plot data. |
-| src/ | Project-authored Core A package and existing scaffold modules. |
-| scripts/ | Portable Core A runners, audits, and figure QA entrypoints. |
-| experiments/ | Core A catalog, run-level aggregates, effects, and acceptance summaries. |
-| results/ | Small, curated Core A summaries, plot data, and figures; not raw training output. |
-| tests/ | Focused Core A unit and contract tests. |
+| `src/ee6008/` | Current project-authored Core A package: model loading, configuration, baselines, probes, and utilities. |
+| `src/models/`, `src/training/`, `src/evaluation/` | Older scaffold directories; their READMEs describe conventions, not the current implementation. |
+| `scripts/core_a/`, `scripts/core_b/`, `scripts/final_evaluation/`, `scripts/audits/` | Core A/B runners, historical study entrypoints, evaluation and audit tools. Entry points have different data and environment requirements. |
+| `configs/`, `data_metadata/` | Public configuration summaries and metadata; these are not raw datasets. |
+| `docs/core_a/`, `docs/core_b/` | Study scope, conclusions, limitations, and reproduction boundaries. |
+| `experiments/core_a/`, `experiments/core_b/` | Curated aggregate tables and experiment indexes. |
+| `results/core_a/`, `results/core_b/` | Selected figures and plot inputs; not full training outputs. |
+| `tests/` | Focused unit and contract tests. |
 
-## Collaboration workflow
+## Set up and public CPU checks
 
-main is the stable branch. Use task branches such as feature/vjepa2-loader, experiment/g1-recognition-baseline, fix/dataset-path, or docs/weekly-update; do not create permanent personal branches.
+The project environment targets Python 3.11–3.12. Review [environment.yml](environment.yml) and [requirements.txt](requirements.txt); PyTorch and video dependencies may need a build compatible with the authorized runtime. The setup commands below are documented instructions; they were not run as part of this README update.
 
-    git pull origin main
-    git switch -c feature/short-description
-    git add -- confirmed/path
-    git commit -m "type: short description"
-    git push -u origin feature/short-description
+From the repository root in a Bash-compatible shell:
 
-Open a pull request when the change is ready. Small documentation fixes may be merged directly into main when the team agrees. Never commit raw data, credentials, checkpoints, or unreviewed large artifacts.
+```bash
+conda env create -f environment.yml
+conda activate ee6008-cca
+```
 
-## Reproducibility
+The public repository does not include raw video, feature tensors, real checkpoints, per-example prediction/target arrays, or execution logs. Full training or replay needs the corresponding authorized data, weights, runtime, and server artifacts.
 
-Each real run should record the dataset revision, split, Git commit, run ID, random seed, model/checkpoint identifier, restricted artifact ID, metrics, owner, date, and status in experiments/runs.csv. The run registry distinguishes development, validation, and final/heldout scoring. Historical access statements are scoped to their own runs.
-
-### Public CPU contract checks
-
-Run these checks from the repository root with the project Python environment and its declared CPU dependencies. They exercise the scorer and contract fixtures; they do not train, extract features, load checkpoints, download data, or read real final/heldout payloads. The historical study scripts are evidence archives and are not all direct-run tools; see [the entrypoint/result map](docs/releases/server-sync-20261022T082418Z/ENTRYPOINT_RESULT_MAP.csv) for server-only requirements and UNKNOWN mappings.
+The published CPU contract checks are:
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES='' PYTHONPATH="scripts/core_a/final_recovery_v2:scripts/final_evaluation/v1_historical" python3 -B -m pytest -q -p no:cacheprovider scripts/core_a/final_recovery_v2/test_core_a_v2_scorer.py
 PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES='' EE6008_PROJECT_ROOT=. PYTHONPATH="scripts/core_b/final_recovery_v2:scripts/final_evaluation/v1_historical" python3 -B -m pytest -q -p no:cacheprovider scripts/core_b/final_recovery_v2/test_core_b_v2_contracts.py -k 'not anchor_frame_schedule_stops_at_anchor'
 ```
 
-The deselected anchor-frame schedule test reads the server-only development and final input manifests. The independent acceptance record lists the test outcomes observed for the upload snapshot and the fixture correction; it does not represent a full experiment replay.
+The Core B schedule test is excluded because it reads server-only development/final input manifests. These checks cover public scorer and contract fixtures; they do not run training, full inference, video feature extraction, or historical experiment replay.
 
-## Contributors
-
-This is a five-student course project owned by jyc114514. Additional collaborator invitations are pending reliable GitHub usernames from the team; no usernames are guessed in this repository.
-
-## Project materials
-
-The original local folders remain outside this public repository. Public copies here are deliberately curated. Copyright-sensitive paper PDFs, login-state files, private forms, raw dataset files, checkpoints, and large audit artifacts are represented by links or excluded notes instead of being redistributed.
-
-## Status
-
-- Repository scaffold: initialized; Core A evidence release added on this branch.
-- Historical Core A Full-120 Stage1: 9/9 accepted source cells, development/validation only; D-P-L uses unmerged derived inference.
-- Core A V2: six cells rescored on 602 same-source final labels after a disclosed mapping correction; no new training; not an independent blind confirmation.
-- Core B: B1/B2/B3, V3, D3, query/ablation, and V2 CURRENT_PROFILE development/final results are indexed separately.
-- Core B V2 final targets were read after the 22-bundle prediction seal; 41 final episodes overlap the Core A indexed-video population, and session independence is unknown.
-- Human scientific/team review, video recording, and course submission remain pending in the closeout record.
-- License: no new license is asserted by this evidence export; third-party/data licenses remain separately governed.
-
-## Server sync release
-
-The audited code/results export since the prior publication is indexed in [the release summary](docs/releases/server-sync-20261022T082418Z/RELEASE_SUMMARY.md), [the experiment result index](docs/releases/server-sync-20261022T082418Z/EXPERIMENT_RESULT_INDEX.csv), and [the Core B study line index](docs/core_b/EXPERIMENT_LINE_INDEX.md). The release distinguishes historical development-only access statements from later disclosed same-source final-label analyses.
-
-## Post-release repair supplement (2026-10-24)
-
-This supplement follows independent acceptance at PR head 348469cb8c3d5ba468b32740e8c23684b9f2dcc4. It adds clearly marked, source-hash-bound repaired copies for 15 of the 18 previously excluded code candidates; the original historical files remain unchanged. Three host/admin-only wrappers remain excluded. File-level source/export lineage is in docs/releases/server-sync-20261022T082418Z/REPAIR_SOURCE_MAP_20261024.csv. Non-public server configuration/input references in ENTRYPOINT_RESULT_MAP.csv are represented by stable artifact_id placeholders; input types and access conditions remain visible, while public repository-relative paths remain intact.
-
-The supplement also publishes 120 already-saved aggregate artifacts: 91 result tables/JSON and 29 plot-data files. It does not recompute metrics. Source/export hashes, sizes, path-redaction notes, and CSV row counts are in RESULT_EXPORT_PROVENANCE_20261024.csv. RELEASE_REPAIR_MANIFEST_20261024.csv and RELEASE_REPAIR_CHECKSUMS_20261024.sha256 cover only the repair payload listed there; the original release manifest/checksum remain scoped to the original snapshot.
-
-The exact V7 single-head scorer is separate from the V7 ensemble scorer. V9 context-dropout, V9 cached-Q0, and the V9 bootstrap-correction supplement are separately indexed. No V10 run directory or saved aggregate was present in the inspected export.
-
-Use the focused Core A and Core B CPU commands above for public contract checks. The repaired hand-calibrated analysis, R3D extraction, and temporal-variation replay remain research entrypoints that require study-specific server artifacts. No aggregate metric table was found for those three studies; their linked study notes remain the public result evidence. R3D requires explicit --project-root, --study-root, --primary-inputs, --dense-inputs, --raw-root and --weights inputs; no server data roots are embedded, and output metadata uses opaque artifact IDs. A full extraction still requires authorized GPU execution; the script does not download weights. Historical study code is not uniformly a set of directly runnable tools.
-
-Core A historical Stage1 source binding is partial: the V-JEPA2 source revision is verified, but custom runner file identity remains UNKNOWN. Existing disclosures remain in force: Core A prior label exposure/amended analysis; Core B same-source overlap and session independence UNKNOWN; Q0 bridge FAIL_UNRESOLVED; standardized metrics are not physical robot accuracy.
-## Independent acceptance follow-up (2026-10-26)
-
-The public PR head `d3c2dd144d498b9f5aa656f8a61f371fc28974de` was independently downloaded from GitHub and checked; the current results and remaining boundaries are recorded in [the acceptance report](docs/releases/server-sync-20261022T082418Z/POST_RELEASE_ACCEPTANCE_20261026.md). The versioned [acceptance manifest](docs/releases/server-sync-20261022T082418Z/POST_RELEASE_ACCEPTANCE_MANIFEST_20261026.csv) and [checksums](docs/releases/server-sync-20261022T082418Z/POST_RELEASE_ACCEPTANCE_CHECKSUMS_20261026.sha256) cover the 149 repair-payload files plus that report. The sidecar files do not hash themselves. The 2026-10-24 repair manifest/checksum are historical and apply only to the pre-follow-up snapshot.
-
-At acceptance of prior head `47a994c6154ff5a2a9baab9fb0027dbcc10be3e6`, the legacy B1 runner still lacked its three imported dependencies. The subsequent B1-specific follow-up below closes the public code dependency set. The earlier acceptance report remains a snapshot of that earlier head.
-
-### B1 public dependency closure (2026-10-26)
-
-The B1 entrypoints now resolve their project checkpoint helpers and the pinned official V-JEPA2 attentive-pooler source from the public tree. See the [dependency repair record](docs/releases/server-sync-20261022T082418Z/B1_PUBLIC_DEPENDENCY_REPAIR_20261026.md), [source provenance](docs/releases/server-sync-20261022T082418Z/B1_SOURCE_PROVENANCE.md), [dependency closure](docs/releases/server-sync-20261022T082418Z/B1_DEPENDENCY_CLOSURE.csv), and [B1 delta checksums](docs/releases/server-sync-20261022T082418Z/B1_DEPENDENCY_DELTA_CHECKSUMS_20261026.sha256).
-
-Run the synthetic CPU contract and import checks from the repository root:
+The B1 public dependency closure also has a synthetic CPU/import check:
 
 ```bash
 B1_DIR=scripts/core_b/legacy_archives/code/b1
@@ -112,5 +80,18 @@ PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES='' PYTHONPATH="$B1_DIR:$B1_DIR/pu
   python3 -B -m pytest -q -p no:cacheprovider "$B1_DIR/public_support/tests/test_b1_public_dependency_closure.py"
 ```
 
-The public dependency closure does not include B1's server-only normalized input archive, train-only normalization and token-path manifests, per-episode token files, full input manifest/feasibility metadata, or run receipts/checkpoints/predictions. A complete B1 training or acceptance run still requires those artifacts and physical GPU3 execution. Historical helper source identity remains partial; B1 historical numerical replay is not claimed.
+It exercises public imports, path guards, and synthetic CPU contracts, including a randomly initialized pooler and a synthetic checkpoint payload. It does not replay historical B1 results or run B1 training. Historical helper source identity remains partially verified; full B1 numerical replay was not run. The B1 runner's physical GPU 3 setting applies to that historical configuration, not to every project workflow. See the [B1 repair record](docs/releases/server-sync-20261022T082418Z/B1_PUBLIC_DEPENDENCY_REPAIR_20261026.md) and [entrypoint/result map](docs/releases/server-sync-20261022T082418Z/ENTRYPOINT_RESULT_MAP.csv).
 
+Core A figures can be regenerated from the curated plot inputs with the commands in [scripts/core_a/README.md](scripts/core_a/README.md). A plot rebuild does not repeat an experiment.
+
+## Collaboration and run records
+
+This is a five-student course project. `main` is the stable branch; changes are developed on task branches and proposed through pull requests. Record each real run in `experiments/runs.csv`, including dataset revision and split, Git commit, run ID, seed, model/checkpoint, metrics, owner, date, and status. Keep development, validation, and final/heldout records distinct; access statements apply to their named run.
+
+## Data, provenance, and licensing
+
+Raw videos and frames, checkpoints, feature caches, full predictions and targets, and run logs remain in the authorized research environment. Public artifact IDs are references, not downloadable data. Read the dated [server-sync release summary](docs/releases/server-sync-20261022T082418Z/RELEASE_SUMMARY.md) and [experiment/result index](docs/releases/server-sync-20261022T082418Z/EXPERIMENT_RESULT_INDEX.csv) for export provenance and historical study boundaries. Earlier development-only access statements apply only to their named studies; later V2 final-label disclosures are documented separately.
+
+The root [SHA256SUMS](SHA256SUMS) and [Core A publication manifest](docs/core_a/publication/PUBLICATION_MANIFEST.csv) preserve the 2026-09-10 Core A release snapshot. Their README hashes match those files at commit [f43c07b](https://github.com/jyc114514/EE6008_AY26S1-10-CCA/tree/f43c07b6055e993986ee1fd6a952261ec6634b71); they are not checksums for the current `main` tree.
+
+No new blanket license is asserted by this evidence export. Project, third-party code, datasets, and model weights may have separate terms; a citation or source link does not grant redistribution rights.

@@ -1,5 +1,10 @@
-# Preserve archived contributor bytes for the accompanying SHA256 manifest.
-scripts/videomae/** -text
-results/videomae/** -text
-tests/videomae/** -text
-configs/videomae_task_a_baseline.yaml -text
+# Stable bytes for the dated supplementary export and its SHA-256 manifest.
+/.gitattributes text eol=lf
+/README.md text eol=lf
+/README.zh-CN.md text eol=lf
+/experiments/runs.csv text eol=lf
+/docs/supplementary/** text eol=lf
+/experiments/supplementary/** text eol=lf
+/scripts/supplementary/** text eol=lf
+/configs/supplementary/** text eol=lf
+/docs/releases/supplementary-20261107/** text eol=lf

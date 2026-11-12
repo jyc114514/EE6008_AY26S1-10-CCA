@@ -1,0 +1,3 @@
+system,fitted_seeds,models_per_seed,total_fits,epochs_per_model,rows_per_seed_across_models,total_parameters_per_seed,active_parameters_per_prediction,optimizer_updates_per_seed_across_models,sample_presentations_per_seed_across_models,numeric_context_dropout_probability
+SHARED_V0,3,1,3,160,1280,891548,891548,3200,204800,0
+EXPERT_V0_BANK,3,5,15,160,1280,4457740,891548,3680,204800,0

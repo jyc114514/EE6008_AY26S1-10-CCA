@@ -1,0 +1,4 @@
+# Supplement to repository-root requirements.txt; install an appropriate
+# PyTorch/CUDA build separately for the authorized external runtime.
+scikit-learn>=1.4
+safetensors>=0.4

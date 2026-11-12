@@ -1,5 +1,7 @@
 # Core B evidence and results
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 This folder contains dated, study-specific summaries from the server research archive and the current V2 closeout. Separate studies remain separate: B1/B2/B3; history×video; JY-02; V3 multi-anchor; V3 state×video; observation delay; fixed-model video correspondence; D3; V4–V9; VideoMAE handoff; and CURRENT_PROFILE_V2.
 
 Start with [current results and limits](CURRENT_RESULTS_AND_LIMITATIONS.md), then browse the [study summaries](studies/) and [result tables](../../experiments/core_b/). The release index links each result to exported source code, a public config/contract summary, figures, and provenance status.

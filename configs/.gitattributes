@@ -1,0 +1,2 @@
+# Preserve the VideoMAE configuration bytes.
+/videomae_task_a_baseline.yaml -text
