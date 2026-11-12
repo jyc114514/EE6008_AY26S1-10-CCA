@@ -22,14 +22,14 @@ Start with [current conclusions](docs/core_a/CURRENT_CONCLUSIONS.md), the [amend
 
 ### Core B: state/action trajectory prediction studies
 
-Core B contains separate dated studies and aggregate results for multiple model, input, and temporal-prediction settings. Its latest indexed CURRENT_PROFILE_V2 path scored development and final splits from previously fitted checkpoints; it added no training. Twenty-two prediction bundles per split were sealed before final targets were read.
+Core B contains separate dated studies and aggregate results for multiple model, input, and temporal-prediction settings. Its latest indexed CURRENT_PROFILE_V2 path scored development and final splits from previously fitted checkpoints; it added no training. The records show 22 prediction bundles sealed for each split; final targets were read only after the final prediction seal passed.
 
 | Split | Episodes / anchors | V0 position MAE | Persistence position MAE |
 | --- | ---: | ---: | ---: |
 | Development | 47 / 185 | 0.158397 | 0.222262 |
 | Final recovery | 41 / 162 | 0.178383 | 0.238057 |
 
-These are standardized metrics, not physical robot accuracy. The 41 final episodes overlap the Core A indexed-video population, and session independence was not established. The original Q0 bridge remains `FAIL_UNRESOLVED`; its cause is `UNKNOWN`. See [current results and limitations](docs/core_b/CURRENT_RESULTS_AND_LIMITATIONS.md), the [study index](docs/core_b/EXPERIMENT_LINE_INDEX.md), and the [Core B guide](docs/core_b/README.md).
+These are standardized metrics, not physical robot accuracy. The 41 same-source final episodes overlap the Core A indexed-video population, and session independence was not established. This final evaluation is not an independent confirmation. The original Q0 bridge remains `FAIL_UNRESOLVED`; its cause is `UNKNOWN`. See [current results and limitations](docs/core_b/CURRENT_RESULTS_AND_LIMITATIONS.md), the [study index](docs/core_b/EXPERIMENT_LINE_INDEX.md), and the [Core B guide](docs/core_b/README.md).
 
 ## Repository map
 
@@ -46,9 +46,18 @@ These are standardized metrics, not physical robot accuracy. The 41 final episod
 
 ## Set up and public CPU checks
 
-The project environment targets Python 3.11–3.12. Review [environment.yml](environment.yml) and [requirements.txt](requirements.txt); PyTorch and video dependencies may need a build compatible with the authorized runtime. The public repository does not include raw video, feature tensors, real checkpoints, per-example prediction/target arrays, or execution logs. Full training or replay needs the corresponding authorized data, weights, runtime, and server artifacts.
+The project environment targets Python 3.11–3.12. Review [environment.yml](environment.yml) and [requirements.txt](requirements.txt); PyTorch and video dependencies may need a build compatible with the authorized runtime. The setup commands below are documented instructions; they were not run as part of this README update.
 
-From the repository root in a Bash-compatible shell, the published CPU contract checks are:
+From the repository root in a Bash-compatible shell:
+
+```bash
+conda env create -f environment.yml
+conda activate ee6008-cca
+```
+
+The public repository does not include raw video, feature tensors, real checkpoints, per-example prediction/target arrays, or execution logs. Full training or replay needs the corresponding authorized data, weights, runtime, and server artifacts.
+
+The published CPU contract checks are:
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES='' PYTHONPATH="scripts/core_a/final_recovery_v2:scripts/final_evaluation/v1_historical" python3 -B -m pytest -q -p no:cacheprovider scripts/core_a/final_recovery_v2/test_core_a_v2_scorer.py
@@ -68,6 +77,10 @@ PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES='' PYTHONPATH="$B1_DIR:$B1_DIR/pu
 It exercises public imports, path guards, and synthetic CPU contracts, including a randomly initialized pooler and a synthetic checkpoint payload. It does not replay historical B1 results or run B1 training. Historical helper source identity remains partially verified; full B1 numerical replay was not run. The B1 runner's physical GPU 3 setting applies to that historical configuration, not to every project workflow. See the [B1 repair record](docs/releases/server-sync-20261022T082418Z/B1_PUBLIC_DEPENDENCY_REPAIR_20261026.md) and [entrypoint/result map](docs/releases/server-sync-20261022T082418Z/ENTRYPOINT_RESULT_MAP.csv).
 
 Core A figures can be regenerated from the curated plot inputs with the commands in [scripts/core_a/README.md](scripts/core_a/README.md). A plot rebuild does not repeat an experiment.
+
+## Collaboration and run records
+
+This is a five-student course project. `main` is the stable branch; changes are developed on task branches and proposed through pull requests. Record each real run in `experiments/runs.csv`, including dataset revision and split, Git commit, run ID, seed, model/checkpoint, metrics, owner, date, and status. Keep development, validation, and final/heldout records distinct; access statements apply to their named run.
 
 ## Data, provenance, and licensing
 
