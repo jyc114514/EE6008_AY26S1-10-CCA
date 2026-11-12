@@ -51,10 +51,10 @@ feature extraction and fitting. CPU-only checks do not validate that runtime.
 From the repository root:
 
 ```bash
-python scripts/supplementary/20261107/core_a/check_protocol.py
-python scripts/supplementary/20261107/core_b/test_contracts.py
-python scripts/supplementary/20261107/core_b_experts/test_train_experts.py
-python scripts/supplementary/20261107/test_export_configuration.py
+python scripts/supplementary/SUPPLEMENTARY_EXPERIMENTS_V1_20261107/core_a/check_protocol.py
+python scripts/supplementary/SUPPLEMENTARY_EXPERIMENTS_V1_20261107/core_b/test_contracts.py
+python scripts/supplementary/SUPPLEMENTARY_EXPERIMENTS_V1_20261107/core_b_experts/test_train_experts.py
+python scripts/supplementary/SUPPLEMENTARY_EXPERIMENTS_V1_20261107/test_export_configuration.py
 ```
 
 These commands use synthetic arrays and temporary directories. They require no
@@ -68,7 +68,7 @@ is unchanged; the numerical expert tests still run.
 After installing the optional metric-reference dependency, also run:
 
 ```bash
-python scripts/supplementary/20261107/analysis_a/test_compare_core_a.py
+python scripts/supplementary/SUPPLEMENTARY_EXPERIMENTS_V1_20261107/analysis_a/test_compare_core_a.py
 ```
 
 ## Explicit external configuration

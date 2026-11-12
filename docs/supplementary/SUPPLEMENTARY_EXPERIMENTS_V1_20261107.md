@@ -2,7 +2,7 @@
 
 These three follow-up studies extend the recognition and command-forecasting experiments in the EE6008 report dated 24 October 2026. They were completed on 7 November and are documented in Appendix D of the V6 report. Historical results retain their original experimental scope; the final populations had already been evaluated, so these are same-source supplementary analyses, not new blind tests.
 
-The studies are also separate from the earlier [development-only Core B specialization waypoint](../../core_b/studies/CORE_B_TASK_SPECIALIZATION_WAYPOINT_V2_20261013T064245Z.md). Its 78 fits must not be combined with the 18 new fits reported here. Original reference analyses are [Core A](../../core_a/FINAL_V2_AMENDED_ANALYSIS.md) and [Core B](../../core_b/CURRENT_RESULTS_AND_LIMITATIONS.md).
+The studies are also separate from the earlier [development-only Core B specialization waypoint](../core_b/studies/CORE_B_TASK_SPECIALIZATION_WAYPOINT_V2_20261013T064245Z.md). Its 78 fits must not be combined with the 18 new fits reported here. Original reference analyses are [Core A](../core_a/FINAL_V2_AMENDED_ANALYSIS.md) and [Core B](../core_b/CURRENT_RESULTS_AND_LIMITATIONS.md).
 
 | Study | Work performed on 7 November | Reference |
 |---|---|---|
@@ -72,29 +72,29 @@ Position averages 30 future rows; Safe-FD evaluates 29 future-internal differenc
 
 The numbers are aligned with V6 Appendix D. The latest retained verification completed at 2026-11-07 17:37 UTC (8 November in China). It matched 361 saved artifact hashes and six additional historical Core A prediction hashes against the server. It checked 21 trained checkpoints: three Core A heads, 15 task experts and three fresh shared controls. It also independently read 112 sealed Core B prediction files and recomputed 8,856 episode-score rows from predictions and original scoring targets, with zero maximum difference from the saved scores. Core A verification independently rescored nine final prediction archives and 54 saved validation-epoch outputs.
 
-The public [verification summary](../../../experiments/supplementary/20261107/verification.json) is a selected-field projection of those retained receipts. The [aggregate provenance record](../../../experiments/supplementary/20261107/provenance.json) names source roles and SHA-256 values. It does not expose private locations or per-example data. Preparation of this repository addition on 12 November did not reconnect to the server, retrain models or repeat full inference.
+The public [verification summary](../../experiments/supplementary/followup_v1/VERIFICATION.json) is a selected-field projection of those retained receipts. The [aggregate provenance record](../../experiments/supplementary/followup_v1/PROVENANCE.json) names source roles and SHA-256 values. It does not expose private locations or per-example data. Preparation of this repository addition on 12 November did not reconnect to the server, retrain models or repeat full inference.
 
-The [result directory](../../../experiments/supplementary/20261107/) contains:
+The [result directory](../../experiments/supplementary/followup_v1/) contains:
 
 | Files | Meaning |
 |---|---|
-| `core_a_final_summary.csv`, `core_a_per_seed.csv`, `core_a_paired_differences.csv` | Recognition results and paired differences against historical controls |
-| `core_b_predicted_task_*.csv` | Retained-model inference results, per-seed aggregates, coverage and common-cohort intervals |
-| `core_b_experts_macro.csv`, `core_b_experts_per_seed.csv`, `core_b_experts_paired_per_seed.csv` | Primary fresh expert/shared comparison on the full original population |
-| `core_b_experts_per_task.csv`, `core_b_experts_paired_per_task_seed.csv` | Exploratory effects for each of the five tasks |
-| `core_b_experts_budget.csv` | Parameter, training exposure and optimizer-update budgets |
-| `verification.json`, `provenance.json` | Sanitized audit scope and source hashes |
+| `CORE_A_FINAL_SUMMARY.csv`, `CORE_A_PER_SEED.csv`, `CORE_A_PAIRED_DIFFERENCES.csv` | Recognition results and paired differences against historical controls |
+| `CORE_B_PREDICTED_TASK_*.csv` | Retained-model inference results, per-seed aggregates, coverage and common-cohort intervals |
+| `CORE_B_EXPERTS_MACRO.csv`, `CORE_B_EXPERTS_PER_SEED.csv`, `CORE_B_EXPERTS_PAIRED_PER_SEED.csv` | Primary fresh expert/shared comparison on the full original population |
+| `CORE_B_EXPERTS_PER_TASK.csv`, `CORE_B_EXPERTS_PAIRED_PER_TASK_SEED.csv` | Exploratory effects for each of the five tasks |
+| `CORE_B_EXPERTS_BUDGET.csv` | Parameter, training exposure and optimizer-update budgets |
+| `VERIFICATION.json`, `PROVENANCE.json` | Sanitized audit scope and source hashes |
 
 Blank sample-SD fields for the single persistence control mean not applicable, not zero. Development predicted-task summaries use seed-specific accepted populations, while paired intervals use the common accepted population. Do not pool these estimands. Relative expert changes use unrounded five-task macro means.
 
-The [public configuration](../../../configs/supplementary/20261107_public.json) is a readable projection of recorded settings, not a replacement for the original locked run configuration. The [source export and reproduction guide](../../../scripts/supplementary/20261107/README.md) distinguishes the prepared path adapters from the actual historical execution source. It also lists the authorized legacy dependencies needed for a real rerun.
+The [public configuration](../../configs/supplementary/followup_v1_public.json) is a readable projection of recorded settings, not a replacement for the original locked run configuration. The [source export and reproduction guide](../../scripts/supplementary/SUPPLEMENTARY_EXPERIMENTS_V1_20261107/README.md) distinguishes the prepared path adapters from the actual historical execution source. It also lists the authorized legacy dependencies needed for a real rerun.
 
 From the repository root, the following check uses only the public tables and standard Python library:
 
 ```bash
-python scripts/supplementary/20261107/verify_public_results.py
+python scripts/supplementary/SUPPLEMENTARY_EXPERIMENTS_V1_20261107/verify_public_results.py
 ```
 
-This checks arithmetic, population/seed consistency and this addition's [SHA-256 manifest](SHA256SUMS). It does not verify private prediction arrays or replay training. Full reproduction requires the authorized dataset snapshot, split/class manifests, frozen encoder checkpoint, downstream initialization, accepted source configuration and feature caches. Summary tables alone do not supply these inputs.
+This checks arithmetic, population/seed consistency and this addition's [SHA-256 manifest](../releases/supplementary-20261107/CHECKSUMS.sha256). It does not verify private prediction arrays or replay training. Full reproduction requires the authorized dataset snapshot, split/class manifests, frozen encoder checkpoint, downstream initialization, accepted source configuration and feature caches. Summary tables alone do not supply these inputs.
 
 Cui Can's contribution to these follow-up studies covers research-question design, execution coordination, comparisons and result verification. Attribution for the original architecture, implementation and benchmark remains as documented in the main report and repository.

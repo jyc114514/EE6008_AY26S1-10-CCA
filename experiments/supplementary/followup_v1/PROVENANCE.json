@@ -345,7 +345,7 @@
   },
   "outputs": [
     {
-      "file": "core_a_final_summary.csv",
+      "file": "CORE_A_FINAL_SUMMARY.csv",
       "sha256": "810b6dd9813f10bae59f2f3ec5b3285c4d4d3b2cee1ef423139f9786a446a1cd",
       "bytes": 1114,
       "rows": 9,
@@ -355,7 +355,7 @@
       "derivation": "Three conditions×three metrics from independently rescored retained recognition outputs. Values use percentages; sample SD is in percentage points."
     },
     {
-      "file": "core_a_per_seed.csv",
+      "file": "CORE_A_PER_SEED.csv",
       "sha256": "75fcc25948b0ec44cfd1c1b6da57a5bbca323f76aa508f583db4c51503bba921",
       "bytes": 1228,
       "rows": 9,
@@ -365,7 +365,7 @@
       "derivation": "Nine fitted-model aggregate rows; percentages from the same independent recognition audit used by the summary. No individual-example identifiers."
     },
     {
-      "file": "core_a_paired_differences.csv",
+      "file": "CORE_A_PAIRED_DIFFERENCES.csv",
       "sha256": "5fb3bd237bacb55a89cc6bb422d197cb600859c7668b01ad272a9abf60115a9d",
       "bytes": 1468,
       "rows": 6,
@@ -375,7 +375,7 @@
       "derivation": "New fourth-second condition minus each historical comparator; paired conditional 95% episode-cluster bootstrap intervals."
     },
     {
-      "file": "core_b_predicted_task_summary.csv",
+      "file": "CORE_B_PREDICTED_TASK_SUMMARY.csv",
       "sha256": "b51b34acf0081705995da238d5798dbb85cdd171623a891210c9d7adf72d42d3",
       "bytes": 8386,
       "rows": 46,
@@ -386,7 +386,7 @@
       "derivation": "Concatenate splits; preserve original aggregate fields, scopes, and numeric CSV tokens verbatim."
     },
     {
-      "file": "core_b_predicted_task_per_seed.csv",
+      "file": "CORE_B_PREDICTED_TASK_PER_SEED.csv",
       "sha256": "ea547abd6fb4df31c38c5ed7b29ac53da05aa83d5726ae909a43ea07b406affd",
       "bytes": 17859,
       "rows": 134,
@@ -397,7 +397,7 @@
       "derivation": "Concatenate splits; preserve original aggregate fields, scopes, and numeric CSV tokens verbatim."
     },
     {
-      "file": "core_b_predicted_task_coverage.csv",
+      "file": "CORE_B_PREDICTED_TASK_COVERAGE.csv",
       "sha256": "505315c371596553158fb75ae5a79fe4d4550c0a5f0353f26046c993397fd310",
       "bytes": 2098,
       "rows": 36,
@@ -408,7 +408,7 @@
       "derivation": "Concatenate splits; preserve original aggregate fields, scopes, and numeric CSV tokens verbatim."
     },
     {
-      "file": "core_b_predicted_task_paired_intervals.csv",
+      "file": "CORE_B_PREDICTED_TASK_PAIRED_INTERVALS.csv",
       "sha256": "4113bb2b6f894f3ef164fe94a5ac95f275e274155f29e8f5afade2a32efb4e59",
       "bytes": 9282,
       "rows": 42,
@@ -419,7 +419,7 @@
       "derivation": "Concatenate splits; preserve original aggregate fields, scopes, and numeric CSV tokens verbatim."
     },
     {
-      "file": "core_b_experts_macro.csv",
+      "file": "CORE_B_EXPERTS_MACRO.csv",
       "sha256": "b6b0a8e748f2531e386c3cb4030b4caf770ed66f494deeaffd51b2d5d6aee761",
       "bytes": 2130,
       "rows": 6,
@@ -432,7 +432,7 @@
       "derivation": "Join original mean/SD and paired full-cohort intervals; relative percent = 100 × (expert − new shared) / new shared, using unrounded means. Existing CSV numeric tokens preserved."
     },
     {
-      "file": "core_b_experts_per_task.csv",
+      "file": "CORE_B_EXPERTS_PER_TASK.csv",
       "sha256": "9b2836e13d63d5f390d07e18570ff273a39485ea734f5e079792c2876e0951d7",
       "bytes": 7099,
       "rows": 30,
@@ -445,7 +445,7 @@
       "derivation": "Join original task mean/SD and paired task intervals; task intervals are conditional, unadjusted for multiplicity; no individual examples."
     },
     {
-      "file": "core_b_experts_per_seed.csv",
+      "file": "CORE_B_EXPERTS_PER_SEED.csv",
       "sha256": "3ac5b4288804dc8f39c8ff69477c0d3135eed699efcb2b06b76d66161f1bb97b",
       "bytes": 1945,
       "rows": 12,
@@ -456,7 +456,7 @@
       "derivation": "Keep oracle/full-population shared and expert aggregate cells only. Three fixed training seeds; no per-example output."
     },
     {
-      "file": "core_b_experts_paired_per_seed.csv",
+      "file": "CORE_B_EXPERTS_PAIRED_PER_SEED.csv",
       "sha256": "29f9dfbff3bff0df5c808e1bc04c0d6610670fe8a179aed27d582f89aeca1156",
       "bytes": 1454,
       "rows": 6,
@@ -467,7 +467,7 @@
       "derivation": "Keep expert−shared oracle/full-population paired aggregate comparisons only."
     },
     {
-      "file": "core_b_experts_paired_per_task_seed.csv",
+      "file": "CORE_B_EXPERTS_PAIRED_PER_TASK_SEED.csv",
       "sha256": "21e3e7d016e99d9c7c572e01ffe5d780045cac0a863408da3b4ec8e564634fa3",
       "bytes": 6366,
       "rows": 30,
@@ -478,7 +478,7 @@
       "derivation": "Keep expert−shared oracle/full-population task×seed aggregate comparisons only."
     },
     {
-      "file": "core_b_experts_budget.csv",
+      "file": "CORE_B_EXPERTS_BUDGET.csv",
       "sha256": "64e1fb5dbd4f62c070e01917f9ea75b94abe05416d52b3aa531b84c8c926317e",
       "bytes": 385,
       "rows": 2,
@@ -505,7 +505,7 @@
       "derivation": "Aggregate 18 training manifests matched to prior hashes into shared/expert-bank per-seed budgets; identical budgets across the three seeds. Excludes paths, hosts and individual checkpoint identities."
     },
     {
-      "file": "verification.json",
+      "file": "VERIFICATION.json",
       "sha256": "7a5cb6ee0d8bcd461a2a7f04b34de7832520c8d94767e4d4546ebc3b72e17141",
       "bytes": 2454,
       "source_ids": [

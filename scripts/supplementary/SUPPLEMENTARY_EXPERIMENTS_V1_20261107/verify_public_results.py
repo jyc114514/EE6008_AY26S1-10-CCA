@@ -16,7 +16,7 @@ import statistics
 
 
 ROOT = Path(__file__).resolve().parents[3]
-DATA = ROOT / "experiments/supplementary/20261107"
+DATA = ROOT / "experiments/supplementary/followup_v1"
 METRICS = ("position_mae", "safe_fd_l1", "seam_safe_fd_l1")
 A_SEEDS = {"20260825", "20260826", "20260827"}
 B_SEEDS = {"202610131", "202610132", "202610133"}
@@ -62,9 +62,9 @@ def grouped(records, fields):
 
 
 def check_a():
-    seed_rows = rows("core_a_per_seed.csv")
+    seed_rows = rows("CORE_A_PER_SEED.csv")
     groups = grouped(seed_rows, ("split", "condition"))
-    summary = rows("core_a_final_summary.csv")
+    summary = rows("CORE_A_FINAL_SUMMARY.csv")
     summary_map = index(summary, ("split", "condition", "metric"))
     require(len(seed_rows) == 9 and len(groups) == 3 and len(summary) == 9, "Core A cell count")
     for (split, condition), group in groups.items():
@@ -76,7 +76,7 @@ def check_a():
             published = summary_map[(split, condition, metric)]
             close(published["mean_percent"], statistics.mean(values), "Core A mean")
             close(published["sample_sd_percentage_points"], statistics.stdev(values), "Core A sample SD")
-    contrasts = rows("core_a_paired_differences.csv")
+    contrasts = rows("CORE_A_PAIRED_DIFFERENCES.csv")
     require(len(contrasts) == 6, "Core A comparison count")
     for row in contrasts:
         key = (row["split"], row["new_condition"], row["metric"])
@@ -89,9 +89,9 @@ def check_a():
 
 
 def check_cascade():
-    seed_rows = rows("core_b_predicted_task_per_seed.csv")
+    seed_rows = rows("CORE_B_PREDICTED_TASK_PER_SEED.csv")
     groups = grouped(seed_rows, ("split", "condition", "scope", "program"))
-    summary = rows("core_b_predicted_task_summary.csv")
+    summary = rows("CORE_B_PREDICTED_TASK_SUMMARY.csv")
     require(len(groups) == len(summary), "Cascade summary-group coverage")
     for row in summary:
         key = tuple(row[f] for f in ("split", "condition", "scope", "program"))
@@ -107,7 +107,7 @@ def check_cascade():
                 close(row[metric + "_sample_sd"], statistics.stdev(values), "Cascade sample SD")
             else:
                 require(row[metric + "_sample_sd"] == "", "Singleton SD is missing, not zero")
-    coverage = grouped(rows("core_b_predicted_task_coverage.csv"), ("split", "a_seed", "b_seed"))
+    coverage = grouped(rows("CORE_B_PREDICTED_TASK_COVERAGE.csv"), ("split", "a_seed", "b_seed"))
     require(len(coverage) == 6, "Cascade coverage seed/split count")
     for (split, a_seed, b_seed), group in coverage.items():
         overall = [r for r in group if r["true_task_id"] == "ALL"]
@@ -124,7 +124,7 @@ def check_cascade():
         close(overall[0]["coverage"], accepted / total, "Overall coverage ratio")
         for row in group:
             close(row["coverage"], int(row["accepted_anchors"]) / int(row["anchors"]), "Task coverage ratio")
-    intervals = rows("core_b_predicted_task_paired_intervals.csv")
+    intervals = rows("CORE_B_PREDICTED_TASK_PAIRED_INTERVALS.csv")
     for row in intervals:
         require(float(row["ci_low"]) <= float(row["ci_high"]), "Cascade interval order")
         require(int(row["common_accepted_anchors"]) == (162 if row["split"] == "final_test" else 181), "Common cohort")
@@ -134,10 +134,10 @@ def check_cascade():
 
 
 def check_experts():
-    seeds = rows("core_b_experts_per_seed.csv")
+    seeds = rows("CORE_B_EXPERTS_PER_SEED.csv")
     by_system = grouped(seeds, ("split", "system"))
     by_seed = index(seeds, ("split", "system", "b_seed"))
-    macro = rows("core_b_experts_macro.csv")
+    macro = rows("CORE_B_EXPERTS_MACRO.csv")
     require(len(macro) == 6 and len(seeds) == 12, "Expert primary table sizes")
     for row in macro:
         metric, split = row["metric"], row["split"]
@@ -153,13 +153,13 @@ def check_experts():
         close(row["expert_minus_shared"], delta, "Expert minus fresh shared")
         close(row["relative_percent"], delta / float(row["shared_mean"]) * 100, "Relative percentage, not points")
         require(float(row["conditional_ci95_low"]) <= float(row["conditional_ci95_high"]), "Expert interval order")
-    for row in rows("core_b_experts_paired_per_seed.csv"):
+    for row in rows("CORE_B_EXPERTS_PAIRED_PER_SEED.csv"):
         for metric in METRICS:
             close(row[metric], float(by_seed[(row["split"], "EXPERT_V0", row["b_seed"])][metric]) -
                   float(by_seed[(row["split"], "SHARED_V0", row["b_seed"])][metric]), "Paired expert seed difference")
-    tasks = rows("core_b_experts_per_task.csv")
+    tasks = rows("CORE_B_EXPERTS_PER_TASK.csv")
     task_groups = grouped(tasks, ("split", "metric"))
-    paired_tasks = grouped(rows("core_b_experts_paired_per_task_seed.csv"), ("split", "task_id"))
+    paired_tasks = grouped(rows("CORE_B_EXPERTS_PAIRED_PER_TASK_SEED.csv"), ("split", "task_id"))
     for row in macro:
         group = task_groups[(row["split"], row["metric"])]
         require({r["task_id"] for r in group} == TASKS, "Five-task macro membership")
@@ -174,7 +174,7 @@ def check_experts():
         paired = paired_tasks[(row["split"], row["task_id"])]
         require({r["b_seed"] for r in paired} == B_SEEDS, "Per-task paired seeds")
         close(row["expert_minus_shared"], statistics.mean(float(r[row["metric"]]) for r in paired), "Per-task paired mean")
-    budget = {r["system"]: r for r in rows("core_b_experts_budget.csv")}
+    budget = {r["system"]: r for r in rows("CORE_B_EXPERTS_BUDGET.csv")}
     shared, expert = budget["SHARED_V0"], budget["EXPERT_V0_BANK"]
     require(int(shared["total_fits"]) == 3 and int(expert["total_fits"]) == 15, "18 fresh downstream fits")
     close(int(expert["total_parameters_per_seed"]) / int(shared["total_parameters_per_seed"]), 5, "Bank parameter ratio")
@@ -188,16 +188,16 @@ def sha(path):
 
 
 def check_integrity():
-    provenance = json.loads((DATA / "provenance.json").read_text(encoding="utf-8"))
+    provenance = json.loads((DATA / "PROVENANCE.json").read_text(encoding="utf-8"))
     for entry in provenance["outputs"]:
         path = DATA / entry["file"]
         require(sha(path) == entry["sha256"], "Aggregate provenance hash: " + entry["file"])
         require(path.stat().st_size == entry["bytes"], "Aggregate provenance bytes")
-    code_dir = ROOT / "scripts/supplementary/20261107"
+    code_dir = ROOT / "scripts/supplementary/SUPPLEMENTARY_EXPERIMENTS_V1_20261107"
     for entry in json.loads((code_dir / "SOURCE_EXPORT_HASHES.json").read_text(encoding="utf-8")):
         path = code_dir / entry["public_path"]
         require(sha(path) == entry["export_sha256"], "Prepared source export hash: " + entry["public_path"])
-    manifest = ROOT / "docs/supplementary/20261107/SHA256SUMS"
+    manifest = ROOT / "docs/releases/supplementary-20261107/CHECKSUMS.sha256"
     for line in manifest.read_text(encoding="utf-8").splitlines():
         expected, rel = line.split("  ", 1)
         path = ROOT / rel

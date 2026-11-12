@@ -33,7 +33,7 @@ These are standardized metrics, not physical robot accuracy. The 41 same-source 
 
 ## Supplementary studies completed 7 November 2026
 
-The [three-study supplement](docs/supplementary/20261107/README.md) records a repeated fourth-second recognition clip, predicted-task conditioning with retained forecasting weights, and five newly trained task experts against fresh shared controls. It includes aggregate results, a public settings summary, source exports and retained verification evidence.
+The [three-study supplement](docs/supplementary/SUPPLEMENTARY_EXPERIMENTS_V1_20261107.md) records a repeated fourth-second recognition clip, predicted-task conditioning with retained forecasting weights, and five newly trained task experts against fresh shared controls. It includes aggregate results, a public settings summary, source exports and retained verification evidence.
 
 The repeated clip does not match the historical dynamic Top-1 result. Correct final task predictions preserve forecasts on the evaluated subset. Experts reduce final Position MAE by 3.26% but increase Seam error by 13.43% against the fresh shared control. The supplement documents previous final-set exposure, conditional uncertainty and unequal model/update budgets. These studies are separate from the earlier development-only task-specialization waypoint.
 
