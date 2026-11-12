@@ -22,14 +22,14 @@ Core A V2 在事先披露标签访问与类别映射修正后，对六组已有�
 
 ### Core B：状态/动作轨迹预测研究
 
-Core B 收录针对不同模型、输入和时间预测设置的独立研究及聚合结果。最新编目的 CURRENT_PROFILE_V2 流程使用已训练的 checkpoint 对 development 与 final split 评分，没有新增训练。读取 final targets 之前，每个 split 的 22 个 prediction bundles 均已封存。
+Core B 收录针对不同模型、输入和时间预测设置的独立研究及聚合结果。最新编目的 CURRENT_PROFILE_V2 流程使用已训练的 checkpoint 对 development 与 final split 评分，没有新增训练。记录显示每个 split 均有 22 个已封存 prediction bundles；final targets 仅在 final prediction seal 通过后读取。
 
 | Split | Episode / anchor 数 | V0 position MAE | Persistence position MAE |
 | --- | ---: | ---: | ---: |
 | Development | 47 / 185 | 0.158397 | 0.222262 |
 | Final recovery | 41 / 162 | 0.178383 | 0.238057 |
 
-这些是标准化指标，不代表机器人实际精度。41 个 final episodes 与 Core A 编目视频群体重叠，session 独立性未得到证明。原始 Q0 bridge 仍为 `FAIL_UNRESOLVED`，原因是 `UNKNOWN`。详见[当前结果与局限](docs/core_b/CURRENT_RESULTS_AND_LIMITATIONS.md)、[研究索引](docs/core_b/EXPERIMENT_LINE_INDEX.md)和 [Core B 指南](docs/core_b/README.zh-CN.md)。
+这些是标准化指标，不代表机器人实际精度。这组同源 final 评估的 41 个 episodes 与 Core A 编目视频群体重叠，session 独立性未得到证明；它不是独立确认。原始 Q0 bridge 仍为 `FAIL_UNRESOLVED`，原因是 `UNKNOWN`。详见[当前结果与局限](docs/core_b/CURRENT_RESULTS_AND_LIMITATIONS.md)、[研究索引](docs/core_b/EXPERIMENT_LINE_INDEX.md)和 [Core B 指南](docs/core_b/README.zh-CN.md)。
 
 ## 仓库导航
 
@@ -46,7 +46,14 @@ Core B 收录针对不同模型、输入和时间预测设置的独立研究及�
 
 ## 环境与公开 CPU 检查
 
-项目环境面向 Python 3.11–3.12。请查看 [environment.yml](environment.yml) 与 [requirements.txt](requirements.txt)；PyTorch 和视频依赖可能需要换成适配已授权运行环境的构建版本。公开仓库不包含原始视频、feature tensor、真实 checkpoint、逐样本预测/目标数组或执行日志。完整训练或重放需要相应的授权数据、权重、运行环境和服务器工件。
+项目环境面向 Python 3.11–3.12。请查看 [environment.yml](environment.yml) 与 [requirements.txt](requirements.txt)；PyTorch 和视频依赖可能需要换成适配已授权运行环境的构建版本。以下建环境命令仅为文档说明，本次 README 更新没有实际运行：
+
+```bash
+conda env create -f environment.yml
+conda activate ee6008-cca
+```
+
+公开仓库不包含原始视频、feature tensor、真实 checkpoint、逐样本预测/目标数组或执行日志。完整训练或重放需要相应的授权数据、权重、运行环境和服务器工件。
 
 在仓库根目录使用 Bash 兼容的 shell，可执行已发布的 CPU contract checks：
 
@@ -68,6 +75,10 @@ PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES='' PYTHONPATH="$B1_DIR:$B1_DIR/pu
 它会检查公开导入、路径保护和合成 CPU contract，其中包括随机初始化 pooler 与合成 checkpoint payload。它不会重放历史 B1 结果，也不会运行 B1 训练。历史 helper 的源码身份仅得到部分证实，完整 B1 数值重放未执行。物理 GPU 3 是历史 B1 runner 对应配置的要求，并非所有项目流程都必须使用 GPU 3。详见 [B1 修补记录](docs/releases/server-sync-20261022T082418Z/B1_PUBLIC_DEPENDENCY_REPAIR_20261026.md)和 [entrypoint/result map](docs/releases/server-sync-20261022T082418Z/ENTRYPOINT_RESULT_MAP.csv)。
 
 Core A 图表可依据[脚本说明](scripts/core_a/README.md)，从整理后的绘图输入重新生成。重新绘图不等于重复实验。
+
+## 协作与实验记录
+
+这是一个五人课程项目。`main` 是稳定分支；请在按任务命名的工作分支上修改，并通过 pull request 提交。每次真实实验都应在 `experiments/runs.csv` 记录 dataset revision 与 split、Git commit、run ID、seed、model/checkpoint、指标、负责人、日期和状态。development、validation、final/heldout 记录分开管理；数据访问说明只适用于对应 run。
 
 ## 数据、来源与许可
 
