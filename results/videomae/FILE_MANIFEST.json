@@ -1,4 +1,4 @@
-﻿{
+{
     "scope":  "VideoMAE contributor code and aggregate evidence only",
     "files":  [
                   {
@@ -8,8 +8,8 @@
                   },
                   {
                       "path":  "results/videomae/CPU_ZERO_TOLERANCE_REPLAY_20261013.csv",
-                      "bytes":  1361,
-                      "sha256":  "9da1456ebabc38712903ae8897eb87860fbd665e1adf24f2d2839194807f2768"
+                      "bytes":  1345,
+                      "sha256":  "13143d22ccbae51c6caf4e06e1723ec489815137e05dbde8c1b5b592a4ed9ef3"
                   },
                   {
                       "path":  "results/videomae/CPU_ZERO_TOLERANCE_REPLAY_20261013.json",

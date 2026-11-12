@@ -1,4 +1,4 @@
-﻿"cell","train_prediction_max_abs","dev_prediction_max_abs","metric_max_abs","zero_tolerance_passed"
+"cell","train_prediction_max_abs","dev_prediction_max_abs","metric_max_abs","zero_tolerance_passed"
 "TS11-D_H60_S20261001","0.001777052879333496","0.0008306503295898438","2.37338244915009E-05","False"
 "TS11-D_H30_S20261001","0.0014399886131286621","0.0014965534210205078","4.23640012741089E-05","False"
 "TS11-D_H30_S20261002","0.0011379122734069824","0.0008237957954406738","4.31239604949951E-05","False"
