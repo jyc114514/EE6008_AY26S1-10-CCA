@@ -6,7 +6,7 @@
 
 这是 NTU EE6008 课程项目的公开仓库，收录两条相关研究线的代码、精选实验依据和复现说明：Core A 视频任务识别，以及 Core B 状态/动作轨迹预测研究。
 
-> **快照范围：** 本说明依据 `main` 分支在 2026-10-27 的公开版本 `3343154b65dc98a3758d131c059e5806d2bc58ab`，以及下方链接的定期发布记录和 B1 修补记录。它不代表该快照之后尚未公开的项目进展。
+> **快照范围：** 本说明依据 `main` 分支在 2026-10-27 的公开版本 `3343154b65dc98a3758d131c059e5806d2bc58ab`，以及下方链接的按日期整理的发布记录和 B1 修补记录。它不代表该快照之后尚未公开的项目进展。
 
 ## 研究方向
 
@@ -18,7 +18,7 @@ Core A 研究如何根据 G1 视频中四秒的观测前缀识别 task ID。公�
 
 Core A V2 在事先披露标签访问与类别映射修正后，对六组已有预测在 602 个同源 final labels 上重新评分。它没有新增训练或模型 forward pass；这是修正后的同源分析，不是未触碰标签的盲测确认。结果在不同指标上的方向并不一致，不能据此证明 action anticipation、独立的运动理解或机器人部署表现。
 
-可从[当前结论](docs/core_a/CURRENT_CONCLUSIONS.md)、[V2 修正分析](docs/core_a/FINAL_V2_AMENDED_ANALYSIS.zh-CN.md)和 [Core A 指南](docs/core_a/README.zh-CN.md)开始阅读。
+可从[当前结论](docs/core_a/CURRENT_CONCLUSIONS.zh-CN.md)、[V2 修正分析](docs/core_a/FINAL_V2_AMENDED_ANALYSIS.zh-CN.md)和 [Core A 指南](docs/core_a/README.zh-CN.md)开始阅读。
 
 ### Core B：状态/动作轨迹预测研究
 
@@ -82,7 +82,7 @@ Core A 图表可依据[脚本说明](scripts/core_a/README.md)，从整理后的
 
 ## 数据、来源与许可
 
-原始视频与帧、checkpoint、feature cache、完整预测和目标值，以及运行日志都保留在获授权的研究环境中。公开 artifact ID 是引用标识，不是可下载的数据。请参阅定期发布的[服务器同步摘要](docs/releases/server-sync-20261022T082418Z/RELEASE_SUMMARY.md)和[实验/结果索引](docs/releases/server-sync-20261022T082418Z/EXPERIMENT_RESULT_INDEX.csv)，了解导出来源及历史研究边界。早期 development-only 访问记录仅适用于对应研究；后续 V2 final-label 访问情况另有披露。
+原始视频与帧、checkpoint、feature cache、完整预测和目标值，以及运行日志都保留在获授权的研究环境中。公开 artifact ID 是引用标识，不是可下载的数据。请参阅按日期整理的[服务器同步摘要](docs/releases/server-sync-20261022T082418Z/RELEASE_SUMMARY.md)和[实验/结果索引](docs/releases/server-sync-20261022T082418Z/EXPERIMENT_RESULT_INDEX.csv)，了解导出来源及历史研究边界。早期 development-only 访问记录仅适用于对应研究；后续 V2 final-label 访问情况另有披露。
 
 根目录的 [SHA256SUMS](SHA256SUMS) 和 [Core A publication manifest](docs/core_a/publication/PUBLICATION_MANIFEST.csv) 保留 2026-09-10 Core A 发布快照的校验值。两份 README 的对应哈希与 [f43c07b 提交](https://github.com/jyc114514/EE6008_AY26S1-10-CCA/tree/f43c07b6055e993986ee1fd6a952261ec6634b71)上的文件一致；它们不能用于校验当前 `main` 全树。
 
