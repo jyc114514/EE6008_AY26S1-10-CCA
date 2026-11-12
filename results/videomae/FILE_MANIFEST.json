@@ -1,0 +1,240 @@
+{
+    "scope": "Current public VideoMAE contributor code, configuration, tests, and aggregate evidence export; hashes do not identify historical run-source bytes",
+    "files": [
+        {
+            "path": "configs/videomae_task_a_baseline.yaml",
+            "bytes": 724,
+            "sha256": "4237e26cb755f1734ec11ce4684a3d91e4cbfa698347fcdbf05de9df7f791970"
+        },
+        {
+            "path": "results/videomae/CPU_ZERO_TOLERANCE_REPLAY_20261013.csv",
+            "bytes": 1345,
+            "sha256": "13143d22ccbae51c6caf4e06e1723ec489815137e05dbde8c1b5b592a4ed9ef3"
+        },
+        {
+            "path": "results/videomae/CPU_ZERO_TOLERANCE_REPLAY_20261013.json",
+            "bytes": 3235,
+            "sha256": "82cac44e2c3577f9d20195154b9971f337d36a1286840c545467028d63773586"
+        },
+        {
+            "path": "results/videomae/DEVELOPMENT_REPORTED_SUMMARY.json",
+            "bytes": 1776,
+            "sha256": "0d8c4086af6bedc3c2786b5be65fdf0c26cf3bb08001fcc6e2cb6d3084456793"
+        },
+        {
+            "path": "results/videomae/README.md",
+            "bytes": 4984,
+            "sha256": "74e590726040c2c637dae943130552b15be42820d5770a42c93de98b328045e2"
+        },
+        {
+            "path": "scripts/videomae/README.md",
+            "bytes": 7195,
+            "sha256": "e572cf778e262154d42a1690ebbd8807866990e1472e63253cdfde88b9bba3be"
+        },
+        {
+            "path": "scripts/videomae/audit_videomae_checkpoint_layout.py",
+            "bytes": 2782,
+            "sha256": "4217afe12e07603f6b702831b7542d2c6de72f60474c728cf074f63e1f617e5d"
+        },
+        {
+            "path": "scripts/videomae/audit_videomae_core_b_cache.py",
+            "bytes": 4553,
+            "sha256": "b3fc51f48a68f5a0f86171eeafa37ea217a70ff945021765cc7096d0895f4b9f"
+        },
+        {
+            "path": "scripts/videomae/audit_videomae_core_b_predictions.py",
+            "bytes": 4087,
+            "sha256": "ccc6f715740ead4eb0ee1d93377298fc1a77b9ee5c9e5d8b165e8c5169e4a9c6"
+        },
+        {
+            "path": "scripts/videomae/audit_videomae_task_a.py",
+            "bytes": 12771,
+            "sha256": "6401e91e26ec541bbcf54c03ae3244d00ac369ff098d3d00cfd81da192b6bb57"
+        },
+        {
+            "path": "scripts/videomae/batch_evaluate_videomae_core_b.py",
+            "bytes": 7272,
+            "sha256": "85c26c7f9d49a2d4ba2aca1ce9b9e8ae3e0b5d7d62eb8c6715c73dfe7a94c91d"
+        },
+        {
+            "path": "scripts/videomae/check_videomae_core_b_training_interface.py",
+            "bytes": 6535,
+            "sha256": "9279980be969c65837a02037fe607ba4ee9295256f657bb3248f64677fd45e2c"
+        },
+        {
+            "path": "scripts/videomae/check_videomae_state_update_parity.py",
+            "bytes": 10826,
+            "sha256": "e0b29cc0f08f12478cf6acb3d06524e59e402835ae83b6adefe91c6f297c434c"
+        },
+        {
+            "path": "scripts/videomae/close_videomae_core_b_handoff.py",
+            "bytes": 16490,
+            "sha256": "dd2d35433d3d516ed7d60b00762bbc3bb2ca88f3123e7a5a2e0542894028a97c"
+        },
+        {
+            "path": "scripts/videomae/compare_videomae_static_dynamic.py",
+            "bytes": 4950,
+            "sha256": "87f381efb59ab306acd1e95b52bc9106c03349842ae9bbae2a8989384b01c56f"
+        },
+        {
+            "path": "scripts/videomae/compare_videomae_vjepa_core_b.py",
+            "bytes": 14649,
+            "sha256": "362f8927c1aaaac87609eb4178803cd3dd3db5c05b8cc94082a4243455f61fea"
+        },
+        {
+            "path": "scripts/videomae/diagnose_videomae_state_reproduction.py",
+            "bytes": 11518,
+            "sha256": "cf9468c0bdb5951c65652229e748887b6c87d2a8c0af285e956d2e2a4b5ae764"
+        },
+        {
+            "path": "scripts/videomae/evaluate_videomae_core_b.py",
+            "bytes": 9889,
+            "sha256": "12f7fdde9087dbea473dc4fc5b374ea1183a8568314c6b9d39ce99f1aa312bb4"
+        },
+        {
+            "path": "scripts/videomae/extract_videomae_core_b_cache.py",
+            "bytes": 13232,
+            "sha256": "c81888dfcabf6a58ee09c7cd079928db96c47e1467d84ee66d2b7d89dfa6c802"
+        },
+        {
+            "path": "scripts/videomae/extract_videomae_core_b_smoke.py",
+            "bytes": 8910,
+            "sha256": "de493ef6acfda221a7c1458f2545026182c46c482c62e5964394155992712c58"
+        },
+        {
+            "path": "scripts/videomae/extract_videomae_features_task_a.py",
+            "bytes": 9512,
+            "sha256": "9b57a650831bdc81c4869b68c31da1ed21a510f69c753795164694d76edc824a"
+        },
+        {
+            "path": "scripts/videomae/fit_videomae_core_b_normalizer.py",
+            "bytes": 6106,
+            "sha256": "7fd5dcb024c57613c0f7128ac0813c525baf30c08a96308636f2e1f7fa9ad14d"
+        },
+        {
+            "path": "scripts/videomae/package_videomae_handoff.py",
+            "bytes": 11005,
+            "sha256": "7cab176ba1050369b0bc8ecef78f2ce0715b084ac7e80a7a504ace3d4e9cc48e"
+        },
+        {
+            "path": "scripts/videomae/path_config.py",
+            "bytes": 1092,
+            "sha256": "0888e425c50555b30ec046fd5b45e3582d4388040020daa739027c38fc8598c0"
+        },
+        {
+            "path": "scripts/videomae/preflight_videomae_benchmark.py",
+            "bytes": 3237,
+            "sha256": "578494f552fb1856f5b02c145e9827c2ce9e45f744d1ce6414d89aae3f1ffcff"
+        },
+        {
+            "path": "scripts/videomae/preflight_videomae_core_a_strict.py",
+            "bytes": 12455,
+            "sha256": "c5aa4fc56c7f16217d0e2a71d55e0f088a7b1dc5463f1621a37878c6383e5535"
+        },
+        {
+            "path": "scripts/videomae/prepare_videomae_cache_job.py",
+            "bytes": 4121,
+            "sha256": "7f02579949e6aa7f96ebf848ef1814dfda6eeeee5d56b55b0ca4393e63dd7fb0"
+        },
+        {
+            "path": "scripts/videomae/prepare_videomae_core_a_features_job.py",
+            "bytes": 2735,
+            "sha256": "5d5acba783c966163c082846292ab1b82a87795d6a05b0d5f0dd509beabe26a3"
+        },
+        {
+            "path": "scripts/videomae/prepare_videomae_formal_job.py",
+            "bytes": 4030,
+            "sha256": "b9bfcfb4597e1471b34fcb190ff8e81195318a3da62ed63923b62d9201278082"
+        },
+        {
+            "path": "scripts/videomae/prepare_videomae_formal_resume_check.py",
+            "bytes": 2686,
+            "sha256": "f0e2725debbd4346387f7ec423969effa447178276791c9b41e0b35dc3354f0d"
+        },
+        {
+            "path": "scripts/videomae/prepare_videomae_gpu_parity_job.py",
+            "bytes": 2184,
+            "sha256": "4500a8659867af08e954eb97b91ac021457755d9023af532135aed0875ea6077"
+        },
+        {
+            "path": "scripts/videomae/prepare_videomae_stage0_job.py",
+            "bytes": 2587,
+            "sha256": "148acdff2fd8be2a6e44f54210e8b74aece436161985ec1c522d93ac32d803e9"
+        },
+        {
+            "path": "scripts/videomae/prepare_videomae_training_stage0.py",
+            "bytes": 2802,
+            "sha256": "f17abf557289feacb68064a3446c245de2a50b611d1076c3ab9279398999c52c"
+        },
+        {
+            "path": "scripts/videomae/queue_videomae_core_b_remaining.py",
+            "bytes": 8785,
+            "sha256": "6808789dfddea689e35a15bc441e7ba4ed4b113da53cd0ae77a1a3e5c404623a"
+        },
+        {
+            "path": "scripts/videomae/run_videomae_core_b_training_stage0.py",
+            "bytes": 12114,
+            "sha256": "4be6168a234009f242b232fb273bb76c062001d8500b4808e5fc701bc815b91b"
+        },
+        {
+            "path": "scripts/videomae/run_videomae_static_task_a.sh",
+            "bytes": 4818,
+            "sha256": "d26604cd23b2b380f6d8a9e75fe98b83011e82217fb08f7f68863b0384d15bce"
+        },
+        {
+            "path": "scripts/videomae/smoke_test_videomae.py",
+            "bytes": 4224,
+            "sha256": "04cf14b384f1d3794c510ad61ad1b03344dd34859e0ea22f3fed11b1fe12ae00"
+        },
+        {
+            "path": "scripts/videomae/smoke_videomae_core_b_head.py",
+            "bytes": 5308,
+            "sha256": "5f5ff0f46af30bb7d12a93bb270de5d205517dccb9e1d4735f7a9214a615bbb2"
+        },
+        {
+            "path": "scripts/videomae/train_videomae_core_a_strict_probes.py",
+            "bytes": 10149,
+            "sha256": "bb55152b0135d63bbcc7ba7857c294322ad3905a3ab11d8793b9338486a0659f"
+        },
+        {
+            "path": "scripts/videomae/train_videomae_core_b_formal.py",
+            "bytes": 17160,
+            "sha256": "c450c270ade7e219baa5a7a529d308ac5244ef879ae93a882850857f9aa00473"
+        },
+        {
+            "path": "scripts/videomae/train_videomae_linear_probe_task_a.py",
+            "bytes": 10716,
+            "sha256": "cddc769e6519eca48c5f1eec945b729c64211e0fa61550ca40475750f3937f04"
+        },
+        {
+            "path": "scripts/videomae/verify_videomae_strict_load.py",
+            "bytes": 7478,
+            "sha256": "883e0d7343d83f85f1148d723d0e1ff7fa49dc380e1fe15e9e86616de120966c"
+        },
+        {
+            "path": "tests/videomae/test_cli_path_contract.py",
+            "bytes": 3543,
+            "sha256": "d03be5903541b03bc5afc4953c600b72d2413393f279d58b0f59c6b758e9c246"
+        },
+        {
+            "path": "tests/videomae/test_job_scratch.py",
+            "bytes": 3319,
+            "sha256": "8fdad1d31bace51712cb563d5102710cd2ae8745a5da1c97773c3c2ea933e449"
+        },
+        {
+            "path": "tests/videomae/test_path_config.py",
+            "bytes": 5897,
+            "sha256": "ce3d4d713e3cd84ed3d8ca210cf64022be1577aba67f8eacc942f567358aed3e"
+        },
+        {
+            "path": "tests/videomae/test_static_wrapper.py",
+            "bytes": 12488,
+            "sha256": "e8a3aa6b0147e63a8ebc1e2d1f2571b63539b2ed1370a769bdc62b8965c96f18"
+        },
+        {
+            "path": "tests/videomae/test_videomae_handoff.py",
+            "bytes": 971,
+            "sha256": "3219646a8e850738e3f17c904b48f6c2f2ad57f9616d76963df49bb73052dabd"
+        }
+    ]
+}

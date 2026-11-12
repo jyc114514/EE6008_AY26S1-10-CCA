@@ -1,0 +1,121 @@
+{
+  "status": "FAIL_REPLAY_TOLERANCE",
+  "results": [
+    {
+      "cell": "TS11-D_H60_S20261001",
+      "prediction_max_abs": {
+        "train": 0.001777052879333496,
+        "dev": 0.0008306503295898438
+      },
+      "metric_max_abs": 2.3733824491500854e-05,
+      "passed": false
+    },
+    {
+      "cell": "TS11-D_H30_S20261001",
+      "prediction_max_abs": {
+        "train": 0.0014399886131286621,
+        "dev": 0.0014965534210205078
+      },
+      "metric_max_abs": 4.236400127410889e-05,
+      "passed": false
+    },
+    {
+      "cell": "TS11-D_H30_S20261002",
+      "prediction_max_abs": {
+        "train": 0.0011379122734069824,
+        "dev": 0.0008237957954406738
+      },
+      "metric_max_abs": 4.312396049499512e-05,
+      "passed": false
+    },
+    {
+      "cell": "TS11-D_H30_S20261003",
+      "prediction_max_abs": {
+        "train": 0.001357436180114746,
+        "dev": 0.0009570717811584473
+      },
+      "metric_max_abs": 7.502734661102295e-05,
+      "passed": false
+    },
+    {
+      "cell": "TS11-D_H60_S20261002",
+      "prediction_max_abs": {
+        "train": 0.0011913776397705078,
+        "dev": 0.001542508602142334
+      },
+      "metric_max_abs": 5.644559860229492e-05,
+      "passed": false
+    },
+    {
+      "cell": "TS11-D_H60_S20261003",
+      "prediction_max_abs": {
+        "train": 0.0014069080352783203,
+        "dev": 0.0012530088424682617
+      },
+      "metric_max_abs": 8.296221494674683e-05,
+      "passed": false
+    },
+    {
+      "cell": "STATE-CTRL_H30_S20261001",
+      "prediction_max_abs": {
+        "train": 0.0013252496719360352,
+        "dev": 0.0014846324920654297
+      },
+      "metric_max_abs": 4.3439678847789764e-05,
+      "passed": false
+    },
+    {
+      "cell": "STATE-CTRL_H30_S20261002",
+      "prediction_max_abs": {
+        "train": 0.0019959211349487305,
+        "dev": 0.0012230873107910156
+      },
+      "metric_max_abs": 6.987154483795166e-05,
+      "passed": false
+    },
+    {
+      "cell": "STATE-CTRL_H30_S20261003",
+      "prediction_max_abs": {
+        "train": 0.0013431310653686523,
+        "dev": 0.0009171962738037109
+      },
+      "metric_max_abs": 6.030639633536339e-05,
+      "passed": false
+    },
+    {
+      "cell": "STATE-CTRL_H60_S20261001",
+      "prediction_max_abs": {
+        "train": 0.0030961036682128906,
+        "dev": 0.0020438432693481445
+      },
+      "metric_max_abs": 3.662767509621245e-05,
+      "passed": false
+    },
+    {
+      "cell": "STATE-CTRL_H60_S20261002",
+      "prediction_max_abs": {
+        "train": 0.0019698143005371094,
+        "dev": 0.0011029243469238281
+      },
+      "metric_max_abs": 3.6716461181640625e-05,
+      "passed": false
+    },
+    {
+      "cell": "STATE-CTRL_H60_S20261003",
+      "prediction_max_abs": {
+        "train": 0.00260162353515625,
+        "dev": 0.0012125968933105469
+      },
+      "metric_max_abs": 0.00011648237705230713,
+      "passed": false
+    }
+  ],
+  "prediction_atol": 0.0,
+  "metric_atol": 0.0,
+  "device": "cpu",
+  "torch": "2.12.1+cu130",
+  "numpy": "2.5.2",
+  "python": "3.12.14 | packaged by conda-forge | (main, Aug 21 2026, 22:48:28) [GCC 14.4.0]",
+  "final_test_access": 0,
+  "scope": "cached-feature inference then scoring; no retraining or raw-video replay"
+}
