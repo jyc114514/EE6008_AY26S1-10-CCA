@@ -1,0 +1,7 @@
+split,comparison,scope,a_seed,b_seed,direction,estimand_status,anchor_support,episode_support,task_support,position_mae,safe_fd_l1,seam_safe_fd_l1
+dev,EXPERT_minus_SHARED_oracle,full_original_population,20260825,202610131,negative favors first-named system/condition lower error,estimable,185,47,5,-0.0018789532092997544,0.0031122301704467068,0.11456162102102363
+dev,EXPERT_minus_SHARED_oracle,full_original_population,20260826,202610132,negative favors first-named system/condition lower error,estimable,185,47,5,-0.0024179516149733975,0.004917935389506448,0.05863965772858045
+dev,EXPERT_minus_SHARED_oracle,full_original_population,20260827,202610133,negative favors first-named system/condition lower error,estimable,185,47,5,-0.001331891979783779,0.0026266174594449594,0.05800399849424629
+final_test,EXPERT_minus_SHARED_oracle,full_original_population,20260825,202610131,negative favors first-named system/condition lower error,estimable,162,41,5,-0.007000428082422955,0.0011891659618446576,0.1076868372405357
+final_test,EXPERT_minus_SHARED_oracle,full_original_population,20260826,202610132,negative favors first-named system/condition lower error,estimable,162,41,5,-0.0054084560068711,0.0037303977741004225,0.12175802164605014
+final_test,EXPERT_minus_SHARED_oracle,full_original_population,20260827,202610133,negative favors first-named system/condition lower error,estimable,162,41,5,-0.00501244419598533,0.001236275148768224,0.10920039726686315

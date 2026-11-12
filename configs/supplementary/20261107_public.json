@@ -1,0 +1,2360 @@
+{
+  "schema_version": 1,
+  "artifact_type": "public_configuration_summary",
+  "executable": false,
+  "historical_lock_replacement": false,
+  "study_date": "2026-11-07",
+  "experiment_git_commit": "UNKNOWN",
+  "provenance_policy": "Execution is bound by recorded source/config/model hashes. The repository publication base is not the experiment commit. This summary is not an executable historical lock.",
+  "owner": {
+    "name": "CUI CAN",
+    "role": "supplementary research design, execution coordination, comparison and verification",
+    "basis": "User-directed supplementary work and V6 contribution statement; training logs establish runs and outputs, not personal authorship of code or the original architecture."
+  },
+  "core_a": {
+    "study_id": "A_SECOND4_CYCLE",
+    "experiment_git_commit": "UNKNOWN",
+    "dataset_name": "G1_Humanoid_Everyday",
+    "dataset_revision": "6b6b599def75e3558b2736062e79bdbeec6cd224",
+    "dataset_revision_basis": {
+      "source_id": "S0002",
+      "sha256": "e73b6119a0bc26936b6ecbc4cc964482d4b847405aec096e52e3f6605887795b"
+    },
+    "inherited_historical_source_commit": "204698b45b3712590f06245fbfba32d3be539812",
+    "inherited_source_commit_is_followup_commit": false,
+    "protocol": "core_a_fourth_second_repeated_clip_v1",
+    "variant": "fourth_second_8_frames_repeated_4_times",
+    "seeds": [
+      20260825,
+      20260826,
+      20260827
+    ],
+    "split_counts": {
+      "final_test": 602,
+      "train": 2757,
+      "validation": 617
+    },
+    "split_sha256": "2883debbbe542bd4df0478ec7e896ed1468e647f93cb609041dd6411e7856997",
+    "label_map_sha256": "057a66c50e4fd85198e4a59359e4fc31c79565f0a379f0be368a389bb4811c22",
+    "population_sha256": "90e0e4799c2107c267b729b37a6e8bb1e2cd18de70f6b387814e4d852d62ba01",
+    "checkpoint_sha256": "848a77c33cc9e6649ed2119c9bea1e2c569bcdab9539ff3e7c02ccc2959ddf4d",
+    "sampled_positions": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "sampled_timestamps_seconds": [
+      3.0,
+      3.125,
+      3.25,
+      3.375,
+      3.5,
+      3.625,
+      3.75,
+      3.875,
+      3.0,
+      3.125,
+      3.25,
+      3.375,
+      3.5,
+      3.625,
+      3.75,
+      3.875,
+      3.0,
+      3.125,
+      3.25,
+      3.375,
+      3.5,
+      3.625,
+      3.75,
+      3.875,
+      3.0,
+      3.125,
+      3.25,
+      3.375,
+      3.5,
+      3.625,
+      3.75,
+      3.875
+    ],
+    "feature_token_shape": [
+      9216,
+      768
+    ],
+    "token_storage_dtype": "float16",
+    "training_policy": {
+      "batch_size": 48,
+      "calibration_bins": 15,
+      "gradient_accumulation_steps": 1,
+      "label_smoothing": 0.0,
+      "learning_rate": 0.001,
+      "loss_name": "cross_entropy",
+      "max_epochs": 20,
+      "min_delta": 0.001,
+      "min_epochs": 5,
+      "num_heads": 16,
+      "num_workers": 0,
+      "patience": 5,
+      "preload_tokens": true,
+      "probe_depth": 4,
+      "use_bfloat16": true,
+      "weight_decay": 0.0001
+    },
+    "encoder_numeric_policy": "original run_core_a CUDA BF16 autocast; FP16 saved tokens; no forced SDPA/backend change",
+    "input_interpretation": "Eight fourth-second frames repeated four times, retaining within-second motion; four repetitions are not four fitted seeds.",
+    "encoder_model": "vjepa2_1_vit_base_384",
+    "frame_count": 32,
+    "input_resolution": 384,
+    "sample_fps": 8,
+    "historical_comparison_environment_matched": false,
+    "configuration_evidence": {
+      "source_id": "S0001",
+      "sha256": "061c32068fa25abda91b26acea56459009d268abc975a8c37dad35493135973e"
+    },
+    "source_hashes": {
+      "runner_sha256": "41f3057629298d2931733c2067c8a58ef67bf861e25db0c9248a422c530ffe05",
+      "original_encoder_source_sha256": "24708f810cd1ca0a7ddb6975ecf231ee4e5c55d9a0f66118c3c33a2605e57692",
+      "original_preprocess_sha256": "45e1bfef8441528d7fddceda4ae436562ccc5cbeb628f018ce39fe707442494d",
+      "original_run_seed_source_sha256": "c49488fce6cc3c65624825b763bfad55ee11cd8f3b82386fffcac16838398e65"
+    },
+    "pipeline_completed_utc": "2026-11-07T13:12:25.153691+00:00",
+    "runtime": {
+      "python": "3.10.12",
+      "torch": "2.5.1+cu121",
+      "cuda_build": "12.1",
+      "gpu": "NVIDIA RTX A5000",
+      "matmul_tf32": false,
+      "cudnn_tf32": true
+    },
+    "fits": [
+      {
+        "seed": 20260825,
+        "status": "pass",
+        "best_epoch": 12,
+        "epochs_completed": 17,
+        "stop_reason": "patience_reached",
+        "total_optimizer_steps": 986,
+        "total_samples_exposed": 46869,
+        "elapsed_seconds": 5721.481864463538,
+        "checkpoint_best_sha256": "164d2cf9e89fb64d6d8143f8e02b16f64a4bb8cdd75108458a0172f4ea1fb138",
+        "checkpoint_last_sha256": "74b3913e69bddc498a390e35b22c23bbbf9c8ccc16ad5321947eb238cc1d87a0",
+        "completed_utc": "UNKNOWN",
+        "completed_by_pipeline_utc": "2026-11-07T13:12:25.153691+00:00",
+        "receipt": {
+          "source_id": "S0011",
+          "sha256": "1035c282cba0685ff31a888c4713c80f6abdb18335ab3247bbbbba6d93e5f7e3"
+        },
+        "resolved_config": {
+          "source_id": "S0002",
+          "sha256": "e73b6119a0bc26936b6ecbc4cc964482d4b847405aec096e52e3f6605887795b"
+        },
+        "checkpoint_selection": "validation_macro_f1",
+        "checkpoint_id": "server-only://supplementary/20261107/a/seed-20260825/best@164d2cf9e89fb64d6d8143f8e02b16f64a4bb8cdd75108458a0172f4ea1fb138"
+      },
+      {
+        "seed": 20260826,
+        "status": "pass",
+        "best_epoch": 12,
+        "epochs_completed": 17,
+        "stop_reason": "patience_reached",
+        "total_optimizer_steps": 986,
+        "total_samples_exposed": 46869,
+        "elapsed_seconds": 6060.056207899004,
+        "checkpoint_best_sha256": "dbe459d94da87c4f665784b8e028bdba1cbc4c7f1487cb26171baa4911bb801f",
+        "checkpoint_last_sha256": "b2769f135c2b526c479678c8b211bb2aa31d2fd98210e8e654fdc20d4e95c195",
+        "completed_utc": "UNKNOWN",
+        "completed_by_pipeline_utc": "2026-11-07T13:12:25.153691+00:00",
+        "receipt": {
+          "source_id": "S0014",
+          "sha256": "959db399fbde83f202bbe13d9a83e865a9016009cf571157d43bce21ab7e34ce"
+        },
+        "resolved_config": {
+          "source_id": "S0015",
+          "sha256": "9dc6e880b8c2e9bf11a7382771e6c7dbb1eef2859cab7470f54842108cafc1ab"
+        },
+        "checkpoint_selection": "validation_macro_f1",
+        "checkpoint_id": "server-only://supplementary/20261107/a/seed-20260826/best@dbe459d94da87c4f665784b8e028bdba1cbc4c7f1487cb26171baa4911bb801f"
+      },
+      {
+        "seed": 20260827,
+        "status": "pass",
+        "best_epoch": 15,
+        "epochs_completed": 20,
+        "stop_reason": "patience_reached",
+        "total_optimizer_steps": 1160,
+        "total_samples_exposed": 55140,
+        "elapsed_seconds": 6737.594253633171,
+        "checkpoint_best_sha256": "26397d5890707fc64327bd84c6e530f8d4ea4a91b24da7d5adb778a3958d4587",
+        "checkpoint_last_sha256": "54ea850460468180dbd1c9e5325019a65fcbd3f3508ef24d6322452e5b546537",
+        "completed_utc": "UNKNOWN",
+        "completed_by_pipeline_utc": "2026-11-07T13:12:25.153691+00:00",
+        "receipt": {
+          "source_id": "S0018",
+          "sha256": "814ac5158185f628c341ec1bfc5c7b6505686611c1d2b231f62fd1ae6e8bedd7"
+        },
+        "resolved_config": {
+          "source_id": "S0019",
+          "sha256": "fc2d4e7166fc8b8d25f367d5307526c33fcea0769cc0bd13ace0804ad1bc9548"
+        },
+        "checkpoint_selection": "validation_macro_f1",
+        "checkpoint_id": "server-only://supplementary/20261107/a/seed-20260827/best@26397d5890707fc64327bd84c6e530f8d4ea4a91b24da7d5adb778a3958d4587"
+      }
+    ],
+    "evaluations": [
+      {
+        "seed": 20260825,
+        "split": "validation",
+        "checkpoint_sha256": "164d2cf9e89fb64d6d8143f8e02b16f64a4bb8cdd75108458a0172f4ea1fb138",
+        "row_count": 617,
+        "npz_sha256": "a4f439090e59a9acf3a2f7042b2732b881fd97f9411fc36eefdf379b42c3686b",
+        "csv_sha256": "f32a8f665939dde8a3066eb7942e6f814215aa0eedf565a2e4cd91bd13e45aa0",
+        "truth_labels_used_for_prediction": false,
+        "completed_utc": "UNKNOWN",
+        "receipt": {
+          "source_id": "S0012",
+          "sha256": "9d055b761d0aa74ad91ae0a6e34a25ac79ca141491067c26abcaeae8eb378bb9"
+        }
+      },
+      {
+        "seed": 20260825,
+        "split": "final_test",
+        "checkpoint_sha256": "164d2cf9e89fb64d6d8143f8e02b16f64a4bb8cdd75108458a0172f4ea1fb138",
+        "row_count": 602,
+        "npz_sha256": "751ba90bb8cdb7c0f2b8198723fa42154eb0fc15d4d65238488faa1380baab9d",
+        "csv_sha256": "119722bcfcaf1996de371f48e708f57d5a5879b07c25da56192a6b8a813612f8",
+        "truth_labels_used_for_prediction": false,
+        "completed_utc": "UNKNOWN",
+        "receipt": {
+          "source_id": "S0013",
+          "sha256": "0e51dffa6032dfa78d700350d38ca820c114f3e40e15e0652156f983802acd89"
+        }
+      },
+      {
+        "seed": 20260826,
+        "split": "validation",
+        "checkpoint_sha256": "dbe459d94da87c4f665784b8e028bdba1cbc4c7f1487cb26171baa4911bb801f",
+        "row_count": 617,
+        "npz_sha256": "71db4607e5f0ed8aab07e19448cc346f8b59698f41ac98ce180cd4adebdc956b",
+        "csv_sha256": "4dc7efa98e34776b67e25e85ae5aac63b018e73e8b394f057f7636904de11355",
+        "truth_labels_used_for_prediction": false,
+        "completed_utc": "UNKNOWN",
+        "receipt": {
+          "source_id": "S0016",
+          "sha256": "883dda018d139213fdebe3e8237f6c954ffa7072a95df545f250fd516d81250c"
+        }
+      },
+      {
+        "seed": 20260826,
+        "split": "final_test",
+        "checkpoint_sha256": "dbe459d94da87c4f665784b8e028bdba1cbc4c7f1487cb26171baa4911bb801f",
+        "row_count": 602,
+        "npz_sha256": "2bc21887ed3b44c68842f5fca9e7a81d7042abfaeb29cea1633c09989faa07ba",
+        "csv_sha256": "d6147a870ea01ddd725e531fa9d81fd59ca0fbef4fa46fb1afe800e30cf95952",
+        "truth_labels_used_for_prediction": false,
+        "completed_utc": "UNKNOWN",
+        "receipt": {
+          "source_id": "S0017",
+          "sha256": "446521902a15fa56656ca44cab170c0e8b92fda8b10e84410bb426e5dcacfbbf"
+        }
+      },
+      {
+        "seed": 20260827,
+        "split": "validation",
+        "checkpoint_sha256": "26397d5890707fc64327bd84c6e530f8d4ea4a91b24da7d5adb778a3958d4587",
+        "row_count": 617,
+        "npz_sha256": "9080f9efa97ddccdcae767cbeae5c819cfa66bf3104630d98eb9b54518064570",
+        "csv_sha256": "dbf43888397ea2a856ac2d566fafbfb32e60351f0b1e87ea8ebe5e6e042dae06",
+        "truth_labels_used_for_prediction": false,
+        "completed_utc": "UNKNOWN",
+        "receipt": {
+          "source_id": "S0020",
+          "sha256": "27e36c70758d982c39a968adb3c63d140e8da54963f200af0bfd012481b43a74"
+        }
+      },
+      {
+        "seed": 20260827,
+        "split": "final_test",
+        "checkpoint_sha256": "26397d5890707fc64327bd84c6e530f8d4ea4a91b24da7d5adb778a3958d4587",
+        "row_count": 602,
+        "npz_sha256": "016ee92ee91a1ed14438c0227e3c2778ca6b27564d4fdf0cf481d0c40f544e0a",
+        "csv_sha256": "47dcce7e700df8434555cb95579f34e017852ae8ce9480a93eb6527c08d8b136",
+        "truth_labels_used_for_prediction": false,
+        "completed_utc": "UNKNOWN",
+        "receipt": {
+          "source_id": "S0021",
+          "sha256": "d4cc26282e0fc9f1b52921810e97b3f7b272a96932f87cef6913ddd20cfe9186"
+        }
+      }
+    ]
+  },
+  "core_b_conditioning": {
+    "study_id": "B_PREDICTED_TASK",
+    "experiment_git_commit": "UNKNOWN",
+    "dataset_revision": "UNKNOWN",
+    "dataset_revision_note": "The reviewed replay receipts bind exact prefix/target/feature artifacts; no explicit dataset_revision field is supplied by those receipts.",
+    "new_training_runs": 0,
+    "core_a_source": "retained original dynamic classifier; not A_SECOND4_CYCLE",
+    "seed_pairs": [
+      [
+        20260825,
+        202610131
+      ],
+      [
+        20260826,
+        202610132
+      ],
+      [
+        20260827,
+        202610133
+      ]
+    ],
+    "supported_task_ids": [
+      119,
+      94,
+      90,
+      141,
+      230
+    ],
+    "programs": [
+      "A0",
+      "AD",
+      "V0",
+      "VD",
+      "S_OPT",
+      "MIX0",
+      "MIXD"
+    ],
+    "conditions": [
+      "oracle_task",
+      "core_a_task"
+    ],
+    "policy": "Unrestricted 120-class Top-1; unsupported or missing predictions/cutoffs and post-anchor observations abstain; no truth fallback.",
+    "configuration_basis": "Recorded inference runner hash, retained source model matrix, score receipts and saved raw replay audit; preliminary pending configuration is not treated as the executed lock.",
+    "source_code_hashes": {
+      "scripts/run_cascade.py": "bcbeb1411b9256bbe8ec957543587d8b02645e9d187eb51a2a94fc25b695608a",
+      "scripts/score_cascade.py": "4b9d14b5a510e7dcb031df9f7a3671069de5c468221e8a2d25736e4bdfb9c91c"
+    },
+    "historical_models": [
+      {
+        "program": "A0",
+        "seed": "202610131",
+        "checkpoint_sha256": "5208423d943f89b4642d8ff44905ba0593d699a1db8e662a515f83aaa9e16ae4",
+        "config_sha256": "2101b4557054dd58c49612c44a5fe96d10858b975c4137f84121c3ccbd028851",
+        "model_manifest_sha256": "5ead28e3a775544b4a6ecd1c6ce6635349955273caa3f49f26031db5800ed0f2",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d"
+      },
+      {
+        "program": "A0",
+        "seed": "202610132",
+        "checkpoint_sha256": "b9cd77b04b50da1e5b472400cdb0b41eeabf11f18edf4ca464ba23263d3ee5bc",
+        "config_sha256": "faaa185ba051466a4740580cd379d5af63cb51dc9df60df64b3d31c36dae7853",
+        "model_manifest_sha256": "72a70ebab7ea859ab57fe39741add0f154420dd021d6275d05b0c228669c5c56",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d"
+      },
+      {
+        "program": "A0",
+        "seed": "202610133",
+        "checkpoint_sha256": "8d1d4a8420a723b8b1c8ed85aad62b26a73b7f11a86014892dd3d92ab6ea8497",
+        "config_sha256": "7282956c20b71d94e97206f3865c19a62a35b72eadbc501722eeb2d8af468d56",
+        "model_manifest_sha256": "5efaa8344b3d96ed029ffe747ba88f9cfcea3d1c81a769c48bbca8da45e23044",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d"
+      },
+      {
+        "program": "AD",
+        "seed": "202610131",
+        "checkpoint_sha256": "16f3e68679f942648a85bf0cce6505bf549670943287328bff2b5dce767a7068",
+        "config_sha256": "f2fe0d9f65c48dc604218da7a07a9dc47e14c32e884180bdf3abe35e45fa4803",
+        "model_manifest_sha256": "7407bdcf320c8fb8e0128bdef65681aefbbc9d15c05734ed03863b4314b9571a",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d"
+      },
+      {
+        "program": "AD",
+        "seed": "202610132",
+        "checkpoint_sha256": "7b793de39933bc1de400b07c931258e38c6845f175720e35314a911d94f473cf",
+        "config_sha256": "ac6af43587861e4070a7075539abb93b43a3715e62e67aab464da31e48837c91",
+        "model_manifest_sha256": "1fdd46693e8cf5709152a4b4c6c51c66868dcf86727246bf86f5dc169588ed2a",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d"
+      },
+      {
+        "program": "AD",
+        "seed": "202610133",
+        "checkpoint_sha256": "76dc124b9252296236ac42a84a7ea4a74a78fa2d77e81c1b21efa47d482eaf96",
+        "config_sha256": "4db603b428a3d1360ffe3baf5f27dfa44b3bf37f3465c301edc0cc7d2395fe08",
+        "model_manifest_sha256": "c85b744bc77ca5550bcf04e7168fe0ca98a73983da3312b2565a2a6854817d50",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d"
+      },
+      {
+        "program": "V0",
+        "seed": "202610131",
+        "checkpoint_sha256": "f86c3c752e0f4d7752303dcff8e9f20912c56cd244ce68de3552cabd0c4db2b8",
+        "config_sha256": "a14a58d5d2fe4a2f562af5497584400a3dfd70d1419059bda09a9b6465cbbd2b",
+        "model_manifest_sha256": "af5ec09a24e2211b458cc56b242aa7031900795a44afb118c7a5fe217f36bd05",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d"
+      },
+      {
+        "program": "V0",
+        "seed": "202610132",
+        "checkpoint_sha256": "14fce627c0ed3a1b47d23e06d924da203caf88bc86fb5e1675c4a6ebe05238ff",
+        "config_sha256": "7ace8b98770a32352b6f8453a1b8e82a34dd4048ac40c185c986107cbee29ce0",
+        "model_manifest_sha256": "bbbd0bc7e378c0355c7a66f94ac59fa14f4bb9b9d0f7fddcb0cff058974287b1",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d"
+      },
+      {
+        "program": "V0",
+        "seed": "202610133",
+        "checkpoint_sha256": "f52e32a6c1f0dd2b00573eb1078be03d5f27c021c0456505ad8294a0fe24cdaa",
+        "config_sha256": "7989a94760a26f32c618825159496a34b5cb9e148c30ec3fa923a827da5a6f5a",
+        "model_manifest_sha256": "dd9fecc4eca815c4c75bda2712aea770c999b750780d8db73d04040a344b23a9",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d"
+      },
+      {
+        "program": "VD",
+        "seed": "202610131",
+        "checkpoint_sha256": "aac73d96d997d2691a49db7e2f082a2e2f6c66880ddfde23037b89978bbc1888",
+        "config_sha256": "ce2f121bbd2f90457fe7c28676c7ff22912d32e7fb5b70172ac1e14bc8b371f4",
+        "model_manifest_sha256": "11bb9b0cd16ded880c5d613fcc47c23f26209cb4276be8ef5ecb39a81fa7e8b1",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d"
+      },
+      {
+        "program": "VD",
+        "seed": "202610132",
+        "checkpoint_sha256": "6b8fcf627f462bf68ce804d30e0bebcca114c4e322103873874d641af8ce09d0",
+        "config_sha256": "2e93feec7a33604e2e2887ca4a11a372cf2d3d998ac02a580c4e9ab889169c57",
+        "model_manifest_sha256": "8fc59ede9480bcd1091187edd3d6260e8cb23c30b89fdf547bbc4c5220b86c79",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d"
+      },
+      {
+        "program": "VD",
+        "seed": "202610133",
+        "checkpoint_sha256": "e502b945f4c5a162b26d17464ec3f63ac51fc1bdb4e5987258f46bf78315444d",
+        "config_sha256": "209e849cc549026ec769c88e0fd839e4bbf131532d5f34f2314ce2756f986ab9",
+        "model_manifest_sha256": "3ff7efca01b8754b0f1e7e507140f74980b5c2ce7d6ca71f567c7ace2857387e",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d"
+      },
+      {
+        "program": "S_OPT",
+        "seed": "202610131",
+        "checkpoint_sha256": "20bed18629f4aa2cb67629198fb01634fae507f580e9f46b5ce23dc686d4cb0b",
+        "config_sha256": "bound through accepted model receipt and source map",
+        "model_manifest_sha256": "85a81f20e2f3a45c96845e7e6cc883903731fb01155563183e9219fea8c06310",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d"
+      },
+      {
+        "program": "S_OPT",
+        "seed": "202610132",
+        "checkpoint_sha256": "8ea09d15e05a271ed7b20c7d5321249709bb265559e66b02f699da2393def9f0",
+        "config_sha256": "bound through accepted model receipt and source map",
+        "model_manifest_sha256": "df620ef85ad02a093c518eb8008a220766482cc18085c96d2c6780fb683f78c7",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d"
+      },
+      {
+        "program": "S_OPT",
+        "seed": "202610133",
+        "checkpoint_sha256": "3d53232aea572c81a1580aa06a1a5662d646c0049957b036f628a8bbb92366d7",
+        "config_sha256": "bound through accepted model receipt and source map",
+        "model_manifest_sha256": "b3c355e499b82ff706f6e422a5c2624babb442f08fe5baf466b4f9c1549f3181",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d"
+      }
+    ],
+    "evaluations": [
+      {
+        "status": "PASS",
+        "split": "dev",
+        "prediction_seal_sha256": "860313ec6db6a414f2514e7f6ea7490a672d65725e2aae82849e4b1ee19d6d1e",
+        "metric_scale_sha256": "dbf36b2dda89f57f140e17afaf1c9f7adceb7b33b3130102e034923e6a7cdc32",
+        "population_anchors": 185,
+        "population_episodes": 47,
+        "seed_pairs": [
+          [
+            20260825,
+            202610131
+          ],
+          [
+            20260826,
+            202610132
+          ],
+          [
+            20260827,
+            202610133
+          ]
+        ],
+        "bootstrap_seed": 2026101902,
+        "bootstrap_draws": 5000,
+        "bootstrap_indices_sha256": "ac05cda09e83aebb7b9b4d87b8c91ce38db8289b04bd6bb274db28de5a2e852f",
+        "common_accepted_anchors": 181,
+        "prefix_sha256": "04897c39a9348b9b2bfba96b186220837e6db34f6ef4b8b1f341fd1ed84746a3",
+        "target_sha256": "233a0cdb31d1ddd7cea6ecfaa5e9d02e9c42e9822af7fe488c7fe5a40febee27",
+        "inference_completed_utc": "2026-11-07T09:07:26.348879+00:00",
+        "score_completed_utc": "UNKNOWN",
+        "score_receipt": {
+          "source_id": "S0023",
+          "sha256": "af551e76a43d5afc53ab1cdb639d06cee674b1770140346ecb886d6c8fa7c11d"
+        },
+        "inference_resource_receipt": {
+          "source_id": "S0024",
+          "sha256": "55e327a25508f37231bce91d873a9b045df3ada1d7b4bf56abd150a4312e4a88"
+        },
+        "coverage": [
+          {
+            "a_seed": "20260825",
+            "b_seed": "202610131",
+            "anchors": "185",
+            "accepted_anchors": "185",
+            "coverage": "1.0",
+            "episodes": "47",
+            "accepted_episodes": "47"
+          },
+          {
+            "a_seed": "20260826",
+            "b_seed": "202610132",
+            "anchors": "185",
+            "accepted_anchors": "185",
+            "coverage": "1.0",
+            "episodes": "47",
+            "accepted_episodes": "47"
+          },
+          {
+            "a_seed": "20260827",
+            "b_seed": "202610133",
+            "anchors": "185",
+            "accepted_anchors": "181",
+            "coverage": "0.9783783783783784",
+            "episodes": "47",
+            "accepted_episodes": "46"
+          }
+        ],
+        "raw_replay_verification": {
+          "prediction_files_verified": 43,
+          "episode_score_rows_recomputed": 3134,
+          "maximum_abs_recomputed_score_difference": 0.0
+        }
+      },
+      {
+        "status": "PASS",
+        "split": "final_test",
+        "prediction_seal_sha256": "c43d905714f8f03f208496386b0e5fa52d8f5b9a02c11df4b8ef70425469b32f",
+        "metric_scale_sha256": "dbf36b2dda89f57f140e17afaf1c9f7adceb7b33b3130102e034923e6a7cdc32",
+        "population_anchors": 162,
+        "population_episodes": 41,
+        "seed_pairs": [
+          [
+            20260825,
+            202610131
+          ],
+          [
+            20260826,
+            202610132
+          ],
+          [
+            20260827,
+            202610133
+          ]
+        ],
+        "bootstrap_seed": 2026101902,
+        "bootstrap_draws": 5000,
+        "bootstrap_indices_sha256": "f07e3c463235bec963cb5ea5f68900f5a5e163173e6f7e47880404752b956097",
+        "common_accepted_anchors": 162,
+        "prefix_sha256": "f25d40745ff558c398a5d3990fee5a18e7a42a914b1b8b2770f375a719d620a2",
+        "target_sha256": "04ed439e4b14b5957730a40b465687aee2c4bda9ceb2ab48324d1275e4dd44c7",
+        "inference_completed_utc": "2026-11-07T09:15:12.309503+00:00",
+        "score_completed_utc": "UNKNOWN",
+        "score_receipt": {
+          "source_id": "S0027",
+          "sha256": "5c9364714315eee71e0ae488f45685841010d927504febd31f8a7697c256d6a9"
+        },
+        "inference_resource_receipt": {
+          "source_id": "S0028",
+          "sha256": "1824e0d0610a007d938e84087262f3045435a8d9e62c3158aced66cd25baa48b"
+        },
+        "coverage": [
+          {
+            "a_seed": "20260825",
+            "b_seed": "202610131",
+            "anchors": "162",
+            "accepted_anchors": "162",
+            "coverage": "1.0",
+            "episodes": "41",
+            "accepted_episodes": "41"
+          },
+          {
+            "a_seed": "20260826",
+            "b_seed": "202610132",
+            "anchors": "162",
+            "accepted_anchors": "162",
+            "coverage": "1.0",
+            "episodes": "41",
+            "accepted_episodes": "41"
+          },
+          {
+            "a_seed": "20260827",
+            "b_seed": "202610133",
+            "anchors": "162",
+            "accepted_anchors": "162",
+            "coverage": "1.0",
+            "episodes": "41",
+            "accepted_episodes": "41"
+          }
+        ],
+        "raw_replay_verification": {
+          "prediction_files_verified": 43,
+          "episode_score_rows_recomputed": 2747,
+          "maximum_abs_recomputed_score_difference": 0.0
+        }
+      }
+    ],
+    "historical_model_matrix": {
+      "source_id": "S0022",
+      "sha256": "c325a336251959eaf8ede72a659416b5287055d449a476b9d3a7069ea03f52f3"
+    }
+  },
+  "core_b_experts": {
+    "study_id": "B_TASK_EXPERTS_V0",
+    "experiment_git_commit": "UNKNOWN",
+    "dataset_revision": "UNKNOWN",
+    "task_ids": [
+      119,
+      94,
+      90,
+      141,
+      230
+    ],
+    "seeds": [
+      202610131,
+      202610132,
+      202610133
+    ],
+    "expert_fits": 15,
+    "shared_control_fits": 3,
+    "architecture": "V2TaskConditionedPredictor",
+    "video_mode": "TS11-D",
+    "numeric_context_drop_probability": 0.0,
+    "epochs": 160,
+    "batch_size": 64,
+    "tail_batch_policy": "retain every row; divide weighted loss by actual batch size",
+    "optimizer": {
+      "name": "AdamW",
+      "lr": 0.0005,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0.0001,
+      "gradient_clip_norm": 1.0
+    },
+    "scheduler": {
+      "name": "UpdateDrivenCosineAnnealingLR",
+      "T_max": "160 * ceil(number of selected train anchors / 64)",
+      "eta_min": 1e-05,
+      "step_location": "optimizer post-step"
+    },
+    "expert_weights": "N_class / (episodes_in_class * anchors_in_episode)",
+    "shared_weights": "1280 / (5 * episodes_in_task * anchors_in_episode)",
+    "expert_sampler": "filter each original global locked epoch permutation to the selected true task, retaining relative order",
+    "initialization": "same original untrained shared_5task_base file per seed for shared and all five experts; no trained weights reused",
+    "task_token": "unchanged five-way token, constant within each expert; evaluation token equals routing task",
+    "normalization": "original global train-only normalization and metric scales unchanged",
+    "checkpoint_rule": "fixed epoch160; no validation/final checkpoint selection or hyperparameter tuning",
+    "prediction_conditions": [
+      "oracle_task",
+      "original_dynamic_core_a_task"
+    ],
+    "class_policy": "original unrestricted120-class argmax; unsupported/missing/noncausal inputs abstain; no truth fallback",
+    "seed_pairs": [
+      [
+        20260825,
+        202610131
+      ],
+      [
+        20260826,
+        202610132
+      ],
+      [
+        20260827,
+        202610133
+      ]
+    ],
+    "populations": {
+      "train": {
+        "anchors": 1280,
+        "episodes": 220
+      },
+      "dev": {
+        "anchors": 185,
+        "episodes": 47,
+        "prefix_sha256": "04897c39a9348b9b2bfba96b186220837e6db34f6ef4b8b1f341fd1ed84746a3"
+      },
+      "final_test": {
+        "anchors": 162,
+        "episodes": 41,
+        "prefix_sha256": "f25d40745ff558c398a5d3990fee5a18e7a42a914b1b8b2770f375a719d620a2"
+      }
+    },
+    "train_support": [
+      {
+        "task_id": 119,
+        "train_anchors": 362,
+        "train_episodes": 56,
+        "steps_per_epoch": 6,
+        "optimizer_updates": 960,
+        "tail_batch_size": 42
+      },
+      {
+        "task_id": 94,
+        "train_anchors": 345,
+        "train_episodes": 56,
+        "steps_per_epoch": 6,
+        "optimizer_updates": 960,
+        "tail_batch_size": 25
+      },
+      {
+        "task_id": 90,
+        "train_anchors": 203,
+        "train_episodes": 48,
+        "steps_per_epoch": 4,
+        "optimizer_updates": 640,
+        "tail_batch_size": 11
+      },
+      {
+        "task_id": 141,
+        "train_anchors": 232,
+        "train_episodes": 30,
+        "steps_per_epoch": 4,
+        "optimizer_updates": 640,
+        "tail_batch_size": 40
+      },
+      {
+        "task_id": 230,
+        "train_anchors": 138,
+        "train_episodes": 30,
+        "steps_per_epoch": 3,
+        "optimizer_updates": 480,
+        "tail_batch_size": 10
+      }
+    ],
+    "shared_updates_per_seed": 3200,
+    "expert_bank_updates_per_seed": 3680,
+    "sample_presentations_per_seed_each_system": 204800,
+    "feature_profile_caveat": "Both systems train on identical historical Q0 features and evaluate identical CURRENT_PROFILE_V2 cached features. Their numerical bridge is historically unresolved; this is a comparison under that fixed feature shift.",
+    "final_test_caveat": "Previously used fixed final set; this follow-up is not a newly unseen holdout.",
+    "metrics": [
+      "position_mae",
+      "safe_fd_l1",
+      "seam_safe_fd_l1"
+    ],
+    "aggregation": "anchors within episode, equal episodes within true task, equal five tasks, then mean/sampleSD over three seed systems",
+    "bootstrap": {
+      "draws": 5000,
+      "seed": 2026110702,
+      "unit": "source cluster within true task; verify episode correspondence",
+      "models": "fixed paired seeds, no seed resampling"
+    },
+    "study_locked_utc": "2026-11-07T10:51:04.716018+00:00",
+    "configuration_evidence": {
+      "source_id": "S0004",
+      "sha256": "349260695454e239e8fbe29f06ac8aeacd3d8ebe5e23fe3f0653c93382434d5f"
+    },
+    "parameter_budget": {
+      "shared": 891548,
+      "five_expert_bank": 4457740,
+      "active_per_prediction": 891548
+    },
+    "source_code_hashes": {
+      "scripts/run_cascade.py": "bcbeb1411b9256bbe8ec957543587d8b02645e9d187eb51a2a94fc25b695608a",
+      "scripts/run_pipeline.py": "d6d8e19450b891c32eafc79f9effd04640050dd175d7093023d5521fc828999e",
+      "scripts/evaluate_experts.py": "2ab7ec727e1e321c82e4af075bb65fa1364090b46d38f51940203b5dba88cc89",
+      "scripts/preflight_all.py": "2608b49a1e48acc19ef04e1be92e5fdd450de17551455d4f52f55e0e1dd7a1f2",
+      "scripts/train_experts.py": "2989d94ab9baa21ddfaa4110b0bc10d0fee3e4e9b3e4f6ce8e6efd2bff3c9cda",
+      "scripts/test_train_experts.py": "8802d864ce6504ed999fb650e07e9f59aac2accf3e691fceb9047db1f6609933",
+      "scripts/prepare_protocol.py": "a33089317bc5cf32e72acf045dd08971309df1f25ed19029cd7cd1ba72deb286",
+      "scripts/score_cascade.py": "4b9d14b5a510e7dcb031df9f7a3671069de5c468221e8a2d25736e4bdfb9c91c",
+      "scripts/check_status.py": "993b690e36d1225460406a864327313d4a59820f9ed314d32e517187737e6f67"
+    },
+    "fits": [
+      {
+        "seed": 202610131,
+        "mode": "shared",
+        "task_id": null,
+        "task_ids": [
+          119,
+          94,
+          90,
+          141,
+          230
+        ],
+        "task_order": [
+          119,
+          94,
+          90,
+          141,
+          230
+        ],
+        "architecture": "V2TaskConditionedPredictor",
+        "epochs_completed": 160,
+        "optimizer_steps": 3200,
+        "train_rows": 1280,
+        "train_episodes": 220,
+        "training_sample_presentations": 204800,
+        "constant_task_rank": null,
+        "init_sha256": "fda2719566b204e5968976747111e9ae4c5841558ff1095bffe7f90f8d739d64",
+        "init_state_hash": "bc788b5ecd13a715283dbc2cff43445732f86431bd99bc90dd9dbb088b00946b",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d",
+        "train_npz_sha256": "28c446ce091e00e73c2d885f3a1552102d23fa5b832feecac497a8547e1aa0b3",
+        "original_config_sha256": "a14a58d5d2fe4a2f562af5497584400a3dfd70d1419059bda09a9b6465cbbd2b",
+        "training_runner_sha256": "2989d94ab9baa21ddfaa4110b0bc10d0fee3e4e9b3e4f6ce8e6efd2bff3c9cda",
+        "scheduler": {
+          "T_max": 3200,
+          "eta_min": 1e-05,
+          "name": "UpdateDrivenCosineAnnealingLR",
+          "step_location": "optimizer post-step"
+        },
+        "parameter_count": 891548,
+        "model_file_sha256": "d307dad408f05804af505fd66eb83b6ef8d1595474b1414209e21ea3b90885c2",
+        "source_code_hashes": {
+          "locked_source/D3_model.py": "6d4c321c65bb101f5c756ba8f1186a98d0358e16dc49dfa39f1d677c35d9e589",
+          "locked_source/d3_eq_contract.py": "7359c956bf405092dade2e49e72f236759099330357652469c610d422c770b1c",
+          "prepare_v2_data.py": "64126bdf992037bb3455b4a78392269e7ecd9e62ae01a6b425ef6b090341e15d",
+          "v2_model.py": "6e1e967c89afeeb6e676e9265a893fed54f66682f54af3bf04cf3d41766c8c24",
+          "v2_scheduler.py": "4d81a77a5c983e0771c2c0d945b0bd7cc1467582139c767e58dbbffabbe1d80b",
+          "v9_common.py": "f023fa7af55f681d1308b0165dbcb4b1fe75091fcf3f9ed1df59d456d1a12615"
+        },
+        "completed_utc": "2026-11-07T13:24:21.652661+00:00",
+        "status": "PASS",
+        "checkpoint_id": "server-only://supplementary/20261107/b3/shared/seed-202610131@d307dad408f05804af505fd66eb83b6ef8d1595474b1414209e21ea3b90885c2",
+        "completion_receipt": {
+          "source_id": "S0031",
+          "sha256": "dce4da31732f14dd4f673be6423dd968edaa2f567cf94f6cb9e68d20a88459c8"
+        },
+        "manifest": {
+          "source_id": "S0032",
+          "sha256": "a3e7a3cb0b63dbedcd152fedd2ca18513db22bcb8211cd5d70497147a2270a75"
+        },
+        "resolved_config": {
+          "source_id": "S0033",
+          "sha256": "a868366b70ed7385977e523e7ac7558123436e8dcc507bbe0e1775b3a9542268"
+        },
+        "cache": {
+          "content_lock_sha256": "2bd6271bc7cc8be4a9c34119f64ae90f69a35fbe842496a8a654ff587c041690",
+          "historical_shard_content_hash_available": false,
+          "preloaded_array_sha256": "15325fc11638b26cefa74baef83c8c0dccac1ef41268fee2111055b6d26f90a9",
+          "preloaded_dtype": "float32",
+          "preloaded_shape": [
+            1280,
+            2,
+            16,
+            4,
+            768
+          ],
+          "source_manifest_sha256": "43f0cd52e481cdc88b92b307476e0a6e7e3e6784c8057220501f6ce091e1a2ee"
+        },
+        "runtime": {
+          "amp": false,
+          "dtype": "float32",
+          "gpu_name": "NVIDIA RTX A5000",
+          "python_version": "3.10.12",
+          "tf32": false,
+          "torch_cuda_version": "12.1",
+          "torch_version": "2.5.1+cu121"
+        }
+      },
+      {
+        "seed": 202610132,
+        "mode": "shared",
+        "task_id": null,
+        "task_ids": [
+          119,
+          94,
+          90,
+          141,
+          230
+        ],
+        "task_order": [
+          119,
+          94,
+          90,
+          141,
+          230
+        ],
+        "architecture": "V2TaskConditionedPredictor",
+        "epochs_completed": 160,
+        "optimizer_steps": 3200,
+        "train_rows": 1280,
+        "train_episodes": 220,
+        "training_sample_presentations": 204800,
+        "constant_task_rank": null,
+        "init_sha256": "27e9a02509f227d90abeb29e3432ee9b934b0b1d1b3281c6908e662693b4df50",
+        "init_state_hash": "15f20cb0de643599ee10ba41f3a41c9ca7e7b14e59e6f3174b9fc9d6b927bd29",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d",
+        "train_npz_sha256": "28c446ce091e00e73c2d885f3a1552102d23fa5b832feecac497a8547e1aa0b3",
+        "original_config_sha256": "7ace8b98770a32352b6f8453a1b8e82a34dd4048ac40c185c986107cbee29ce0",
+        "training_runner_sha256": "2989d94ab9baa21ddfaa4110b0bc10d0fee3e4e9b3e4f6ce8e6efd2bff3c9cda",
+        "scheduler": {
+          "T_max": 3200,
+          "eta_min": 1e-05,
+          "name": "UpdateDrivenCosineAnnealingLR",
+          "step_location": "optimizer post-step"
+        },
+        "parameter_count": 891548,
+        "model_file_sha256": "3b4fa744efb1b788676ad19fbc4acabd4b2f04f989aeac9992c351d93df50258",
+        "source_code_hashes": {
+          "locked_source/D3_model.py": "6d4c321c65bb101f5c756ba8f1186a98d0358e16dc49dfa39f1d677c35d9e589",
+          "locked_source/d3_eq_contract.py": "7359c956bf405092dade2e49e72f236759099330357652469c610d422c770b1c",
+          "prepare_v2_data.py": "64126bdf992037bb3455b4a78392269e7ecd9e62ae01a6b425ef6b090341e15d",
+          "v2_model.py": "6e1e967c89afeeb6e676e9265a893fed54f66682f54af3bf04cf3d41766c8c24",
+          "v2_scheduler.py": "4d81a77a5c983e0771c2c0d945b0bd7cc1467582139c767e58dbbffabbe1d80b",
+          "v9_common.py": "f023fa7af55f681d1308b0165dbcb4b1fe75091fcf3f9ed1df59d456d1a12615"
+        },
+        "completed_utc": "2026-11-07T13:24:17.646748+00:00",
+        "status": "PASS",
+        "checkpoint_id": "server-only://supplementary/20261107/b3/shared/seed-202610132@3b4fa744efb1b788676ad19fbc4acabd4b2f04f989aeac9992c351d93df50258",
+        "completion_receipt": {
+          "source_id": "S0034",
+          "sha256": "9901a285b98bacda095ff88c20d880dd57be08e5f4f97b2c96ab7ea734f74370"
+        },
+        "manifest": {
+          "source_id": "S0035",
+          "sha256": "5f2c893d6a9df6831e67c532bf0b0af890b9aa568a868bb36602143521d0d4e7"
+        },
+        "resolved_config": {
+          "source_id": "S0036",
+          "sha256": "b004331f85ced9d466af82261d3d527b228c558de8703baf6b67a82237b7ed41"
+        },
+        "cache": {
+          "content_lock_sha256": "2bd6271bc7cc8be4a9c34119f64ae90f69a35fbe842496a8a654ff587c041690",
+          "historical_shard_content_hash_available": false,
+          "preloaded_array_sha256": "15325fc11638b26cefa74baef83c8c0dccac1ef41268fee2111055b6d26f90a9",
+          "preloaded_dtype": "float32",
+          "preloaded_shape": [
+            1280,
+            2,
+            16,
+            4,
+            768
+          ],
+          "source_manifest_sha256": "43f0cd52e481cdc88b92b307476e0a6e7e3e6784c8057220501f6ce091e1a2ee"
+        },
+        "runtime": {
+          "amp": false,
+          "dtype": "float32",
+          "gpu_name": "NVIDIA RTX A5000",
+          "python_version": "3.10.12",
+          "tf32": false,
+          "torch_cuda_version": "12.1",
+          "torch_version": "2.5.1+cu121"
+        }
+      },
+      {
+        "seed": 202610133,
+        "mode": "shared",
+        "task_id": null,
+        "task_ids": [
+          119,
+          94,
+          90,
+          141,
+          230
+        ],
+        "task_order": [
+          119,
+          94,
+          90,
+          141,
+          230
+        ],
+        "architecture": "V2TaskConditionedPredictor",
+        "epochs_completed": 160,
+        "optimizer_steps": 3200,
+        "train_rows": 1280,
+        "train_episodes": 220,
+        "training_sample_presentations": 204800,
+        "constant_task_rank": null,
+        "init_sha256": "cd1fd04c1c8cc9b3f918ea1bde2a0475539ea0d9d565aaa9f2429681d67dc09b",
+        "init_state_hash": "6f8bee049460dafbe2600081433cd15ae81eda0546d6a4813c0be58c05269bd0",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d",
+        "train_npz_sha256": "28c446ce091e00e73c2d885f3a1552102d23fa5b832feecac497a8547e1aa0b3",
+        "original_config_sha256": "7989a94760a26f32c618825159496a34b5cb9e148c30ec3fa923a827da5a6f5a",
+        "training_runner_sha256": "2989d94ab9baa21ddfaa4110b0bc10d0fee3e4e9b3e4f6ce8e6efd2bff3c9cda",
+        "scheduler": {
+          "T_max": 3200,
+          "eta_min": 1e-05,
+          "name": "UpdateDrivenCosineAnnealingLR",
+          "step_location": "optimizer post-step"
+        },
+        "parameter_count": 891548,
+        "model_file_sha256": "622844df805b23008d4d343047cce90d0d96e637ab07c6661c424b72590b4768",
+        "source_code_hashes": {
+          "locked_source/D3_model.py": "6d4c321c65bb101f5c756ba8f1186a98d0358e16dc49dfa39f1d677c35d9e589",
+          "locked_source/d3_eq_contract.py": "7359c956bf405092dade2e49e72f236759099330357652469c610d422c770b1c",
+          "prepare_v2_data.py": "64126bdf992037bb3455b4a78392269e7ecd9e62ae01a6b425ef6b090341e15d",
+          "v2_model.py": "6e1e967c89afeeb6e676e9265a893fed54f66682f54af3bf04cf3d41766c8c24",
+          "v2_scheduler.py": "4d81a77a5c983e0771c2c0d945b0bd7cc1467582139c767e58dbbffabbe1d80b",
+          "v9_common.py": "f023fa7af55f681d1308b0165dbcb4b1fe75091fcf3f9ed1df59d456d1a12615"
+        },
+        "completed_utc": "2026-11-07T13:35:48.235716+00:00",
+        "status": "PASS",
+        "checkpoint_id": "server-only://supplementary/20261107/b3/shared/seed-202610133@622844df805b23008d4d343047cce90d0d96e637ab07c6661c424b72590b4768",
+        "completion_receipt": {
+          "source_id": "S0037",
+          "sha256": "a62d656e9b6741008be0b8a97becabc410fa77f73c1e37ebd8380cee9331481d"
+        },
+        "manifest": {
+          "source_id": "S0038",
+          "sha256": "014b77eebeec18c1c314927023c17c7cd2f3d1e6277924aeca97af83f8a137b0"
+        },
+        "resolved_config": {
+          "source_id": "S0039",
+          "sha256": "bda4ba0ad356415a7a56dab14b7fa65f048a0777a1bdf581527d555784b7027a"
+        },
+        "cache": {
+          "content_lock_sha256": "2bd6271bc7cc8be4a9c34119f64ae90f69a35fbe842496a8a654ff587c041690",
+          "historical_shard_content_hash_available": false,
+          "preloaded_array_sha256": "15325fc11638b26cefa74baef83c8c0dccac1ef41268fee2111055b6d26f90a9",
+          "preloaded_dtype": "float32",
+          "preloaded_shape": [
+            1280,
+            2,
+            16,
+            4,
+            768
+          ],
+          "source_manifest_sha256": "43f0cd52e481cdc88b92b307476e0a6e7e3e6784c8057220501f6ce091e1a2ee"
+        },
+        "runtime": {
+          "amp": false,
+          "dtype": "float32",
+          "gpu_name": "NVIDIA RTX A5000",
+          "python_version": "3.10.12",
+          "tf32": false,
+          "torch_cuda_version": "12.1",
+          "torch_version": "2.5.1+cu121"
+        }
+      },
+      {
+        "seed": 202610131,
+        "mode": "expert",
+        "task_id": 119,
+        "task_ids": [
+          119
+        ],
+        "task_order": [
+          119,
+          94,
+          90,
+          141,
+          230
+        ],
+        "architecture": "V2TaskConditionedPredictor",
+        "epochs_completed": 160,
+        "optimizer_steps": 960,
+        "train_rows": 362,
+        "train_episodes": 56,
+        "training_sample_presentations": 57920,
+        "constant_task_rank": 0,
+        "init_sha256": "fda2719566b204e5968976747111e9ae4c5841558ff1095bffe7f90f8d739d64",
+        "init_state_hash": "bc788b5ecd13a715283dbc2cff43445732f86431bd99bc90dd9dbb088b00946b",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d",
+        "train_npz_sha256": "28c446ce091e00e73c2d885f3a1552102d23fa5b832feecac497a8547e1aa0b3",
+        "original_config_sha256": "a14a58d5d2fe4a2f562af5497584400a3dfd70d1419059bda09a9b6465cbbd2b",
+        "training_runner_sha256": "2989d94ab9baa21ddfaa4110b0bc10d0fee3e4e9b3e4f6ce8e6efd2bff3c9cda",
+        "scheduler": {
+          "T_max": 960,
+          "eta_min": 1e-05,
+          "name": "UpdateDrivenCosineAnnealingLR",
+          "step_location": "optimizer post-step"
+        },
+        "parameter_count": 891548,
+        "model_file_sha256": "530cbdc6ba66a96e649e6bd9aa0708f0577bf3b2f85743dca7a397c5d2280ee8",
+        "source_code_hashes": {
+          "locked_source/D3_model.py": "6d4c321c65bb101f5c756ba8f1186a98d0358e16dc49dfa39f1d677c35d9e589",
+          "locked_source/d3_eq_contract.py": "7359c956bf405092dade2e49e72f236759099330357652469c610d422c770b1c",
+          "prepare_v2_data.py": "64126bdf992037bb3455b4a78392269e7ecd9e62ae01a6b425ef6b090341e15d",
+          "v2_model.py": "6e1e967c89afeeb6e676e9265a893fed54f66682f54af3bf04cf3d41766c8c24",
+          "v2_scheduler.py": "4d81a77a5c983e0771c2c0d945b0bd7cc1467582139c767e58dbbffabbe1d80b",
+          "v9_common.py": "f023fa7af55f681d1308b0165dbcb4b1fe75091fcf3f9ed1df59d456d1a12615"
+        },
+        "completed_utc": "2026-11-07T13:27:53.408915+00:00",
+        "status": "PASS",
+        "checkpoint_id": "server-only://supplementary/20261107/b3/task_119/seed-202610131@530cbdc6ba66a96e649e6bd9aa0708f0577bf3b2f85743dca7a397c5d2280ee8",
+        "completion_receipt": {
+          "source_id": "S0040",
+          "sha256": "d6cf525b6c6668bcdc96e41cb3aabe25d69937a5575835a652d924a6e843a229"
+        },
+        "manifest": {
+          "source_id": "S0041",
+          "sha256": "74479361b9f385a0c829683854536a173cdac4c720e195668e03a060e8d92bbd"
+        },
+        "resolved_config": {
+          "source_id": "S0042",
+          "sha256": "f45fbec154e735c096aab94c99cdc9fd40dd8166a4535a705e43e7855d8cf7d6"
+        },
+        "cache": {
+          "content_lock_sha256": "2bd6271bc7cc8be4a9c34119f64ae90f69a35fbe842496a8a654ff587c041690",
+          "historical_shard_content_hash_available": false,
+          "preloaded_array_sha256": "15325fc11638b26cefa74baef83c8c0dccac1ef41268fee2111055b6d26f90a9",
+          "preloaded_dtype": "float32",
+          "preloaded_shape": [
+            1280,
+            2,
+            16,
+            4,
+            768
+          ],
+          "source_manifest_sha256": "43f0cd52e481cdc88b92b307476e0a6e7e3e6784c8057220501f6ce091e1a2ee"
+        },
+        "runtime": {
+          "amp": false,
+          "dtype": "float32",
+          "gpu_name": "NVIDIA RTX A5000",
+          "python_version": "3.10.12",
+          "tf32": false,
+          "torch_cuda_version": "12.1",
+          "torch_version": "2.5.1+cu121"
+        }
+      },
+      {
+        "seed": 202610132,
+        "mode": "expert",
+        "task_id": 119,
+        "task_ids": [
+          119
+        ],
+        "task_order": [
+          119,
+          94,
+          90,
+          141,
+          230
+        ],
+        "architecture": "V2TaskConditionedPredictor",
+        "epochs_completed": 160,
+        "optimizer_steps": 960,
+        "train_rows": 362,
+        "train_episodes": 56,
+        "training_sample_presentations": 57920,
+        "constant_task_rank": 0,
+        "init_sha256": "27e9a02509f227d90abeb29e3432ee9b934b0b1d1b3281c6908e662693b4df50",
+        "init_state_hash": "15f20cb0de643599ee10ba41f3a41c9ca7e7b14e59e6f3174b9fc9d6b927bd29",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d",
+        "train_npz_sha256": "28c446ce091e00e73c2d885f3a1552102d23fa5b832feecac497a8547e1aa0b3",
+        "original_config_sha256": "7ace8b98770a32352b6f8453a1b8e82a34dd4048ac40c185c986107cbee29ce0",
+        "training_runner_sha256": "2989d94ab9baa21ddfaa4110b0bc10d0fee3e4e9b3e4f6ce8e6efd2bff3c9cda",
+        "scheduler": {
+          "T_max": 960,
+          "eta_min": 1e-05,
+          "name": "UpdateDrivenCosineAnnealingLR",
+          "step_location": "optimizer post-step"
+        },
+        "parameter_count": 891548,
+        "model_file_sha256": "33533f4072b7a0f468e35c03562b4112d12cd5bcee4cf9beaef8861a51469ac5",
+        "source_code_hashes": {
+          "locked_source/D3_model.py": "6d4c321c65bb101f5c756ba8f1186a98d0358e16dc49dfa39f1d677c35d9e589",
+          "locked_source/d3_eq_contract.py": "7359c956bf405092dade2e49e72f236759099330357652469c610d422c770b1c",
+          "prepare_v2_data.py": "64126bdf992037bb3455b4a78392269e7ecd9e62ae01a6b425ef6b090341e15d",
+          "v2_model.py": "6e1e967c89afeeb6e676e9265a893fed54f66682f54af3bf04cf3d41766c8c24",
+          "v2_scheduler.py": "4d81a77a5c983e0771c2c0d945b0bd7cc1467582139c767e58dbbffabbe1d80b",
+          "v9_common.py": "f023fa7af55f681d1308b0165dbcb4b1fe75091fcf3f9ed1df59d456d1a12615"
+        },
+        "completed_utc": "2026-11-07T13:31:30.908798+00:00",
+        "status": "PASS",
+        "checkpoint_id": "server-only://supplementary/20261107/b3/task_119/seed-202610132@33533f4072b7a0f468e35c03562b4112d12cd5bcee4cf9beaef8861a51469ac5",
+        "completion_receipt": {
+          "source_id": "S0043",
+          "sha256": "f523a9ca8dd94fc017c2fad6a5e5ff244955365b388a1f5cb7938f5272bff2b6"
+        },
+        "manifest": {
+          "source_id": "S0044",
+          "sha256": "bf4d9bcedd554257ee9d2ef83a6fbb6320fdd7d475eee33289eb2c615325d3f4"
+        },
+        "resolved_config": {
+          "source_id": "S0045",
+          "sha256": "1250833ec752058e64b6d379339b5cede6e6357951ab60412a618032c330523c"
+        },
+        "cache": {
+          "content_lock_sha256": "2bd6271bc7cc8be4a9c34119f64ae90f69a35fbe842496a8a654ff587c041690",
+          "historical_shard_content_hash_available": false,
+          "preloaded_array_sha256": "15325fc11638b26cefa74baef83c8c0dccac1ef41268fee2111055b6d26f90a9",
+          "preloaded_dtype": "float32",
+          "preloaded_shape": [
+            1280,
+            2,
+            16,
+            4,
+            768
+          ],
+          "source_manifest_sha256": "43f0cd52e481cdc88b92b307476e0a6e7e3e6784c8057220501f6ce091e1a2ee"
+        },
+        "runtime": {
+          "amp": false,
+          "dtype": "float32",
+          "gpu_name": "NVIDIA RTX A5000",
+          "python_version": "3.10.12",
+          "tf32": false,
+          "torch_cuda_version": "12.1",
+          "torch_version": "2.5.1+cu121"
+        }
+      },
+      {
+        "seed": 202610133,
+        "mode": "expert",
+        "task_id": 119,
+        "task_ids": [
+          119
+        ],
+        "task_order": [
+          119,
+          94,
+          90,
+          141,
+          230
+        ],
+        "architecture": "V2TaskConditionedPredictor",
+        "epochs_completed": 160,
+        "optimizer_steps": 960,
+        "train_rows": 362,
+        "train_episodes": 56,
+        "training_sample_presentations": 57920,
+        "constant_task_rank": 0,
+        "init_sha256": "cd1fd04c1c8cc9b3f918ea1bde2a0475539ea0d9d565aaa9f2429681d67dc09b",
+        "init_state_hash": "6f8bee049460dafbe2600081433cd15ae81eda0546d6a4813c0be58c05269bd0",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d",
+        "train_npz_sha256": "28c446ce091e00e73c2d885f3a1552102d23fa5b832feecac497a8547e1aa0b3",
+        "original_config_sha256": "7989a94760a26f32c618825159496a34b5cb9e148c30ec3fa923a827da5a6f5a",
+        "training_runner_sha256": "2989d94ab9baa21ddfaa4110b0bc10d0fee3e4e9b3e4f6ce8e6efd2bff3c9cda",
+        "scheduler": {
+          "T_max": 960,
+          "eta_min": 1e-05,
+          "name": "UpdateDrivenCosineAnnealingLR",
+          "step_location": "optimizer post-step"
+        },
+        "parameter_count": 891548,
+        "model_file_sha256": "1db8b459c10c98d04a6946a1e1bc1291bba6358bf0d01edfcbfa8a01ac944461",
+        "source_code_hashes": {
+          "locked_source/D3_model.py": "6d4c321c65bb101f5c756ba8f1186a98d0358e16dc49dfa39f1d677c35d9e589",
+          "locked_source/d3_eq_contract.py": "7359c956bf405092dade2e49e72f236759099330357652469c610d422c770b1c",
+          "prepare_v2_data.py": "64126bdf992037bb3455b4a78392269e7ecd9e62ae01a6b425ef6b090341e15d",
+          "v2_model.py": "6e1e967c89afeeb6e676e9265a893fed54f66682f54af3bf04cf3d41766c8c24",
+          "v2_scheduler.py": "4d81a77a5c983e0771c2c0d945b0bd7cc1467582139c767e58dbbffabbe1d80b",
+          "v9_common.py": "f023fa7af55f681d1308b0165dbcb4b1fe75091fcf3f9ed1df59d456d1a12615"
+        },
+        "completed_utc": "2026-11-07T13:35:03.083941+00:00",
+        "status": "PASS",
+        "checkpoint_id": "server-only://supplementary/20261107/b3/task_119/seed-202610133@1db8b459c10c98d04a6946a1e1bc1291bba6358bf0d01edfcbfa8a01ac944461",
+        "completion_receipt": {
+          "source_id": "S0046",
+          "sha256": "a3c9e25f91fb38edcacf553302a70302bb2c59b73b027309a8ab0c5c5230abd6"
+        },
+        "manifest": {
+          "source_id": "S0047",
+          "sha256": "ee88e8dcd65e989edfb3eb6baa5e9bfa30d5890835bfd0ccf756ddf7507e6971"
+        },
+        "resolved_config": {
+          "source_id": "S0048",
+          "sha256": "915a7afd0cacb7b65aebd7cc18f07d32b631ecaa56a27a224f829700d5de1929"
+        },
+        "cache": {
+          "content_lock_sha256": "2bd6271bc7cc8be4a9c34119f64ae90f69a35fbe842496a8a654ff587c041690",
+          "historical_shard_content_hash_available": false,
+          "preloaded_array_sha256": "15325fc11638b26cefa74baef83c8c0dccac1ef41268fee2111055b6d26f90a9",
+          "preloaded_dtype": "float32",
+          "preloaded_shape": [
+            1280,
+            2,
+            16,
+            4,
+            768
+          ],
+          "source_manifest_sha256": "43f0cd52e481cdc88b92b307476e0a6e7e3e6784c8057220501f6ce091e1a2ee"
+        },
+        "runtime": {
+          "amp": false,
+          "dtype": "float32",
+          "gpu_name": "NVIDIA RTX A5000",
+          "python_version": "3.10.12",
+          "tf32": false,
+          "torch_cuda_version": "12.1",
+          "torch_version": "2.5.1+cu121"
+        }
+      },
+      {
+        "seed": 202610131,
+        "mode": "expert",
+        "task_id": 94,
+        "task_ids": [
+          94
+        ],
+        "task_order": [
+          119,
+          94,
+          90,
+          141,
+          230
+        ],
+        "architecture": "V2TaskConditionedPredictor",
+        "epochs_completed": 160,
+        "optimizer_steps": 960,
+        "train_rows": 345,
+        "train_episodes": 56,
+        "training_sample_presentations": 55200,
+        "constant_task_rank": 1,
+        "init_sha256": "fda2719566b204e5968976747111e9ae4c5841558ff1095bffe7f90f8d739d64",
+        "init_state_hash": "bc788b5ecd13a715283dbc2cff43445732f86431bd99bc90dd9dbb088b00946b",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d",
+        "train_npz_sha256": "28c446ce091e00e73c2d885f3a1552102d23fa5b832feecac497a8547e1aa0b3",
+        "original_config_sha256": "a14a58d5d2fe4a2f562af5497584400a3dfd70d1419059bda09a9b6465cbbd2b",
+        "training_runner_sha256": "2989d94ab9baa21ddfaa4110b0bc10d0fee3e4e9b3e4f6ce8e6efd2bff3c9cda",
+        "scheduler": {
+          "T_max": 960,
+          "eta_min": 1e-05,
+          "name": "UpdateDrivenCosineAnnealingLR",
+          "step_location": "optimizer post-step"
+        },
+        "parameter_count": 891548,
+        "model_file_sha256": "483baa89311a21e19ae4263f3ebdb86dec604235e508d442acb9ceccd2652ebb",
+        "source_code_hashes": {
+          "locked_source/D3_model.py": "6d4c321c65bb101f5c756ba8f1186a98d0358e16dc49dfa39f1d677c35d9e589",
+          "locked_source/d3_eq_contract.py": "7359c956bf405092dade2e49e72f236759099330357652469c610d422c770b1c",
+          "prepare_v2_data.py": "64126bdf992037bb3455b4a78392269e7ecd9e62ae01a6b425ef6b090341e15d",
+          "v2_model.py": "6e1e967c89afeeb6e676e9265a893fed54f66682f54af3bf04cf3d41766c8c24",
+          "v2_scheduler.py": "4d81a77a5c983e0771c2c0d945b0bd7cc1467582139c767e58dbbffabbe1d80b",
+          "v9_common.py": "f023fa7af55f681d1308b0165dbcb4b1fe75091fcf3f9ed1df59d456d1a12615"
+        },
+        "completed_utc": "2026-11-07T13:38:15.935875+00:00",
+        "status": "PASS",
+        "checkpoint_id": "server-only://supplementary/20261107/b3/task_94/seed-202610131@483baa89311a21e19ae4263f3ebdb86dec604235e508d442acb9ceccd2652ebb",
+        "completion_receipt": {
+          "source_id": "S0049",
+          "sha256": "2efe98178a30cf9c87a6351d66adfe7c531c600c25fac6519da52942bd723718"
+        },
+        "manifest": {
+          "source_id": "S0050",
+          "sha256": "6e283a797affbc8eff577a457bcb543583608c2d022d34849c569bdd4fbff7ad"
+        },
+        "resolved_config": {
+          "source_id": "S0051",
+          "sha256": "9e2a67c812b5bbbb8b468453c1739fa1a2f5b3bd3fc63aab83df98579855d150"
+        },
+        "cache": {
+          "content_lock_sha256": "2bd6271bc7cc8be4a9c34119f64ae90f69a35fbe842496a8a654ff587c041690",
+          "historical_shard_content_hash_available": false,
+          "preloaded_array_sha256": "15325fc11638b26cefa74baef83c8c0dccac1ef41268fee2111055b6d26f90a9",
+          "preloaded_dtype": "float32",
+          "preloaded_shape": [
+            1280,
+            2,
+            16,
+            4,
+            768
+          ],
+          "source_manifest_sha256": "43f0cd52e481cdc88b92b307476e0a6e7e3e6784c8057220501f6ce091e1a2ee"
+        },
+        "runtime": {
+          "amp": false,
+          "dtype": "float32",
+          "gpu_name": "NVIDIA RTX A5000",
+          "python_version": "3.10.12",
+          "tf32": false,
+          "torch_cuda_version": "12.1",
+          "torch_version": "2.5.1+cu121"
+        }
+      },
+      {
+        "seed": 202610132,
+        "mode": "expert",
+        "task_id": 94,
+        "task_ids": [
+          94
+        ],
+        "task_order": [
+          119,
+          94,
+          90,
+          141,
+          230
+        ],
+        "architecture": "V2TaskConditionedPredictor",
+        "epochs_completed": 160,
+        "optimizer_steps": 960,
+        "train_rows": 345,
+        "train_episodes": 56,
+        "training_sample_presentations": 55200,
+        "constant_task_rank": 1,
+        "init_sha256": "27e9a02509f227d90abeb29e3432ee9b934b0b1d1b3281c6908e662693b4df50",
+        "init_state_hash": "15f20cb0de643599ee10ba41f3a41c9ca7e7b14e59e6f3174b9fc9d6b927bd29",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d",
+        "train_npz_sha256": "28c446ce091e00e73c2d885f3a1552102d23fa5b832feecac497a8547e1aa0b3",
+        "original_config_sha256": "7ace8b98770a32352b6f8453a1b8e82a34dd4048ac40c185c986107cbee29ce0",
+        "training_runner_sha256": "2989d94ab9baa21ddfaa4110b0bc10d0fee3e4e9b3e4f6ce8e6efd2bff3c9cda",
+        "scheduler": {
+          "T_max": 960,
+          "eta_min": 1e-05,
+          "name": "UpdateDrivenCosineAnnealingLR",
+          "step_location": "optimizer post-step"
+        },
+        "parameter_count": 891548,
+        "model_file_sha256": "d26b64cde826165e7ba3334004fdbeea72f08038c28090c6830070535763dc41",
+        "source_code_hashes": {
+          "locked_source/D3_model.py": "6d4c321c65bb101f5c756ba8f1186a98d0358e16dc49dfa39f1d677c35d9e589",
+          "locked_source/d3_eq_contract.py": "7359c956bf405092dade2e49e72f236759099330357652469c610d422c770b1c",
+          "prepare_v2_data.py": "64126bdf992037bb3455b4a78392269e7ecd9e62ae01a6b425ef6b090341e15d",
+          "v2_model.py": "6e1e967c89afeeb6e676e9265a893fed54f66682f54af3bf04cf3d41766c8c24",
+          "v2_scheduler.py": "4d81a77a5c983e0771c2c0d945b0bd7cc1467582139c767e58dbbffabbe1d80b",
+          "v9_common.py": "f023fa7af55f681d1308b0165dbcb4b1fe75091fcf3f9ed1df59d456d1a12615"
+        },
+        "completed_utc": "2026-11-07T13:39:00.510006+00:00",
+        "status": "PASS",
+        "checkpoint_id": "server-only://supplementary/20261107/b3/task_94/seed-202610132@d26b64cde826165e7ba3334004fdbeea72f08038c28090c6830070535763dc41",
+        "completion_receipt": {
+          "source_id": "S0052",
+          "sha256": "4b9bf225841c1b90c6dfe3d3aae54841863392720708e7d490e58232afdd3fb7"
+        },
+        "manifest": {
+          "source_id": "S0053",
+          "sha256": "529117923b8f5a8fb7ccb2b53a18293d4676024d73fb1dd26bd8f8aab9803483"
+        },
+        "resolved_config": {
+          "source_id": "S0054",
+          "sha256": "f8cefdd5dff57607ad980e4d4a3feebaa04174642bd45c33d569ecd4fd5ae372"
+        },
+        "cache": {
+          "content_lock_sha256": "2bd6271bc7cc8be4a9c34119f64ae90f69a35fbe842496a8a654ff587c041690",
+          "historical_shard_content_hash_available": false,
+          "preloaded_array_sha256": "15325fc11638b26cefa74baef83c8c0dccac1ef41268fee2111055b6d26f90a9",
+          "preloaded_dtype": "float32",
+          "preloaded_shape": [
+            1280,
+            2,
+            16,
+            4,
+            768
+          ],
+          "source_manifest_sha256": "43f0cd52e481cdc88b92b307476e0a6e7e3e6784c8057220501f6ce091e1a2ee"
+        },
+        "runtime": {
+          "amp": false,
+          "dtype": "float32",
+          "gpu_name": "NVIDIA RTX A5000",
+          "python_version": "3.10.12",
+          "tf32": false,
+          "torch_cuda_version": "12.1",
+          "torch_version": "2.5.1+cu121"
+        }
+      },
+      {
+        "seed": 202610133,
+        "mode": "expert",
+        "task_id": 94,
+        "task_ids": [
+          94
+        ],
+        "task_order": [
+          119,
+          94,
+          90,
+          141,
+          230
+        ],
+        "architecture": "V2TaskConditionedPredictor",
+        "epochs_completed": 160,
+        "optimizer_steps": 960,
+        "train_rows": 345,
+        "train_episodes": 56,
+        "training_sample_presentations": 55200,
+        "constant_task_rank": 1,
+        "init_sha256": "cd1fd04c1c8cc9b3f918ea1bde2a0475539ea0d9d565aaa9f2429681d67dc09b",
+        "init_state_hash": "6f8bee049460dafbe2600081433cd15ae81eda0546d6a4813c0be58c05269bd0",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d",
+        "train_npz_sha256": "28c446ce091e00e73c2d885f3a1552102d23fa5b832feecac497a8547e1aa0b3",
+        "original_config_sha256": "7989a94760a26f32c618825159496a34b5cb9e148c30ec3fa923a827da5a6f5a",
+        "training_runner_sha256": "2989d94ab9baa21ddfaa4110b0bc10d0fee3e4e9b3e4f6ce8e6efd2bff3c9cda",
+        "scheduler": {
+          "T_max": 960,
+          "eta_min": 1e-05,
+          "name": "UpdateDrivenCosineAnnealingLR",
+          "step_location": "optimizer post-step"
+        },
+        "parameter_count": 891548,
+        "model_file_sha256": "cb3c4846d9fdc9bb24cc5c4e5c346efb133330d6ac185e4405bea825e7caab17",
+        "source_code_hashes": {
+          "locked_source/D3_model.py": "6d4c321c65bb101f5c756ba8f1186a98d0358e16dc49dfa39f1d677c35d9e589",
+          "locked_source/d3_eq_contract.py": "7359c956bf405092dade2e49e72f236759099330357652469c610d422c770b1c",
+          "prepare_v2_data.py": "64126bdf992037bb3455b4a78392269e7ecd9e62ae01a6b425ef6b090341e15d",
+          "v2_model.py": "6e1e967c89afeeb6e676e9265a893fed54f66682f54af3bf04cf3d41766c8c24",
+          "v2_scheduler.py": "4d81a77a5c983e0771c2c0d945b0bd7cc1467582139c767e58dbbffabbe1d80b",
+          "v9_common.py": "f023fa7af55f681d1308b0165dbcb4b1fe75091fcf3f9ed1df59d456d1a12615"
+        },
+        "completed_utc": "2026-11-07T13:41:28.576747+00:00",
+        "status": "PASS",
+        "checkpoint_id": "server-only://supplementary/20261107/b3/task_94/seed-202610133@cb3c4846d9fdc9bb24cc5c4e5c346efb133330d6ac185e4405bea825e7caab17",
+        "completion_receipt": {
+          "source_id": "S0055",
+          "sha256": "fbeaafbfb51ac2ee68a25f79b83f9103043a11fa5f7c0eae793b5506a15e78d4"
+        },
+        "manifest": {
+          "source_id": "S0056",
+          "sha256": "e1ec1d77062732abd5b84eac8c8294de771bc0b3dbfe16b1e25fad2f4e3cd37e"
+        },
+        "resolved_config": {
+          "source_id": "S0057",
+          "sha256": "960c96d582cb0758f886c93a6053074571c683b70a2d0535e883f2ec40ec3e1d"
+        },
+        "cache": {
+          "content_lock_sha256": "2bd6271bc7cc8be4a9c34119f64ae90f69a35fbe842496a8a654ff587c041690",
+          "historical_shard_content_hash_available": false,
+          "preloaded_array_sha256": "15325fc11638b26cefa74baef83c8c0dccac1ef41268fee2111055b6d26f90a9",
+          "preloaded_dtype": "float32",
+          "preloaded_shape": [
+            1280,
+            2,
+            16,
+            4,
+            768
+          ],
+          "source_manifest_sha256": "43f0cd52e481cdc88b92b307476e0a6e7e3e6784c8057220501f6ce091e1a2ee"
+        },
+        "runtime": {
+          "amp": false,
+          "dtype": "float32",
+          "gpu_name": "NVIDIA RTX A5000",
+          "python_version": "3.10.12",
+          "tf32": false,
+          "torch_cuda_version": "12.1",
+          "torch_version": "2.5.1+cu121"
+        }
+      },
+      {
+        "seed": 202610131,
+        "mode": "expert",
+        "task_id": 90,
+        "task_ids": [
+          90
+        ],
+        "task_order": [
+          119,
+          94,
+          90,
+          141,
+          230
+        ],
+        "architecture": "V2TaskConditionedPredictor",
+        "epochs_completed": 160,
+        "optimizer_steps": 640,
+        "train_rows": 203,
+        "train_episodes": 48,
+        "training_sample_presentations": 32480,
+        "constant_task_rank": 2,
+        "init_sha256": "fda2719566b204e5968976747111e9ae4c5841558ff1095bffe7f90f8d739d64",
+        "init_state_hash": "bc788b5ecd13a715283dbc2cff43445732f86431bd99bc90dd9dbb088b00946b",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d",
+        "train_npz_sha256": "28c446ce091e00e73c2d885f3a1552102d23fa5b832feecac497a8547e1aa0b3",
+        "original_config_sha256": "a14a58d5d2fe4a2f562af5497584400a3dfd70d1419059bda09a9b6465cbbd2b",
+        "training_runner_sha256": "2989d94ab9baa21ddfaa4110b0bc10d0fee3e4e9b3e4f6ce8e6efd2bff3c9cda",
+        "scheduler": {
+          "T_max": 640,
+          "eta_min": 1e-05,
+          "name": "UpdateDrivenCosineAnnealingLR",
+          "step_location": "optimizer post-step"
+        },
+        "parameter_count": 891548,
+        "model_file_sha256": "d2c5a5c4ded093c2d70c558e8fea1b8809c74c5546f0c8156618b604f97d9209",
+        "source_code_hashes": {
+          "locked_source/D3_model.py": "6d4c321c65bb101f5c756ba8f1186a98d0358e16dc49dfa39f1d677c35d9e589",
+          "locked_source/d3_eq_contract.py": "7359c956bf405092dade2e49e72f236759099330357652469c610d422c770b1c",
+          "prepare_v2_data.py": "64126bdf992037bb3455b4a78392269e7ecd9e62ae01a6b425ef6b090341e15d",
+          "v2_model.py": "6e1e967c89afeeb6e676e9265a893fed54f66682f54af3bf04cf3d41766c8c24",
+          "v2_scheduler.py": "4d81a77a5c983e0771c2c0d945b0bd7cc1467582139c767e58dbbffabbe1d80b",
+          "v9_common.py": "f023fa7af55f681d1308b0165dbcb4b1fe75091fcf3f9ed1df59d456d1a12615"
+        },
+        "completed_utc": "2026-11-07T13:41:06.613181+00:00",
+        "status": "PASS",
+        "checkpoint_id": "server-only://supplementary/20261107/b3/task_90/seed-202610131@d2c5a5c4ded093c2d70c558e8fea1b8809c74c5546f0c8156618b604f97d9209",
+        "completion_receipt": {
+          "source_id": "S0058",
+          "sha256": "341c7e8875c766c566671a7968aa1778e55af99b91564e6a08ea5d5de22fd32f"
+        },
+        "manifest": {
+          "source_id": "S0059",
+          "sha256": "2eb037c3aeaac5461940567bae73ad3dbbd2e5963a9a75ba7f3f13d37848ed92"
+        },
+        "resolved_config": {
+          "source_id": "S0060",
+          "sha256": "98d8b7007f0980bb35e495a823272d35aa5c8d17c73191849557ffc17e19ed0c"
+        },
+        "cache": {
+          "content_lock_sha256": "2bd6271bc7cc8be4a9c34119f64ae90f69a35fbe842496a8a654ff587c041690",
+          "historical_shard_content_hash_available": false,
+          "preloaded_array_sha256": "15325fc11638b26cefa74baef83c8c0dccac1ef41268fee2111055b6d26f90a9",
+          "preloaded_dtype": "float32",
+          "preloaded_shape": [
+            1280,
+            2,
+            16,
+            4,
+            768
+          ],
+          "source_manifest_sha256": "43f0cd52e481cdc88b92b307476e0a6e7e3e6784c8057220501f6ce091e1a2ee"
+        },
+        "runtime": {
+          "amp": false,
+          "dtype": "float32",
+          "gpu_name": "NVIDIA RTX A5000",
+          "python_version": "3.10.12",
+          "tf32": false,
+          "torch_cuda_version": "12.1",
+          "torch_version": "2.5.1+cu121"
+        }
+      },
+      {
+        "seed": 202610132,
+        "mode": "expert",
+        "task_id": 90,
+        "task_ids": [
+          90
+        ],
+        "task_order": [
+          119,
+          94,
+          90,
+          141,
+          230
+        ],
+        "architecture": "V2TaskConditionedPredictor",
+        "epochs_completed": 160,
+        "optimizer_steps": 640,
+        "train_rows": 203,
+        "train_episodes": 48,
+        "training_sample_presentations": 32480,
+        "constant_task_rank": 2,
+        "init_sha256": "27e9a02509f227d90abeb29e3432ee9b934b0b1d1b3281c6908e662693b4df50",
+        "init_state_hash": "15f20cb0de643599ee10ba41f3a41c9ca7e7b14e59e6f3174b9fc9d6b927bd29",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d",
+        "train_npz_sha256": "28c446ce091e00e73c2d885f3a1552102d23fa5b832feecac497a8547e1aa0b3",
+        "original_config_sha256": "7ace8b98770a32352b6f8453a1b8e82a34dd4048ac40c185c986107cbee29ce0",
+        "training_runner_sha256": "2989d94ab9baa21ddfaa4110b0bc10d0fee3e4e9b3e4f6ce8e6efd2bff3c9cda",
+        "scheduler": {
+          "T_max": 640,
+          "eta_min": 1e-05,
+          "name": "UpdateDrivenCosineAnnealingLR",
+          "step_location": "optimizer post-step"
+        },
+        "parameter_count": 891548,
+        "model_file_sha256": "74ba05203a4cd6fe2cd01673e34f7daafb9d1e727e1b37d48a8a395223e9b886",
+        "source_code_hashes": {
+          "locked_source/D3_model.py": "6d4c321c65bb101f5c756ba8f1186a98d0358e16dc49dfa39f1d677c35d9e589",
+          "locked_source/d3_eq_contract.py": "7359c956bf405092dade2e49e72f236759099330357652469c610d422c770b1c",
+          "prepare_v2_data.py": "64126bdf992037bb3455b4a78392269e7ecd9e62ae01a6b425ef6b090341e15d",
+          "v2_model.py": "6e1e967c89afeeb6e676e9265a893fed54f66682f54af3bf04cf3d41766c8c24",
+          "v2_scheduler.py": "4d81a77a5c983e0771c2c0d945b0bd7cc1467582139c767e58dbbffabbe1d80b",
+          "v9_common.py": "f023fa7af55f681d1308b0165dbcb4b1fe75091fcf3f9ed1df59d456d1a12615"
+        },
+        "completed_utc": "2026-11-07T13:43:05.340738+00:00",
+        "status": "PASS",
+        "checkpoint_id": "server-only://supplementary/20261107/b3/task_90/seed-202610132@74ba05203a4cd6fe2cd01673e34f7daafb9d1e727e1b37d48a8a395223e9b886",
+        "completion_receipt": {
+          "source_id": "S0061",
+          "sha256": "4b6077b6b6ea9f8d1e574cd28936acf25ea41425f9359581b3717b6395b7cfcb"
+        },
+        "manifest": {
+          "source_id": "S0062",
+          "sha256": "33998a6896c0468a0a442ac684f188c1f6a82a2759d1f968436f87f13b191e70"
+        },
+        "resolved_config": {
+          "source_id": "S0063",
+          "sha256": "9f48374fd0e018fe84eae7560f406278a814d9965e43db7abcb988017533e9e9"
+        },
+        "cache": {
+          "content_lock_sha256": "2bd6271bc7cc8be4a9c34119f64ae90f69a35fbe842496a8a654ff587c041690",
+          "historical_shard_content_hash_available": false,
+          "preloaded_array_sha256": "15325fc11638b26cefa74baef83c8c0dccac1ef41268fee2111055b6d26f90a9",
+          "preloaded_dtype": "float32",
+          "preloaded_shape": [
+            1280,
+            2,
+            16,
+            4,
+            768
+          ],
+          "source_manifest_sha256": "43f0cd52e481cdc88b92b307476e0a6e7e3e6784c8057220501f6ce091e1a2ee"
+        },
+        "runtime": {
+          "amp": false,
+          "dtype": "float32",
+          "gpu_name": "NVIDIA RTX A5000",
+          "python_version": "3.10.12",
+          "tf32": false,
+          "torch_cuda_version": "12.1",
+          "torch_version": "2.5.1+cu121"
+        }
+      },
+      {
+        "seed": 202610133,
+        "mode": "expert",
+        "task_id": 90,
+        "task_ids": [
+          90
+        ],
+        "task_order": [
+          119,
+          94,
+          90,
+          141,
+          230
+        ],
+        "architecture": "V2TaskConditionedPredictor",
+        "epochs_completed": 160,
+        "optimizer_steps": 640,
+        "train_rows": 203,
+        "train_episodes": 48,
+        "training_sample_presentations": 32480,
+        "constant_task_rank": 2,
+        "init_sha256": "cd1fd04c1c8cc9b3f918ea1bde2a0475539ea0d9d565aaa9f2429681d67dc09b",
+        "init_state_hash": "6f8bee049460dafbe2600081433cd15ae81eda0546d6a4813c0be58c05269bd0",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d",
+        "train_npz_sha256": "28c446ce091e00e73c2d885f3a1552102d23fa5b832feecac497a8547e1aa0b3",
+        "original_config_sha256": "7989a94760a26f32c618825159496a34b5cb9e148c30ec3fa923a827da5a6f5a",
+        "training_runner_sha256": "2989d94ab9baa21ddfaa4110b0bc10d0fee3e4e9b3e4f6ce8e6efd2bff3c9cda",
+        "scheduler": {
+          "T_max": 640,
+          "eta_min": 1e-05,
+          "name": "UpdateDrivenCosineAnnealingLR",
+          "step_location": "optimizer post-step"
+        },
+        "parameter_count": 891548,
+        "model_file_sha256": "0db4e0b2348b62fccc23aedf948d471cd6d4486e30a3a8b28b7cfadd4067ac0f",
+        "source_code_hashes": {
+          "locked_source/D3_model.py": "6d4c321c65bb101f5c756ba8f1186a98d0358e16dc49dfa39f1d677c35d9e589",
+          "locked_source/d3_eq_contract.py": "7359c956bf405092dade2e49e72f236759099330357652469c610d422c770b1c",
+          "prepare_v2_data.py": "64126bdf992037bb3455b4a78392269e7ecd9e62ae01a6b425ef6b090341e15d",
+          "v2_model.py": "6e1e967c89afeeb6e676e9265a893fed54f66682f54af3bf04cf3d41766c8c24",
+          "v2_scheduler.py": "4d81a77a5c983e0771c2c0d945b0bd7cc1467582139c767e58dbbffabbe1d80b",
+          "v9_common.py": "f023fa7af55f681d1308b0165dbcb4b1fe75091fcf3f9ed1df59d456d1a12615"
+        },
+        "completed_utc": "2026-11-07T13:43:26.801251+00:00",
+        "status": "PASS",
+        "checkpoint_id": "server-only://supplementary/20261107/b3/task_90/seed-202610133@0db4e0b2348b62fccc23aedf948d471cd6d4486e30a3a8b28b7cfadd4067ac0f",
+        "completion_receipt": {
+          "source_id": "S0064",
+          "sha256": "a450b3405d1f9d3b7dc17d8677168d97e72322e63d5b515024a9a808c77bfd98"
+        },
+        "manifest": {
+          "source_id": "S0065",
+          "sha256": "9a255f68de2a2b2f6f547e1b0bf9eec011abf0c058535a0984e5a60c925a8dd9"
+        },
+        "resolved_config": {
+          "source_id": "S0066",
+          "sha256": "de47055ef9134c112dceabde4f8e2f0583940c0d6cd96aea41e84c963af1daf9"
+        },
+        "cache": {
+          "content_lock_sha256": "2bd6271bc7cc8be4a9c34119f64ae90f69a35fbe842496a8a654ff587c041690",
+          "historical_shard_content_hash_available": false,
+          "preloaded_array_sha256": "15325fc11638b26cefa74baef83c8c0dccac1ef41268fee2111055b6d26f90a9",
+          "preloaded_dtype": "float32",
+          "preloaded_shape": [
+            1280,
+            2,
+            16,
+            4,
+            768
+          ],
+          "source_manifest_sha256": "43f0cd52e481cdc88b92b307476e0a6e7e3e6784c8057220501f6ce091e1a2ee"
+        },
+        "runtime": {
+          "amp": false,
+          "dtype": "float32",
+          "gpu_name": "NVIDIA RTX A5000",
+          "python_version": "3.10.12",
+          "tf32": false,
+          "torch_cuda_version": "12.1",
+          "torch_version": "2.5.1+cu121"
+        }
+      },
+      {
+        "seed": 202610131,
+        "mode": "expert",
+        "task_id": 141,
+        "task_ids": [
+          141
+        ],
+        "task_order": [
+          119,
+          94,
+          90,
+          141,
+          230
+        ],
+        "architecture": "V2TaskConditionedPredictor",
+        "epochs_completed": 160,
+        "optimizer_steps": 640,
+        "train_rows": 232,
+        "train_episodes": 30,
+        "training_sample_presentations": 37120,
+        "constant_task_rank": 3,
+        "init_sha256": "fda2719566b204e5968976747111e9ae4c5841558ff1095bffe7f90f8d739d64",
+        "init_state_hash": "bc788b5ecd13a715283dbc2cff43445732f86431bd99bc90dd9dbb088b00946b",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d",
+        "train_npz_sha256": "28c446ce091e00e73c2d885f3a1552102d23fa5b832feecac497a8547e1aa0b3",
+        "original_config_sha256": "a14a58d5d2fe4a2f562af5497584400a3dfd70d1419059bda09a9b6465cbbd2b",
+        "training_runner_sha256": "2989d94ab9baa21ddfaa4110b0bc10d0fee3e4e9b3e4f6ce8e6efd2bff3c9cda",
+        "scheduler": {
+          "T_max": 640,
+          "eta_min": 1e-05,
+          "name": "UpdateDrivenCosineAnnealingLR",
+          "step_location": "optimizer post-step"
+        },
+        "parameter_count": 891548,
+        "model_file_sha256": "9ac9e61be9b06dd2a7653a33f472b4094298c53444d39d0ae41645d8a7d663d6",
+        "source_code_hashes": {
+          "locked_source/D3_model.py": "6d4c321c65bb101f5c756ba8f1186a98d0358e16dc49dfa39f1d677c35d9e589",
+          "locked_source/d3_eq_contract.py": "7359c956bf405092dade2e49e72f236759099330357652469c610d422c770b1c",
+          "prepare_v2_data.py": "64126bdf992037bb3455b4a78392269e7ecd9e62ae01a6b425ef6b090341e15d",
+          "v2_model.py": "6e1e967c89afeeb6e676e9265a893fed54f66682f54af3bf04cf3d41766c8c24",
+          "v2_scheduler.py": "4d81a77a5c983e0771c2c0d945b0bd7cc1467582139c767e58dbbffabbe1d80b",
+          "v9_common.py": "f023fa7af55f681d1308b0165dbcb4b1fe75091fcf3f9ed1df59d456d1a12615"
+        },
+        "completed_utc": "2026-11-07T13:45:17.248701+00:00",
+        "status": "PASS",
+        "checkpoint_id": "server-only://supplementary/20261107/b3/task_141/seed-202610131@9ac9e61be9b06dd2a7653a33f472b4094298c53444d39d0ae41645d8a7d663d6",
+        "completion_receipt": {
+          "source_id": "S0067",
+          "sha256": "6d8f6d7148bebce1a49bcf6e7125c31b193ff1d04deb436ebe3ad99f3d9b5541"
+        },
+        "manifest": {
+          "source_id": "S0068",
+          "sha256": "6dbaf61a418edb963ae2c1227647f3d91a571affbb626b92b69c172efab7f4d8"
+        },
+        "resolved_config": {
+          "source_id": "S0069",
+          "sha256": "ff21be36afe06212f4b94cbec8be21621e0587eebffd08262800e603309feb56"
+        },
+        "cache": {
+          "content_lock_sha256": "2bd6271bc7cc8be4a9c34119f64ae90f69a35fbe842496a8a654ff587c041690",
+          "historical_shard_content_hash_available": false,
+          "preloaded_array_sha256": "15325fc11638b26cefa74baef83c8c0dccac1ef41268fee2111055b6d26f90a9",
+          "preloaded_dtype": "float32",
+          "preloaded_shape": [
+            1280,
+            2,
+            16,
+            4,
+            768
+          ],
+          "source_manifest_sha256": "43f0cd52e481cdc88b92b307476e0a6e7e3e6784c8057220501f6ce091e1a2ee"
+        },
+        "runtime": {
+          "amp": false,
+          "dtype": "float32",
+          "gpu_name": "NVIDIA RTX A5000",
+          "python_version": "3.10.12",
+          "tf32": false,
+          "torch_cuda_version": "12.1",
+          "torch_version": "2.5.1+cu121"
+        }
+      },
+      {
+        "seed": 202610132,
+        "mode": "expert",
+        "task_id": 141,
+        "task_ids": [
+          141
+        ],
+        "task_order": [
+          119,
+          94,
+          90,
+          141,
+          230
+        ],
+        "architecture": "V2TaskConditionedPredictor",
+        "epochs_completed": 160,
+        "optimizer_steps": 640,
+        "train_rows": 232,
+        "train_episodes": 30,
+        "training_sample_presentations": 37120,
+        "constant_task_rank": 3,
+        "init_sha256": "27e9a02509f227d90abeb29e3432ee9b934b0b1d1b3281c6908e662693b4df50",
+        "init_state_hash": "15f20cb0de643599ee10ba41f3a41c9ca7e7b14e59e6f3174b9fc9d6b927bd29",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d",
+        "train_npz_sha256": "28c446ce091e00e73c2d885f3a1552102d23fa5b832feecac497a8547e1aa0b3",
+        "original_config_sha256": "7ace8b98770a32352b6f8453a1b8e82a34dd4048ac40c185c986107cbee29ce0",
+        "training_runner_sha256": "2989d94ab9baa21ddfaa4110b0bc10d0fee3e4e9b3e4f6ce8e6efd2bff3c9cda",
+        "scheduler": {
+          "T_max": 640,
+          "eta_min": 1e-05,
+          "name": "UpdateDrivenCosineAnnealingLR",
+          "step_location": "optimizer post-step"
+        },
+        "parameter_count": 891548,
+        "model_file_sha256": "af5dd26375b07e92d03c3930764e99e0117872a14fa7cf3a18ce1f50e09de2b6",
+        "source_code_hashes": {
+          "locked_source/D3_model.py": "6d4c321c65bb101f5c756ba8f1186a98d0358e16dc49dfa39f1d677c35d9e589",
+          "locked_source/d3_eq_contract.py": "7359c956bf405092dade2e49e72f236759099330357652469c610d422c770b1c",
+          "prepare_v2_data.py": "64126bdf992037bb3455b4a78392269e7ecd9e62ae01a6b425ef6b090341e15d",
+          "v2_model.py": "6e1e967c89afeeb6e676e9265a893fed54f66682f54af3bf04cf3d41766c8c24",
+          "v2_scheduler.py": "4d81a77a5c983e0771c2c0d945b0bd7cc1467582139c767e58dbbffabbe1d80b",
+          "v9_common.py": "f023fa7af55f681d1308b0165dbcb4b1fe75091fcf3f9ed1df59d456d1a12615"
+        },
+        "completed_utc": "2026-11-07T13:45:39.491865+00:00",
+        "status": "PASS",
+        "checkpoint_id": "server-only://supplementary/20261107/b3/task_141/seed-202610132@af5dd26375b07e92d03c3930764e99e0117872a14fa7cf3a18ce1f50e09de2b6",
+        "completion_receipt": {
+          "source_id": "S0070",
+          "sha256": "1880d164372fed9d1e98bb68dc5305f1bfaebbb2664f6a004a0297e31975d0ad"
+        },
+        "manifest": {
+          "source_id": "S0071",
+          "sha256": "1dcee48ffc0119662635480c26b1938a8995f3e25aa6e73d0de0b92431acfda5"
+        },
+        "resolved_config": {
+          "source_id": "S0072",
+          "sha256": "4eba55f9c747a4faed087dd84e16d17959d4c923d145f579f8740db9e20c91b6"
+        },
+        "cache": {
+          "content_lock_sha256": "2bd6271bc7cc8be4a9c34119f64ae90f69a35fbe842496a8a654ff587c041690",
+          "historical_shard_content_hash_available": false,
+          "preloaded_array_sha256": "15325fc11638b26cefa74baef83c8c0dccac1ef41268fee2111055b6d26f90a9",
+          "preloaded_dtype": "float32",
+          "preloaded_shape": [
+            1280,
+            2,
+            16,
+            4,
+            768
+          ],
+          "source_manifest_sha256": "43f0cd52e481cdc88b92b307476e0a6e7e3e6784c8057220501f6ce091e1a2ee"
+        },
+        "runtime": {
+          "amp": false,
+          "dtype": "float32",
+          "gpu_name": "NVIDIA RTX A5000",
+          "python_version": "3.10.12",
+          "tf32": false,
+          "torch_cuda_version": "12.1",
+          "torch_version": "2.5.1+cu121"
+        }
+      },
+      {
+        "seed": 202610133,
+        "mode": "expert",
+        "task_id": 141,
+        "task_ids": [
+          141
+        ],
+        "task_order": [
+          119,
+          94,
+          90,
+          141,
+          230
+        ],
+        "architecture": "V2TaskConditionedPredictor",
+        "epochs_completed": 160,
+        "optimizer_steps": 640,
+        "train_rows": 232,
+        "train_episodes": 30,
+        "training_sample_presentations": 37120,
+        "constant_task_rank": 3,
+        "init_sha256": "cd1fd04c1c8cc9b3f918ea1bde2a0475539ea0d9d565aaa9f2429681d67dc09b",
+        "init_state_hash": "6f8bee049460dafbe2600081433cd15ae81eda0546d6a4813c0be58c05269bd0",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d",
+        "train_npz_sha256": "28c446ce091e00e73c2d885f3a1552102d23fa5b832feecac497a8547e1aa0b3",
+        "original_config_sha256": "7989a94760a26f32c618825159496a34b5cb9e148c30ec3fa923a827da5a6f5a",
+        "training_runner_sha256": "2989d94ab9baa21ddfaa4110b0bc10d0fee3e4e9b3e4f6ce8e6efd2bff3c9cda",
+        "scheduler": {
+          "T_max": 640,
+          "eta_min": 1e-05,
+          "name": "UpdateDrivenCosineAnnealingLR",
+          "step_location": "optimizer post-step"
+        },
+        "parameter_count": 891548,
+        "model_file_sha256": "27b250364dd913e0dfad40282f7851e283e520012f9e56f45c9d0622918df0ab",
+        "source_code_hashes": {
+          "locked_source/D3_model.py": "6d4c321c65bb101f5c756ba8f1186a98d0358e16dc49dfa39f1d677c35d9e589",
+          "locked_source/d3_eq_contract.py": "7359c956bf405092dade2e49e72f236759099330357652469c610d422c770b1c",
+          "prepare_v2_data.py": "64126bdf992037bb3455b4a78392269e7ecd9e62ae01a6b425ef6b090341e15d",
+          "v2_model.py": "6e1e967c89afeeb6e676e9265a893fed54f66682f54af3bf04cf3d41766c8c24",
+          "v2_scheduler.py": "4d81a77a5c983e0771c2c0d945b0bd7cc1467582139c767e58dbbffabbe1d80b",
+          "v9_common.py": "f023fa7af55f681d1308b0165dbcb4b1fe75091fcf3f9ed1df59d456d1a12615"
+        },
+        "completed_utc": "2026-11-07T13:47:30.853372+00:00",
+        "status": "PASS",
+        "checkpoint_id": "server-only://supplementary/20261107/b3/task_141/seed-202610133@27b250364dd913e0dfad40282f7851e283e520012f9e56f45c9d0622918df0ab",
+        "completion_receipt": {
+          "source_id": "S0073",
+          "sha256": "984c138f803178c4ad59d49d19bd6b70980e0c6e6318ac41c52b854209e1df08"
+        },
+        "manifest": {
+          "source_id": "S0074",
+          "sha256": "b94b918df697005deaf9f23fce504cf8be76de26039595d581f5ca99a669ff2f"
+        },
+        "resolved_config": {
+          "source_id": "S0075",
+          "sha256": "822e8fe70d33944c07c5ea6fde24034c3dd63bc2087d178a119302d1ba90cfdc"
+        },
+        "cache": {
+          "content_lock_sha256": "2bd6271bc7cc8be4a9c34119f64ae90f69a35fbe842496a8a654ff587c041690",
+          "historical_shard_content_hash_available": false,
+          "preloaded_array_sha256": "15325fc11638b26cefa74baef83c8c0dccac1ef41268fee2111055b6d26f90a9",
+          "preloaded_dtype": "float32",
+          "preloaded_shape": [
+            1280,
+            2,
+            16,
+            4,
+            768
+          ],
+          "source_manifest_sha256": "43f0cd52e481cdc88b92b307476e0a6e7e3e6784c8057220501f6ce091e1a2ee"
+        },
+        "runtime": {
+          "amp": false,
+          "dtype": "float32",
+          "gpu_name": "NVIDIA RTX A5000",
+          "python_version": "3.10.12",
+          "tf32": false,
+          "torch_cuda_version": "12.1",
+          "torch_version": "2.5.1+cu121"
+        }
+      },
+      {
+        "seed": 202610131,
+        "mode": "expert",
+        "task_id": 230,
+        "task_ids": [
+          230
+        ],
+        "task_order": [
+          119,
+          94,
+          90,
+          141,
+          230
+        ],
+        "architecture": "V2TaskConditionedPredictor",
+        "epochs_completed": 160,
+        "optimizer_steps": 480,
+        "train_rows": 138,
+        "train_episodes": 30,
+        "training_sample_presentations": 22080,
+        "constant_task_rank": 4,
+        "init_sha256": "fda2719566b204e5968976747111e9ae4c5841558ff1095bffe7f90f8d739d64",
+        "init_state_hash": "bc788b5ecd13a715283dbc2cff43445732f86431bd99bc90dd9dbb088b00946b",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d",
+        "train_npz_sha256": "28c446ce091e00e73c2d885f3a1552102d23fa5b832feecac497a8547e1aa0b3",
+        "original_config_sha256": "a14a58d5d2fe4a2f562af5497584400a3dfd70d1419059bda09a9b6465cbbd2b",
+        "training_runner_sha256": "2989d94ab9baa21ddfaa4110b0bc10d0fee3e4e9b3e4f6ce8e6efd2bff3c9cda",
+        "scheduler": {
+          "T_max": 480,
+          "eta_min": 1e-05,
+          "name": "UpdateDrivenCosineAnnealingLR",
+          "step_location": "optimizer post-step"
+        },
+        "parameter_count": 891548,
+        "model_file_sha256": "30197315c1fd72bdef0203084c6339ad4022fbe85d4cb87737c3593db292cd0b",
+        "source_code_hashes": {
+          "locked_source/D3_model.py": "6d4c321c65bb101f5c756ba8f1186a98d0358e16dc49dfa39f1d677c35d9e589",
+          "locked_source/d3_eq_contract.py": "7359c956bf405092dade2e49e72f236759099330357652469c610d422c770b1c",
+          "prepare_v2_data.py": "64126bdf992037bb3455b4a78392269e7ecd9e62ae01a6b425ef6b090341e15d",
+          "v2_model.py": "6e1e967c89afeeb6e676e9265a893fed54f66682f54af3bf04cf3d41766c8c24",
+          "v2_scheduler.py": "4d81a77a5c983e0771c2c0d945b0bd7cc1467582139c767e58dbbffabbe1d80b",
+          "v9_common.py": "f023fa7af55f681d1308b0165dbcb4b1fe75091fcf3f9ed1df59d456d1a12615"
+        },
+        "completed_utc": "2026-11-07T13:47:02.329761+00:00",
+        "status": "PASS",
+        "checkpoint_id": "server-only://supplementary/20261107/b3/task_230/seed-202610131@30197315c1fd72bdef0203084c6339ad4022fbe85d4cb87737c3593db292cd0b",
+        "completion_receipt": {
+          "source_id": "S0076",
+          "sha256": "c728d0284e4c9dcfec87e9b27d43b6b93a7eb7605d0b3f99ce5c48bddbe20591"
+        },
+        "manifest": {
+          "source_id": "S0077",
+          "sha256": "b777992068bdbd8e309b1edc22186796d40a056875ba09042a8d7f8deb8e1c73"
+        },
+        "resolved_config": {
+          "source_id": "S0078",
+          "sha256": "0f56628c1a4c6ecc7bfad5da348d31844294f11f8c190eee1704c95c5ad94589"
+        },
+        "cache": {
+          "content_lock_sha256": "2bd6271bc7cc8be4a9c34119f64ae90f69a35fbe842496a8a654ff587c041690",
+          "historical_shard_content_hash_available": false,
+          "preloaded_array_sha256": "15325fc11638b26cefa74baef83c8c0dccac1ef41268fee2111055b6d26f90a9",
+          "preloaded_dtype": "float32",
+          "preloaded_shape": [
+            1280,
+            2,
+            16,
+            4,
+            768
+          ],
+          "source_manifest_sha256": "43f0cd52e481cdc88b92b307476e0a6e7e3e6784c8057220501f6ce091e1a2ee"
+        },
+        "runtime": {
+          "amp": false,
+          "dtype": "float32",
+          "gpu_name": "NVIDIA RTX A5000",
+          "python_version": "3.10.12",
+          "tf32": false,
+          "torch_cuda_version": "12.1",
+          "torch_version": "2.5.1+cu121"
+        }
+      },
+      {
+        "seed": 202610132,
+        "mode": "expert",
+        "task_id": 230,
+        "task_ids": [
+          230
+        ],
+        "task_order": [
+          119,
+          94,
+          90,
+          141,
+          230
+        ],
+        "architecture": "V2TaskConditionedPredictor",
+        "epochs_completed": 160,
+        "optimizer_steps": 480,
+        "train_rows": 138,
+        "train_episodes": 30,
+        "training_sample_presentations": 22080,
+        "constant_task_rank": 4,
+        "init_sha256": "27e9a02509f227d90abeb29e3432ee9b934b0b1d1b3281c6908e662693b4df50",
+        "init_state_hash": "15f20cb0de643599ee10ba41f3a41c9ca7e7b14e59e6f3174b9fc9d6b927bd29",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d",
+        "train_npz_sha256": "28c446ce091e00e73c2d885f3a1552102d23fa5b832feecac497a8547e1aa0b3",
+        "original_config_sha256": "7ace8b98770a32352b6f8453a1b8e82a34dd4048ac40c185c986107cbee29ce0",
+        "training_runner_sha256": "2989d94ab9baa21ddfaa4110b0bc10d0fee3e4e9b3e4f6ce8e6efd2bff3c9cda",
+        "scheduler": {
+          "T_max": 480,
+          "eta_min": 1e-05,
+          "name": "UpdateDrivenCosineAnnealingLR",
+          "step_location": "optimizer post-step"
+        },
+        "parameter_count": 891548,
+        "model_file_sha256": "1a239b1f298c61187604f8d08f71fa7aa9109d5aed6ca1eb2ac1010b1c2329d6",
+        "source_code_hashes": {
+          "locked_source/D3_model.py": "6d4c321c65bb101f5c756ba8f1186a98d0358e16dc49dfa39f1d677c35d9e589",
+          "locked_source/d3_eq_contract.py": "7359c956bf405092dade2e49e72f236759099330357652469c610d422c770b1c",
+          "prepare_v2_data.py": "64126bdf992037bb3455b4a78392269e7ecd9e62ae01a6b425ef6b090341e15d",
+          "v2_model.py": "6e1e967c89afeeb6e676e9265a893fed54f66682f54af3bf04cf3d41766c8c24",
+          "v2_scheduler.py": "4d81a77a5c983e0771c2c0d945b0bd7cc1467582139c767e58dbbffabbe1d80b",
+          "v9_common.py": "f023fa7af55f681d1308b0165dbcb4b1fe75091fcf3f9ed1df59d456d1a12615"
+        },
+        "completed_utc": "2026-11-07T13:48:27.506139+00:00",
+        "status": "PASS",
+        "checkpoint_id": "server-only://supplementary/20261107/b3/task_230/seed-202610132@1a239b1f298c61187604f8d08f71fa7aa9109d5aed6ca1eb2ac1010b1c2329d6",
+        "completion_receipt": {
+          "source_id": "S0079",
+          "sha256": "4705169cd044047c41660bc54bf2d8affba9648520e3cebce982baba81d36774"
+        },
+        "manifest": {
+          "source_id": "S0080",
+          "sha256": "fd05c0a3d98bc9ed79f3671f98efa1864e4cbf39e04d1db9e5a78bc3a6f46397"
+        },
+        "resolved_config": {
+          "source_id": "S0081",
+          "sha256": "69371f97cf6682f273e6fb470f5d1343b084ad2d9062f500dcb78e9892fecdd1"
+        },
+        "cache": {
+          "content_lock_sha256": "2bd6271bc7cc8be4a9c34119f64ae90f69a35fbe842496a8a654ff587c041690",
+          "historical_shard_content_hash_available": false,
+          "preloaded_array_sha256": "15325fc11638b26cefa74baef83c8c0dccac1ef41268fee2111055b6d26f90a9",
+          "preloaded_dtype": "float32",
+          "preloaded_shape": [
+            1280,
+            2,
+            16,
+            4,
+            768
+          ],
+          "source_manifest_sha256": "43f0cd52e481cdc88b92b307476e0a6e7e3e6784c8057220501f6ce091e1a2ee"
+        },
+        "runtime": {
+          "amp": false,
+          "dtype": "float32",
+          "gpu_name": "NVIDIA RTX A5000",
+          "python_version": "3.10.12",
+          "tf32": false,
+          "torch_cuda_version": "12.1",
+          "torch_version": "2.5.1+cu121"
+        }
+      },
+      {
+        "seed": 202610133,
+        "mode": "expert",
+        "task_id": 230,
+        "task_ids": [
+          230
+        ],
+        "task_order": [
+          119,
+          94,
+          90,
+          141,
+          230
+        ],
+        "architecture": "V2TaskConditionedPredictor",
+        "epochs_completed": 160,
+        "optimizer_steps": 480,
+        "train_rows": 138,
+        "train_episodes": 30,
+        "training_sample_presentations": 22080,
+        "constant_task_rank": 4,
+        "init_sha256": "cd1fd04c1c8cc9b3f918ea1bde2a0475539ea0d9d565aaa9f2429681d67dc09b",
+        "init_state_hash": "6f8bee049460dafbe2600081433cd15ae81eda0546d6a4813c0be58c05269bd0",
+        "normalizer_sha256": "22f66a54f6106de68c1a0bf0aa3a46ca3340c3077b4121c6a0fdf9d83528d65d",
+        "train_npz_sha256": "28c446ce091e00e73c2d885f3a1552102d23fa5b832feecac497a8547e1aa0b3",
+        "original_config_sha256": "7989a94760a26f32c618825159496a34b5cb9e148c30ec3fa923a827da5a6f5a",
+        "training_runner_sha256": "2989d94ab9baa21ddfaa4110b0bc10d0fee3e4e9b3e4f6ce8e6efd2bff3c9cda",
+        "scheduler": {
+          "T_max": 480,
+          "eta_min": 1e-05,
+          "name": "UpdateDrivenCosineAnnealingLR",
+          "step_location": "optimizer post-step"
+        },
+        "parameter_count": 891548,
+        "model_file_sha256": "c48896ad8e6f753cbdbc73ccff893cd93a23768a29f6ad8c4a0d72e5c2c791a4",
+        "source_code_hashes": {
+          "locked_source/D3_model.py": "6d4c321c65bb101f5c756ba8f1186a98d0358e16dc49dfa39f1d677c35d9e589",
+          "locked_source/d3_eq_contract.py": "7359c956bf405092dade2e49e72f236759099330357652469c610d422c770b1c",
+          "prepare_v2_data.py": "64126bdf992037bb3455b4a78392269e7ecd9e62ae01a6b425ef6b090341e15d",
+          "v2_model.py": "6e1e967c89afeeb6e676e9265a893fed54f66682f54af3bf04cf3d41766c8c24",
+          "v2_scheduler.py": "4d81a77a5c983e0771c2c0d945b0bd7cc1467582139c767e58dbbffabbe1d80b",
+          "v9_common.py": "f023fa7af55f681d1308b0165dbcb4b1fe75091fcf3f9ed1df59d456d1a12615"
+        },
+        "completed_utc": "2026-11-07T13:48:56.122608+00:00",
+        "status": "PASS",
+        "checkpoint_id": "server-only://supplementary/20261107/b3/task_230/seed-202610133@c48896ad8e6f753cbdbc73ccff893cd93a23768a29f6ad8c4a0d72e5c2c791a4",
+        "completion_receipt": {
+          "source_id": "S0082",
+          "sha256": "d82e65028dc19c902dfe75560c42d66b281b7acb41750c5af73dc49d16d8c621"
+        },
+        "manifest": {
+          "source_id": "S0083",
+          "sha256": "bae2cb56fe934bd5a2f3a5c1cd350cccfec58ad9bf08b549b04d016d1efb9fa8"
+        },
+        "resolved_config": {
+          "source_id": "S0084",
+          "sha256": "4ff8106dd2f2eb0ab0fcfe1c990b84813e6a86b5d0a6ddbbe4f284cc10c06a26"
+        },
+        "cache": {
+          "content_lock_sha256": "2bd6271bc7cc8be4a9c34119f64ae90f69a35fbe842496a8a654ff587c041690",
+          "historical_shard_content_hash_available": false,
+          "preloaded_array_sha256": "15325fc11638b26cefa74baef83c8c0dccac1ef41268fee2111055b6d26f90a9",
+          "preloaded_dtype": "float32",
+          "preloaded_shape": [
+            1280,
+            2,
+            16,
+            4,
+            768
+          ],
+          "source_manifest_sha256": "43f0cd52e481cdc88b92b307476e0a6e7e3e6784c8057220501f6ce091e1a2ee"
+        },
+        "runtime": {
+          "amp": false,
+          "dtype": "float32",
+          "gpu_name": "NVIDIA RTX A5000",
+          "python_version": "3.10.12",
+          "tf32": false,
+          "torch_cuda_version": "12.1",
+          "torch_version": "2.5.1+cu121"
+        }
+      }
+    ],
+    "evaluations": [
+      {
+        "status": "PASS",
+        "split": "dev",
+        "completed_utc": "2026-11-07T13:49:17.732470+00:00",
+        "population_anchors": 185,
+        "population_episodes": 47,
+        "common_accepted_anchors": 181,
+        "global_prediction_seal_sha256": "93269a81cdbbfb9b465b619d696fb3ba5ef40f583542111ad2d6074a6af9202d",
+        "metric_scale_sha256": "dbf36b2dda89f57f140e17afaf1c9f7adceb7b33b3130102e034923e6a7cdc32",
+        "bootstrap_seed": 2026110702,
+        "bootstrap_draws": 5000,
+        "bootstrap_plan_sha256": "3a4fca0770af51e536de7a388c7ec2f5177f67a514ed3e27e084d68777089895",
+        "score_only_no_model_or_hyperparameter_selection": true,
+        "target_sha256": "233a0cdb31d1ddd7cea6ecfaa5e9d02e9c42e9822af7fe488c7fe5a40febee27",
+        "score_receipt": {
+          "source_id": "S0085",
+          "sha256": "1d0c9fc30e80404c775771546c968f5566bad4afde2232471104037b2bcbf022"
+        }
+      },
+      {
+        "status": "PASS",
+        "split": "final_test",
+        "completed_utc": "2026-11-07T13:49:18.119689+00:00",
+        "population_anchors": 162,
+        "population_episodes": 41,
+        "common_accepted_anchors": 162,
+        "global_prediction_seal_sha256": "93269a81cdbbfb9b465b619d696fb3ba5ef40f583542111ad2d6074a6af9202d",
+        "metric_scale_sha256": "dbf36b2dda89f57f140e17afaf1c9f7adceb7b33b3130102e034923e6a7cdc32",
+        "bootstrap_seed": 2026110702,
+        "bootstrap_draws": 5000,
+        "bootstrap_plan_sha256": "b327607e2f883cf7a3913e8c71032c8a35d3b4eb755a7063b4b62829691a8f64",
+        "score_only_no_model_or_hyperparameter_selection": true,
+        "target_sha256": "04ed439e4b14b5957730a40b465687aee2c4bda9ceb2ab48324d1275e4dd44c7",
+        "score_receipt": {
+          "source_id": "S0087",
+          "sha256": "86d7a33f042dce09371c3605a5c3fd12f55dea8e35926cfa84ba54faef093448"
+        }
+      }
+    ]
+  },
+  "verification": {
+    "status": "PASS_WITH_STATED_EXPERIMENT_LIMITATIONS",
+    "completed_utc": "2026-11-07T17:37:39.111452+00:00",
+    "live_checks": {
+      "local_artifacts_matching_live_server_sha256": 361,
+      "hash_mismatches": 0,
+      "additional_original_core_a_baselines_matching": 6,
+      "actual_model_checkpoints_matching_training_receipts": 21,
+      "core_a_best_checkpoints": 3,
+      "core_b_expert_checkpoints": 15,
+      "core_b_shared_control_checkpoints": 3,
+      "sealed_core_b_prediction_files_read": 112,
+      "episode_error_rows_independently_recomputed_from_predictions_and_targets": 8856,
+      "maximum_score_difference": 0.0,
+      "all_final_task_substitution_arrays_identical": true
+    },
+    "receipt": {
+      "source_id": "S0006",
+      "sha256": "896a1bd6efb0d231478eae2eee5007631d3ae7d79bae1940e7ce101a49032257"
+    },
+    "temporal_scope": "Saved audit completed 2026-11-07 UTC (2026-11-08 Asia/Shanghai); no new live-server read was performed while preparing this public metadata.",
+    "limits": [
+      "Previously evaluated final populations, not a new blind test.",
+      "Historical training-cache and evaluation-feature numerical equivalence remains unresolved.",
+      "Execution logs establish experiments and artifacts, not individual authorship."
+    ]
+  }
+}

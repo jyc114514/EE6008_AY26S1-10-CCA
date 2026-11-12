@@ -1,0 +1,154 @@
+[
+  {
+    "source_id": "SUPP-CODE-01",
+    "public_path": "core_a/run_core_a_followup.py",
+    "source_sha256": "41f3057629298d2931733c2067c8a58ef67bf861e25db0c9248a422c530ffe05",
+    "export_sha256": "ea5bbf4ed42ed31790af4d763ceb72550d4b1d2239f597e61104fb7ce96ad3b9",
+    "transformations": [
+      "Normalize public source encoding/line endings",
+      "Read canonical legacy source prefix from explicit environment",
+      "Reject unconfigured legacy relocation",
+      "Require explicit prefix after CLI parsing; preserve --help"
+    ],
+    "documentation": "README.md"
+  },
+  {
+    "source_id": "SUPP-CODE-02",
+    "public_path": "core_a/check_protocol.py",
+    "source_sha256": "94312ef500f4b66ed3762f9da652f754ae7e682bad810fc5ca34efee99091d1f",
+    "export_sha256": "39439837c423be9a7c88b405b885f10d3a9934589e1726060c4f0e147f3c619c",
+    "transformations": [
+      "Normalize public source encoding/line endings",
+      "Report source checks only when explicitly supplied"
+    ],
+    "documentation": "README.md"
+  },
+  {
+    "source_id": "SUPP-CODE-03",
+    "public_path": "core_b/run_cascade.py",
+    "source_sha256": "bcbeb1411b9256bbe8ec957543587d8b02645e9d187eb51a2a94fc25b695608a",
+    "export_sha256": "e599c02b9cd851b54f25454ad0cc781ec090d40c998d4b6978d397abb5148b46",
+    "transformations": [
+      "Normalize public source encoding/line endings",
+      "Read canonical legacy source prefix from explicit environment",
+      "Read historical replay subdirectory from explicit environment",
+      "Validate configured external paths independently of model/data code",
+      "Reject unconfigured relocation",
+      "Require external configuration at inference entry point"
+    ],
+    "documentation": "README.md"
+  },
+  {
+    "source_id": "SUPP-CODE-04",
+    "public_path": "core_b/score_cascade.py",
+    "source_sha256": "4b9d14b5a510e7dcb031df9f7a3671069de5c468221e8a2d25736e4bdfb9c91c",
+    "export_sha256": "6959367c034611cd390de70b80ec5162ca8f97123de18f97ab5361551bd6db68",
+    "transformations": [
+      "Normalize public source encoding/line endings",
+      "Import explicit external-path validation",
+      "Require external configuration before scored replay"
+    ],
+    "documentation": "README.md"
+  },
+  {
+    "source_id": "SUPP-CODE-05",
+    "public_path": "core_b/test_contracts.py",
+    "source_sha256": "060bb0ecf9b4daa1b04b942c071562dc9dc895ccaf65ffc4b98dd1c2707704bb",
+    "export_sha256": "060bb0ecf9b4daa1b04b942c071562dc9dc895ccaf65ffc4b98dd1c2707704bb",
+    "transformations": [
+      "Normalize public source encoding/line endings"
+    ],
+    "documentation": "README.md"
+  },
+  {
+    "source_id": "SUPP-CODE-06",
+    "public_path": "core_b_experts/prepare_protocol.py",
+    "source_sha256": "a33089317bc5cf32e72acf045dd08971309df1f25ed19029cd7cd1ba72deb286",
+    "export_sha256": "5e0f8be2c69cbf7e4c12992a572e1ac56b893e9887d012e0709ecdd3e84356a3",
+    "transformations": [
+      "Normalize public source encoding/line endings",
+      "Import environment access",
+      "Read canonical source prefix from explicit environment",
+      "Read historical replay subdirectory from explicit environment",
+      "Fail closed when required external paths are absent or invalid"
+    ],
+    "documentation": "README.md"
+  },
+  {
+    "source_id": "SUPP-CODE-07",
+    "public_path": "core_b_experts/train_experts.py",
+    "source_sha256": "2989d94ab9baa21ddfaa4110b0bc10d0fee3e4e9b3e4f6ce8e6efd2bff3c9cda",
+    "export_sha256": "48153f1f97d002c61c006b50ba511738754d6a08a2fd4a449dde5f47ea9e6dd1",
+    "transformations": [
+      "Normalize public source encoding/line endings",
+      "Read canonical legacy source prefix from explicit environment",
+      "Reject unconfigured legacy relocation",
+      "Require prefix before training or real-input preflight"
+    ],
+    "documentation": "README.md"
+  },
+  {
+    "source_id": "SUPP-CODE-08",
+    "public_path": "core_b_experts/evaluate_experts.py",
+    "source_sha256": "2ab7ec727e1e321c82e4af075bb65fa1364090b46d38f51940203b5dba88cc89",
+    "export_sha256": "c137480d0772f53c22304f9153b8d5f9098dc7a8351fb66c066f00817aae4aa5",
+    "transformations": [
+      "Normalize public source encoding/line endings",
+      "Require shared relocation configuration after CLI parsing"
+    ],
+    "documentation": "README.md"
+  },
+  {
+    "source_id": "SUPP-CODE-09",
+    "public_path": "core_b_experts/test_train_experts.py",
+    "source_sha256": "8802d864ce6504ed999fb650e07e9f59aac2accf3e691fceb9047db1f6609933",
+    "export_sha256": "fbff04614c0dd61fb4cd1c8abd74ee8c92b48f2b01593cbfcad656f565211298",
+    "transformations": [
+      "Normalize public source encoding/line endings",
+      "Import hardlink capability probe for the existing filesystem test",
+      "Explicitly skip only the atomic-hardlink test on unsupported filesystems; preserve numeric tests"
+    ],
+    "documentation": "README.md"
+  },
+  {
+    "source_id": "SUPP-CODE-10",
+    "public_path": "baseline_a/decode_original_predictions.py",
+    "source_sha256": "29357b2d6951a4c2bc05a54495df5192ac08e99d3a8e9e823f36bf655cb2c1d3",
+    "export_sha256": "90acaa3c76f128fea630de12350f0a1b718f1f2e9ebb57ff82849572478da3d5",
+    "transformations": [
+      "Normalize public source encoding/line endings",
+      "Read canonical legacy prefix; preserve required trailing slash semantics",
+      "Reject unconfigured legacy relocation",
+      "Require explicit legacy prefix before production execution",
+      "Use installed dependencies instead of private vendored packages",
+      "Delay external-data dependencies until the configured execution path",
+      "Allow --help and missing-configuration errors without importing PyArrow or PyYAML"
+    ],
+    "documentation": "README.md"
+  },
+  {
+    "source_id": "SUPP-CODE-11",
+    "public_path": "analysis_a/compare_core_a.py",
+    "source_sha256": "3abf7faa8dae7341c46cb3231f4f8ba786eab8bed234b2594d5832af1cd3e574",
+    "export_sha256": "a8f753ee1ed41e027e2229df8a644fc811061342be2db6d467633167ade1eb71",
+    "transformations": [
+      "Normalize public source encoding/line endings",
+      "Read canonical legacy prefix; preserve required trailing slash semantics",
+      "Reject unconfigured legacy relocation",
+      "Require explicit legacy prefix before production execution",
+      "Use installed PyArrow; remove private dependency fallback"
+    ],
+    "documentation": "README.md"
+  },
+  {
+    "source_id": "SUPP-CODE-12",
+    "public_path": "analysis_a/test_compare_core_a.py",
+    "source_sha256": "6db478f52ba8ad0aa2b45f46441b25fa7a26fd193581f0f3e3669dff499531a9",
+    "export_sha256": "e3d10a63162f48039c41b2149589c999e4a3308fea5a3ef7d6fec67405112572",
+    "transformations": [
+      "Normalize public source encoding/line endings",
+      "Use installed scikit-learn for synthetic tests"
+    ],
+    "documentation": "README.md"
+  }
+]
