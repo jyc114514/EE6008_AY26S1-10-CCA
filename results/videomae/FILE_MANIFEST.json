@@ -213,8 +213,8 @@
         },
         {
             "path": "tests/videomae/test_cli_path_contract.py",
-            "bytes": 3452,
-            "sha256": "2e544e0eded284368d1c0f54a2f377c40e176be0e1863849c95dc3b812dac1fc"
+            "bytes": 3543,
+            "sha256": "d03be5903541b03bc5afc4953c600b72d2413393f279d58b0f59c6b758e9c246"
         },
         {
             "path": "tests/videomae/test_job_scratch.py",
