@@ -1,0 +1,34 @@
+task:
+  name: core_a_transformer_baseline
+  split_source: server_v3_duplicate_safe_train_validation_manifest
+  final_test_used: false
+
+model:
+  name: MCG-NJU/videomae-small-finetuned-kinetics
+  family: VideoMAE
+  role: transformer_baseline
+  freeze_encoder: true
+  feature_type: pooled
+
+input:
+  observation_window_seconds: 4.0
+  sample_fps: 4.0
+  frames: 16
+  processor: VideoMAEImageProcessor
+  notes: Uses the VideoMAE processor's configured resize/crop/normalization.
+
+linear_probe:
+  optimizer: AdamW
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  batch_size: 256
+  max_epochs: 100
+  early_stopping_patience: 15
+  seed: 6008
+  selection_metric: validation_macro_f1
+
+metrics:
+  - top1
+  - micro_f1
+  - macro_f1
+  - nll

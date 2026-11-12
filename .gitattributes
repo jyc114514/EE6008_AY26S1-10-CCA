@@ -1,0 +1,5 @@
+# Preserve archived contributor bytes for the accompanying SHA256 manifest.
+scripts/videomae/** -text
+results/videomae/** -text
+tests/videomae/** -text
+configs/videomae_task_a_baseline.yaml -text

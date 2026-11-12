@@ -1,0 +1,34 @@
+{
+  "record_type": "reported_aggregate_transcription_not_original_metrics_export",
+  "contributor": "Xueshen Zhang",
+  "scope": "historical_development_only_not_final_five_task_benchmark",
+  "provenance": "Contributor handoff and server terminal outputs from 2026-10-08/09; original per-run metrics remain in restricted team storage",
+  "core_a": {
+    "seeds": [6008, 7, 42],
+    "selection": "validation_macro_f1",
+    "train_episodes": 2757,
+    "validation_episodes": 617,
+    "classes": 120,
+    "mean_sample_sd_reported_rounded": {
+      "top1_percent": [94.3274, 0.1621],
+      "top5_percent": [98.9735, 0.2476],
+      "macro_f1_percent": [88.2317, 1.2570]
+    }
+  },
+  "core_b": {
+    "seeds": [20261001, 20261002, 20261003],
+    "dev_source_groups": 603,
+    "metric": "action_full28_standardized_mae",
+    "rows_reported_rounded": [
+      {"horizon": 30, "model": "VideoMAE", "mean": 0.195368, "sample_sd": 0.001749},
+      {"horizon": 30, "model": "V-JEPA_reference", "mean": 0.199408, "sample_sd": 0.009118},
+      {"horizon": 30, "model": "STATE-CTRL", "mean": 0.194846, "sample_sd": 0.001107},
+      {"horizon": 30, "model": "TEAM-STATE-CTRL_reference", "mean": 0.195021, "sample_sd": 0.00083946},
+      {"horizon": 60, "model": "VideoMAE", "mean": 0.268999, "sample_sd": 0.001557},
+      {"horizon": 60, "model": "V-JEPA_reference", "mean": 0.268321, "sample_sd": 0.000974},
+      {"horizon": 60, "model": "STATE-CTRL", "mean": 0.268134, "sample_sd": 0.000466},
+      {"horizon": 60, "model": "TEAM-STATE-CTRL_reference", "mean": 0.267958, "sample_sd": 0.000210}
+    ],
+    "interpretation": "H30 mean difference concentrates in seed 20261002; no established average visual gain over corresponding state controls; differing feature/projection capacities"
+  }
+}
